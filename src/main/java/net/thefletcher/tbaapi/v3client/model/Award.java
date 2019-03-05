@@ -111,10 +111,10 @@ public class Award {
   }
 
    /**
-   * A list of recipients of the award at the event. Either team_key and/or awardee for individual awards.
+   * A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn&#39;t awarded at the event).
    * @return recipientList
   **/
-  @ApiModelProperty(required = true, value = "A list of recipients of the award at the event. Either team_key and/or awardee for individual awards.")
+  @ApiModelProperty(required = true, value = "A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event).")
   public List<AwardRecipient> getRecipientList() {
     return recipientList;
   }
