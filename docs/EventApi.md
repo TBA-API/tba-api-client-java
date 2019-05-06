@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventPredictions"></a>
 # **getEventPredictions**
-> EventPredictions getEventPredictions(eventKey, ifModifiedSince)
+> Object getEventPredictions(eventKey, ifModifiedSince)
 
 
 
@@ -811,7 +811,7 @@ EventApi apiInstance = new EventApi();
 String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    EventPredictions result = apiInstance.getEventPredictions(eventKey, ifModifiedSince);
+    Object result = apiInstance.getEventPredictions(eventKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventApi#getEventPredictions");
@@ -828,7 +828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EventPredictions**](EventPredictions.md)
+**Object**
 
 ### Authorization
 

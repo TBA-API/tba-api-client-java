@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **actualTime** | **Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. |  [optional]
 **predictedTime** | **Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time. |  [optional]
 **postResultTime** | **Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) when the match result was posted. |  [optional]
-**scoreBreakdown** | **Object** | Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null. |  [optional]
+**scoreBreakdown** | [**Object**](.md) | Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null. |  [optional]
 **videos** | [**List&lt;MatchVideos&gt;**](MatchVideos.md) | Array of video objects associated with this match. |  [optional]
 
 
