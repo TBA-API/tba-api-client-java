@@ -67,13 +67,13 @@ public class Match {
       return String.valueOf(value);
     }
 
-    public static CompLevelEnum fromValue(String text) {
+    public static CompLevelEnum fromValue(String value) {
       for (CompLevelEnum b : CompLevelEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<CompLevelEnum> {
@@ -85,7 +85,7 @@ public class Match {
       @Override
       public CompLevelEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return CompLevelEnum.fromValue(String.valueOf(value));
+        return CompLevelEnum.fromValue(value);
       }
     }
   }

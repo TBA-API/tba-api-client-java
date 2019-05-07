@@ -1,7 +1,9 @@
 
+
 # EventDistrictPointsPoints
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **total** | **Integer** | Total points awarded at this event. | 

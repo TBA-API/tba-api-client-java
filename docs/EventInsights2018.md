@@ -1,7 +1,9 @@
 
+
 # EventInsights2018
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **autoQuestAchieved** | **List&lt;Float&gt;** | An array with three values, number of times auto quest was completed, number of opportunities to complete the auto quest, and percentage. | 

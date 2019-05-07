@@ -1,7 +1,9 @@
 
+
 # TeamEventStatusRank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **numTeams** | **Integer** | Number of teams ranked. |  [optional]

@@ -166,11 +166,11 @@ public class EventInsights2016 {
    * @return aChevalDeFrise
   **/
   @ApiModelProperty(required = true, value = "For the Cheval De Frise - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getAChevalDeFrise() {
+  public List<Float> getaChevalDeFrise() {
     return aChevalDeFrise;
   }
 
-  public void setAChevalDeFrise(List<Float> aChevalDeFrise) {
+  public void setaChevalDeFrise(List<Float> aChevalDeFrise) {
     this.aChevalDeFrise = aChevalDeFrise;
   }
 
@@ -189,11 +189,11 @@ public class EventInsights2016 {
    * @return aPortcullis
   **/
   @ApiModelProperty(required = true, value = "For the Portcullis - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getAPortcullis() {
+  public List<Float> getaPortcullis() {
     return aPortcullis;
   }
 
-  public void setAPortcullis(List<Float> aPortcullis) {
+  public void setaPortcullis(List<Float> aPortcullis) {
     this.aPortcullis = aPortcullis;
   }
 
@@ -212,11 +212,11 @@ public class EventInsights2016 {
    * @return bRamparts
   **/
   @ApiModelProperty(required = true, value = "For the Ramparts - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getBRamparts() {
+  public List<Float> getbRamparts() {
     return bRamparts;
   }
 
-  public void setBRamparts(List<Float> bRamparts) {
+  public void setbRamparts(List<Float> bRamparts) {
     this.bRamparts = bRamparts;
   }
 
@@ -235,11 +235,11 @@ public class EventInsights2016 {
    * @return bMoat
   **/
   @ApiModelProperty(required = true, value = "For the Moat - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getBMoat() {
+  public List<Float> getbMoat() {
     return bMoat;
   }
 
-  public void setBMoat(List<Float> bMoat) {
+  public void setbMoat(List<Float> bMoat) {
     this.bMoat = bMoat;
   }
 
@@ -258,11 +258,11 @@ public class EventInsights2016 {
    * @return cSallyPort
   **/
   @ApiModelProperty(required = true, value = "For the Sally Port - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getCSallyPort() {
+  public List<Float> getcSallyPort() {
     return cSallyPort;
   }
 
-  public void setCSallyPort(List<Float> cSallyPort) {
+  public void setcSallyPort(List<Float> cSallyPort) {
     this.cSallyPort = cSallyPort;
   }
 
@@ -281,11 +281,11 @@ public class EventInsights2016 {
    * @return cDrawbridge
   **/
   @ApiModelProperty(required = true, value = "For the Drawbridge - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getCDrawbridge() {
+  public List<Float> getcDrawbridge() {
     return cDrawbridge;
   }
 
-  public void setCDrawbridge(List<Float> cDrawbridge) {
+  public void setcDrawbridge(List<Float> cDrawbridge) {
     this.cDrawbridge = cDrawbridge;
   }
 
@@ -304,11 +304,11 @@ public class EventInsights2016 {
    * @return dRoughTerrain
   **/
   @ApiModelProperty(required = true, value = "For the Rough Terrain - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getDRoughTerrain() {
+  public List<Float> getdRoughTerrain() {
     return dRoughTerrain;
   }
 
-  public void setDRoughTerrain(List<Float> dRoughTerrain) {
+  public void setdRoughTerrain(List<Float> dRoughTerrain) {
     this.dRoughTerrain = dRoughTerrain;
   }
 
@@ -327,11 +327,11 @@ public class EventInsights2016 {
    * @return dRockWall
   **/
   @ApiModelProperty(required = true, value = "For the Rock Wall - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
-  public List<Float> getDRockWall() {
+  public List<Float> getdRockWall() {
     return dRockWall;
   }
 
-  public void setDRockWall(List<Float> dRockWall) {
+  public void setdRockWall(List<Float> dRockWall) {
     this.dRockWall = dRockWall;
   }
 

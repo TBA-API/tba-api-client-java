@@ -80,13 +80,13 @@ public class Media {
       return String.valueOf(value);
     }
 
-    public static TypeEnum fromValue(String text) {
+    public static TypeEnum fromValue(String value) {
       for (TypeEnum b : TypeEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
@@ -98,7 +98,7 @@ public class Media {
       @Override
       public TypeEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return TypeEnum.fromValue(String.valueOf(value));
+        return TypeEnum.fromValue(value);
       }
     }
   }

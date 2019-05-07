@@ -36,33 +36,32 @@ import java.util.List;
 import java.util.Map;
 
 public class TbaApi {
-    private ApiClient apiClient;
+    private ApiClient localVarApiClient;
 
     public TbaApi() {
         this(Configuration.getDefaultApiClient());
     }
 
     public TbaApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        this.localVarApiClient = apiClient;
     }
 
     public ApiClient getApiClient() {
-        return apiClient;
+        return localVarApiClient;
     }
 
     public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        this.localVarApiClient = apiClient;
     }
 
     /**
      * Build call for getStatus
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getStatusCall(String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getStatusCall(String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -72,14 +71,14 @@ public class TbaApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -87,31 +86,19 @@ public class TbaApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getStatusValidateBeforeCall(String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getStatusValidateBeforeCall(String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call call = getStatusCall(ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getStatusCall(ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -123,8 +110,8 @@ public class TbaApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public APIStatus getStatus(String ifModifiedSince) throws ApiException {
-        ApiResponse<APIStatus> resp = getStatusWithHttpInfo(ifModifiedSince);
-        return resp.getData();
+        ApiResponse<APIStatus> localVarResp = getStatusWithHttpInfo(ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -135,43 +122,24 @@ public class TbaApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<APIStatus> getStatusWithHttpInfo(String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getStatusValidateBeforeCall(ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getStatusValidateBeforeCall(ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<APIStatus>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      *  (asynchronously)
      * Returns API status, and TBA status information.
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getStatusAsync(String ifModifiedSince, final ApiCallback<APIStatus> callback) throws ApiException {
+    public okhttp3.Call getStatusAsync(String ifModifiedSince, final ApiCallback<APIStatus> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getStatusValidateBeforeCall(ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getStatusValidateBeforeCall(ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<APIStatus>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
 }

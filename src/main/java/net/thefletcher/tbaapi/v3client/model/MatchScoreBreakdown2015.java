@@ -65,13 +65,13 @@ public class MatchScoreBreakdown2015 {
       return String.valueOf(value);
     }
 
-    public static CoopertitionEnum fromValue(String text) {
+    public static CoopertitionEnum fromValue(String value) {
       for (CoopertitionEnum b : CoopertitionEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<CoopertitionEnum> {
@@ -83,7 +83,7 @@ public class MatchScoreBreakdown2015 {
       @Override
       public CoopertitionEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return CoopertitionEnum.fromValue(String.valueOf(value));
+        return CoopertitionEnum.fromValue(value);
       }
     }
   }

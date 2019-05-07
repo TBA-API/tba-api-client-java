@@ -1,7 +1,9 @@
 
+
 # MatchScoreBreakdown2016Alliance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **autoPoints** | **Integer** |  |  [optional]
@@ -44,8 +46,9 @@ Name | Type | Description | Notes
 **position5crossings** | **Integer** |  |  [optional]
 
 
-<a name="Robot1AutoEnum"></a>
+
 ## Enum: Robot1AutoEnum
+
 Name | Value
 ---- | -----
 CROSSED | &quot;Crossed&quot;
@@ -53,8 +56,9 @@ REACHED | &quot;Reached&quot;
 NONE | &quot;None&quot;
 
 
-<a name="Robot2AutoEnum"></a>
+
 ## Enum: Robot2AutoEnum
+
 Name | Value
 ---- | -----
 CROSSED | &quot;Crossed&quot;
@@ -62,8 +66,9 @@ REACHED | &quot;Reached&quot;
 NONE | &quot;None&quot;
 
 
-<a name="Robot3AutoEnum"></a>
+
 ## Enum: Robot3AutoEnum
+
 Name | Value
 ---- | -----
 CROSSED | &quot;Crossed&quot;

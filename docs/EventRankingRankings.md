@@ -1,7 +1,9 @@
 
+
 # EventRankingRankings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **matchesPlayed** | **Integer** | Number of matches played by this team. | 

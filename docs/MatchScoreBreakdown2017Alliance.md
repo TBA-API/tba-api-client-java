@@ -1,7 +1,9 @@
 
+
 # MatchScoreBreakdown2017Alliance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **autoPoints** | **Integer** |  |  [optional]
@@ -39,8 +41,9 @@ Name | Type | Description | Notes
 **touchpadFar** | **String** |  |  [optional]
 
 
-<a name="Robot1AutoEnum"></a>
+
 ## Enum: Robot1AutoEnum
+
 Name | Value
 ---- | -----
 UNKNOWN | &quot;Unknown&quot;
@@ -48,8 +51,9 @@ MOBILITY | &quot;Mobility&quot;
 NONE | &quot;None&quot;
 
 
-<a name="Robot2AutoEnum"></a>
+
 ## Enum: Robot2AutoEnum
+
 Name | Value
 ---- | -----
 UNKNOWN | &quot;Unknown&quot;
@@ -57,8 +61,9 @@ MOBILITY | &quot;Mobility&quot;
 NONE | &quot;None&quot;
 
 
-<a name="Robot3AutoEnum"></a>
+
 ## Enum: Robot3AutoEnum
+
 Name | Value
 ---- | -----
 UNKNOWN | &quot;Unknown&quot;

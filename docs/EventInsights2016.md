@@ -1,7 +1,9 @@
 
+
 # EventInsights2016
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lowBar** | **List&lt;Float&gt;** | For the Low Bar - An array with three values, number of times damaged, number of opportunities to damage, and percentage. | 

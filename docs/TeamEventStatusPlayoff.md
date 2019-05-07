@@ -1,7 +1,9 @@
 
+
 # TeamEventStatusPlayoff
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **level** | [**LevelEnum**](#LevelEnum) | The highest playoff level the team reached. |  [optional]
@@ -11,8 +13,9 @@ Name | Type | Description | Notes
 **playoffAverage** | **Integer** | The average match score during playoffs. Year specific. May be null if not relevant for a given year. |  [optional]
 
 
-<a name="LevelEnum"></a>
+
 ## Enum: LevelEnum
+
 Name | Value
 ---- | -----
 QM | &quot;qm&quot;
@@ -22,8 +25,9 @@ SF | &quot;sf&quot;
 F | &quot;f&quot;
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
+
 Name | Value
 ---- | -----
 WON | &quot;won&quot;

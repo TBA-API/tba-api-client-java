@@ -1,7 +1,9 @@
 
+
 # MatchAlliance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **score** | **Integer** | Score for this alliance. Will be null or -1 for an unplayed match. | 

@@ -75,13 +75,13 @@ public class MatchScoreBreakdown2017Alliance {
       return String.valueOf(value);
     }
 
-    public static Robot1AutoEnum fromValue(String text) {
+    public static Robot1AutoEnum fromValue(String value) {
       for (Robot1AutoEnum b : Robot1AutoEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<Robot1AutoEnum> {
@@ -93,7 +93,7 @@ public class MatchScoreBreakdown2017Alliance {
       @Override
       public Robot1AutoEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return Robot1AutoEnum.fromValue(String.valueOf(value));
+        return Robot1AutoEnum.fromValue(value);
       }
     }
   }
@@ -128,13 +128,13 @@ public class MatchScoreBreakdown2017Alliance {
       return String.valueOf(value);
     }
 
-    public static Robot2AutoEnum fromValue(String text) {
+    public static Robot2AutoEnum fromValue(String value) {
       for (Robot2AutoEnum b : Robot2AutoEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<Robot2AutoEnum> {
@@ -146,7 +146,7 @@ public class MatchScoreBreakdown2017Alliance {
       @Override
       public Robot2AutoEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return Robot2AutoEnum.fromValue(String.valueOf(value));
+        return Robot2AutoEnum.fromValue(value);
       }
     }
   }
@@ -181,13 +181,13 @@ public class MatchScoreBreakdown2017Alliance {
       return String.valueOf(value);
     }
 
-    public static Robot3AutoEnum fromValue(String text) {
+    public static Robot3AutoEnum fromValue(String value) {
       for (Robot3AutoEnum b : Robot3AutoEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<Robot3AutoEnum> {
@@ -199,7 +199,7 @@ public class MatchScoreBreakdown2017Alliance {
       @Override
       public Robot3AutoEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return Robot3AutoEnum.fromValue(String.valueOf(value));
+        return Robot3AutoEnum.fromValue(value);
       }
     }
   }
@@ -660,11 +660,11 @@ public class MatchScoreBreakdown2017Alliance {
    * @return kPaRankingPointAchieved
   **/
   @ApiModelProperty(value = "")
-  public Boolean getKPaRankingPointAchieved() {
+  public Boolean getkPaRankingPointAchieved() {
     return kPaRankingPointAchieved;
   }
 
-  public void setKPaRankingPointAchieved(Boolean kPaRankingPointAchieved) {
+  public void setkPaRankingPointAchieved(Boolean kPaRankingPointAchieved) {
     this.kPaRankingPointAchieved = kPaRankingPointAchieved;
   }
 
@@ -696,11 +696,11 @@ public class MatchScoreBreakdown2017Alliance {
    * @return kPaBonusPoints
   **/
   @ApiModelProperty(value = "")
-  public Integer getKPaBonusPoints() {
+  public Integer getkPaBonusPoints() {
     return kPaBonusPoints;
   }
 
-  public void setKPaBonusPoints(Integer kPaBonusPoints) {
+  public void setkPaBonusPoints(Integer kPaBonusPoints) {
     this.kPaBonusPoints = kPaBonusPoints;
   }
 

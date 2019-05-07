@@ -1,7 +1,9 @@
 
+
 # WLTRecord
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **losses** | **Integer** | Number of losses. | 

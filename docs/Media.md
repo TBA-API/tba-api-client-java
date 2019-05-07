@@ -1,7 +1,9 @@
 
+
 # Media
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **key** | **String** | TBA identifier for this media. | 
@@ -13,8 +15,9 @@ Name | Type | Description | Notes
 **viewUrl** | **String** | The URL that leads to the full web page for the media, if one exists. |  [optional]
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
+
 Name | Value
 ---- | -----
 YOUTUBE | &quot;youtube&quot;

@@ -1,7 +1,9 @@
 
+
 # MatchScoreBreakdown2018Alliance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **adjustPoints** | **Integer** |  |  [optional]

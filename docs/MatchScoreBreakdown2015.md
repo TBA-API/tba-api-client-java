@@ -1,7 +1,9 @@
 
+
 # MatchScoreBreakdown2015
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blue** | [**MatchScoreBreakdown2015Alliance**](MatchScoreBreakdown2015Alliance.md) |  |  [optional]
@@ -10,8 +12,9 @@ Name | Type | Description | Notes
 **coopertitionPoints** | **Integer** |  |  [optional]
 
 
-<a name="CoopertitionEnum"></a>
+
 ## Enum: CoopertitionEnum
+
 Name | Value
 ---- | -----
 NONE | &quot;None&quot;

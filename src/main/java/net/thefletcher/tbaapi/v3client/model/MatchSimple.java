@@ -64,13 +64,13 @@ public class MatchSimple {
       return String.valueOf(value);
     }
 
-    public static CompLevelEnum fromValue(String text) {
+    public static CompLevelEnum fromValue(String value) {
       for (CompLevelEnum b : CompLevelEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<CompLevelEnum> {
@@ -82,7 +82,7 @@ public class MatchSimple {
       @Override
       public CompLevelEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return CompLevelEnum.fromValue(String.valueOf(value));
+        return CompLevelEnum.fromValue(value);
       }
     }
   }
@@ -127,13 +127,13 @@ public class MatchSimple {
       return String.valueOf(value);
     }
 
-    public static WinningAllianceEnum fromValue(String text) {
+    public static WinningAllianceEnum fromValue(String value) {
       for (WinningAllianceEnum b : WinningAllianceEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + text + "'");
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
     public static class Adapter extends TypeAdapter<WinningAllianceEnum> {
@@ -145,7 +145,7 @@ public class MatchSimple {
       @Override
       public WinningAllianceEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return WinningAllianceEnum.fromValue(String.valueOf(value));
+        return WinningAllianceEnum.fromValue(value);
       }
     }
   }

@@ -1,7 +1,9 @@
 
+
 # APIStatus
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currentSeason** | **Integer** | Year of the current FRC season. | 

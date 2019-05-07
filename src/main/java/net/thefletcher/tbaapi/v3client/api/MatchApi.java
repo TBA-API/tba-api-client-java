@@ -37,52 +37,51 @@ import java.util.List;
 import java.util.Map;
 
 public class MatchApi {
-    private ApiClient apiClient;
+    private ApiClient localVarApiClient;
 
     public MatchApi() {
         this(Configuration.getDefaultApiClient());
     }
 
     public MatchApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        this.localVarApiClient = apiClient;
     }
 
     public ApiClient getApiClient() {
-        return apiClient;
+        return localVarApiClient;
     }
 
     public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        this.localVarApiClient = apiClient;
     }
 
     /**
      * Build call for getEventMatchTimeseries
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchTimeseriesCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getEventMatchTimeseriesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches/timeseries"
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -90,27 +89,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchTimeseriesValidateBeforeCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getEventMatchTimeseriesValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'eventKey' is set
         if (eventKey == null) {
@@ -118,8 +105,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getEventMatchTimeseriesCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getEventMatchTimeseriesCall(eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -132,8 +119,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<String> getEventMatchTimeseries(String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<String>> resp = getEventMatchTimeseriesWithHttpInfo(eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<String>> localVarResp = getEventMatchTimeseriesWithHttpInfo(eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -145,9 +132,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<String>> getEventMatchTimeseriesWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getEventMatchTimeseriesValidateBeforeCall(eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getEventMatchTimeseriesValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -155,64 +142,44 @@ public class MatchApi {
      * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchTimeseriesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> callback) throws ApiException {
+    public okhttp3.Call getEventMatchTimeseriesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getEventMatchTimeseriesValidateBeforeCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getEventMatchTimeseriesValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getEventMatches
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchesCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getEventMatchesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches"
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -220,27 +187,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchesValidateBeforeCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getEventMatchesValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'eventKey' is set
         if (eventKey == null) {
@@ -248,8 +203,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getEventMatchesCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getEventMatchesCall(eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -262,8 +217,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<Match> getEventMatches(String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<Match>> resp = getEventMatchesWithHttpInfo(eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<Match>> localVarResp = getEventMatchesWithHttpInfo(eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -275,9 +230,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Match>> getEventMatchesWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getEventMatchesValidateBeforeCall(eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getEventMatchesValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -285,64 +240,44 @@ public class MatchApi {
      * Gets a list of matches for the given event.
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> callback) throws ApiException {
+    public okhttp3.Call getEventMatchesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getEventMatchesValidateBeforeCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getEventMatchesValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getEventMatchesKeys
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchesKeysCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getEventMatchesKeysCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches/keys"
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -350,27 +285,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchesKeysValidateBeforeCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getEventMatchesKeysValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'eventKey' is set
         if (eventKey == null) {
@@ -378,8 +301,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getEventMatchesKeysCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getEventMatchesKeysCall(eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -392,8 +315,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<String> getEventMatchesKeys(String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<String>> resp = getEventMatchesKeysWithHttpInfo(eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<String>> localVarResp = getEventMatchesKeysWithHttpInfo(eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -405,9 +328,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<String>> getEventMatchesKeysWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getEventMatchesKeysValidateBeforeCall(eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getEventMatchesKeysValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -415,64 +338,44 @@ public class MatchApi {
      * Gets a list of match keys for the given event.
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchesKeysAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> callback) throws ApiException {
+    public okhttp3.Call getEventMatchesKeysAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getEventMatchesKeysValidateBeforeCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getEventMatchesKeysValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getEventMatchesSimple
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchesSimpleCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getEventMatchesSimpleCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches/simple"
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -480,27 +383,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchesSimpleValidateBeforeCall(String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getEventMatchesSimpleValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'eventKey' is set
         if (eventKey == null) {
@@ -508,8 +399,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getEventMatchesSimpleCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getEventMatchesSimpleCall(eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -522,8 +413,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<MatchSimple> getEventMatchesSimple(String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<MatchSimple>> resp = getEventMatchesSimpleWithHttpInfo(eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<MatchSimple>> localVarResp = getEventMatchesSimpleWithHttpInfo(eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -535,9 +426,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<MatchSimple>> getEventMatchesSimpleWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getEventMatchesSimpleValidateBeforeCall(eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getEventMatchesSimpleValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<MatchSimple>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -545,64 +436,44 @@ public class MatchApi {
      * Gets a short-form list of matches for the given event.
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchesSimpleAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<MatchSimple>> callback) throws ApiException {
+    public okhttp3.Call getEventMatchesSimpleAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<MatchSimple>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getEventMatchesSimpleValidateBeforeCall(eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getEventMatchesSimpleValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<MatchSimple>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getMatch
      * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getMatchCall(String matchKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getMatchCall(String matchKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/match/{match_key}"
-            .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey.toString()));
+            .replaceAll("\\{" + "match_key" + "\\}", localVarApiClient.escapeString(matchKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -610,27 +481,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMatchValidateBeforeCall(String matchKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getMatchValidateBeforeCall(String matchKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'matchKey' is set
         if (matchKey == null) {
@@ -638,8 +497,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getMatchCall(matchKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getMatchCall(matchKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -652,8 +511,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public Match getMatch(String matchKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<Match> resp = getMatchWithHttpInfo(matchKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<Match> localVarResp = getMatchWithHttpInfo(matchKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -665,9 +524,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<Match> getMatchWithHttpInfo(String matchKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getMatchValidateBeforeCall(matchKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getMatchValidateBeforeCall(matchKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<Match>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -675,64 +534,44 @@ public class MatchApi {
      * Gets a &#x60;Match&#x60; object for the given match key.
      * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getMatchAsync(String matchKey, String ifModifiedSince, final ApiCallback<Match> callback) throws ApiException {
+    public okhttp3.Call getMatchAsync(String matchKey, String ifModifiedSince, final ApiCallback<Match> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getMatchValidateBeforeCall(matchKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getMatchValidateBeforeCall(matchKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<Match>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getMatchSimple
      * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getMatchSimpleCall(String matchKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getMatchSimpleCall(String matchKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/match/{match_key}/simple"
-            .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey.toString()));
+            .replaceAll("\\{" + "match_key" + "\\}", localVarApiClient.escapeString(matchKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -740,27 +579,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMatchSimpleValidateBeforeCall(String matchKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getMatchSimpleValidateBeforeCall(String matchKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'matchKey' is set
         if (matchKey == null) {
@@ -768,8 +595,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getMatchSimpleCall(matchKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getMatchSimpleCall(matchKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -782,8 +609,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public MatchSimple getMatchSimple(String matchKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<MatchSimple> resp = getMatchSimpleWithHttpInfo(matchKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<MatchSimple> localVarResp = getMatchSimpleWithHttpInfo(matchKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -795,9 +622,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<MatchSimple> getMatchSimpleWithHttpInfo(String matchKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getMatchSimpleValidateBeforeCall(matchKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getMatchSimpleValidateBeforeCall(matchKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<MatchSimple>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -805,64 +632,44 @@ public class MatchApi {
      * Gets a short-form &#x60;Match&#x60; object for the given match key.
      * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getMatchSimpleAsync(String matchKey, String ifModifiedSince, final ApiCallback<MatchSimple> callback) throws ApiException {
+    public okhttp3.Call getMatchSimpleAsync(String matchKey, String ifModifiedSince, final ApiCallback<MatchSimple> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getMatchSimpleValidateBeforeCall(matchKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getMatchSimpleValidateBeforeCall(matchKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<MatchSimple>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getMatchTimeseries
      * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getMatchTimeseriesCall(String matchKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getMatchTimeseriesCall(String matchKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/match/{match_key}/timeseries"
-            .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey.toString()));
+            .replaceAll("\\{" + "match_key" + "\\}", localVarApiClient.escapeString(matchKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -870,27 +677,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMatchTimeseriesValidateBeforeCall(String matchKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getMatchTimeseriesValidateBeforeCall(String matchKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'matchKey' is set
         if (matchKey == null) {
@@ -898,8 +693,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getMatchTimeseriesCall(matchKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getMatchTimeseriesCall(matchKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -912,8 +707,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<Object> getMatchTimeseries(String matchKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<Object>> resp = getMatchTimeseriesWithHttpInfo(matchKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<Object>> localVarResp = getMatchTimeseriesWithHttpInfo(matchKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -925,9 +720,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Object>> getMatchTimeseriesWithHttpInfo(String matchKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getMatchTimeseriesValidateBeforeCall(matchKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getMatchTimeseriesValidateBeforeCall(matchKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -935,66 +730,46 @@ public class MatchApi {
      * Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
      * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getMatchTimeseriesAsync(String matchKey, String ifModifiedSince, final ApiCallback<List<Object>> callback) throws ApiException {
+    public okhttp3.Call getMatchTimeseriesAsync(String matchKey, String ifModifiedSince, final ApiCallback<List<Object>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getMatchTimeseriesValidateBeforeCall(matchKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getMatchTimeseriesValidateBeforeCall(matchKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getTeamEventMatches
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventMatchesCall(String teamKey, String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/event/{event_key}/matches"
-            .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -1002,27 +777,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventMatchesValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getTeamEventMatchesValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'teamKey' is set
         if (teamKey == null) {
@@ -1035,8 +798,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getTeamEventMatchesCall(teamKey, eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getTeamEventMatchesCall(teamKey, eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -1050,8 +813,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<Match> getTeamEventMatches(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<Match>> resp = getTeamEventMatchesWithHttpInfo(teamKey, eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<Match>> localVarResp = getTeamEventMatchesWithHttpInfo(teamKey, eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -1064,9 +827,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Match>> getTeamEventMatchesWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getTeamEventMatchesValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getTeamEventMatchesValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1075,66 +838,46 @@ public class MatchApi {
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventMatchesAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getTeamEventMatchesValidateBeforeCall(teamKey, eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getTeamEventMatchesValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getTeamEventMatchesKeys
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventMatchesKeysCall(String teamKey, String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesKeysCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/event/{event_key}/matches/keys"
-            .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -1142,27 +885,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventMatchesKeysValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getTeamEventMatchesKeysValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'teamKey' is set
         if (teamKey == null) {
@@ -1175,8 +906,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getTeamEventMatchesKeysCall(teamKey, eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getTeamEventMatchesKeysCall(teamKey, eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -1190,8 +921,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<String> getTeamEventMatchesKeys(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<String>> resp = getTeamEventMatchesKeysWithHttpInfo(teamKey, eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<String>> localVarResp = getTeamEventMatchesKeysWithHttpInfo(teamKey, eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -1204,9 +935,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<String>> getTeamEventMatchesKeysWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getTeamEventMatchesKeysValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getTeamEventMatchesKeysValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1215,66 +946,46 @@ public class MatchApi {
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventMatchesKeysAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<String>> callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesKeysAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getTeamEventMatchesKeysValidateBeforeCall(teamKey, eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getTeamEventMatchesKeysValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getTeamEventMatchesSimple
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventMatchesSimpleCall(String teamKey, String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesSimpleCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/event/{event_key}/matches/simple"
-            .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-            .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -1282,27 +993,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventMatchesSimpleValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getTeamEventMatchesSimpleValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'teamKey' is set
         if (teamKey == null) {
@@ -1315,8 +1014,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getTeamEventMatchesSimpleCall(teamKey, eventKey, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getTeamEventMatchesSimpleCall(teamKey, eventKey, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -1330,8 +1029,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<Match> getTeamEventMatchesSimple(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<Match>> resp = getTeamEventMatchesSimpleWithHttpInfo(teamKey, eventKey, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<Match>> localVarResp = getTeamEventMatchesSimpleWithHttpInfo(teamKey, eventKey, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -1344,9 +1043,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Match>> getTeamEventMatchesSimpleWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getTeamEventMatchesSimpleValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getTeamEventMatchesSimpleValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1355,66 +1054,46 @@ public class MatchApi {
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventMatchesSimpleAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesSimpleAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getTeamEventMatchesSimpleValidateBeforeCall(teamKey, eventKey, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getTeamEventMatchesSimpleValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getTeamMatchesByYear
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param year Competition Year (or Season). Must be 4 digits. (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamMatchesByYearCall(String teamKey, Integer year, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getTeamMatchesByYearCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/matches/{year}"
-            .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-            .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()));
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -1422,27 +1101,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamMatchesByYearValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getTeamMatchesByYearValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'teamKey' is set
         if (teamKey == null) {
@@ -1455,8 +1122,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getTeamMatchesByYearCall(teamKey, year, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getTeamMatchesByYearCall(teamKey, year, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -1470,8 +1137,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<Match> getTeamMatchesByYear(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<Match>> resp = getTeamMatchesByYearWithHttpInfo(teamKey, year, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<Match>> localVarResp = getTeamMatchesByYearWithHttpInfo(teamKey, year, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -1484,9 +1151,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<Match>> getTeamMatchesByYearWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getTeamMatchesByYearValidateBeforeCall(teamKey, year, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getTeamMatchesByYearValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1495,66 +1162,46 @@ public class MatchApi {
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param year Competition Year (or Season). Must be 4 digits. (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamMatchesByYearAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<Match>> callback) throws ApiException {
+    public okhttp3.Call getTeamMatchesByYearAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getTeamMatchesByYearValidateBeforeCall(teamKey, year, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getTeamMatchesByYearValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getTeamMatchesByYearKeys
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param year Competition Year (or Season). Must be 4 digits. (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamMatchesByYearKeysCall(String teamKey, Integer year, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getTeamMatchesByYearKeysCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/matches/{year}/keys"
-            .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-            .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()));
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -1562,27 +1209,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamMatchesByYearKeysValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getTeamMatchesByYearKeysValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'teamKey' is set
         if (teamKey == null) {
@@ -1595,8 +1230,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getTeamMatchesByYearKeysCall(teamKey, year, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getTeamMatchesByYearKeysCall(teamKey, year, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -1610,8 +1245,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<String> getTeamMatchesByYearKeys(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<String>> resp = getTeamMatchesByYearKeysWithHttpInfo(teamKey, year, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<String>> localVarResp = getTeamMatchesByYearKeysWithHttpInfo(teamKey, year, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -1624,9 +1259,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<String>> getTeamMatchesByYearKeysWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getTeamMatchesByYearKeysValidateBeforeCall(teamKey, year, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getTeamMatchesByYearKeysValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1635,66 +1270,46 @@ public class MatchApi {
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param year Competition Year (or Season). Must be 4 digits. (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamMatchesByYearKeysAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<String>> callback) throws ApiException {
+    public okhttp3.Call getTeamMatchesByYearKeysAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getTeamMatchesByYearKeysValidateBeforeCall(teamKey, year, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getTeamMatchesByYearKeysValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
     /**
      * Build call for getTeamMatchesByYearSimple
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param year Competition Year (or Season). Must be 4 digits. (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
+     * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamMatchesByYearSimpleCall(String teamKey, Integer year, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public okhttp3.Call getTeamMatchesByYearSimpleCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/matches/{year}/simple"
-            .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-            .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()));
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifModifiedSince != null) {
-            localVarHeaderParams.put("If-Modified-Since", apiClient.parameterToString(ifModifiedSince));
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
         }
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
         };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
@@ -1702,27 +1317,15 @@ public class MatchApi {
         final String[] localVarContentTypes = {
             
         };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
-        if (progressListener != null) {
-            apiClient.setHttpClient(apiClient.getHttpClient().newBuilder().addNetworkInterceptor(new okhttp3.Interceptor() {
-                @Override
-                public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
-                    okhttp3.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                            .build();
-                }
-            }).build());
-        }
-
         String[] localVarAuthNames = new String[] { "apiKey" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamMatchesByYearSimpleValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private okhttp3.Call getTeamMatchesByYearSimpleValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'teamKey' is set
         if (teamKey == null) {
@@ -1735,8 +1338,8 @@ public class MatchApi {
         }
         
 
-        okhttp3.Call call = getTeamMatchesByYearSimpleCall(teamKey, year, ifModifiedSince, progressListener, progressRequestListener);
-        return call;
+        okhttp3.Call localVarCall = getTeamMatchesByYearSimpleCall(teamKey, year, ifModifiedSince, _callback);
+        return localVarCall;
 
     }
 
@@ -1750,8 +1353,8 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public List<MatchSimple> getTeamMatchesByYearSimple(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
-        ApiResponse<List<MatchSimple>> resp = getTeamMatchesByYearSimpleWithHttpInfo(teamKey, year, ifModifiedSince);
-        return resp.getData();
+        ApiResponse<List<MatchSimple>> localVarResp = getTeamMatchesByYearSimpleWithHttpInfo(teamKey, year, ifModifiedSince);
+        return localVarResp.getData();
     }
 
     /**
@@ -1764,9 +1367,9 @@ public class MatchApi {
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public ApiResponse<List<MatchSimple>> getTeamMatchesByYearSimpleWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
-        okhttp3.Call call = getTeamMatchesByYearSimpleValidateBeforeCall(teamKey, year, ifModifiedSince, null, null);
+        okhttp3.Call localVarCall = getTeamMatchesByYearSimpleValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<MatchSimple>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1775,34 +1378,15 @@ public class MatchApi {
      * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
      * @param year Competition Year (or Season). Must be 4 digits. (required)
      * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
-     * @param callback The callback to be executed when the API call finishes
+     * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamMatchesByYearSimpleAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<MatchSimple>> callback) throws ApiException {
+    public okhttp3.Call getTeamMatchesByYearSimpleAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<MatchSimple>> _callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        okhttp3.Call call = getTeamMatchesByYearSimpleValidateBeforeCall(teamKey, year, ifModifiedSince, progressListener, progressRequestListener);
+        okhttp3.Call localVarCall = getTeamMatchesByYearSimpleValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<MatchSimple>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
     }
 }
