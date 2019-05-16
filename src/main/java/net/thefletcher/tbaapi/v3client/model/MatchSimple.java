@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import net.thefletcher.tbaapi.v3client.model.MatchSimpleAlliances;
+import net.thefletcher.tbaapi.v3client.model.MatchAlliances;
 
 /**
  * MatchSimple
@@ -101,7 +101,7 @@ public class MatchSimple {
 
   public static final String SERIALIZED_NAME_ALLIANCES = "alliances";
   @SerializedName(SERIALIZED_NAME_ALLIANCES)
-  private MatchSimpleAlliances alliances = null;
+  private MatchAlliances alliances = null;
 
   /**
    * The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
@@ -242,7 +242,7 @@ public class MatchSimple {
     this.matchNumber = matchNumber;
   }
 
-  public MatchSimple alliances(MatchSimpleAlliances alliances) {
+  public MatchSimple alliances(MatchAlliances alliances) {
     this.alliances = alliances;
     return this;
   }
@@ -252,11 +252,11 @@ public class MatchSimple {
    * @return alliances
   **/
   @ApiModelProperty(value = "")
-  public MatchSimpleAlliances getAlliances() {
+  public MatchAlliances getAlliances() {
     return alliances;
   }
 
-  public void setAlliances(MatchSimpleAlliances alliances) {
+  public void setAlliances(MatchAlliances alliances) {
     this.alliances = alliances;
   }
 

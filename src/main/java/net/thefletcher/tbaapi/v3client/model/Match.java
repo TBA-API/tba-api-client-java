@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import net.thefletcher.tbaapi.v3client.model.MatchSimpleAlliances;
+import net.thefletcher.tbaapi.v3client.model.MatchAlliances;
 import net.thefletcher.tbaapi.v3client.model.MatchVideos;
 
 /**
@@ -104,7 +104,7 @@ public class Match {
 
   public static final String SERIALIZED_NAME_ALLIANCES = "alliances";
   @SerializedName(SERIALIZED_NAME_ALLIANCES)
-  private MatchSimpleAlliances alliances = null;
+  private MatchAlliances alliances = null;
 
   public static final String SERIALIZED_NAME_WINNING_ALLIANCE = "winning_alliance";
   @SerializedName(SERIALIZED_NAME_WINNING_ALLIANCE)
@@ -210,7 +210,7 @@ public class Match {
     this.matchNumber = matchNumber;
   }
 
-  public Match alliances(MatchSimpleAlliances alliances) {
+  public Match alliances(MatchAlliances alliances) {
     this.alliances = alliances;
     return this;
   }
@@ -220,11 +220,11 @@ public class Match {
    * @return alliances
   **/
   @ApiModelProperty(value = "")
-  public MatchSimpleAlliances getAlliances() {
+  public MatchAlliances getAlliances() {
     return alliances;
   }
 
-  public void setAlliances(MatchSimpleAlliances alliances) {
+  public void setAlliances(MatchAlliances alliances) {
     this.alliances = alliances;
   }
 
