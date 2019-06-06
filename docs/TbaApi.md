@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getStatus"></a>
 # **getStatus**
-> APIStatus getStatus()
+> APIStatus getStatus(ifModifiedSince)
 
 
 
@@ -33,8 +33,9 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 TbaApi apiInstance = new TbaApi();
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    APIStatus result = apiInstance.getStatus();
+    APIStatus result = apiInstance.getStatus(ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TbaApi#getStatus");
@@ -43,7 +44,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 

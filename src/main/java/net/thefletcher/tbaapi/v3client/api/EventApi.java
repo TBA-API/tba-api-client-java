@@ -68,19 +68,26 @@ public class EventApi {
 
     /**
      * Build call for getDistrictEvents
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getDistrictEventsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDistrictEventsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/district/{district_key}/events";
+        String localVarPath = "/district/{district_key}/events"
+            .replaceAll("\\{" + "district_key" + "\\}", localVarApiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -101,10 +108,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDistrictEventsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDistrictEventsValidateBeforeCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'districtKey' is set
+        if (districtKey == null) {
+            throw new ApiException("Missing the required parameter 'districtKey' when calling getDistrictEvents(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getDistrictEventsCall(_callback);
+        okhttp3.Call localVarCall = getDistrictEventsCall(districtKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -112,22 +124,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of events in the given district.
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Event&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Event> getDistrictEvents() throws ApiException {
-        ApiResponse<List<Event>> localVarResp = getDistrictEventsWithHttpInfo();
+    public List<Event> getDistrictEvents(String districtKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Event>> localVarResp = getDistrictEventsWithHttpInfo(districtKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of events in the given district.
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Event&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Event>> getDistrictEventsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getDistrictEventsValidateBeforeCall(null);
+    public ApiResponse<List<Event>> getDistrictEventsWithHttpInfo(String districtKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getDistrictEventsValidateBeforeCall(districtKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -135,32 +151,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of events in the given district.
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getDistrictEventsAsync(final ApiCallback<List<Event>> _callback) throws ApiException {
+    public okhttp3.Call getDistrictEventsAsync(String districtKey, String ifModifiedSince, final ApiCallback<List<Event>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDistrictEventsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getDistrictEventsValidateBeforeCall(districtKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getDistrictEventsKeys
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getDistrictEventsKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDistrictEventsKeysCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/district/{district_key}/events/keys";
+        String localVarPath = "/district/{district_key}/events/keys"
+            .replaceAll("\\{" + "district_key" + "\\}", localVarApiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -181,10 +206,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDistrictEventsKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDistrictEventsKeysValidateBeforeCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'districtKey' is set
+        if (districtKey == null) {
+            throw new ApiException("Missing the required parameter 'districtKey' when calling getDistrictEventsKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getDistrictEventsKeysCall(_callback);
+        okhttp3.Call localVarCall = getDistrictEventsKeysCall(districtKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -192,22 +222,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of event keys for events in the given district.
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getDistrictEventsKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getDistrictEventsKeysWithHttpInfo();
+    public List<String> getDistrictEventsKeys(String districtKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getDistrictEventsKeysWithHttpInfo(districtKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of event keys for events in the given district.
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getDistrictEventsKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getDistrictEventsKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getDistrictEventsKeysWithHttpInfo(String districtKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getDistrictEventsKeysValidateBeforeCall(districtKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -215,13 +249,15 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of event keys for events in the given district.
+     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getDistrictEventsKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getDistrictEventsKeysAsync(String districtKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDistrictEventsKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getDistrictEventsKeysValidateBeforeCall(districtKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -229,11 +265,12 @@ public class EventApi {
     /**
      * Build call for getDistrictEventsSimple
      * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getDistrictEventsSimpleCall(String districtKey, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDistrictEventsSimpleCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
@@ -243,6 +280,10 @@ public class EventApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -263,7 +304,7 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDistrictEventsSimpleValidateBeforeCall(String districtKey, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDistrictEventsSimpleValidateBeforeCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'districtKey' is set
         if (districtKey == null) {
@@ -271,7 +312,7 @@ public class EventApi {
         }
         
 
-        okhttp3.Call localVarCall = getDistrictEventsSimpleCall(districtKey, _callback);
+        okhttp3.Call localVarCall = getDistrictEventsSimpleCall(districtKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -280,11 +321,12 @@ public class EventApi {
      * 
      * Gets a short-form list of events in the given district.
      * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;EventSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EventSimple> getDistrictEventsSimple(String districtKey) throws ApiException {
-        ApiResponse<List<EventSimple>> localVarResp = getDistrictEventsSimpleWithHttpInfo(districtKey);
+    public List<EventSimple> getDistrictEventsSimple(String districtKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<EventSimple>> localVarResp = getDistrictEventsSimpleWithHttpInfo(districtKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
@@ -292,11 +334,12 @@ public class EventApi {
      * 
      * Gets a short-form list of events in the given district.
      * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;EventSimple&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EventSimple>> getDistrictEventsSimpleWithHttpInfo(String districtKey) throws ApiException {
-        okhttp3.Call localVarCall = getDistrictEventsSimpleValidateBeforeCall(districtKey, null);
+    public ApiResponse<List<EventSimple>> getDistrictEventsSimpleWithHttpInfo(String districtKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getDistrictEventsSimpleValidateBeforeCall(districtKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -305,32 +348,40 @@ public class EventApi {
      *  (asynchronously)
      * Gets a short-form list of events in the given district.
      * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getDistrictEventsSimpleAsync(String districtKey, final ApiCallback<List<EventSimple>> _callback) throws ApiException {
+    public okhttp3.Call getDistrictEventsSimpleAsync(String districtKey, String ifModifiedSince, final ApiCallback<List<EventSimple>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDistrictEventsSimpleValidateBeforeCall(districtKey, _callback);
+        okhttp3.Call localVarCall = getDistrictEventsSimpleValidateBeforeCall(districtKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEvent
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}";
+        String localVarPath = "/event/{event_key}"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -351,10 +402,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEvent(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventCall(_callback);
+        okhttp3.Call localVarCall = getEventCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -362,22 +418,26 @@ public class EventApi {
     /**
      * 
      * Gets an Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return Event
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Event getEvent() throws ApiException {
-        ApiResponse<Event> localVarResp = getEventWithHttpInfo();
+    public Event getEvent(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<Event> localVarResp = getEventWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets an Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;Event&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Event> getEventWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventValidateBeforeCall(null);
+    public ApiResponse<Event> getEventWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<Event>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -385,32 +445,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets an Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventAsync(final ApiCallback<Event> _callback) throws ApiException {
+    public okhttp3.Call getEventAsync(String eventKey, String ifModifiedSince, final ApiCallback<Event> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<Event>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventAlliances
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventAlliancesCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventAlliancesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/alliances";
+        String localVarPath = "/event/{event_key}/alliances"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -431,10 +500,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventAlliancesValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventAlliancesValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventAlliances(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventAlliancesCall(_callback);
+        okhttp3.Call localVarCall = getEventAlliancesCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -442,22 +516,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of Elimination Alliances for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;EliminationAlliance&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EliminationAlliance> getEventAlliances() throws ApiException {
-        ApiResponse<List<EliminationAlliance>> localVarResp = getEventAlliancesWithHttpInfo();
+    public List<EliminationAlliance> getEventAlliances(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<EliminationAlliance>> localVarResp = getEventAlliancesWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of Elimination Alliances for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;EliminationAlliance&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EliminationAlliance>> getEventAlliancesWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventAlliancesValidateBeforeCall(null);
+    public ApiResponse<List<EliminationAlliance>> getEventAlliancesWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventAlliancesValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<EliminationAlliance>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -465,32 +543,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of Elimination Alliances for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventAlliancesAsync(final ApiCallback<List<EliminationAlliance>> _callback) throws ApiException {
+    public okhttp3.Call getEventAlliancesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<EliminationAlliance>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventAlliancesValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventAlliancesValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<EliminationAlliance>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventAwards
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventAwardsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventAwardsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/awards";
+        String localVarPath = "/event/{event_key}/awards"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -511,10 +598,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventAwardsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventAwardsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventAwards(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventAwardsCall(_callback);
+        okhttp3.Call localVarCall = getEventAwardsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -522,22 +614,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of awards from the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Award&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Award> getEventAwards() throws ApiException {
-        ApiResponse<List<Award>> localVarResp = getEventAwardsWithHttpInfo();
+    public List<Award> getEventAwards(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Award>> localVarResp = getEventAwardsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of awards from the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Award&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Award>> getEventAwardsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventAwardsValidateBeforeCall(null);
+    public ApiResponse<List<Award>> getEventAwardsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventAwardsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Award>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -545,32 +641,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of awards from the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventAwardsAsync(final ApiCallback<List<Award>> _callback) throws ApiException {
+    public okhttp3.Call getEventAwardsAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<Award>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventAwardsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventAwardsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Award>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventDistrictPoints
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventDistrictPointsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventDistrictPointsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/district_points";
+        String localVarPath = "/event/{event_key}/district_points"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -591,10 +696,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventDistrictPointsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventDistrictPointsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventDistrictPoints(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventDistrictPointsCall(_callback);
+        okhttp3.Call localVarCall = getEventDistrictPointsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -602,22 +712,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of team rankings for the Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return EventDistrictPoints
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EventDistrictPoints getEventDistrictPoints() throws ApiException {
-        ApiResponse<EventDistrictPoints> localVarResp = getEventDistrictPointsWithHttpInfo();
+    public EventDistrictPoints getEventDistrictPoints(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<EventDistrictPoints> localVarResp = getEventDistrictPointsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of team rankings for the Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;EventDistrictPoints&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EventDistrictPoints> getEventDistrictPointsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventDistrictPointsValidateBeforeCall(null);
+    public ApiResponse<EventDistrictPoints> getEventDistrictPointsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventDistrictPointsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<EventDistrictPoints>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -625,32 +739,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of team rankings for the Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventDistrictPointsAsync(final ApiCallback<EventDistrictPoints> _callback) throws ApiException {
+    public okhttp3.Call getEventDistrictPointsAsync(String eventKey, String ifModifiedSince, final ApiCallback<EventDistrictPoints> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventDistrictPointsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventDistrictPointsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<EventDistrictPoints>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventInsights
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventInsightsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventInsightsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/insights";
+        String localVarPath = "/event/{event_key}/insights"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -671,10 +794,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventInsightsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventInsightsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventInsights(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventInsightsCall(_callback);
+        okhttp3.Call localVarCall = getEventInsightsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -682,22 +810,26 @@ public class EventApi {
     /**
      * 
      * Gets a set of Event-specific insights for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return EventInsights
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EventInsights getEventInsights() throws ApiException {
-        ApiResponse<EventInsights> localVarResp = getEventInsightsWithHttpInfo();
+    public EventInsights getEventInsights(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<EventInsights> localVarResp = getEventInsightsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a set of Event-specific insights for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;EventInsights&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EventInsights> getEventInsightsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventInsightsValidateBeforeCall(null);
+    public ApiResponse<EventInsights> getEventInsightsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventInsightsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<EventInsights>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -705,32 +837,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a set of Event-specific insights for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventInsightsAsync(final ApiCallback<EventInsights> _callback) throws ApiException {
+    public okhttp3.Call getEventInsightsAsync(String eventKey, String ifModifiedSince, final ApiCallback<EventInsights> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventInsightsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventInsightsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<EventInsights>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventMatchTimeseries
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchTimeseriesCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventMatchTimeseriesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/matches/timeseries";
+        String localVarPath = "/event/{event_key}/matches/timeseries"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -751,10 +892,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchTimeseriesValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventMatchTimeseriesValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventMatchTimeseries(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventMatchTimeseriesCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchTimeseriesCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -762,22 +908,26 @@ public class EventApi {
     /**
      * 
      * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getEventMatchTimeseries() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getEventMatchTimeseriesWithHttpInfo();
+    public List<String> getEventMatchTimeseries(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getEventMatchTimeseriesWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getEventMatchTimeseriesWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventMatchTimeseriesValidateBeforeCall(null);
+    public ApiResponse<List<String>> getEventMatchTimeseriesWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventMatchTimeseriesValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -785,32 +935,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchTimeseriesAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getEventMatchTimeseriesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventMatchTimeseriesValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchTimeseriesValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventMatches
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchesCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventMatchesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/matches";
+        String localVarPath = "/event/{event_key}/matches"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -831,10 +990,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchesValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventMatchesValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventMatches(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventMatchesCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchesCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -842,22 +1006,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of matches for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Match&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Match> getEventMatches() throws ApiException {
-        ApiResponse<List<Match>> localVarResp = getEventMatchesWithHttpInfo();
+    public List<Match> getEventMatches(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Match>> localVarResp = getEventMatchesWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of matches for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Match&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Match>> getEventMatchesWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventMatchesValidateBeforeCall(null);
+    public ApiResponse<List<Match>> getEventMatchesWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventMatchesValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -865,32 +1033,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of matches for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchesAsync(final ApiCallback<List<Match>> _callback) throws ApiException {
+    public okhttp3.Call getEventMatchesAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventMatchesValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchesValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventMatchesKeys
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchesKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventMatchesKeysCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/matches/keys";
+        String localVarPath = "/event/{event_key}/matches/keys"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -911,10 +1088,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchesKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventMatchesKeysValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventMatchesKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventMatchesKeysCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchesKeysCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -922,22 +1104,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of match keys for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getEventMatchesKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getEventMatchesKeysWithHttpInfo();
+    public List<String> getEventMatchesKeys(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getEventMatchesKeysWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of match keys for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getEventMatchesKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventMatchesKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getEventMatchesKeysWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventMatchesKeysValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -945,32 +1131,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of match keys for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchesKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getEventMatchesKeysAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventMatchesKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchesKeysValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventMatchesSimple
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventMatchesSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventMatchesSimpleCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/matches/simple";
+        String localVarPath = "/event/{event_key}/matches/simple"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -991,10 +1186,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventMatchesSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventMatchesSimpleValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventMatchesSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventMatchesSimpleCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchesSimpleCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1002,22 +1202,26 @@ public class EventApi {
     /**
      * 
      * Gets a short-form list of matches for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;MatchSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<MatchSimple> getEventMatchesSimple() throws ApiException {
-        ApiResponse<List<MatchSimple>> localVarResp = getEventMatchesSimpleWithHttpInfo();
+    public List<MatchSimple> getEventMatchesSimple(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<MatchSimple>> localVarResp = getEventMatchesSimpleWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form list of matches for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;MatchSimple&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<MatchSimple>> getEventMatchesSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventMatchesSimpleValidateBeforeCall(null);
+    public ApiResponse<List<MatchSimple>> getEventMatchesSimpleWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventMatchesSimpleValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<MatchSimple>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1025,32 +1229,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form list of matches for the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventMatchesSimpleAsync(final ApiCallback<List<MatchSimple>> _callback) throws ApiException {
+    public okhttp3.Call getEventMatchesSimpleAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<MatchSimple>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventMatchesSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventMatchesSimpleValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<MatchSimple>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventOPRs
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventOPRsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventOPRsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/oprs";
+        String localVarPath = "/event/{event_key}/oprs"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1071,10 +1284,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventOPRsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventOPRsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventOPRs(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventOPRsCall(_callback);
+        okhttp3.Call localVarCall = getEventOPRsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1082,22 +1300,26 @@ public class EventApi {
     /**
      * 
      * Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return EventOPRs
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EventOPRs getEventOPRs() throws ApiException {
-        ApiResponse<EventOPRs> localVarResp = getEventOPRsWithHttpInfo();
+    public EventOPRs getEventOPRs(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<EventOPRs> localVarResp = getEventOPRsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;EventOPRs&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EventOPRs> getEventOPRsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventOPRsValidateBeforeCall(null);
+    public ApiResponse<EventOPRs> getEventOPRsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventOPRsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<EventOPRs>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1105,32 +1327,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventOPRsAsync(final ApiCallback<EventOPRs> _callback) throws ApiException {
+    public okhttp3.Call getEventOPRsAsync(String eventKey, String ifModifiedSince, final ApiCallback<EventOPRs> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventOPRsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventOPRsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<EventOPRs>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventPredictions
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventPredictionsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventPredictionsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/predictions";
+        String localVarPath = "/event/{event_key}/predictions"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1151,10 +1382,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventPredictionsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventPredictionsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventPredictions(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventPredictionsCall(_callback);
+        okhttp3.Call localVarCall = getEventPredictionsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1162,22 +1398,26 @@ public class EventApi {
     /**
      * 
      * Gets information on TBA-generated predictions for the given Event. Contains year-specific information. *WARNING* This endpoint is currently under development and may change at any time.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object getEventPredictions() throws ApiException {
-        ApiResponse<Object> localVarResp = getEventPredictionsWithHttpInfo();
+    public Object getEventPredictions(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<Object> localVarResp = getEventPredictionsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets information on TBA-generated predictions for the given Event. Contains year-specific information. *WARNING* This endpoint is currently under development and may change at any time.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> getEventPredictionsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventPredictionsValidateBeforeCall(null);
+    public ApiResponse<Object> getEventPredictionsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventPredictionsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1185,32 +1425,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets information on TBA-generated predictions for the given Event. Contains year-specific information. *WARNING* This endpoint is currently under development and may change at any time.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventPredictionsAsync(final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getEventPredictionsAsync(String eventKey, String ifModifiedSince, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventPredictionsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventPredictionsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventRankings
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventRankingsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventRankingsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/rankings";
+        String localVarPath = "/event/{event_key}/rankings"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1231,10 +1480,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventRankingsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventRankingsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventRankings(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventRankingsCall(_callback);
+        okhttp3.Call localVarCall = getEventRankingsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1242,22 +1496,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of team rankings for the Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return EventRanking
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EventRanking getEventRankings() throws ApiException {
-        ApiResponse<EventRanking> localVarResp = getEventRankingsWithHttpInfo();
+    public EventRanking getEventRankings(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<EventRanking> localVarResp = getEventRankingsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of team rankings for the Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;EventRanking&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EventRanking> getEventRankingsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventRankingsValidateBeforeCall(null);
+    public ApiResponse<EventRanking> getEventRankingsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventRankingsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<EventRanking>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1265,32 +1523,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of team rankings for the Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventRankingsAsync(final ApiCallback<EventRanking> _callback) throws ApiException {
+    public okhttp3.Call getEventRankingsAsync(String eventKey, String ifModifiedSince, final ApiCallback<EventRanking> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventRankingsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventRankingsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<EventRanking>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventSimple
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventSimpleCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/simple";
+        String localVarPath = "/event/{event_key}/simple"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1311,10 +1578,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventSimpleValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventSimpleCall(_callback);
+        okhttp3.Call localVarCall = getEventSimpleCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1322,22 +1594,26 @@ public class EventApi {
     /**
      * 
      * Gets a short-form Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return EventSimple
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EventSimple getEventSimple() throws ApiException {
-        ApiResponse<EventSimple> localVarResp = getEventSimpleWithHttpInfo();
+    public EventSimple getEventSimple(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<EventSimple> localVarResp = getEventSimpleWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;EventSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EventSimple> getEventSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventSimpleValidateBeforeCall(null);
+    public ApiResponse<EventSimple> getEventSimpleWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventSimpleValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<EventSimple>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1345,32 +1621,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form Event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventSimpleAsync(final ApiCallback<EventSimple> _callback) throws ApiException {
+    public okhttp3.Call getEventSimpleAsync(String eventKey, String ifModifiedSince, final ApiCallback<EventSimple> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventSimpleValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<EventSimple>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventTeams
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventTeamsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/teams";
+        String localVarPath = "/event/{event_key}/teams"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1391,10 +1676,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventTeamsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventTeamsValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventTeams(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventTeamsCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1402,22 +1692,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of &#x60;Team&#x60; objects that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Team&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Team> getEventTeams() throws ApiException {
-        ApiResponse<List<Team>> localVarResp = getEventTeamsWithHttpInfo();
+    public List<Team> getEventTeams(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Team>> localVarResp = getEventTeamsWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of &#x60;Team&#x60; objects that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Team&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Team>> getEventTeamsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventTeamsValidateBeforeCall(null);
+    public ApiResponse<List<Team>> getEventTeamsWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventTeamsValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Team>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1425,32 +1719,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of &#x60;Team&#x60; objects that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventTeamsAsync(final ApiCallback<List<Team>> _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<Team>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventTeamsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Team>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventTeamsKeys
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventTeamsKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsKeysCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/teams/keys";
+        String localVarPath = "/event/{event_key}/teams/keys"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1471,10 +1774,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventTeamsKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventTeamsKeysValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventTeamsKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventTeamsKeysCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsKeysCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1482,22 +1790,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of &#x60;Team&#x60; keys that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getEventTeamsKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getEventTeamsKeysWithHttpInfo();
+    public List<String> getEventTeamsKeys(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getEventTeamsKeysWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of &#x60;Team&#x60; keys that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getEventTeamsKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventTeamsKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getEventTeamsKeysWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventTeamsKeysValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1505,32 +1817,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of &#x60;Team&#x60; keys that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventTeamsKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsKeysAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventTeamsKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsKeysValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventTeamsSimple
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventTeamsSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsSimpleCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/teams/simple";
+        String localVarPath = "/event/{event_key}/teams/simple"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1551,10 +1872,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventTeamsSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventTeamsSimpleValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventTeamsSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventTeamsSimpleCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsSimpleCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1562,22 +1888,26 @@ public class EventApi {
     /**
      * 
      * Gets a short-form list of &#x60;Team&#x60; objects that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;TeamSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<TeamSimple> getEventTeamsSimple() throws ApiException {
-        ApiResponse<List<TeamSimple>> localVarResp = getEventTeamsSimpleWithHttpInfo();
+    public List<TeamSimple> getEventTeamsSimple(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<TeamSimple>> localVarResp = getEventTeamsSimpleWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form list of &#x60;Team&#x60; objects that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;TeamSimple&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<TeamSimple>> getEventTeamsSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventTeamsSimpleValidateBeforeCall(null);
+    public ApiResponse<List<TeamSimple>> getEventTeamsSimpleWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventTeamsSimpleValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<TeamSimple>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1585,32 +1915,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form list of &#x60;Team&#x60; objects that competed in the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventTeamsSimpleAsync(final ApiCallback<List<TeamSimple>> _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsSimpleAsync(String eventKey, String ifModifiedSince, final ApiCallback<List<TeamSimple>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventTeamsSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsSimpleValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<TeamSimple>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventTeamsStatuses
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventTeamsStatusesCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsStatusesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/event/{event_key}/teams/statuses";
+        String localVarPath = "/event/{event_key}/teams/statuses"
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1631,10 +1970,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventTeamsStatusesValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventTeamsStatusesValidateBeforeCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getEventTeamsStatuses(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventTeamsStatusesCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsStatusesCall(eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1642,22 +1986,26 @@ public class EventApi {
     /**
      * 
      * Gets a key-value list of the event statuses for teams competing at the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return Map&lt;String, TeamEventStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, TeamEventStatus> getEventTeamsStatuses() throws ApiException {
-        ApiResponse<Map<String, TeamEventStatus>> localVarResp = getEventTeamsStatusesWithHttpInfo();
+    public Map<String, TeamEventStatus> getEventTeamsStatuses(String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<Map<String, TeamEventStatus>> localVarResp = getEventTeamsStatusesWithHttpInfo(eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a key-value list of the event statuses for teams competing at the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;Map&lt;String, TeamEventStatus&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, TeamEventStatus>> getEventTeamsStatusesWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventTeamsStatusesValidateBeforeCall(null);
+    public ApiResponse<Map<String, TeamEventStatus>> getEventTeamsStatusesWithHttpInfo(String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventTeamsStatusesValidateBeforeCall(eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<Map<String, TeamEventStatus>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1665,32 +2013,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a key-value list of the event statuses for teams competing at the given event.
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventTeamsStatusesAsync(final ApiCallback<Map<String, TeamEventStatus>> _callback) throws ApiException {
+    public okhttp3.Call getEventTeamsStatusesAsync(String eventKey, String ifModifiedSince, final ApiCallback<Map<String, TeamEventStatus>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventTeamsStatusesValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventTeamsStatusesValidateBeforeCall(eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<Map<String, TeamEventStatus>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventsByYear
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventsByYearCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsByYearCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/events/{year}";
+        String localVarPath = "/events/{year}"
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1711,10 +2068,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsByYearValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsByYearValidateBeforeCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getEventsByYear(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventsByYearCall(_callback);
+        okhttp3.Call localVarCall = getEventsByYearCall(year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1722,22 +2084,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of events in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Event&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Event> getEventsByYear() throws ApiException {
-        ApiResponse<List<Event>> localVarResp = getEventsByYearWithHttpInfo();
+    public List<Event> getEventsByYear(Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Event>> localVarResp = getEventsByYearWithHttpInfo(year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of events in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Event&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Event>> getEventsByYearWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventsByYearValidateBeforeCall(null);
+    public ApiResponse<List<Event>> getEventsByYearWithHttpInfo(Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventsByYearValidateBeforeCall(year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1745,32 +2111,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of events in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventsByYearAsync(final ApiCallback<List<Event>> _callback) throws ApiException {
+    public okhttp3.Call getEventsByYearAsync(Integer year, String ifModifiedSince, final ApiCallback<List<Event>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsByYearValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventsByYearValidateBeforeCall(year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventsByYearKeys
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventsByYearKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsByYearKeysCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/events/{year}/keys";
+        String localVarPath = "/events/{year}/keys"
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1791,10 +2166,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsByYearKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsByYearKeysValidateBeforeCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getEventsByYearKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventsByYearKeysCall(_callback);
+        okhttp3.Call localVarCall = getEventsByYearKeysCall(year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1802,22 +2182,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of event keys in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getEventsByYearKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getEventsByYearKeysWithHttpInfo();
+    public List<String> getEventsByYearKeys(Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getEventsByYearKeysWithHttpInfo(year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of event keys in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getEventsByYearKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventsByYearKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getEventsByYearKeysWithHttpInfo(Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventsByYearKeysValidateBeforeCall(year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1825,32 +2209,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of event keys in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventsByYearKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getEventsByYearKeysAsync(Integer year, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsByYearKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventsByYearKeysValidateBeforeCall(year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEventsByYearSimple
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getEventsByYearSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsByYearSimpleCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/events/{year}/simple";
+        String localVarPath = "/events/{year}/simple"
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1871,10 +2264,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsByYearSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsByYearSimpleValidateBeforeCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getEventsByYearSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getEventsByYearSimpleCall(_callback);
+        okhttp3.Call localVarCall = getEventsByYearSimpleCall(year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1882,22 +2280,26 @@ public class EventApi {
     /**
      * 
      * Gets a short-form list of events in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;EventSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EventSimple> getEventsByYearSimple() throws ApiException {
-        ApiResponse<List<EventSimple>> localVarResp = getEventsByYearSimpleWithHttpInfo();
+    public List<EventSimple> getEventsByYearSimple(Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<EventSimple>> localVarResp = getEventsByYearSimpleWithHttpInfo(year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form list of events in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;EventSimple&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EventSimple>> getEventsByYearSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getEventsByYearSimpleValidateBeforeCall(null);
+    public ApiResponse<List<EventSimple>> getEventsByYearSimpleWithHttpInfo(Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getEventsByYearSimpleValidateBeforeCall(year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1905,32 +2307,43 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form list of events in the given year.
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getEventsByYearSimpleAsync(final ApiCallback<List<EventSimple>> _callback) throws ApiException {
+    public okhttp3.Call getEventsByYearSimpleAsync(Integer year, String ifModifiedSince, final ApiCallback<List<EventSimple>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsByYearSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getEventsByYearSimpleValidateBeforeCall(year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventAwards
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventAwardsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventAwardsCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/event/{event_key}/awards";
+        String localVarPath = "/team/{team_key}/event/{event_key}/awards"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -1951,10 +2364,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventAwardsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventAwardsValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventAwards(Async)");
+        }
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getTeamEventAwards(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventAwardsCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventAwardsCall(teamKey, eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -1962,22 +2385,28 @@ public class EventApi {
     /**
      * 
      * Gets a list of awards the given team won at the given event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Award&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Award> getTeamEventAwards() throws ApiException {
-        ApiResponse<List<Award>> localVarResp = getTeamEventAwardsWithHttpInfo();
+    public List<Award> getTeamEventAwards(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Award>> localVarResp = getTeamEventAwardsWithHttpInfo(teamKey, eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of awards the given team won at the given event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Award&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Award>> getTeamEventAwardsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventAwardsValidateBeforeCall(null);
+    public ApiResponse<List<Award>> getTeamEventAwardsWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventAwardsValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Award>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1985,32 +2414,44 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of awards the given team won at the given event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventAwardsAsync(final ApiCallback<List<Award>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventAwardsAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Award>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventAwardsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventAwardsValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Award>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventMatches
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventMatchesCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/event/{event_key}/matches";
+        String localVarPath = "/team/{team_key}/event/{event_key}/matches"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2031,10 +2472,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventMatchesValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventMatchesValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventMatches(Async)");
+        }
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getTeamEventMatches(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventMatchesCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventMatchesCall(teamKey, eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2042,22 +2493,28 @@ public class EventApi {
     /**
      * 
      * Gets a list of matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Match&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Match> getTeamEventMatches() throws ApiException {
-        ApiResponse<List<Match>> localVarResp = getTeamEventMatchesWithHttpInfo();
+    public List<Match> getTeamEventMatches(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Match>> localVarResp = getTeamEventMatchesWithHttpInfo(teamKey, eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Match&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Match>> getTeamEventMatchesWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventMatchesValidateBeforeCall(null);
+    public ApiResponse<List<Match>> getTeamEventMatchesWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventMatchesValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2065,32 +2522,44 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventMatchesAsync(final ApiCallback<List<Match>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventMatchesValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventMatchesValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventMatchesKeys
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventMatchesKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesKeysCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/event/{event_key}/matches/keys";
+        String localVarPath = "/team/{team_key}/event/{event_key}/matches/keys"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2111,10 +2580,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventMatchesKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventMatchesKeysValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventMatchesKeys(Async)");
+        }
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getTeamEventMatchesKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventMatchesKeysCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventMatchesKeysCall(teamKey, eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2122,22 +2601,28 @@ public class EventApi {
     /**
      * 
      * Gets a list of match keys for matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getTeamEventMatchesKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getTeamEventMatchesKeysWithHttpInfo();
+    public List<String> getTeamEventMatchesKeys(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getTeamEventMatchesKeysWithHttpInfo(teamKey, eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of match keys for matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getTeamEventMatchesKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventMatchesKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getTeamEventMatchesKeysWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventMatchesKeysValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2145,32 +2630,44 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of match keys for matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventMatchesKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesKeysAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventMatchesKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventMatchesKeysValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventMatchesSimple
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventMatchesSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesSimpleCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/event/{event_key}/matches/simple";
+        String localVarPath = "/team/{team_key}/event/{event_key}/matches/simple"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2191,10 +2688,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventMatchesSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventMatchesSimpleValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventMatchesSimple(Async)");
+        }
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getTeamEventMatchesSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventMatchesSimpleCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventMatchesSimpleCall(teamKey, eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2202,22 +2709,28 @@ public class EventApi {
     /**
      * 
      * Gets a short-form list of matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Match&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Match> getTeamEventMatchesSimple() throws ApiException {
-        ApiResponse<List<Match>> localVarResp = getTeamEventMatchesSimpleWithHttpInfo();
+    public List<Match> getTeamEventMatchesSimple(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Match>> localVarResp = getTeamEventMatchesSimpleWithHttpInfo(teamKey, eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form list of matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Match&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Match>> getTeamEventMatchesSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventMatchesSimpleValidateBeforeCall(null);
+    public ApiResponse<List<Match>> getTeamEventMatchesSimpleWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventMatchesSimpleValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2225,32 +2738,44 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form list of matches for the given team and event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventMatchesSimpleAsync(final ApiCallback<List<Match>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventMatchesSimpleAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<List<Match>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventMatchesSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventMatchesSimpleValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Match>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventStatus
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventStatusCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventStatusCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/event/{event_key}/status";
+        String localVarPath = "/team/{team_key}/event/{event_key}/status"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "event_key" + "\\}", localVarApiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2271,10 +2796,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventStatusValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventStatusValidateBeforeCall(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventStatus(Async)");
+        }
+        
+        // verify the required parameter 'eventKey' is set
+        if (eventKey == null) {
+            throw new ApiException("Missing the required parameter 'eventKey' when calling getTeamEventStatus(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventStatusCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventStatusCall(teamKey, eventKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2282,22 +2817,28 @@ public class EventApi {
     /**
      * 
      * Gets the competition rank and status of the team at the given event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return TeamEventStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public TeamEventStatus getTeamEventStatus() throws ApiException {
-        ApiResponse<TeamEventStatus> localVarResp = getTeamEventStatusWithHttpInfo();
+    public TeamEventStatus getTeamEventStatus(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<TeamEventStatus> localVarResp = getTeamEventStatusWithHttpInfo(teamKey, eventKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets the competition rank and status of the team at the given event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;TeamEventStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<TeamEventStatus> getTeamEventStatusWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventStatusValidateBeforeCall(null);
+    public ApiResponse<TeamEventStatus> getTeamEventStatusWithHttpInfo(String teamKey, String eventKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventStatusValidateBeforeCall(teamKey, eventKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<TeamEventStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2305,32 +2846,42 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets the competition rank and status of the team at the given event.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventStatusAsync(final ApiCallback<TeamEventStatus> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventStatusAsync(String teamKey, String eventKey, String ifModifiedSince, final ApiCallback<TeamEventStatus> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventStatusValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventStatusValidateBeforeCall(teamKey, eventKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<TeamEventStatus>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEvents
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events";
+        String localVarPath = "/team/{team_key}/events"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2351,10 +2902,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsValidateBeforeCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEvents(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsCall(teamKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2362,22 +2918,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Event&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Event> getTeamEvents() throws ApiException {
-        ApiResponse<List<Event>> localVarResp = getTeamEventsWithHttpInfo();
+    public List<Event> getTeamEvents(String teamKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Event>> localVarResp = getTeamEventsWithHttpInfo(teamKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Event&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Event>> getTeamEventsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsValidateBeforeCall(null);
+    public ApiResponse<List<Event>> getTeamEventsWithHttpInfo(String teamKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsValidateBeforeCall(teamKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2385,32 +2945,43 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsAsync(final ApiCallback<List<Event>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsAsync(String teamKey, String ifModifiedSince, final ApiCallback<List<Event>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsValidateBeforeCall(teamKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventsByYear
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsByYearCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsByYearCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events/{year}";
+        String localVarPath = "/team/{team_key}/events/{year}"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2431,10 +3002,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsByYearValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsByYearValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventsByYear(Async)");
+        }
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getTeamEventsByYear(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsByYearCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsByYearCall(teamKey, year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2442,22 +3023,28 @@ public class EventApi {
     /**
      * 
      * Gets a list of events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;Event&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Event> getTeamEventsByYear() throws ApiException {
-        ApiResponse<List<Event>> localVarResp = getTeamEventsByYearWithHttpInfo();
+    public List<Event> getTeamEventsByYear(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<Event>> localVarResp = getTeamEventsByYearWithHttpInfo(teamKey, year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;Event&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Event>> getTeamEventsByYearWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsByYearValidateBeforeCall(null);
+    public ApiResponse<List<Event>> getTeamEventsByYearWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsByYearValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2465,32 +3052,44 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsByYearAsync(final ApiCallback<List<Event>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsByYearAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<Event>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsByYearValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsByYearValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<Event>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventsByYearKeys
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsByYearKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsByYearKeysCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events/{year}/keys";
+        String localVarPath = "/team/{team_key}/events/{year}/keys"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2511,10 +3110,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsByYearKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsByYearKeysValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventsByYearKeys(Async)");
+        }
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getTeamEventsByYearKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsByYearKeysCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsByYearKeysCall(teamKey, year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2522,22 +3131,28 @@ public class EventApi {
     /**
      * 
      * Gets a list of the event keys for events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getTeamEventsByYearKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getTeamEventsByYearKeysWithHttpInfo();
+    public List<String> getTeamEventsByYearKeys(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getTeamEventsByYearKeysWithHttpInfo(teamKey, year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of the event keys for events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getTeamEventsByYearKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsByYearKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getTeamEventsByYearKeysWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsByYearKeysValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2545,32 +3160,44 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of the event keys for events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsByYearKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsByYearKeysAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsByYearKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsByYearKeysValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventsByYearSimple
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsByYearSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsByYearSimpleCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events/{year}/simple";
+        String localVarPath = "/team/{team_key}/events/{year}/simple"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2591,10 +3218,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsByYearSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsByYearSimpleValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventsByYearSimple(Async)");
+        }
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getTeamEventsByYearSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsByYearSimpleCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsByYearSimpleCall(teamKey, year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2602,22 +3239,28 @@ public class EventApi {
     /**
      * 
      * Gets a short-form list of events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;EventSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EventSimple> getTeamEventsByYearSimple() throws ApiException {
-        ApiResponse<List<EventSimple>> localVarResp = getTeamEventsByYearSimpleWithHttpInfo();
+    public List<EventSimple> getTeamEventsByYearSimple(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<EventSimple>> localVarResp = getTeamEventsByYearSimpleWithHttpInfo(teamKey, year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form list of events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;EventSimple&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EventSimple>> getTeamEventsByYearSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsByYearSimpleValidateBeforeCall(null);
+    public ApiResponse<List<EventSimple>> getTeamEventsByYearSimpleWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsByYearSimpleValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2625,32 +3268,42 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form list of events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsByYearSimpleAsync(final ApiCallback<List<EventSimple>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsByYearSimpleAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<List<EventSimple>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsByYearSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsByYearSimpleValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventsKeys
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsKeysCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsKeysCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events/keys";
+        String localVarPath = "/team/{team_key}/events/keys"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2671,10 +3324,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsKeysValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsKeysValidateBeforeCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventsKeys(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsKeysCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsKeysCall(teamKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2682,22 +3340,26 @@ public class EventApi {
     /**
      * 
      * Gets a list of the event keys for all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<String> getTeamEventsKeys() throws ApiException {
-        ApiResponse<List<String>> localVarResp = getTeamEventsKeysWithHttpInfo();
+    public List<String> getTeamEventsKeys(String teamKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<String>> localVarResp = getTeamEventsKeysWithHttpInfo(teamKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a list of the event keys for all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<String>> getTeamEventsKeysWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsKeysValidateBeforeCall(null);
+    public ApiResponse<List<String>> getTeamEventsKeysWithHttpInfo(String teamKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsKeysValidateBeforeCall(teamKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2705,32 +3367,41 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a list of the event keys for all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsKeysAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsKeysAsync(String teamKey, String ifModifiedSince, final ApiCallback<List<String>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsKeysValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsKeysValidateBeforeCall(teamKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventsSimple
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsSimpleCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsSimpleCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events/simple";
+        String localVarPath = "/team/{team_key}/events/simple"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2751,10 +3422,15 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsSimpleValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsSimpleValidateBeforeCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventsSimple(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsSimpleCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsSimpleCall(teamKey, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2762,22 +3438,26 @@ public class EventApi {
     /**
      * 
      * Gets a short-form list of all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return List&lt;EventSimple&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<EventSimple> getTeamEventsSimple() throws ApiException {
-        ApiResponse<List<EventSimple>> localVarResp = getTeamEventsSimpleWithHttpInfo();
+    public List<EventSimple> getTeamEventsSimple(String teamKey, String ifModifiedSince) throws ApiException {
+        ApiResponse<List<EventSimple>> localVarResp = getTeamEventsSimpleWithHttpInfo(teamKey, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a short-form list of all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;List&lt;EventSimple&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<EventSimple>> getTeamEventsSimpleWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsSimpleValidateBeforeCall(null);
+    public ApiResponse<List<EventSimple>> getTeamEventsSimpleWithHttpInfo(String teamKey, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsSimpleValidateBeforeCall(teamKey, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2785,32 +3465,43 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a short-form list of all events this team has competed at.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsSimpleAsync(final ApiCallback<List<EventSimple>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsSimpleAsync(String teamKey, String ifModifiedSince, final ApiCallback<List<EventSimple>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsSimpleValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsSimpleValidateBeforeCall(teamKey, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<List<EventSimple>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getTeamEventsStatusesByYear
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public okhttp3.Call getTeamEventsStatusesByYearCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsStatusesByYearCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = new Object();
 
         // create path and map variables
-        String localVarPath = "/team/{team_key}/events/{year}/statuses";
+        String localVarPath = "/team/{team_key}/events/{year}/statuses"
+            .replaceAll("\\{" + "team_key" + "\\}", localVarApiClient.escapeString(teamKey.toString()))
+            .replaceAll("\\{" + "year" + "\\}", localVarApiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        if (ifModifiedSince != null) {
+            localVarHeaderParams.put("If-Modified-Since", localVarApiClient.parameterToString(ifModifiedSince));
+        }
+
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
         final String[] localVarAccepts = {
             "application/json"
@@ -2831,10 +3522,20 @@ public class EventApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTeamEventsStatusesByYearValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTeamEventsStatusesByYearValidateBeforeCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'teamKey' is set
+        if (teamKey == null) {
+            throw new ApiException("Missing the required parameter 'teamKey' when calling getTeamEventsStatusesByYear(Async)");
+        }
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling getTeamEventsStatusesByYear(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = getTeamEventsStatusesByYearCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsStatusesByYearCall(teamKey, year, ifModifiedSince, _callback);
         return localVarCall;
 
     }
@@ -2842,22 +3543,28 @@ public class EventApi {
     /**
      * 
      * Gets a key-value list of the event statuses for events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return Map&lt;String, TeamEventStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Map<String, TeamEventStatus> getTeamEventsStatusesByYear() throws ApiException {
-        ApiResponse<Map<String, TeamEventStatus>> localVarResp = getTeamEventsStatusesByYearWithHttpInfo();
+    public Map<String, TeamEventStatus> getTeamEventsStatusesByYear(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        ApiResponse<Map<String, TeamEventStatus>> localVarResp = getTeamEventsStatusesByYearWithHttpInfo(teamKey, year, ifModifiedSince);
         return localVarResp.getData();
     }
 
     /**
      * 
      * Gets a key-value list of the event statuses for events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @return ApiResponse&lt;Map&lt;String, TeamEventStatus&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Map<String, TeamEventStatus>> getTeamEventsStatusesByYearWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getTeamEventsStatusesByYearValidateBeforeCall(null);
+    public ApiResponse<Map<String, TeamEventStatus>> getTeamEventsStatusesByYearWithHttpInfo(String teamKey, Integer year, String ifModifiedSince) throws ApiException {
+        okhttp3.Call localVarCall = getTeamEventsStatusesByYearValidateBeforeCall(teamKey, year, ifModifiedSince, null);
         Type localVarReturnType = new TypeToken<Map<String, TeamEventStatus>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2865,13 +3572,16 @@ public class EventApi {
     /**
      *  (asynchronously)
      * Gets a key-value list of the event statuses for events this team has competed at in the given year.
+     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; (required)
+     * @param year Competition Year (or Season). Must be 4 digits. (required)
+     * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public okhttp3.Call getTeamEventsStatusesByYearAsync(final ApiCallback<Map<String, TeamEventStatus>> _callback) throws ApiException {
+    public okhttp3.Call getTeamEventsStatusesByYearAsync(String teamKey, Integer year, String ifModifiedSince, final ApiCallback<Map<String, TeamEventStatus>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTeamEventsStatusesByYearValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = getTeamEventsStatusesByYearValidateBeforeCall(teamKey, year, ifModifiedSince, _callback);
         Type localVarReturnType = new TypeToken<Map<String, TeamEventStatus>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

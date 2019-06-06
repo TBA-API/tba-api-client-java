@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="getDistrictEvents"></a>
 # **getDistrictEvents**
-> List&lt;Event&gt; getDistrictEvents()
+> List&lt;Event&gt; getDistrictEvents(districtKey, ifModifiedSince)
 
 
 
@@ -42,8 +42,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Event> result = apiInstance.getDistrictEvents();
+    List<Event> result = apiInstance.getDistrictEvents(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictEvents");
@@ -52,7 +54,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -69,7 +75,7 @@ This endpoint does not need any parameter.
 
 <a name="getDistrictEventsKeys"></a>
 # **getDistrictEventsKeys**
-> List&lt;String&gt; getDistrictEventsKeys()
+> List&lt;String&gt; getDistrictEventsKeys(districtKey, ifModifiedSince)
 
 
 
@@ -93,8 +99,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getDistrictEventsKeys();
+    List<String> result = apiInstance.getDistrictEventsKeys(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictEventsKeys");
@@ -103,7 +111,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -120,7 +132,7 @@ This endpoint does not need any parameter.
 
 <a name="getDistrictEventsSimple"></a>
 # **getDistrictEventsSimple**
-> List&lt;EventSimple&gt; getDistrictEventsSimple(districtKey)
+> List&lt;EventSimple&gt; getDistrictEventsSimple(districtKey, ifModifiedSince)
 
 
 
@@ -145,8 +157,9 @@ apiKey.setApiKey("YOUR API KEY");
 
 DistrictApi apiInstance = new DistrictApi();
 String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<EventSimple> result = apiInstance.getDistrictEventsSimple(districtKey);
+    List<EventSimple> result = apiInstance.getDistrictEventsSimple(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictEventsSimple");
@@ -159,6 +172,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -175,7 +189,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictRankings"></a>
 # **getDistrictRankings**
-> List&lt;DistrictRanking&gt; getDistrictRankings()
+> List&lt;DistrictRanking&gt; getDistrictRankings(districtKey, ifModifiedSince)
 
 
 
@@ -199,8 +213,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<DistrictRanking> result = apiInstance.getDistrictRankings();
+    List<DistrictRanking> result = apiInstance.getDistrictRankings(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictRankings");
@@ -209,7 +225,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -226,7 +246,7 @@ This endpoint does not need any parameter.
 
 <a name="getDistrictTeams"></a>
 # **getDistrictTeams**
-> List&lt;Team&gt; getDistrictTeams()
+> List&lt;Team&gt; getDistrictTeams(districtKey, ifModifiedSince)
 
 
 
@@ -250,8 +270,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Team> result = apiInstance.getDistrictTeams();
+    List<Team> result = apiInstance.getDistrictTeams(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictTeams");
@@ -260,7 +282,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -277,7 +303,7 @@ This endpoint does not need any parameter.
 
 <a name="getDistrictTeamsKeys"></a>
 # **getDistrictTeamsKeys**
-> List&lt;String&gt; getDistrictTeamsKeys()
+> List&lt;String&gt; getDistrictTeamsKeys(districtKey, ifModifiedSince)
 
 
 
@@ -301,8 +327,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getDistrictTeamsKeys();
+    List<String> result = apiInstance.getDistrictTeamsKeys(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictTeamsKeys");
@@ -311,7 +339,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -328,7 +360,7 @@ This endpoint does not need any parameter.
 
 <a name="getDistrictTeamsSimple"></a>
 # **getDistrictTeamsSimple**
-> List&lt;TeamSimple&gt; getDistrictTeamsSimple()
+> List&lt;TeamSimple&gt; getDistrictTeamsSimple(districtKey, ifModifiedSince)
 
 
 
@@ -352,8 +384,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<TeamSimple> result = apiInstance.getDistrictTeamsSimple();
+    List<TeamSimple> result = apiInstance.getDistrictTeamsSimple(districtKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictTeamsSimple");
@@ -362,7 +396,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -379,7 +417,7 @@ This endpoint does not need any parameter.
 
 <a name="getDistrictsByYear"></a>
 # **getDistrictsByYear**
-> List&lt;DistrictList&gt; getDistrictsByYear()
+> List&lt;DistrictList&gt; getDistrictsByYear(year, ifModifiedSince)
 
 
 
@@ -403,8 +441,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<DistrictList> result = apiInstance.getDistrictsByYear();
+    List<DistrictList> result = apiInstance.getDistrictsByYear(year, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getDistrictsByYear");
@@ -413,7 +453,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -430,7 +474,7 @@ This endpoint does not need any parameter.
 
 <a name="getEventDistrictPoints"></a>
 # **getEventDistrictPoints**
-> EventDistrictPoints getEventDistrictPoints()
+> EventDistrictPoints getEventDistrictPoints(eventKey, ifModifiedSince)
 
 
 
@@ -454,8 +498,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    EventDistrictPoints result = apiInstance.getEventDistrictPoints();
+    EventDistrictPoints result = apiInstance.getEventDistrictPoints(eventKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getEventDistrictPoints");
@@ -464,7 +510,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -481,7 +531,7 @@ This endpoint does not need any parameter.
 
 <a name="getTeamDistricts"></a>
 # **getTeamDistricts**
-> List&lt;DistrictList&gt; getTeamDistricts()
+> List&lt;DistrictList&gt; getTeamDistricts(teamKey, ifModifiedSince)
 
 
 
@@ -505,8 +555,10 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
+String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<DistrictList> result = apiInstance.getTeamDistricts();
+    List<DistrictList> result = apiInstance.getTeamDistricts(teamKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getTeamDistricts");
@@ -515,7 +567,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **teamKey** | **String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
