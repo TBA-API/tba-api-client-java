@@ -29,7 +29,7 @@ Method | HTTP request | Description
 
 <a name="getDistrictEvents"></a>
 # **getDistrictEvents**
-> List&lt;Event&gt; getDistrictEvents(districtKey, ifModifiedSince)
+> List&lt;Event&gt; getDistrictEvents()
 
 
 
@@ -53,10 +53,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Event> result = apiInstance.getDistrictEvents(districtKey, ifModifiedSince);
+    List<Event> result = apiInstance.getDistrictEvents();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictEvents");
@@ -65,11 +63,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -86,7 +80,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsKeys"></a>
 # **getDistrictEventsKeys**
-> List&lt;String&gt; getDistrictEventsKeys(districtKey, ifModifiedSince)
+> List&lt;String&gt; getDistrictEventsKeys()
 
 
 
@@ -110,10 +104,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getDistrictEventsKeys(districtKey, ifModifiedSince);
+    List<String> result = apiInstance.getDistrictEventsKeys();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictEventsKeys");
@@ -122,11 +114,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -143,7 +131,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsSimple"></a>
 # **getDistrictEventsSimple**
-> List&lt;EventSimple&gt; getDistrictEventsSimple(districtKey, ifModifiedSince)
+> List&lt;EventSimple&gt; getDistrictEventsSimple(districtKey)
 
 
 
@@ -168,9 +156,8 @@ apiKey.setApiKey("YOUR API KEY");
 
 ListApi apiInstance = new ListApi();
 String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<EventSimple> result = apiInstance.getDistrictEventsSimple(districtKey, ifModifiedSince);
+    List<EventSimple> result = apiInstance.getDistrictEventsSimple(districtKey);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictEventsSimple");
@@ -183,7 +170,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -200,7 +186,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictRankings"></a>
 # **getDistrictRankings**
-> List&lt;DistrictRanking&gt; getDistrictRankings(districtKey, ifModifiedSince)
+> List&lt;DistrictRanking&gt; getDistrictRankings()
 
 
 
@@ -224,10 +210,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<DistrictRanking> result = apiInstance.getDistrictRankings(districtKey, ifModifiedSince);
+    List<DistrictRanking> result = apiInstance.getDistrictRankings();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictRankings");
@@ -236,11 +220,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -257,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeams"></a>
 # **getDistrictTeams**
-> List&lt;Team&gt; getDistrictTeams(districtKey, ifModifiedSince)
+> List&lt;Team&gt; getDistrictTeams()
 
 
 
@@ -281,10 +261,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Team> result = apiInstance.getDistrictTeams(districtKey, ifModifiedSince);
+    List<Team> result = apiInstance.getDistrictTeams();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictTeams");
@@ -293,11 +271,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -314,7 +288,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeamsKeys"></a>
 # **getDistrictTeamsKeys**
-> List&lt;String&gt; getDistrictTeamsKeys(districtKey, ifModifiedSince)
+> List&lt;String&gt; getDistrictTeamsKeys()
 
 
 
@@ -338,10 +312,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getDistrictTeamsKeys(districtKey, ifModifiedSince);
+    List<String> result = apiInstance.getDistrictTeamsKeys();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictTeamsKeys");
@@ -350,11 +322,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -371,7 +339,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeamsSimple"></a>
 # **getDistrictTeamsSimple**
-> List&lt;TeamSimple&gt; getDistrictTeamsSimple(districtKey, ifModifiedSince)
+> List&lt;TeamSimple&gt; getDistrictTeamsSimple()
 
 
 
@@ -395,10 +363,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String districtKey = "districtKey_example"; // String | TBA District Key, eg `2016fim`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<TeamSimple> result = apiInstance.getDistrictTeamsSimple(districtKey, ifModifiedSince);
+    List<TeamSimple> result = apiInstance.getDistrictTeamsSimple();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getDistrictTeamsSimple");
@@ -407,11 +373,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -428,7 +390,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeams"></a>
 # **getEventTeams**
-> List&lt;Team&gt; getEventTeams(eventKey, ifModifiedSince)
+> List&lt;Team&gt; getEventTeams()
 
 
 
@@ -452,10 +414,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Team> result = apiInstance.getEventTeams(eventKey, ifModifiedSince);
+    List<Team> result = apiInstance.getEventTeams();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventTeams");
@@ -464,11 +424,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -485,7 +441,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsKeys"></a>
 # **getEventTeamsKeys**
-> List&lt;String&gt; getEventTeamsKeys(eventKey, ifModifiedSince)
+> List&lt;String&gt; getEventTeamsKeys()
 
 
 
@@ -509,10 +465,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getEventTeamsKeys(eventKey, ifModifiedSince);
+    List<String> result = apiInstance.getEventTeamsKeys();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventTeamsKeys");
@@ -521,11 +475,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -542,7 +492,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsSimple"></a>
 # **getEventTeamsSimple**
-> List&lt;TeamSimple&gt; getEventTeamsSimple(eventKey, ifModifiedSince)
+> List&lt;TeamSimple&gt; getEventTeamsSimple()
 
 
 
@@ -566,10 +516,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<TeamSimple> result = apiInstance.getEventTeamsSimple(eventKey, ifModifiedSince);
+    List<TeamSimple> result = apiInstance.getEventTeamsSimple();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventTeamsSimple");
@@ -578,11 +526,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -599,7 +543,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsStatuses"></a>
 # **getEventTeamsStatuses**
-> Map&lt;String, TeamEventStatus&gt; getEventTeamsStatuses(eventKey, ifModifiedSince)
+> Map&lt;String, TeamEventStatus&gt; getEventTeamsStatuses()
 
 
 
@@ -623,10 +567,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    Map<String, TeamEventStatus> result = apiInstance.getEventTeamsStatuses(eventKey, ifModifiedSince);
+    Map<String, TeamEventStatus> result = apiInstance.getEventTeamsStatuses();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventTeamsStatuses");
@@ -635,11 +577,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -656,7 +594,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYear"></a>
 # **getEventsByYear**
-> List&lt;Event&gt; getEventsByYear(year, ifModifiedSince)
+> List&lt;Event&gt; getEventsByYear()
 
 
 
@@ -680,10 +618,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Event> result = apiInstance.getEventsByYear(year, ifModifiedSince);
+    List<Event> result = apiInstance.getEventsByYear();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventsByYear");
@@ -692,11 +628,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -713,7 +645,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYearKeys"></a>
 # **getEventsByYearKeys**
-> List&lt;String&gt; getEventsByYearKeys(year, ifModifiedSince)
+> List&lt;String&gt; getEventsByYearKeys()
 
 
 
@@ -737,10 +669,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getEventsByYearKeys(year, ifModifiedSince);
+    List<String> result = apiInstance.getEventsByYearKeys();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventsByYearKeys");
@@ -749,11 +679,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -770,7 +696,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYearSimple"></a>
 # **getEventsByYearSimple**
-> List&lt;EventSimple&gt; getEventsByYearSimple(year, ifModifiedSince)
+> List&lt;EventSimple&gt; getEventsByYearSimple()
 
 
 
@@ -794,10 +720,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<EventSimple> result = apiInstance.getEventsByYearSimple(year, ifModifiedSince);
+    List<EventSimple> result = apiInstance.getEventsByYearSimple();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getEventsByYearSimple");
@@ -806,11 +730,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -827,7 +747,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsStatusesByYear"></a>
 # **getTeamEventsStatusesByYear**
-> Map&lt;String, TeamEventStatus&gt; getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+> Map&lt;String, TeamEventStatus&gt; getTeamEventsStatusesByYear()
 
 
 
@@ -851,11 +771,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    Map<String, TeamEventStatus> result = apiInstance.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince);
+    Map<String, TeamEventStatus> result = apiInstance.getTeamEventsStatusesByYear();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeamEventsStatusesByYear");
@@ -864,12 +781,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -886,7 +798,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeams"></a>
 # **getTeams**
-> List&lt;Team&gt; getTeams(pageNum, ifModifiedSince)
+> List&lt;Team&gt; getTeams()
 
 
 
@@ -910,10 +822,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Team> result = apiInstance.getTeams(pageNum, ifModifiedSince);
+    List<Team> result = apiInstance.getTeams();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeams");
@@ -922,11 +832,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pageNum** | **Integer**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -943,7 +849,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsByYear"></a>
 # **getTeamsByYear**
-> List&lt;Team&gt; getTeamsByYear(year, pageNum, ifModifiedSince)
+> List&lt;Team&gt; getTeamsByYear()
 
 
 
@@ -967,11 +873,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<Team> result = apiInstance.getTeamsByYear(year, pageNum, ifModifiedSince);
+    List<Team> result = apiInstance.getTeamsByYear();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeamsByYear");
@@ -980,12 +883,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **Integer**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1002,7 +900,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsByYearKeys"></a>
 # **getTeamsByYearKeys**
-> List&lt;String&gt; getTeamsByYearKeys(year, pageNum, ifModifiedSince)
+> List&lt;String&gt; getTeamsByYearKeys()
 
 
 
@@ -1026,11 +924,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getTeamsByYearKeys(year, pageNum, ifModifiedSince);
+    List<String> result = apiInstance.getTeamsByYearKeys();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeamsByYearKeys");
@@ -1039,12 +934,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **Integer**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1061,7 +951,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsByYearSimple"></a>
 # **getTeamsByYearSimple**
-> List&lt;TeamSimple&gt; getTeamsByYearSimple(year, pageNum, ifModifiedSince)
+> List&lt;TeamSimple&gt; getTeamsByYearSimple()
 
 
 
@@ -1085,11 +975,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<TeamSimple> result = apiInstance.getTeamsByYearSimple(year, pageNum, ifModifiedSince);
+    List<TeamSimple> result = apiInstance.getTeamsByYearSimple();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeamsByYearSimple");
@@ -1098,12 +985,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **Integer**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1120,7 +1002,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsKeys"></a>
 # **getTeamsKeys**
-> List&lt;String&gt; getTeamsKeys(pageNum, ifModifiedSince)
+> List&lt;String&gt; getTeamsKeys()
 
 
 
@@ -1144,10 +1026,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<String> result = apiInstance.getTeamsKeys(pageNum, ifModifiedSince);
+    List<String> result = apiInstance.getTeamsKeys();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeamsKeys");
@@ -1156,11 +1036,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pageNum** | **Integer**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -1177,7 +1053,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsSimple"></a>
 # **getTeamsSimple**
-> List&lt;TeamSimple&gt; getTeamsSimple(pageNum, ifModifiedSince)
+> List&lt;TeamSimple&gt; getTeamsSimple()
 
 
 
@@ -1201,10 +1077,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    List<TeamSimple> result = apiInstance.getTeamsSimple(pageNum, ifModifiedSince);
+    List<TeamSimple> result = apiInstance.getTeamsSimple();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ListApi#getTeamsSimple");
@@ -1213,11 +1087,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pageNum** | **Integer**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
