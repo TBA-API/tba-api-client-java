@@ -30,29 +30,38 @@ Gets an array of Match Keys for the given event key that have timeseries data. R
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<String> result = apiInstance.getEventMatchTimeseries(eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getEventMatchTimeseries");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<String> result = apiInstance.getEventMatchTimeseries(eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getEventMatchTimeseries");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -76,6 +85,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getEventMatches"></a>
 # **getEventMatches**
 > List&lt;Match&gt; getEventMatches(eventKey, ifModifiedSince)
@@ -87,29 +103,38 @@ Gets a list of matches for the given event.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<Match> result = apiInstance.getEventMatches(eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getEventMatches");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<Match> result = apiInstance.getEventMatches(eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getEventMatches");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -133,6 +158,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getEventMatchesKeys"></a>
 # **getEventMatchesKeys**
 > List&lt;String&gt; getEventMatchesKeys(eventKey, ifModifiedSince)
@@ -144,29 +176,38 @@ Gets a list of match keys for the given event.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<String> result = apiInstance.getEventMatchesKeys(eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getEventMatchesKeys");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<String> result = apiInstance.getEventMatchesKeys(eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getEventMatchesKeys");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -190,6 +231,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getEventMatchesSimple"></a>
 # **getEventMatchesSimple**
 > List&lt;MatchSimple&gt; getEventMatchesSimple(eventKey, ifModifiedSince)
@@ -201,29 +249,38 @@ Gets a short-form list of matches for the given event.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<MatchSimple> result = apiInstance.getEventMatchesSimple(eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getEventMatchesSimple");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<MatchSimple> result = apiInstance.getEventMatchesSimple(eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getEventMatchesSimple");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -247,6 +304,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getMatch"></a>
 # **getMatch**
 > Match getMatch(matchKey, ifModifiedSince)
@@ -258,29 +322,38 @@ Gets a &#x60;Match&#x60; object for the given match key.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    Match result = apiInstance.getMatch(matchKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getMatch");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      Match result = apiInstance.getMatch(matchKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getMatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -304,6 +377,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getMatchSimple"></a>
 # **getMatchSimple**
 > MatchSimple getMatchSimple(matchKey, ifModifiedSince)
@@ -315,29 +395,38 @@ Gets a short-form &#x60;Match&#x60; object for the given match key.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    MatchSimple result = apiInstance.getMatchSimple(matchKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getMatchSimple");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      MatchSimple result = apiInstance.getMatchSimple(matchKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getMatchSimple");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -361,6 +450,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getMatchTimeseries"></a>
 # **getMatchTimeseries**
 > List&lt;Object&gt; getMatchTimeseries(matchKey, ifModifiedSince)
@@ -372,29 +468,38 @@ Gets an array of game-specific Match Timeseries objects for the given match key 
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<Object> result = apiInstance.getMatchTimeseries(matchKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getMatchTimeseries");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<Object> result = apiInstance.getMatchTimeseries(matchKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getMatchTimeseries");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -418,6 +523,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getTeamEventMatches"></a>
 # **getTeamEventMatches**
 > List&lt;Match&gt; getTeamEventMatches(teamKey, eventKey, ifModifiedSince)
@@ -429,30 +541,39 @@ Gets a list of matches for the given team and event.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<Match> result = apiInstance.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getTeamEventMatches");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<Match> result = apiInstance.getTeamEventMatches(teamKey, eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getTeamEventMatches");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -476,6 +597,13 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
 
 <a name="getTeamEventMatchesKeys"></a>
 # **getTeamEventMatchesKeys**
@@ -488,30 +616,39 @@ Gets a list of match keys for matches for the given team and event.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<String> result = apiInstance.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getTeamEventMatchesKeys");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<String> result = apiInstance.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getTeamEventMatchesKeys");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -535,6 +672,13 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
 
 <a name="getTeamEventMatchesSimple"></a>
 # **getTeamEventMatchesSimple**
@@ -547,30 +691,39 @@ Gets a short-form list of matches for the given team and event.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<Match> result = apiInstance.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getTeamEventMatchesSimple");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+    String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<Match> result = apiInstance.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getTeamEventMatchesSimple");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -595,6 +748,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getTeamMatchesByYear"></a>
 # **getTeamMatchesByYear**
 > List&lt;Match&gt; getTeamMatchesByYear(teamKey, year, ifModifiedSince)
@@ -606,30 +766,39 @@ Gets a list of matches for the given team and year.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<Match> result = apiInstance.getTeamMatchesByYear(teamKey, year, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getTeamMatchesByYear");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+    Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<Match> result = apiInstance.getTeamMatchesByYear(teamKey, year, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getTeamMatchesByYear");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -654,6 +823,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getTeamMatchesByYearKeys"></a>
 # **getTeamMatchesByYearKeys**
 > List&lt;String&gt; getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince)
@@ -665,30 +841,39 @@ Gets a list of match keys for matches for the given team and year.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<String> result = apiInstance.getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getTeamMatchesByYearKeys");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+    Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<String> result = apiInstance.getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getTeamMatchesByYearKeys");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -713,6 +898,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
+
 <a name="getTeamMatchesByYearSimple"></a>
 # **getTeamMatchesByYearSimple**
 > List&lt;MatchSimple&gt; getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince)
@@ -724,30 +916,39 @@ Gets a short-form list of matches for the given team and year.
 ### Example
 ```java
 // Import classes:
-//import net.thefletcher.tbaapi.v3client.ApiClient;
-//import net.thefletcher.tbaapi.v3client.ApiException;
-//import net.thefletcher.tbaapi.v3client.Configuration;
-//import net.thefletcher.tbaapi.v3client.auth.*;
-//import net.thefletcher.tbaapi.v3client.api.MatchApi;
+import net.thefletcher.tbaapi.v3client.ApiClient;
+import net.thefletcher.tbaapi.v3client.ApiException;
+import net.thefletcher.tbaapi.v3client.Configuration;
+import net.thefletcher.tbaapi.v3client.auth.*;
+import net.thefletcher.tbaapi.v3client.models.*;
+import net.thefletcher.tbaapi.v3client.api.MatchApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.thebluealliance.com/api/v3");
+    
+    // Configure API key authorization: apiKey
+    ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+    apiKey.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.setApiKeyPrefix("Token");
 
-// Configure API key authorization: apiKey
-ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
-apiKey.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.setApiKeyPrefix("Token");
-
-MatchApi apiInstance = new MatchApi();
-String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
-String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
-try {
-    List<MatchSimple> result = apiInstance.getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MatchApi#getTeamMatchesByYearSimple");
-    e.printStackTrace();
+    MatchApi apiInstance = new MatchApi(defaultClient);
+    String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+    Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+    String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+    try {
+      List<MatchSimple> result = apiInstance.getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MatchApi#getTeamMatchesByYearSimple");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -771,4 +972,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response |  * Cache-Control - The &#x60;Cache-Control&#x60; header, in particular the &#x60;max-age&#x60; value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly. <br>  * Last-Modified - Indicates the date and time the data returned was last updated. Used by clients in the &#x60;If-Modified-Since&#x60; request header. <br>  |
+**304** | Not Modified - Use Local Cached Value |  -  |
+**401** |  |  -  |
 
