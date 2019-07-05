@@ -23,6 +23,7 @@ IFRAME | &quot;iframe&quot;
 HTML5 | &quot;html5&quot;
 RTMP | &quot;rtmp&quot;
 LIVESTREAM | &quot;livestream&quot;
+DIRECT_LINK | &quot;direct_link&quot;
 
 
 

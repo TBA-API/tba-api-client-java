@@ -46,7 +46,9 @@ public class Webcast {
     
     RTMP("rtmp"),
     
-    LIVESTREAM("livestream");
+    LIVESTREAM("livestream"),
+    
+    DIRECT_LINK("direct_link");
 
     private String value;
 

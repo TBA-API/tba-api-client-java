@@ -380,7 +380,7 @@ public class Team {
    * First year the team officially competed.
    * @return rookieYear
   **/
-  @ApiModelProperty(required = true, value = "First year the team officially competed.")
+  @ApiModelProperty(value = "First year the team officially competed.")
   public Integer getRookieYear() {
     return rookieYear;
   }
