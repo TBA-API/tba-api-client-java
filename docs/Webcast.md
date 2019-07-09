@@ -24,6 +24,10 @@ HTML5 | &quot;html5&quot;
 RTMP | &quot;rtmp&quot;
 LIVESTREAM | &quot;livestream&quot;
 DIRECT_LINK | &quot;direct_link&quot;
+MMS | &quot;mms&quot;
+JUSTIN | &quot;justin&quot;
+STEMTV | &quot;stemtv&quot;
+DACAST | &quot;dacast&quot;
 
 
 

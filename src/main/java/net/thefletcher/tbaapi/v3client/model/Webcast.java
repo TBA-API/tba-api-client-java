@@ -48,7 +48,15 @@ public class Webcast {
     
     LIVESTREAM("livestream"),
     
-    DIRECT_LINK("direct_link");
+    DIRECT_LINK("direct_link"),
+    
+    MMS("mms"),
+    
+    JUSTIN("justin"),
+    
+    STEMTV("stemtv"),
+    
+    DACAST("dacast");
 
     private String value;
 
