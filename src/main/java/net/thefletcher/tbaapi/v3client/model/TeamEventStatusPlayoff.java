@@ -162,6 +162,7 @@ public class TeamEventStatusPlayoff {
    * The highest playoff level the team reached.
    * @return level
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The highest playoff level the team reached.")
   public LevelEnum getLevel() {
     return level;
@@ -180,6 +181,7 @@ public class TeamEventStatusPlayoff {
    * Get currentLevelRecord
    * @return currentLevelRecord
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public WLTRecord getCurrentLevelRecord() {
     return currentLevelRecord;
@@ -198,6 +200,7 @@ public class TeamEventStatusPlayoff {
    * Get record
    * @return record
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public WLTRecord getRecord() {
     return record;
@@ -216,6 +219,7 @@ public class TeamEventStatusPlayoff {
    * Current competition status for the playoffs.
    * @return status
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Current competition status for the playoffs.")
   public StatusEnum getStatus() {
     return status;
@@ -234,6 +238,7 @@ public class TeamEventStatusPlayoff {
    * The average match score during playoffs. Year specific. May be null if not relevant for a given year.
    * @return playoffAverage
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The average match score during playoffs. Year specific. May be null if not relevant for a given year.")
   public Integer getPlayoffAverage() {
     return playoffAverage;

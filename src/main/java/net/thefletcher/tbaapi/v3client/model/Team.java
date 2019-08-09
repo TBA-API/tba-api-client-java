@@ -146,6 +146,7 @@ public class Team {
    * Team nickname provided by FIRST.
    * @return nickname
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Team nickname provided by FIRST.")
   public String getNickname() {
     return nickname;
@@ -182,6 +183,7 @@ public class Team {
    * City of team derived from parsing the address registered with FIRST.
    * @return city
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "City of team derived from parsing the address registered with FIRST.")
   public String getCity() {
     return city;
@@ -200,6 +202,7 @@ public class Team {
    * State of team derived from parsing the address registered with FIRST.
    * @return stateProv
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "State of team derived from parsing the address registered with FIRST.")
   public String getStateProv() {
     return stateProv;
@@ -218,6 +221,7 @@ public class Team {
    * Country of team derived from parsing the address registered with FIRST.
    * @return country
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Country of team derived from parsing the address registered with FIRST.")
   public String getCountry() {
     return country;
@@ -236,6 +240,7 @@ public class Team {
    * Will be NULL, for future development.
    * @return address
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
   public String getAddress() {
     return address;
@@ -254,6 +259,7 @@ public class Team {
    * Postal code from the team address.
    * @return postalCode
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Postal code from the team address.")
   public String getPostalCode() {
     return postalCode;
@@ -272,6 +278,7 @@ public class Team {
    * Will be NULL, for future development.
    * @return gmapsPlaceId
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
   public String getGmapsPlaceId() {
     return gmapsPlaceId;
@@ -290,6 +297,7 @@ public class Team {
    * Will be NULL, for future development.
    * @return gmapsUrl
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
   public String getGmapsUrl() {
     return gmapsUrl;
@@ -308,6 +316,7 @@ public class Team {
    * Will be NULL, for future development.
    * @return lat
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
   public Double getLat() {
     return lat;
@@ -326,6 +335,7 @@ public class Team {
    * Will be NULL, for future development.
    * @return lng
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
   public Double getLng() {
     return lng;
@@ -344,6 +354,7 @@ public class Team {
    * Will be NULL, for future development.
    * @return locationName
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
   public String getLocationName() {
     return locationName;
@@ -362,6 +373,7 @@ public class Team {
    * Official website associated with the team.
    * @return website
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Official website associated with the team.")
   public String getWebsite() {
     return website;
@@ -380,6 +392,7 @@ public class Team {
    * First year the team officially competed.
    * @return rookieYear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "First year the team officially competed.")
   public Integer getRookieYear() {
     return rookieYear;
@@ -398,6 +411,7 @@ public class Team {
    * Team&#39;s motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019.
    * @return motto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Team's motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019.")
   public String getMotto() {
     return motto;
@@ -416,6 +430,7 @@ public class Team {
    * Location of the team&#39;s home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value.
    * @return homeChampionship
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Location of the team's home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value.")
   public Object getHomeChampionship() {
     return homeChampionship;

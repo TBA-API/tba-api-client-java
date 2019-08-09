@@ -58,6 +58,7 @@ public class TeamEventStatusRank {
    * Number of teams ranked.
    * @return numTeams
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of teams ranked.")
   public Integer getNumTeams() {
     return numTeams;
@@ -76,6 +77,7 @@ public class TeamEventStatusRank {
    * Get ranking
    * @return ranking
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public TeamEventStatusRankRanking getRanking() {
     return ranking;
@@ -102,6 +104,7 @@ public class TeamEventStatusRank {
    * Ordered list of names corresponding to the elements of the &#x60;sort_orders&#x60; array.
    * @return sortOrderInfo
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Ordered list of names corresponding to the elements of the `sort_orders` array.")
   public List<TeamEventStatusRankSortOrderInfo> getSortOrderInfo() {
     return sortOrderInfo;
@@ -120,6 +123,7 @@ public class TeamEventStatusRank {
    * Get status
    * @return status
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;

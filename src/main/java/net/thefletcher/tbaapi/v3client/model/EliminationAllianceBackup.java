@@ -47,6 +47,7 @@ public class EliminationAllianceBackup {
    * Team key that was called in as the backup.
    * @return in
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Team key that was called in as the backup.")
   public String getIn() {
     return in;
@@ -65,6 +66,7 @@ public class EliminationAllianceBackup {
    * Team key that was replaced by the backup team.
    * @return out
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Team key that was replaced by the backup team.")
   public String getOut() {
     return out;

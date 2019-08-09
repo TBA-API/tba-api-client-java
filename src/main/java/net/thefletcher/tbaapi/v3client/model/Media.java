@@ -172,6 +172,7 @@ public class Media {
    * The key used to identify this media on the media site.
    * @return foreignKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The key used to identify this media on the media site.")
   public String getForeignKey() {
     return foreignKey;
@@ -190,6 +191,7 @@ public class Media {
    * If required, a JSON dict of additional media information.
    * @return details
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "If required, a JSON dict of additional media information.")
   public Object getDetails() {
     return details;
@@ -208,6 +210,7 @@ public class Media {
    * True if the media is of high quality.
    * @return preferred
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "True if the media is of high quality.")
   public Boolean getPreferred() {
     return preferred;
@@ -226,6 +229,7 @@ public class Media {
    * Direct URL to the media.
    * @return directUrl
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Direct URL to the media.")
   public String getDirectUrl() {
     return directUrl;
@@ -244,6 +248,7 @@ public class Media {
    * The URL that leads to the full web page for the media, if one exists.
    * @return viewUrl
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL that leads to the full web page for the media, if one exists.")
   public String getViewUrl() {
     return viewUrl;

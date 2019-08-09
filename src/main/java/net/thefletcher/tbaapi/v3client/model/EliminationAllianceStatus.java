@@ -59,6 +59,7 @@ public class EliminationAllianceStatus {
    * Get playoffAverage
    * @return playoffAverage
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Double getPlayoffAverage() {
     return playoffAverage;
@@ -77,6 +78,7 @@ public class EliminationAllianceStatus {
    * Get level
    * @return level
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getLevel() {
     return level;
@@ -95,6 +97,7 @@ public class EliminationAllianceStatus {
    * Get record
    * @return record
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public WLTRecord getRecord() {
     return record;
@@ -113,6 +116,7 @@ public class EliminationAllianceStatus {
    * Get currentLevelRecord
    * @return currentLevelRecord
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public WLTRecord getCurrentLevelRecord() {
     return currentLevelRecord;
@@ -131,6 +135,7 @@ public class EliminationAllianceStatus {
    * Get status
    * @return status
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;

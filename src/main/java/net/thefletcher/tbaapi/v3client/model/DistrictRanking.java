@@ -98,6 +98,7 @@ public class DistrictRanking {
    * Any points added to a team as a result of the rookie bonus.
    * @return rookieBonus
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Any points added to a team as a result of the rookie bonus.")
   public Integer getRookieBonus() {
     return rookieBonus;
@@ -142,6 +143,7 @@ public class DistrictRanking {
    * List of events that contributed to the point total for the team.
    * @return eventPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "List of events that contributed to the point total for the team.")
   public List<DistrictRankingEventPoints> getEventPoints() {
     return eventPoints;

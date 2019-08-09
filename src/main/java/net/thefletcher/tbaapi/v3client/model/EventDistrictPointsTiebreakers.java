@@ -56,6 +56,7 @@ public class EventDistrictPointsTiebreakers {
    * Get highestQualScores
    * @return highestQualScores
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public List<Integer> getHighestQualScores() {
     return highestQualScores;
@@ -74,6 +75,7 @@ public class EventDistrictPointsTiebreakers {
    * Get qualWins
    * @return qualWins
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getQualWins() {
     return qualWins;

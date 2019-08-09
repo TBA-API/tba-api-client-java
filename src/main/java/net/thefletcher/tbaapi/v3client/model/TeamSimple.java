@@ -102,6 +102,7 @@ public class TeamSimple {
    * Team nickname provided by FIRST.
    * @return nickname
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Team nickname provided by FIRST.")
   public String getNickname() {
     return nickname;
@@ -138,6 +139,7 @@ public class TeamSimple {
    * City of team derived from parsing the address registered with FIRST.
    * @return city
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "City of team derived from parsing the address registered with FIRST.")
   public String getCity() {
     return city;
@@ -156,6 +158,7 @@ public class TeamSimple {
    * State of team derived from parsing the address registered with FIRST.
    * @return stateProv
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "State of team derived from parsing the address registered with FIRST.")
   public String getStateProv() {
     return stateProv;
@@ -174,6 +177,7 @@ public class TeamSimple {
    * Country of team derived from parsing the address registered with FIRST.
    * @return country
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Country of team derived from parsing the address registered with FIRST.")
   public String getCountry() {
     return country;

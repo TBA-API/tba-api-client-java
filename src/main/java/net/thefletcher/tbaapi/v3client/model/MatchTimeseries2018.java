@@ -163,6 +163,7 @@ public class MatchTimeseries2018 {
    * TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.
    * @return eventKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.")
   public String getEventKey() {
     return eventKey;
@@ -181,6 +182,7 @@ public class MatchTimeseries2018 {
    * Match ID consisting of the level, match number, and set number, eg &#x60;qm45&#x60; or &#x60;f1m1&#x60;.
    * @return matchId
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Match ID consisting of the level, match number, and set number, eg `qm45` or `f1m1`.")
   public String getMatchId() {
     return matchId;
@@ -199,6 +201,7 @@ public class MatchTimeseries2018 {
    * Current mode of play, can be &#x60;pre_match&#x60;, &#x60;auto&#x60;, &#x60;telop&#x60;, or &#x60;post_match&#x60;.
    * @return mode
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Current mode of play, can be `pre_match`, `auto`, `telop`, or `post_match`.")
   public String getMode() {
     return mode;
@@ -217,6 +220,7 @@ public class MatchTimeseries2018 {
    * Get play
    * @return play
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getPlay() {
     return play;
@@ -235,6 +239,7 @@ public class MatchTimeseries2018 {
    * Amount of time remaining in the match, only valid during &#x60;auto&#x60; and &#x60;teleop&#x60; modes.
    * @return timeRemaining
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Amount of time remaining in the match, only valid during `auto` and `teleop` modes.")
   public Integer getTimeRemaining() {
     return timeRemaining;
@@ -253,6 +258,7 @@ public class MatchTimeseries2018 {
    * 1 if the blue alliance is credited with the AUTO QUEST, 0 if not.
    * @return blueAutoQuest
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the blue alliance is credited with the AUTO QUEST, 0 if not.")
   public Integer getBlueAutoQuest() {
     return blueAutoQuest;
@@ -271,6 +277,7 @@ public class MatchTimeseries2018 {
    * Number of POWER CUBES in the BOOST section of the blue alliance VAULT.
    * @return blueBoostCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of POWER CUBES in the BOOST section of the blue alliance VAULT.")
   public Integer getBlueBoostCount() {
     return blueBoostCount;
@@ -289,6 +296,7 @@ public class MatchTimeseries2018 {
    * Returns 1 if the blue alliance BOOST was played, or 0 if not played.
    * @return blueBoostPlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Returns 1 if the blue alliance BOOST was played, or 0 if not played.")
   public Integer getBlueBoostPlayed() {
     return blueBoostPlayed;
@@ -307,6 +315,7 @@ public class MatchTimeseries2018 {
    * Name of the current blue alliance POWER UP being played, or &#x60;null&#x60;.
    * @return blueCurrentPowerup
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Name of the current blue alliance POWER UP being played, or `null`.")
   public String getBlueCurrentPowerup() {
     return blueCurrentPowerup;
@@ -325,6 +334,7 @@ public class MatchTimeseries2018 {
    * 1 if the blue alliance is credited with FACING THE BOSS, 0 if not.
    * @return blueFaceTheBoss
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the blue alliance is credited with FACING THE BOSS, 0 if not.")
   public Integer getBlueFaceTheBoss() {
     return blueFaceTheBoss;
@@ -343,6 +353,7 @@ public class MatchTimeseries2018 {
    * Number of POWER CUBES in the FORCE section of the blue alliance VAULT.
    * @return blueForceCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of POWER CUBES in the FORCE section of the blue alliance VAULT.")
   public Integer getBlueForceCount() {
     return blueForceCount;
@@ -361,6 +372,7 @@ public class MatchTimeseries2018 {
    * Returns 1 if the blue alliance FORCE was played, or 0 if not played.
    * @return blueForcePlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Returns 1 if the blue alliance FORCE was played, or 0 if not played.")
   public Integer getBlueForcePlayed() {
     return blueForcePlayed;
@@ -379,6 +391,7 @@ public class MatchTimeseries2018 {
    * Number of POWER CUBES in the LEVITATE section of the blue alliance VAULT.
    * @return blueLevitateCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of POWER CUBES in the LEVITATE section of the blue alliance VAULT.")
   public Integer getBlueLevitateCount() {
     return blueLevitateCount;
@@ -397,6 +410,7 @@ public class MatchTimeseries2018 {
    * Returns 1 if the blue alliance LEVITATE was played, or 0 if not played.
    * @return blueLevitatePlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Returns 1 if the blue alliance LEVITATE was played, or 0 if not played.")
   public Integer getBlueLevitatePlayed() {
     return blueLevitatePlayed;
@@ -415,6 +429,7 @@ public class MatchTimeseries2018 {
    * Number of seconds remaining in the blue alliance POWER UP time, or 0 if none is active.
    * @return bluePowerupTimeRemaining
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of seconds remaining in the blue alliance POWER UP time, or 0 if none is active.")
   public String getBluePowerupTimeRemaining() {
     return bluePowerupTimeRemaining;
@@ -433,6 +448,7 @@ public class MatchTimeseries2018 {
    * 1 if the blue alliance owns the SCALE, 0 if not.
    * @return blueScaleOwned
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the blue alliance owns the SCALE, 0 if not.")
   public Integer getBlueScaleOwned() {
     return blueScaleOwned;
@@ -451,6 +467,7 @@ public class MatchTimeseries2018 {
    * Current score for the blue alliance.
    * @return blueScore
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Current score for the blue alliance.")
   public Integer getBlueScore() {
     return blueScore;
@@ -469,6 +486,7 @@ public class MatchTimeseries2018 {
    * 1 if the blue alliance owns their SWITCH, 0 if not.
    * @return blueSwitchOwned
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the blue alliance owns their SWITCH, 0 if not.")
   public Integer getBlueSwitchOwned() {
     return blueSwitchOwned;
@@ -487,6 +505,7 @@ public class MatchTimeseries2018 {
    * 1 if the red alliance is credited with the AUTO QUEST, 0 if not.
    * @return redAutoQuest
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the red alliance is credited with the AUTO QUEST, 0 if not.")
   public Integer getRedAutoQuest() {
     return redAutoQuest;
@@ -505,6 +524,7 @@ public class MatchTimeseries2018 {
    * Number of POWER CUBES in the BOOST section of the red alliance VAULT.
    * @return redBoostCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of POWER CUBES in the BOOST section of the red alliance VAULT.")
   public Integer getRedBoostCount() {
     return redBoostCount;
@@ -523,6 +543,7 @@ public class MatchTimeseries2018 {
    * Returns 1 if the red alliance BOOST was played, or 0 if not played.
    * @return redBoostPlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Returns 1 if the red alliance BOOST was played, or 0 if not played.")
   public Integer getRedBoostPlayed() {
     return redBoostPlayed;
@@ -541,6 +562,7 @@ public class MatchTimeseries2018 {
    * Name of the current red alliance POWER UP being played, or &#x60;null&#x60;.
    * @return redCurrentPowerup
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Name of the current red alliance POWER UP being played, or `null`.")
   public String getRedCurrentPowerup() {
     return redCurrentPowerup;
@@ -559,6 +581,7 @@ public class MatchTimeseries2018 {
    * 1 if the red alliance is credited with FACING THE BOSS, 0 if not.
    * @return redFaceTheBoss
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the red alliance is credited with FACING THE BOSS, 0 if not.")
   public Integer getRedFaceTheBoss() {
     return redFaceTheBoss;
@@ -577,6 +600,7 @@ public class MatchTimeseries2018 {
    * Number of POWER CUBES in the FORCE section of the red alliance VAULT.
    * @return redForceCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of POWER CUBES in the FORCE section of the red alliance VAULT.")
   public Integer getRedForceCount() {
     return redForceCount;
@@ -595,6 +619,7 @@ public class MatchTimeseries2018 {
    * Returns 1 if the red alliance FORCE was played, or 0 if not played.
    * @return redForcePlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Returns 1 if the red alliance FORCE was played, or 0 if not played.")
   public Integer getRedForcePlayed() {
     return redForcePlayed;
@@ -613,6 +638,7 @@ public class MatchTimeseries2018 {
    * Number of POWER CUBES in the LEVITATE section of the red alliance VAULT.
    * @return redLevitateCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of POWER CUBES in the LEVITATE section of the red alliance VAULT.")
   public Integer getRedLevitateCount() {
     return redLevitateCount;
@@ -631,6 +657,7 @@ public class MatchTimeseries2018 {
    * Returns 1 if the red alliance LEVITATE was played, or 0 if not played.
    * @return redLevitatePlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Returns 1 if the red alliance LEVITATE was played, or 0 if not played.")
   public Integer getRedLevitatePlayed() {
     return redLevitatePlayed;
@@ -649,6 +676,7 @@ public class MatchTimeseries2018 {
    * Number of seconds remaining in the red alliance POWER UP time, or 0 if none is active.
    * @return redPowerupTimeRemaining
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of seconds remaining in the red alliance POWER UP time, or 0 if none is active.")
   public String getRedPowerupTimeRemaining() {
     return redPowerupTimeRemaining;
@@ -667,6 +695,7 @@ public class MatchTimeseries2018 {
    * 1 if the red alliance owns the SCALE, 0 if not.
    * @return redScaleOwned
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the red alliance owns the SCALE, 0 if not.")
   public Integer getRedScaleOwned() {
     return redScaleOwned;
@@ -685,6 +714,7 @@ public class MatchTimeseries2018 {
    * Current score for the red alliance.
    * @return redScore
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Current score for the red alliance.")
   public Integer getRedScore() {
     return redScore;
@@ -703,6 +733,7 @@ public class MatchTimeseries2018 {
    * 1 if the red alliance owns their SWITCH, 0 if not.
    * @return redSwitchOwned
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "1 if the red alliance owns their SWITCH, 0 if not.")
   public Integer getRedSwitchOwned() {
     return redSwitchOwned;

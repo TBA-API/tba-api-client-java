@@ -46,6 +46,7 @@ public class MatchVideos {
    * Can be one of &#39;youtube&#39; or &#39;tba&#39;
    * @return type
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Can be one of 'youtube' or 'tba'")
   public String getType() {
     return type;
@@ -64,6 +65,7 @@ public class MatchVideos {
    * Unique key representing this video
    * @return key
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Unique key representing this video")
   public String getKey() {
     return key;

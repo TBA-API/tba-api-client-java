@@ -156,6 +156,7 @@ public class EventSimple {
    * Get district
    * @return district
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public DistrictList getDistrict() {
     return district;
@@ -174,6 +175,7 @@ public class EventSimple {
    * City, town, village, etc. the event is located in.
    * @return city
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "City, town, village, etc. the event is located in.")
   public String getCity() {
     return city;
@@ -192,6 +194,7 @@ public class EventSimple {
    * State or Province the event is located in.
    * @return stateProv
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "State or Province the event is located in.")
   public String getStateProv() {
     return stateProv;
@@ -210,6 +213,7 @@ public class EventSimple {
    * Country the event is located in.
    * @return country
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Country the event is located in.")
   public String getCountry() {
     return country;

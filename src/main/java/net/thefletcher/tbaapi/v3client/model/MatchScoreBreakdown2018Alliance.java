@@ -186,6 +186,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get adjustPoints
    * @return adjustPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAdjustPoints() {
     return adjustPoints;
@@ -204,6 +205,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoOwnershipPoints
    * @return autoOwnershipPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoOwnershipPoints() {
     return autoOwnershipPoints;
@@ -222,6 +224,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoPoints
    * @return autoPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoPoints() {
     return autoPoints;
@@ -240,6 +243,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoQuestRankingPoint
    * @return autoQuestRankingPoint
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getAutoQuestRankingPoint() {
     return autoQuestRankingPoint;
@@ -258,6 +262,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoRobot1
    * @return autoRobot1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getAutoRobot1() {
     return autoRobot1;
@@ -276,6 +281,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoRobot2
    * @return autoRobot2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getAutoRobot2() {
     return autoRobot2;
@@ -294,6 +300,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoRobot3
    * @return autoRobot3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getAutoRobot3() {
     return autoRobot3;
@@ -312,6 +319,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoRunPoints
    * @return autoRunPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoRunPoints() {
     return autoRunPoints;
@@ -330,6 +338,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoScaleOwnershipSec
    * @return autoScaleOwnershipSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoScaleOwnershipSec() {
     return autoScaleOwnershipSec;
@@ -348,6 +357,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoSwitchAtZero
    * @return autoSwitchAtZero
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getAutoSwitchAtZero() {
     return autoSwitchAtZero;
@@ -366,6 +376,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get autoSwitchOwnershipSec
    * @return autoSwitchOwnershipSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoSwitchOwnershipSec() {
     return autoSwitchOwnershipSec;
@@ -384,6 +395,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get endgamePoints
    * @return endgamePoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getEndgamePoints() {
     return endgamePoints;
@@ -402,6 +414,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get endgameRobot1
    * @return endgameRobot1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getEndgameRobot1() {
     return endgameRobot1;
@@ -420,6 +433,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get endgameRobot2
    * @return endgameRobot2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getEndgameRobot2() {
     return endgameRobot2;
@@ -438,6 +452,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get endgameRobot3
    * @return endgameRobot3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getEndgameRobot3() {
     return endgameRobot3;
@@ -456,6 +471,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get faceTheBossRankingPoint
    * @return faceTheBossRankingPoint
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getFaceTheBossRankingPoint() {
     return faceTheBossRankingPoint;
@@ -474,6 +490,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get foulCount
    * @return foulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulCount() {
     return foulCount;
@@ -492,6 +509,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get foulPoints
    * @return foulPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulPoints() {
     return foulPoints;
@@ -510,6 +528,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get rp
    * @return rp
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getRp() {
     return rp;
@@ -528,6 +547,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get techFoulCount
    * @return techFoulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTechFoulCount() {
     return techFoulCount;
@@ -546,6 +566,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopOwnershipPoints
    * @return teleopOwnershipPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopOwnershipPoints() {
     return teleopOwnershipPoints;
@@ -564,6 +585,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopPoints
    * @return teleopPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopPoints() {
     return teleopPoints;
@@ -582,6 +604,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopScaleBoostSec
    * @return teleopScaleBoostSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopScaleBoostSec() {
     return teleopScaleBoostSec;
@@ -600,6 +623,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopScaleForceSec
    * @return teleopScaleForceSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopScaleForceSec() {
     return teleopScaleForceSec;
@@ -618,6 +642,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopScaleOwnershipSec
    * @return teleopScaleOwnershipSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopScaleOwnershipSec() {
     return teleopScaleOwnershipSec;
@@ -636,6 +661,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopSwitchBoostSec
    * @return teleopSwitchBoostSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopSwitchBoostSec() {
     return teleopSwitchBoostSec;
@@ -654,6 +680,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopSwitchForceSec
    * @return teleopSwitchForceSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopSwitchForceSec() {
     return teleopSwitchForceSec;
@@ -672,6 +699,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get teleopSwitchOwnershipSec
    * @return teleopSwitchOwnershipSec
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopSwitchOwnershipSec() {
     return teleopSwitchOwnershipSec;
@@ -690,6 +718,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get totalPoints
    * @return totalPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTotalPoints() {
     return totalPoints;
@@ -708,6 +737,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultBoostPlayed
    * @return vaultBoostPlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultBoostPlayed() {
     return vaultBoostPlayed;
@@ -726,6 +756,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultBoostTotal
    * @return vaultBoostTotal
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultBoostTotal() {
     return vaultBoostTotal;
@@ -744,6 +775,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultForcePlayed
    * @return vaultForcePlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultForcePlayed() {
     return vaultForcePlayed;
@@ -762,6 +794,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultForceTotal
    * @return vaultForceTotal
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultForceTotal() {
     return vaultForceTotal;
@@ -780,6 +813,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultLevitatePlayed
    * @return vaultLevitatePlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultLevitatePlayed() {
     return vaultLevitatePlayed;
@@ -798,6 +832,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultLevitateTotal
    * @return vaultLevitateTotal
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultLevitateTotal() {
     return vaultLevitateTotal;
@@ -816,6 +851,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Get vaultPoints
    * @return vaultPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVaultPoints() {
     return vaultPoints;
@@ -834,6 +870,7 @@ public class MatchScoreBreakdown2018Alliance {
    * Unofficial TBA-computed value of the FMS provided GameData given to the alliance teams at the start of the match. 3 Character String containing &#x60;L&#x60; and &#x60;R&#x60; only. The first character represents the near switch, the 2nd the scale, and the 3rd the far, opposing, switch from the alliance&#39;s perspective. An &#x60;L&#x60; in a position indicates the platform on the left will be lit for the alliance while an &#x60;R&#x60; will indicate the right platform will be lit for the alliance. See also [WPI Screen Steps](https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/826278-2018-game-data-details).
    * @return tbaGameData
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Unofficial TBA-computed value of the FMS provided GameData given to the alliance teams at the start of the match. 3 Character String containing `L` and `R` only. The first character represents the near switch, the 2nd the scale, and the 3rd the far, opposing, switch from the alliance's perspective. An `L` in a position indicates the platform on the left will be lit for the alliance while an `R` will indicate the right platform will be lit for the alliance. See also [WPI Screen Steps](https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/826278-2018-game-data-details).")
   public String getTbaGameData() {
     return tbaGameData;

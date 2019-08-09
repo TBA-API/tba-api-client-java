@@ -134,6 +134,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get autoPoints
    * @return autoPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoPoints() {
     return autoPoints;
@@ -152,6 +153,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get teleopPoints
    * @return teleopPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopPoints() {
     return teleopPoints;
@@ -170,6 +172,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerPoints
    * @return containerPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerPoints() {
     return containerPoints;
@@ -188,6 +191,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get totePoints
    * @return totePoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTotePoints() {
     return totePoints;
@@ -206,6 +210,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get litterPoints
    * @return litterPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getLitterPoints() {
     return litterPoints;
@@ -224,6 +229,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get foulPoints
    * @return foulPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulPoints() {
     return foulPoints;
@@ -242,6 +248,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get adjustPoints
    * @return adjustPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAdjustPoints() {
     return adjustPoints;
@@ -260,6 +267,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get totalPoints
    * @return totalPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTotalPoints() {
     return totalPoints;
@@ -278,6 +286,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get foulCount
    * @return foulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulCount() {
     return foulCount;
@@ -296,6 +305,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get toteCountFar
    * @return toteCountFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getToteCountFar() {
     return toteCountFar;
@@ -314,6 +324,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get toteCountNear
    * @return toteCountNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getToteCountNear() {
     return toteCountNear;
@@ -332,6 +343,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get toteSet
    * @return toteSet
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getToteSet() {
     return toteSet;
@@ -350,6 +362,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get toteStack
    * @return toteStack
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getToteStack() {
     return toteStack;
@@ -368,6 +381,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerCountLevel1
    * @return containerCountLevel1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerCountLevel1() {
     return containerCountLevel1;
@@ -386,6 +400,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerCountLevel2
    * @return containerCountLevel2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerCountLevel2() {
     return containerCountLevel2;
@@ -404,6 +419,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerCountLevel3
    * @return containerCountLevel3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerCountLevel3() {
     return containerCountLevel3;
@@ -422,6 +438,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerCountLevel4
    * @return containerCountLevel4
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerCountLevel4() {
     return containerCountLevel4;
@@ -440,6 +457,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerCountLevel5
    * @return containerCountLevel5
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerCountLevel5() {
     return containerCountLevel5;
@@ -458,6 +476,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerCountLevel6
    * @return containerCountLevel6
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getContainerCountLevel6() {
     return containerCountLevel6;
@@ -476,6 +495,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get containerSet
    * @return containerSet
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getContainerSet() {
     return containerSet;
@@ -494,6 +514,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get litterCountContainer
    * @return litterCountContainer
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getLitterCountContainer() {
     return litterCountContainer;
@@ -512,6 +533,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get litterCountLandfill
    * @return litterCountLandfill
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getLitterCountLandfill() {
     return litterCountLandfill;
@@ -530,6 +552,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get litterCountUnprocessed
    * @return litterCountUnprocessed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getLitterCountUnprocessed() {
     return litterCountUnprocessed;
@@ -548,6 +571,7 @@ public class MatchScoreBreakdown2015Alliance {
    * Get robotSet
    * @return robotSet
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRobotSet() {
     return robotSet;

@@ -48,6 +48,7 @@ public class MatchSimpleAlliances {
    * Get red
    * @return red
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchAlliance getRed() {
     return red;
@@ -66,6 +67,7 @@ public class MatchSimpleAlliances {
    * Get blue
    * @return blue
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchAlliance getBlue() {
     return blue;

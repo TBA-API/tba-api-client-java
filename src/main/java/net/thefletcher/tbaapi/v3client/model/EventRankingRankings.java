@@ -92,6 +92,7 @@ public class EventRankingRankings {
    * The average match score during qualifications. Year specific. May be null if not relevant for a given year.
    * @return qualAverage
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The average match score during qualifications. Year specific. May be null if not relevant for a given year.")
   public Integer getQualAverage() {
     return qualAverage;
@@ -118,6 +119,7 @@ public class EventRankingRankings {
    * Additional special data on the team&#39;s performance calculated by TBA.
    * @return extraStats
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Additional special data on the team's performance calculated by TBA.")
   public List<BigDecimal> getExtraStats() {
     return extraStats;
@@ -144,6 +146,7 @@ public class EventRankingRankings {
    * Additional year-specific information, may be null. See parent &#x60;sort_order_info&#x60; for details.
    * @return sortOrders
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Additional year-specific information, may be null. See parent `sort_order_info` for details.")
   public List<BigDecimal> getSortOrders() {
     return sortOrders;

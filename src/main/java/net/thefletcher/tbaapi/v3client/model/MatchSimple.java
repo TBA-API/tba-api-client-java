@@ -251,6 +251,7 @@ public class MatchSimple {
    * Get alliances
    * @return alliances
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchSimpleAlliances getAlliances() {
     return alliances;
@@ -269,6 +270,7 @@ public class MatchSimple {
    * The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
    * @return winningAlliance
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.")
   public WinningAllianceEnum getWinningAlliance() {
     return winningAlliance;
@@ -305,6 +307,7 @@ public class MatchSimple {
    * UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule.
    * @return time
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule.")
   public Long getTime() {
     return time;
@@ -323,6 +326,7 @@ public class MatchSimple {
    * UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time.
    * @return predictedTime
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time.")
   public Long getPredictedTime() {
     return predictedTime;
@@ -341,6 +345,7 @@ public class MatchSimple {
    * UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.
    * @return actualTime
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.")
   public Long getActualTime() {
     return actualTime;

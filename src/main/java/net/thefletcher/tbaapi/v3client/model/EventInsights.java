@@ -47,6 +47,7 @@ public class EventInsights {
    * Inights for the qualification round of an event
    * @return qual
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Inights for the qualification round of an event")
   public Object getQual() {
     return qual;
@@ -65,6 +66,7 @@ public class EventInsights {
    * Insights for the playoff round of an event
    * @return playoff
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Insights for the playoff round of an event")
   public Object getPlayoff() {
     return playoff;

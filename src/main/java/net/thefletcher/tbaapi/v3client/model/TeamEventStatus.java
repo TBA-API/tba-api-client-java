@@ -73,6 +73,7 @@ public class TeamEventStatus {
    * Get qual
    * @return qual
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public TeamEventStatusRank getQual() {
     return qual;
@@ -91,6 +92,7 @@ public class TeamEventStatus {
    * Get alliance
    * @return alliance
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public TeamEventStatusAlliance getAlliance() {
     return alliance;
@@ -109,6 +111,7 @@ public class TeamEventStatus {
    * Get playoff
    * @return playoff
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public TeamEventStatusPlayoff getPlayoff() {
     return playoff;
@@ -127,6 +130,7 @@ public class TeamEventStatus {
    * An HTML formatted string suitable for display to the user containing the team&#39;s alliance pick status.
    * @return allianceStatusStr
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "An HTML formatted string suitable for display to the user containing the team's alliance pick status.")
   public String getAllianceStatusStr() {
     return allianceStatusStr;
@@ -145,6 +149,7 @@ public class TeamEventStatus {
    * An HTML formatter string suitable for display to the user containing the team&#39;s playoff status.
    * @return playoffStatusStr
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "An HTML formatter string suitable for display to the user containing the team's playoff status.")
   public String getPlayoffStatusStr() {
     return playoffStatusStr;
@@ -163,6 +168,7 @@ public class TeamEventStatus {
    * An HTML formatted string suitable for display to the user containing the team&#39;s overall status summary of the event.
    * @return overallStatusStr
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "An HTML formatted string suitable for display to the user containing the team's overall status summary of the event.")
   public String getOverallStatusStr() {
     return overallStatusStr;
@@ -181,6 +187,7 @@ public class TeamEventStatus {
    * TBA match key for the next match the team is scheduled to play in at this event, or null.
    * @return nextMatchKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA match key for the next match the team is scheduled to play in at this event, or null.")
   public String getNextMatchKey() {
     return nextMatchKey;
@@ -199,6 +206,7 @@ public class TeamEventStatus {
    * TBA match key for the last match the team played in at this event, or null.
    * @return lastMatchKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA match key for the last match the team played in at this event, or null.")
   public String getLastMatchKey() {
     return lastMatchKey;

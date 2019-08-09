@@ -47,6 +47,7 @@ public class TeamEventStatusAllianceBackup {
    * TBA key for the team replaced by the backup.
    * @return out
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA key for the team replaced by the backup.")
   public String getOut() {
     return out;
@@ -65,6 +66,7 @@ public class TeamEventStatusAllianceBackup {
    * TBA key for the backup team called in.
    * @return in
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA key for the backup team called in.")
   public String getIn() {
     return in;

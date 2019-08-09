@@ -62,6 +62,7 @@ public class EventOPRs {
    * A key-value pair with team key (eg &#x60;frc254&#x60;) as key and OPR as value.
    * @return oprs
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "A key-value pair with team key (eg `frc254`) as key and OPR as value.")
   public Map<String, Float> getOprs() {
     return oprs;
@@ -88,6 +89,7 @@ public class EventOPRs {
    * A key-value pair with team key (eg &#x60;frc254&#x60;) as key and DPR as value.
    * @return dprs
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "A key-value pair with team key (eg `frc254`) as key and DPR as value.")
   public Map<String, Float> getDprs() {
     return dprs;
@@ -114,6 +116,7 @@ public class EventOPRs {
    * A key-value pair with team key (eg &#x60;frc254&#x60;) as key and CCWM as value.
    * @return ccwms
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "A key-value pair with team key (eg `frc254`) as key and CCWM as value.")
   public Map<String, Float> getCcwms() {
     return ccwms;

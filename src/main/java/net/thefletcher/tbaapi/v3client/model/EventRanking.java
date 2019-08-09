@@ -86,6 +86,7 @@ public class EventRanking {
    * List of special TBA-generated values provided in the &#x60;extra_stats&#x60; array for each item.
    * @return extraStatsInfo
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "List of special TBA-generated values provided in the `extra_stats` array for each item.")
   public List<EventRankingExtraStatsInfo> getExtraStatsInfo() {
     return extraStatsInfo;

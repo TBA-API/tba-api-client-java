@@ -47,6 +47,7 @@ import java.util.regex.Pattern;
 
 import net.thefletcher.tbaapi.v3client.auth.Authentication;
 import net.thefletcher.tbaapi.v3client.auth.HttpBasicAuth;
+import net.thefletcher.tbaapi.v3client.auth.HttpBearerAuth;
 import net.thefletcher.tbaapi.v3client.auth.ApiKeyAuth;
 
 public class ApiClient {
@@ -130,24 +131,14 @@ public class ApiClient {
     }
 
     /**
-     * Set HTTP client
+     * Set HTTP client, which must never be null.
      *
      * @param newHttpClient An instance of OkHttpClient
      * @return Api Client
+     * @throws NullPointerException when newHttpClient is null
      */
     public ApiClient setHttpClient(OkHttpClient newHttpClient) {
-        if(!httpClient.equals(newHttpClient)) {
-            OkHttpClient.Builder builder = newHttpClient.newBuilder();
-            Iterator<Interceptor> networkInterceptorIterator = httpClient.networkInterceptors().iterator();
-            while(networkInterceptorIterator.hasNext()) {
-                builder.addNetworkInterceptor(networkInterceptorIterator.next());
-            }
-            Iterator<Interceptor> interceptorIterator = httpClient.interceptors().iterator();
-            while(interceptorIterator.hasNext()) {
-                builder.addInterceptor(interceptorIterator.next());
-            }
-            this.httpClient = builder.build();
-        }
+        this.httpClient = Objects.requireNonNull(newHttpClient, "HttpClient must not be null!");
         return this;
     }
 

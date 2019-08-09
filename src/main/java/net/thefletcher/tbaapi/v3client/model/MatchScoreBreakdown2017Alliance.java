@@ -317,6 +317,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get autoPoints
    * @return autoPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoPoints() {
     return autoPoints;
@@ -335,6 +336,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get teleopPoints
    * @return teleopPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopPoints() {
     return teleopPoints;
@@ -353,6 +355,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get foulPoints
    * @return foulPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulPoints() {
     return foulPoints;
@@ -371,6 +374,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get adjustPoints
    * @return adjustPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAdjustPoints() {
     return adjustPoints;
@@ -389,6 +393,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get totalPoints
    * @return totalPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTotalPoints() {
     return totalPoints;
@@ -407,6 +412,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get robot1Auto
    * @return robot1Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Robot1AutoEnum getRobot1Auto() {
     return robot1Auto;
@@ -425,6 +431,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get robot2Auto
    * @return robot2Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Robot2AutoEnum getRobot2Auto() {
     return robot2Auto;
@@ -443,6 +450,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get robot3Auto
    * @return robot3Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Robot3AutoEnum getRobot3Auto() {
     return robot3Auto;
@@ -461,6 +469,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotor1Auto
    * @return rotor1Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotor1Auto() {
     return rotor1Auto;
@@ -479,6 +488,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotor2Auto
    * @return rotor2Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotor2Auto() {
     return rotor2Auto;
@@ -497,6 +507,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get autoFuelLow
    * @return autoFuelLow
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoFuelLow() {
     return autoFuelLow;
@@ -515,6 +526,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get autoFuelHigh
    * @return autoFuelHigh
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoFuelHigh() {
     return autoFuelHigh;
@@ -533,6 +545,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get autoMobilityPoints
    * @return autoMobilityPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoMobilityPoints() {
     return autoMobilityPoints;
@@ -551,6 +564,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get autoRotorPoints
    * @return autoRotorPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoRotorPoints() {
     return autoRotorPoints;
@@ -569,6 +583,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get autoFuelPoints
    * @return autoFuelPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoFuelPoints() {
     return autoFuelPoints;
@@ -587,6 +602,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get teleopFuelPoints
    * @return teleopFuelPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopFuelPoints() {
     return teleopFuelPoints;
@@ -605,6 +621,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get teleopFuelLow
    * @return teleopFuelLow
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopFuelLow() {
     return teleopFuelLow;
@@ -623,6 +640,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get teleopFuelHigh
    * @return teleopFuelHigh
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopFuelHigh() {
     return teleopFuelHigh;
@@ -641,6 +659,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get teleopRotorPoints
    * @return teleopRotorPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopRotorPoints() {
     return teleopRotorPoints;
@@ -659,6 +678,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get kPaRankingPointAchieved
    * @return kPaRankingPointAchieved
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getkPaRankingPointAchieved() {
     return kPaRankingPointAchieved;
@@ -677,6 +697,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get teleopTakeoffPoints
    * @return teleopTakeoffPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopTakeoffPoints() {
     return teleopTakeoffPoints;
@@ -695,6 +716,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get kPaBonusPoints
    * @return kPaBonusPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getkPaBonusPoints() {
     return kPaBonusPoints;
@@ -713,6 +735,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotorBonusPoints
    * @return rotorBonusPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getRotorBonusPoints() {
     return rotorBonusPoints;
@@ -731,6 +754,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotor1Engaged
    * @return rotor1Engaged
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotor1Engaged() {
     return rotor1Engaged;
@@ -749,6 +773,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotor2Engaged
    * @return rotor2Engaged
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotor2Engaged() {
     return rotor2Engaged;
@@ -767,6 +792,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotor3Engaged
    * @return rotor3Engaged
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotor3Engaged() {
     return rotor3Engaged;
@@ -785,6 +811,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotor4Engaged
    * @return rotor4Engaged
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotor4Engaged() {
     return rotor4Engaged;
@@ -803,6 +830,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get rotorRankingPointAchieved
    * @return rotorRankingPointAchieved
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getRotorRankingPointAchieved() {
     return rotorRankingPointAchieved;
@@ -821,6 +849,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get techFoulCount
    * @return techFoulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTechFoulCount() {
     return techFoulCount;
@@ -839,6 +868,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get foulCount
    * @return foulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulCount() {
     return foulCount;
@@ -857,6 +887,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get touchpadNear
    * @return touchpadNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTouchpadNear() {
     return touchpadNear;
@@ -875,6 +906,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get touchpadMiddle
    * @return touchpadMiddle
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTouchpadMiddle() {
     return touchpadMiddle;
@@ -893,6 +925,7 @@ public class MatchScoreBreakdown2017Alliance {
    * Get touchpadFar
    * @return touchpadFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTouchpadFar() {
     return touchpadFar;

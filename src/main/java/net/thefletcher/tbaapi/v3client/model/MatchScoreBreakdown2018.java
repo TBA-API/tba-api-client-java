@@ -48,6 +48,7 @@ public class MatchScoreBreakdown2018 {
    * Get blue
    * @return blue
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchScoreBreakdown2018Alliance getBlue() {
     return blue;
@@ -66,6 +67,7 @@ public class MatchScoreBreakdown2018 {
    * Get red
    * @return red
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchScoreBreakdown2018Alliance getRed() {
     return red;

@@ -235,6 +235,7 @@ public class Event {
    * Get district
    * @return district
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public DistrictList getDistrict() {
     return district;
@@ -253,6 +254,7 @@ public class Event {
    * City, town, village, etc. the event is located in.
    * @return city
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "City, town, village, etc. the event is located in.")
   public String getCity() {
     return city;
@@ -271,6 +273,7 @@ public class Event {
    * State or Province the event is located in.
    * @return stateProv
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "State or Province the event is located in.")
   public String getStateProv() {
     return stateProv;
@@ -289,6 +292,7 @@ public class Event {
    * Country the event is located in.
    * @return country
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Country the event is located in.")
   public String getCountry() {
     return country;
@@ -361,6 +365,7 @@ public class Event {
    * Same as &#x60;name&#x60; but doesn&#39;t include event specifiers, such as &#39;Regional&#39; or &#39;District&#39;. May be null.
    * @return shortName
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Same as `name` but doesn't include event specifiers, such as 'Regional' or 'District'. May be null.")
   public String getShortName() {
     return shortName;
@@ -397,6 +402,7 @@ public class Event {
    * Week of the event relative to the first official season event, zero-indexed. Only valid for Regionals, Districts, and District Championships. Null otherwise. (Eg. A season with a week 0 &#39;preseason&#39; event does not count, and week 1 events will show 0 here. Seasons with a week 0.5 regional event will show week 0 for those event(s) and week 1 for week 1 events and so on.)
    * @return week
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Week of the event relative to the first official season event, zero-indexed. Only valid for Regionals, Districts, and District Championships. Null otherwise. (Eg. A season with a week 0 'preseason' event does not count, and week 1 events will show 0 here. Seasons with a week 0.5 regional event will show week 0 for those event(s) and week 1 for week 1 events and so on.)")
   public Integer getWeek() {
     return week;
@@ -415,6 +421,7 @@ public class Event {
    * Address of the event&#39;s venue, if available.
    * @return address
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Address of the event's venue, if available.")
   public String getAddress() {
     return address;
@@ -433,6 +440,7 @@ public class Event {
    * Postal code from the event address.
    * @return postalCode
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Postal code from the event address.")
   public String getPostalCode() {
     return postalCode;
@@ -451,6 +459,7 @@ public class Event {
    * Google Maps Place ID for the event address.
    * @return gmapsPlaceId
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Google Maps Place ID for the event address.")
   public String getGmapsPlaceId() {
     return gmapsPlaceId;
@@ -469,6 +478,7 @@ public class Event {
    * Link to address location on Google Maps.
    * @return gmapsUrl
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Link to address location on Google Maps.")
   public String getGmapsUrl() {
     return gmapsUrl;
@@ -487,6 +497,7 @@ public class Event {
    * Latitude for the event address.
    * @return lat
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Latitude for the event address.")
   public Double getLat() {
     return lat;
@@ -505,6 +516,7 @@ public class Event {
    * Longitude for the event address.
    * @return lng
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Longitude for the event address.")
   public Double getLng() {
     return lng;
@@ -523,6 +535,7 @@ public class Event {
    * Name of the location at the address for the event, eg. Blue Alliance High School.
    * @return locationName
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Name of the location at the address for the event, eg. Blue Alliance High School.")
   public String getLocationName() {
     return locationName;
@@ -541,6 +554,7 @@ public class Event {
    * Timezone name.
    * @return timezone
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Timezone name.")
   public String getTimezone() {
     return timezone;
@@ -559,6 +573,7 @@ public class Event {
    * The event&#39;s website, if any.
    * @return website
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The event's website, if any.")
   public String getWebsite() {
     return website;
@@ -577,6 +592,7 @@ public class Event {
    * The FIRST internal Event ID, used to link to the event on the FRC webpage.
    * @return firstEventId
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The FIRST internal Event ID, used to link to the event on the FRC webpage.")
   public String getFirstEventId() {
     return firstEventId;
@@ -595,6 +611,7 @@ public class Event {
    * Public facing event code used by FIRST (on frc-events.firstinspires.org, for example)
    * @return firstEventCode
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Public facing event code used by FIRST (on frc-events.firstinspires.org, for example)")
   public String getFirstEventCode() {
     return firstEventCode;
@@ -621,6 +638,7 @@ public class Event {
    * Get webcasts
    * @return webcasts
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public List<Webcast> getWebcasts() {
     return webcasts;
@@ -647,6 +665,7 @@ public class Event {
    * An array of event keys for the divisions at this event.
    * @return divisionKeys
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "An array of event keys for the divisions at this event.")
   public List<String> getDivisionKeys() {
     return divisionKeys;
@@ -665,6 +684,7 @@ public class Event {
    * The TBA Event key that represents the event&#39;s parent. Used to link back to the event from a division event. It is also the inverse relation of &#x60;divison_keys&#x60;.
    * @return parentEventKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The TBA Event key that represents the event's parent. Used to link back to the event from a division event. It is also the inverse relation of `divison_keys`.")
   public String getParentEventKey() {
     return parentEventKey;
@@ -683,6 +703,7 @@ public class Event {
    * Playoff Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/playoff_type.py#L4, or null.
    * @return playoffType
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Playoff Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/playoff_type.py#L4, or null.")
   public Integer getPlayoffType() {
     return playoffType;
@@ -701,6 +722,7 @@ public class Event {
    * String representation of the &#x60;playoff_type&#x60;, or null.
    * @return playoffTypeString
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "String representation of the `playoff_type`, or null.")
   public String getPlayoffTypeString() {
     return playoffTypeString;

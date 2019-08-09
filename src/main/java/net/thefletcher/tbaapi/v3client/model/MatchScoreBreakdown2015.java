@@ -105,6 +105,7 @@ public class MatchScoreBreakdown2015 {
    * Get blue
    * @return blue
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchScoreBreakdown2015Alliance getBlue() {
     return blue;
@@ -123,6 +124,7 @@ public class MatchScoreBreakdown2015 {
    * Get red
    * @return red
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public MatchScoreBreakdown2015Alliance getRed() {
     return red;
@@ -141,6 +143,7 @@ public class MatchScoreBreakdown2015 {
    * Get coopertition
    * @return coopertition
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public CoopertitionEnum getCoopertition() {
     return coopertition;
@@ -159,6 +162,7 @@ public class MatchScoreBreakdown2015 {
    * Get coopertitionPoints
    * @return coopertitionPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getCoopertitionPoints() {
     return coopertitionPoints;

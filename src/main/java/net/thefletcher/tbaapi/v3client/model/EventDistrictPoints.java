@@ -82,6 +82,7 @@ public class EventDistrictPoints {
    * Tiebreaker values for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the tiebreaker elements as its value.
    * @return tiebreakers
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Tiebreaker values for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the tiebreaker elements as its value.")
   public Map<String, EventDistrictPointsTiebreakers> getTiebreakers() {
     return tiebreakers;

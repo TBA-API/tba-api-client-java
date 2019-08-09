@@ -47,6 +47,7 @@ public class AwardRecipient {
    * The TBA team key for the team that was given the award. May be null.
    * @return teamKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The TBA team key for the team that was given the award. May be null.")
   public String getTeamKey() {
     return teamKey;
@@ -65,6 +66,7 @@ public class AwardRecipient {
    * The name of the individual given the award. May be null.
    * @return awardee
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "The name of the individual given the award. May be null.")
   public String getAwardee() {
     return awardee;

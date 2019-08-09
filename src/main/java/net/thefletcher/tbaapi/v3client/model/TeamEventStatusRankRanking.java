@@ -70,6 +70,7 @@ public class TeamEventStatusRankRanking {
    * Number of matches played.
    * @return matchesPlayed
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of matches played.")
   public Integer getMatchesPlayed() {
     return matchesPlayed;
@@ -88,6 +89,7 @@ public class TeamEventStatusRankRanking {
    * For some years, average qualification score. Can be null.
    * @return qualAverage
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "For some years, average qualification score. Can be null.")
   public Double getQualAverage() {
     return qualAverage;
@@ -114,6 +116,7 @@ public class TeamEventStatusRankRanking {
    * Ordered list of values used to determine the rank. See the &#x60;sort_order_info&#x60; property for the name of each value.
    * @return sortOrders
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Ordered list of values used to determine the rank. See the `sort_order_info` property for the name of each value.")
   public List<BigDecimal> getSortOrders() {
     return sortOrders;
@@ -132,6 +135,7 @@ public class TeamEventStatusRankRanking {
    * Get record
    * @return record
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public WLTRecord getRecord() {
     return record;
@@ -150,6 +154,7 @@ public class TeamEventStatusRankRanking {
    * Relative rank of this team.
    * @return rank
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Relative rank of this team.")
   public Integer getRank() {
     return rank;
@@ -168,6 +173,7 @@ public class TeamEventStatusRankRanking {
    * Number of matches the team was disqualified for.
    * @return dq
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of matches the team was disqualified for.")
   public Integer getDq() {
     return dq;
@@ -186,6 +192,7 @@ public class TeamEventStatusRankRanking {
    * TBA team key for this rank.
    * @return teamKey
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA team key for this rank.")
   public String getTeamKey() {
     return teamKey;

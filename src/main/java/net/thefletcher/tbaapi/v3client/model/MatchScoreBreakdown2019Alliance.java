@@ -242,6 +242,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get adjustPoints
    * @return adjustPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAdjustPoints() {
     return adjustPoints;
@@ -260,6 +261,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get autoPoints
    * @return autoPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoPoints() {
     return autoPoints;
@@ -278,6 +280,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay1
    * @return bay1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay1() {
     return bay1;
@@ -296,6 +299,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay2
    * @return bay2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay2() {
     return bay2;
@@ -314,6 +318,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay3
    * @return bay3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay3() {
     return bay3;
@@ -332,6 +337,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay4
    * @return bay4
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay4() {
     return bay4;
@@ -350,6 +356,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay5
    * @return bay5
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay5() {
     return bay5;
@@ -368,6 +375,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay6
    * @return bay6
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay6() {
     return bay6;
@@ -386,6 +394,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay7
    * @return bay7
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay7() {
     return bay7;
@@ -404,6 +413,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get bay8
    * @return bay8
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getBay8() {
     return bay8;
@@ -422,6 +432,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get cargoPoints
    * @return cargoPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getCargoPoints() {
     return cargoPoints;
@@ -440,6 +451,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get completeRocketRankingPoint
    * @return completeRocketRankingPoint
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getCompleteRocketRankingPoint() {
     return completeRocketRankingPoint;
@@ -458,6 +470,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get completedRocketFar
    * @return completedRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getCompletedRocketFar() {
     return completedRocketFar;
@@ -476,6 +489,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get completedRocketNear
    * @return completedRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getCompletedRocketNear() {
     return completedRocketNear;
@@ -494,6 +508,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get endgameRobot1
    * @return endgameRobot1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getEndgameRobot1() {
     return endgameRobot1;
@@ -512,6 +527,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get endgameRobot2
    * @return endgameRobot2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getEndgameRobot2() {
     return endgameRobot2;
@@ -530,6 +546,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get endgameRobot3
    * @return endgameRobot3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getEndgameRobot3() {
     return endgameRobot3;
@@ -548,6 +565,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get foulCount
    * @return foulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulCount() {
     return foulCount;
@@ -566,6 +584,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get foulPoints
    * @return foulPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulPoints() {
     return foulPoints;
@@ -584,6 +603,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get habClimbPoints
    * @return habClimbPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getHabClimbPoints() {
     return habClimbPoints;
@@ -602,6 +622,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get habDockingRankingPoint
    * @return habDockingRankingPoint
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getHabDockingRankingPoint() {
     return habDockingRankingPoint;
@@ -620,6 +641,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get habLineRobot1
    * @return habLineRobot1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getHabLineRobot1() {
     return habLineRobot1;
@@ -638,6 +660,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get habLineRobot2
    * @return habLineRobot2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getHabLineRobot2() {
     return habLineRobot2;
@@ -656,6 +679,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get habLineRobot3
    * @return habLineRobot3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getHabLineRobot3() {
     return habLineRobot3;
@@ -674,6 +698,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get hatchPanelPoints
    * @return hatchPanelPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getHatchPanelPoints() {
     return hatchPanelPoints;
@@ -692,6 +717,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get lowLeftRocketFar
    * @return lowLeftRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getLowLeftRocketFar() {
     return lowLeftRocketFar;
@@ -710,6 +736,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get lowLeftRocketNear
    * @return lowLeftRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getLowLeftRocketNear() {
     return lowLeftRocketNear;
@@ -728,6 +755,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get lowRightRocketFar
    * @return lowRightRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getLowRightRocketFar() {
     return lowRightRocketFar;
@@ -746,6 +774,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get lowRightRocketNear
    * @return lowRightRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getLowRightRocketNear() {
     return lowRightRocketNear;
@@ -764,6 +793,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get midLeftRocketFar
    * @return midLeftRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getMidLeftRocketFar() {
     return midLeftRocketFar;
@@ -782,6 +812,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get midLeftRocketNear
    * @return midLeftRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getMidLeftRocketNear() {
     return midLeftRocketNear;
@@ -800,6 +831,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get midRightRocketFar
    * @return midRightRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getMidRightRocketFar() {
     return midRightRocketFar;
@@ -818,6 +850,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get midRightRocketNear
    * @return midRightRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getMidRightRocketNear() {
     return midRightRocketNear;
@@ -836,6 +869,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchBay1
    * @return preMatchBay1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchBay1() {
     return preMatchBay1;
@@ -854,6 +888,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchBay2
    * @return preMatchBay2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchBay2() {
     return preMatchBay2;
@@ -872,6 +907,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchBay3
    * @return preMatchBay3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchBay3() {
     return preMatchBay3;
@@ -890,6 +926,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchBay6
    * @return preMatchBay6
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchBay6() {
     return preMatchBay6;
@@ -908,6 +945,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchBay7
    * @return preMatchBay7
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchBay7() {
     return preMatchBay7;
@@ -926,6 +964,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchBay8
    * @return preMatchBay8
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchBay8() {
     return preMatchBay8;
@@ -944,6 +983,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchLevelRobot1
    * @return preMatchLevelRobot1
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchLevelRobot1() {
     return preMatchLevelRobot1;
@@ -962,6 +1002,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchLevelRobot2
    * @return preMatchLevelRobot2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchLevelRobot2() {
     return preMatchLevelRobot2;
@@ -980,6 +1021,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get preMatchLevelRobot3
    * @return preMatchLevelRobot3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPreMatchLevelRobot3() {
     return preMatchLevelRobot3;
@@ -998,6 +1040,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get rp
    * @return rp
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getRp() {
     return rp;
@@ -1016,6 +1059,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get sandStormBonusPoints
    * @return sandStormBonusPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getSandStormBonusPoints() {
     return sandStormBonusPoints;
@@ -1034,6 +1078,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get techFoulCount
    * @return techFoulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTechFoulCount() {
     return techFoulCount;
@@ -1052,6 +1097,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get teleopPoints
    * @return teleopPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopPoints() {
     return teleopPoints;
@@ -1070,6 +1116,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get topLeftRocketFar
    * @return topLeftRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTopLeftRocketFar() {
     return topLeftRocketFar;
@@ -1088,6 +1135,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get topLeftRocketNear
    * @return topLeftRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTopLeftRocketNear() {
     return topLeftRocketNear;
@@ -1106,6 +1154,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get topRightRocketFar
    * @return topRightRocketFar
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTopRightRocketFar() {
     return topRightRocketFar;
@@ -1124,6 +1173,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get topRightRocketNear
    * @return topRightRocketNear
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTopRightRocketNear() {
     return topRightRocketNear;
@@ -1142,6 +1192,7 @@ public class MatchScoreBreakdown2019Alliance {
    * Get totalPoints
    * @return totalPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTotalPoints() {
     return totalPoints;

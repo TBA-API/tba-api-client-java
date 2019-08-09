@@ -105,6 +105,7 @@ public class MatchAlliance {
    * TBA team keys (eg &#x60;frc254&#x60;) of any teams playing as a surrogate.
    * @return surrogateTeamKeys
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA team keys (eg `frc254`) of any teams playing as a surrogate.")
   public List<String> getSurrogateTeamKeys() {
     return surrogateTeamKeys;
@@ -131,6 +132,7 @@ public class MatchAlliance {
    * TBA team keys (eg &#x60;frc254&#x60;) of any disqualified teams.
    * @return dqTeamKeys
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA team keys (eg `frc254`) of any disqualified teams.")
   public List<String> getDqTeamKeys() {
     return dqTeamKeys;

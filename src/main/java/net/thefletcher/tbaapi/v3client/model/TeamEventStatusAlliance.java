@@ -55,6 +55,7 @@ public class TeamEventStatusAlliance {
    * Alliance name, may be null.
    * @return name
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Alliance name, may be null.")
   public String getName() {
     return name;
@@ -91,6 +92,7 @@ public class TeamEventStatusAlliance {
    * Get backup
    * @return backup
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public TeamEventStatusAllianceBackup getBackup() {
     return backup;

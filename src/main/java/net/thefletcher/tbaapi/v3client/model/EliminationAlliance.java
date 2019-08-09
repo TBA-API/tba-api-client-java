@@ -62,6 +62,7 @@ public class EliminationAlliance {
    * Alliance name, may be null.
    * @return name
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "Alliance name, may be null.")
   public String getName() {
     return name;
@@ -80,6 +81,7 @@ public class EliminationAlliance {
    * Get backup
    * @return backup
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public EliminationAllianceBackup getBackup() {
     return backup;
@@ -106,6 +108,7 @@ public class EliminationAlliance {
    * List of teams that declined the alliance.
    * @return declines
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "List of teams that declined the alliance.")
   public List<String> getDeclines() {
     return declines;
@@ -147,6 +150,7 @@ public class EliminationAlliance {
    * Get status
    * @return status
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public EliminationAllianceStatus getStatus() {
     return status;

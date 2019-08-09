@@ -337,6 +337,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get autoPoints
    * @return autoPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoPoints() {
     return autoPoints;
@@ -355,6 +356,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopPoints
    * @return teleopPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopPoints() {
     return teleopPoints;
@@ -373,6 +375,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get breachPoints
    * @return breachPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getBreachPoints() {
     return breachPoints;
@@ -391,6 +394,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get foulPoints
    * @return foulPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulPoints() {
     return foulPoints;
@@ -409,6 +413,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get capturePoints
    * @return capturePoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getCapturePoints() {
     return capturePoints;
@@ -427,6 +432,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get adjustPoints
    * @return adjustPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAdjustPoints() {
     return adjustPoints;
@@ -445,6 +451,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get totalPoints
    * @return totalPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTotalPoints() {
     return totalPoints;
@@ -463,6 +470,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get robot1Auto
    * @return robot1Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Robot1AutoEnum getRobot1Auto() {
     return robot1Auto;
@@ -481,6 +489,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get robot2Auto
    * @return robot2Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Robot2AutoEnum getRobot2Auto() {
     return robot2Auto;
@@ -499,6 +508,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get robot3Auto
    * @return robot3Auto
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Robot3AutoEnum getRobot3Auto() {
     return robot3Auto;
@@ -517,6 +527,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get autoReachPoints
    * @return autoReachPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoReachPoints() {
     return autoReachPoints;
@@ -535,6 +546,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get autoCrossingPoints
    * @return autoCrossingPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoCrossingPoints() {
     return autoCrossingPoints;
@@ -553,6 +565,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get autoBouldersLow
    * @return autoBouldersLow
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoBouldersLow() {
     return autoBouldersLow;
@@ -571,6 +584,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get autoBouldersHigh
    * @return autoBouldersHigh
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoBouldersHigh() {
     return autoBouldersHigh;
@@ -589,6 +603,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get autoBoulderPoints
    * @return autoBoulderPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getAutoBoulderPoints() {
     return autoBoulderPoints;
@@ -607,6 +622,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopCrossingPoints
    * @return teleopCrossingPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopCrossingPoints() {
     return teleopCrossingPoints;
@@ -625,6 +641,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopBouldersLow
    * @return teleopBouldersLow
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopBouldersLow() {
     return teleopBouldersLow;
@@ -643,6 +660,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopBouldersHigh
    * @return teleopBouldersHigh
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopBouldersHigh() {
     return teleopBouldersHigh;
@@ -661,6 +679,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopBoulderPoints
    * @return teleopBoulderPoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopBoulderPoints() {
     return teleopBoulderPoints;
@@ -679,6 +698,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopDefensesBreached
    * @return teleopDefensesBreached
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Boolean getTeleopDefensesBreached() {
     return teleopDefensesBreached;
@@ -697,6 +717,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopChallengePoints
    * @return teleopChallengePoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopChallengePoints() {
     return teleopChallengePoints;
@@ -715,6 +736,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopScalePoints
    * @return teleopScalePoints
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopScalePoints() {
     return teleopScalePoints;
@@ -733,6 +755,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get teleopTowerCaptured
    * @return teleopTowerCaptured
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTeleopTowerCaptured() {
     return teleopTowerCaptured;
@@ -751,6 +774,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get towerFaceA
    * @return towerFaceA
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTowerFaceA() {
     return towerFaceA;
@@ -769,6 +793,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get towerFaceB
    * @return towerFaceB
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTowerFaceB() {
     return towerFaceB;
@@ -787,6 +812,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get towerFaceC
    * @return towerFaceC
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getTowerFaceC() {
     return towerFaceC;
@@ -805,6 +831,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get towerEndStrength
    * @return towerEndStrength
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTowerEndStrength() {
     return towerEndStrength;
@@ -823,6 +850,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get techFoulCount
    * @return techFoulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getTechFoulCount() {
     return techFoulCount;
@@ -841,6 +869,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get foulCount
    * @return foulCount
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getFoulCount() {
     return foulCount;
@@ -859,6 +888,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position2
    * @return position2
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPosition2() {
     return position2;
@@ -877,6 +907,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position3
    * @return position3
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPosition3() {
     return position3;
@@ -895,6 +926,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position4
    * @return position4
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPosition4() {
     return position4;
@@ -913,6 +945,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position5
    * @return position5
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public String getPosition5() {
     return position5;
@@ -931,6 +964,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position1crossings
    * @return position1crossings
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getPosition1crossings() {
     return position1crossings;
@@ -949,6 +983,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position2crossings
    * @return position2crossings
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getPosition2crossings() {
     return position2crossings;
@@ -967,6 +1002,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position3crossings
    * @return position3crossings
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getPosition3crossings() {
     return position3crossings;
@@ -985,6 +1021,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position4crossings
    * @return position4crossings
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getPosition4crossings() {
     return position4crossings;
@@ -1003,6 +1040,7 @@ public class MatchScoreBreakdown2016Alliance {
    * Get position5crossings
    * @return position5crossings
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getPosition5crossings() {
     return position5crossings;

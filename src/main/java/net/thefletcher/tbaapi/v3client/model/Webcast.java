@@ -153,6 +153,7 @@ public class Webcast {
    * File identification as may be required for some types. May be null.
    * @return file
   **/
+  @javax.annotation.Nullable
   @ApiModelProperty(value = "File identification as may be required for some types. May be null.")
   public String getFile() {
     return file;
