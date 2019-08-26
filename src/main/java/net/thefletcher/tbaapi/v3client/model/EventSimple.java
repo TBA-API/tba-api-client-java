@@ -49,7 +49,7 @@ public class EventSimple {
 
   public static final String SERIALIZED_NAME_DISTRICT = "district";
   @SerializedName(SERIALIZED_NAME_DISTRICT)
-  private DistrictList district = null;
+  private DistrictList district;
 
   public static final String SERIALIZED_NAME_CITY = "city";
   @SerializedName(SERIALIZED_NAME_CITY)
@@ -75,7 +75,9 @@ public class EventSimple {
   @SerializedName(SERIALIZED_NAME_YEAR)
   private Integer year;
 
+
   public EventSimple key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -85,15 +87,20 @@ public class EventSimple {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public EventSimple name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -103,15 +110,20 @@ public class EventSimple {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "Official name of event on record either provided by FIRST or organizers of offseason event.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public EventSimple eventCode(String eventCode) {
+    
     this.eventCode = eventCode;
     return this;
   }
@@ -121,15 +133,20 @@ public class EventSimple {
    * @return eventCode
   **/
   @ApiModelProperty(required = true, value = "Event short code, as provided by FIRST.")
+
   public String getEventCode() {
     return eventCode;
   }
+
+
 
   public void setEventCode(String eventCode) {
     this.eventCode = eventCode;
   }
 
+
   public EventSimple eventType(Integer eventType) {
+    
     this.eventType = eventType;
     return this;
   }
@@ -139,15 +156,20 @@ public class EventSimple {
    * @return eventType
   **/
   @ApiModelProperty(required = true, value = "Event Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2")
+
   public Integer getEventType() {
     return eventType;
   }
+
+
 
   public void setEventType(Integer eventType) {
     this.eventType = eventType;
   }
 
+
   public EventSimple district(DistrictList district) {
+    
     this.district = district;
     return this;
   }
@@ -158,15 +180,20 @@ public class EventSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public DistrictList getDistrict() {
     return district;
   }
+
+
 
   public void setDistrict(DistrictList district) {
     this.district = district;
   }
 
+
   public EventSimple city(String city) {
+    
     this.city = city;
     return this;
   }
@@ -177,15 +204,20 @@ public class EventSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "City, town, village, etc. the event is located in.")
+
   public String getCity() {
     return city;
   }
+
+
 
   public void setCity(String city) {
     this.city = city;
   }
 
+
   public EventSimple stateProv(String stateProv) {
+    
     this.stateProv = stateProv;
     return this;
   }
@@ -196,15 +228,20 @@ public class EventSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "State or Province the event is located in.")
+
   public String getStateProv() {
     return stateProv;
   }
+
+
 
   public void setStateProv(String stateProv) {
     this.stateProv = stateProv;
   }
 
+
   public EventSimple country(String country) {
+    
     this.country = country;
     return this;
   }
@@ -215,15 +252,20 @@ public class EventSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Country the event is located in.")
+
   public String getCountry() {
     return country;
   }
+
+
 
   public void setCountry(String country) {
     this.country = country;
   }
 
+
   public EventSimple startDate(LocalDate startDate) {
+    
     this.startDate = startDate;
     return this;
   }
@@ -233,15 +275,20 @@ public class EventSimple {
    * @return startDate
   **/
   @ApiModelProperty(required = true, value = "Event start date in `yyyy-mm-dd` format.")
+
   public LocalDate getStartDate() {
     return startDate;
   }
+
+
 
   public void setStartDate(LocalDate startDate) {
     this.startDate = startDate;
   }
 
+
   public EventSimple endDate(LocalDate endDate) {
+    
     this.endDate = endDate;
     return this;
   }
@@ -251,15 +298,20 @@ public class EventSimple {
    * @return endDate
   **/
   @ApiModelProperty(required = true, value = "Event end date in `yyyy-mm-dd` format.")
+
   public LocalDate getEndDate() {
     return endDate;
   }
+
+
 
   public void setEndDate(LocalDate endDate) {
     this.endDate = endDate;
   }
 
+
   public EventSimple year(Integer year) {
+    
     this.year = year;
     return this;
   }
@@ -269,9 +321,12 @@ public class EventSimple {
    * @return year
   **/
   @ApiModelProperty(required = true, value = "Year the event data is for.")
+
   public Integer getYear() {
     return year;
   }
+
+
 
   public void setYear(Integer year) {
     this.year = year;

@@ -45,7 +45,9 @@ public class DistrictList {
   @SerializedName(SERIALIZED_NAME_YEAR)
   private Integer year;
 
+
   public DistrictList abbreviation(String abbreviation) {
+    
     this.abbreviation = abbreviation;
     return this;
   }
@@ -55,15 +57,20 @@ public class DistrictList {
    * @return abbreviation
   **/
   @ApiModelProperty(required = true, value = "The short identifier for the district.")
+
   public String getAbbreviation() {
     return abbreviation;
   }
+
+
 
   public void setAbbreviation(String abbreviation) {
     this.abbreviation = abbreviation;
   }
 
+
   public DistrictList displayName(String displayName) {
+    
     this.displayName = displayName;
     return this;
   }
@@ -73,15 +80,20 @@ public class DistrictList {
    * @return displayName
   **/
   @ApiModelProperty(required = true, value = "The long name for the district.")
+
   public String getDisplayName() {
     return displayName;
   }
+
+
 
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
+
   public DistrictList key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -91,15 +103,20 @@ public class DistrictList {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "Key for this district, e.g. `2016ne`.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public DistrictList year(Integer year) {
+    
     this.year = year;
     return this;
   }
@@ -109,9 +126,12 @@ public class DistrictList {
    * @return year
   **/
   @ApiModelProperty(required = true, value = "Year this district participated.")
+
   public Integer getYear() {
     return year;
   }
+
+
 
   public void setYear(Integer year) {
     this.year = year;

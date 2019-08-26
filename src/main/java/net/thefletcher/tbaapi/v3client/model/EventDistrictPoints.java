@@ -40,9 +40,11 @@ public class EventDistrictPoints {
 
   public static final String SERIALIZED_NAME_TIEBREAKERS = "tiebreakers";
   @SerializedName(SERIALIZED_NAME_TIEBREAKERS)
-  private Map<String, EventDistrictPointsTiebreakers> tiebreakers = new HashMap<String, EventDistrictPointsTiebreakers>();
+  private Map<String, EventDistrictPointsTiebreakers> tiebreakers = null;
+
 
   public EventDistrictPoints points(Map<String, EventDistrictPointsPoints> points) {
+    
     this.points = points;
     return this;
   }
@@ -57,15 +59,20 @@ public class EventDistrictPoints {
    * @return points
   **/
   @ApiModelProperty(required = true, value = "Points gained for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the points as its value.")
+
   public Map<String, EventDistrictPointsPoints> getPoints() {
     return points;
   }
+
+
 
   public void setPoints(Map<String, EventDistrictPointsPoints> points) {
     this.points = points;
   }
 
+
   public EventDistrictPoints tiebreakers(Map<String, EventDistrictPointsTiebreakers> tiebreakers) {
+    
     this.tiebreakers = tiebreakers;
     return this;
   }
@@ -84,9 +91,12 @@ public class EventDistrictPoints {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Tiebreaker values for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the tiebreaker elements as its value.")
+
   public Map<String, EventDistrictPointsTiebreakers> getTiebreakers() {
     return tiebreakers;
   }
+
+
 
   public void setTiebreakers(Map<String, EventDistrictPointsTiebreakers> tiebreakers) {
     this.tiebreakers = tiebreakers;

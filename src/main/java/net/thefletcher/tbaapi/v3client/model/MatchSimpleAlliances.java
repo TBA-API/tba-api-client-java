@@ -33,13 +33,15 @@ import net.thefletcher.tbaapi.v3client.model.MatchAlliance;
 public class MatchSimpleAlliances {
   public static final String SERIALIZED_NAME_RED = "red";
   @SerializedName(SERIALIZED_NAME_RED)
-  private MatchAlliance red = null;
+  private MatchAlliance red;
 
   public static final String SERIALIZED_NAME_BLUE = "blue";
   @SerializedName(SERIALIZED_NAME_BLUE)
-  private MatchAlliance blue = null;
+  private MatchAlliance blue;
+
 
   public MatchSimpleAlliances red(MatchAlliance red) {
+    
     this.red = red;
     return this;
   }
@@ -50,15 +52,20 @@ public class MatchSimpleAlliances {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchAlliance getRed() {
     return red;
   }
+
+
 
   public void setRed(MatchAlliance red) {
     this.red = red;
   }
 
+
   public MatchSimpleAlliances blue(MatchAlliance blue) {
+    
     this.blue = blue;
     return this;
   }
@@ -69,9 +76,12 @@ public class MatchSimpleAlliances {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchAlliance getBlue() {
     return blue;
   }
+
+
 
   public void setBlue(MatchAlliance blue) {
     this.blue = blue;

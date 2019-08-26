@@ -33,11 +33,11 @@ import net.thefletcher.tbaapi.v3client.model.MatchScoreBreakdown2015Alliance;
 public class MatchScoreBreakdown2015 {
   public static final String SERIALIZED_NAME_BLUE = "blue";
   @SerializedName(SERIALIZED_NAME_BLUE)
-  private MatchScoreBreakdown2015Alliance blue = null;
+  private MatchScoreBreakdown2015Alliance blue;
 
   public static final String SERIALIZED_NAME_RED = "red";
   @SerializedName(SERIALIZED_NAME_RED)
-  private MatchScoreBreakdown2015Alliance red = null;
+  private MatchScoreBreakdown2015Alliance red;
 
   /**
    * Gets or Sets coopertition
@@ -96,7 +96,9 @@ public class MatchScoreBreakdown2015 {
   @SerializedName(SERIALIZED_NAME_COOPERTITION_POINTS)
   private Integer coopertitionPoints;
 
+
   public MatchScoreBreakdown2015 blue(MatchScoreBreakdown2015Alliance blue) {
+    
     this.blue = blue;
     return this;
   }
@@ -107,15 +109,20 @@ public class MatchScoreBreakdown2015 {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchScoreBreakdown2015Alliance getBlue() {
     return blue;
   }
+
+
 
   public void setBlue(MatchScoreBreakdown2015Alliance blue) {
     this.blue = blue;
   }
 
+
   public MatchScoreBreakdown2015 red(MatchScoreBreakdown2015Alliance red) {
+    
     this.red = red;
     return this;
   }
@@ -126,15 +133,20 @@ public class MatchScoreBreakdown2015 {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchScoreBreakdown2015Alliance getRed() {
     return red;
   }
+
+
 
   public void setRed(MatchScoreBreakdown2015Alliance red) {
     this.red = red;
   }
 
+
   public MatchScoreBreakdown2015 coopertition(CoopertitionEnum coopertition) {
+    
     this.coopertition = coopertition;
     return this;
   }
@@ -145,15 +157,20 @@ public class MatchScoreBreakdown2015 {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public CoopertitionEnum getCoopertition() {
     return coopertition;
   }
+
+
 
   public void setCoopertition(CoopertitionEnum coopertition) {
     this.coopertition = coopertition;
   }
 
+
   public MatchScoreBreakdown2015 coopertitionPoints(Integer coopertitionPoints) {
+    
     this.coopertitionPoints = coopertitionPoints;
     return this;
   }
@@ -164,9 +181,12 @@ public class MatchScoreBreakdown2015 {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getCoopertitionPoints() {
     return coopertitionPoints;
   }
+
+
 
   public void setCoopertitionPoints(Integer coopertitionPoints) {
     this.coopertitionPoints = coopertitionPoints;

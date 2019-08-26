@@ -38,7 +38,9 @@ public class EliminationAllianceBackup {
   @SerializedName(SERIALIZED_NAME_OUT)
   private String out;
 
+
   public EliminationAllianceBackup in(String in) {
+    
     this.in = in;
     return this;
   }
@@ -49,15 +51,20 @@ public class EliminationAllianceBackup {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Team key that was called in as the backup.")
+
   public String getIn() {
     return in;
   }
+
+
 
   public void setIn(String in) {
     this.in = in;
   }
 
+
   public EliminationAllianceBackup out(String out) {
+    
     this.out = out;
     return this;
   }
@@ -68,9 +75,12 @@ public class EliminationAllianceBackup {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Team key that was replaced by the backup team.")
+
   public String getOut() {
     return out;
   }
+
+
 
   public void setOut(String out) {
     this.out = out;

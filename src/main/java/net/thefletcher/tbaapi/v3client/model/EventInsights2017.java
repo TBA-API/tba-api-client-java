@@ -160,7 +160,9 @@ public class EventInsights2017 {
   @SerializedName(SERIALIZED_NAME_UNICORN_MATCHES)
   private List<Float> unicornMatches = new ArrayList<Float>();
 
+
   public EventInsights2017 averageFoulScore(Float averageFoulScore) {
+    
     this.averageFoulScore = averageFoulScore;
     return this;
   }
@@ -170,15 +172,20 @@ public class EventInsights2017 {
    * @return averageFoulScore
   **/
   @ApiModelProperty(required = true, value = "Average foul score.")
+
   public Float getAverageFoulScore() {
     return averageFoulScore;
   }
+
+
 
   public void setAverageFoulScore(Float averageFoulScore) {
     this.averageFoulScore = averageFoulScore;
   }
 
+
   public EventInsights2017 averageFuelPoints(Float averageFuelPoints) {
+    
     this.averageFuelPoints = averageFuelPoints;
     return this;
   }
@@ -188,15 +195,20 @@ public class EventInsights2017 {
    * @return averageFuelPoints
   **/
   @ApiModelProperty(required = true, value = "Average fuel points scored.")
+
   public Float getAverageFuelPoints() {
     return averageFuelPoints;
   }
+
+
 
   public void setAverageFuelPoints(Float averageFuelPoints) {
     this.averageFuelPoints = averageFuelPoints;
   }
 
+
   public EventInsights2017 averageFuelPointsAuto(Float averageFuelPointsAuto) {
+    
     this.averageFuelPointsAuto = averageFuelPointsAuto;
     return this;
   }
@@ -206,15 +218,20 @@ public class EventInsights2017 {
    * @return averageFuelPointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average fuel points scored during auto.")
+
   public Float getAverageFuelPointsAuto() {
     return averageFuelPointsAuto;
   }
+
+
 
   public void setAverageFuelPointsAuto(Float averageFuelPointsAuto) {
     this.averageFuelPointsAuto = averageFuelPointsAuto;
   }
 
+
   public EventInsights2017 averageFuelPointsTeleop(Float averageFuelPointsTeleop) {
+    
     this.averageFuelPointsTeleop = averageFuelPointsTeleop;
     return this;
   }
@@ -224,15 +241,20 @@ public class EventInsights2017 {
    * @return averageFuelPointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average fuel points scored during teleop.")
+
   public Float getAverageFuelPointsTeleop() {
     return averageFuelPointsTeleop;
   }
+
+
 
   public void setAverageFuelPointsTeleop(Float averageFuelPointsTeleop) {
     this.averageFuelPointsTeleop = averageFuelPointsTeleop;
   }
 
+
   public EventInsights2017 averageHighGoals(Float averageHighGoals) {
+    
     this.averageHighGoals = averageHighGoals;
     return this;
   }
@@ -242,15 +264,20 @@ public class EventInsights2017 {
    * @return averageHighGoals
   **/
   @ApiModelProperty(required = true, value = "Average points scored in the high goal.")
+
   public Float getAverageHighGoals() {
     return averageHighGoals;
   }
+
+
 
   public void setAverageHighGoals(Float averageHighGoals) {
     this.averageHighGoals = averageHighGoals;
   }
 
+
   public EventInsights2017 averageHighGoalsAuto(Float averageHighGoalsAuto) {
+    
     this.averageHighGoalsAuto = averageHighGoalsAuto;
     return this;
   }
@@ -260,15 +287,20 @@ public class EventInsights2017 {
    * @return averageHighGoalsAuto
   **/
   @ApiModelProperty(required = true, value = "Average points scored in the high goal during auto.")
+
   public Float getAverageHighGoalsAuto() {
     return averageHighGoalsAuto;
   }
+
+
 
   public void setAverageHighGoalsAuto(Float averageHighGoalsAuto) {
     this.averageHighGoalsAuto = averageHighGoalsAuto;
   }
 
+
   public EventInsights2017 averageHighGoalsTeleop(Float averageHighGoalsTeleop) {
+    
     this.averageHighGoalsTeleop = averageHighGoalsTeleop;
     return this;
   }
@@ -278,15 +310,20 @@ public class EventInsights2017 {
    * @return averageHighGoalsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average points scored in the high goal during teleop.")
+
   public Float getAverageHighGoalsTeleop() {
     return averageHighGoalsTeleop;
   }
+
+
 
   public void setAverageHighGoalsTeleop(Float averageHighGoalsTeleop) {
     this.averageHighGoalsTeleop = averageHighGoalsTeleop;
   }
 
+
   public EventInsights2017 averageLowGoals(Float averageLowGoals) {
+    
     this.averageLowGoals = averageLowGoals;
     return this;
   }
@@ -296,15 +333,20 @@ public class EventInsights2017 {
    * @return averageLowGoals
   **/
   @ApiModelProperty(required = true, value = "Average points scored in the low goal.")
+
   public Float getAverageLowGoals() {
     return averageLowGoals;
   }
+
+
 
   public void setAverageLowGoals(Float averageLowGoals) {
     this.averageLowGoals = averageLowGoals;
   }
 
+
   public EventInsights2017 averageLowGoalsAuto(Float averageLowGoalsAuto) {
+    
     this.averageLowGoalsAuto = averageLowGoalsAuto;
     return this;
   }
@@ -314,15 +356,20 @@ public class EventInsights2017 {
    * @return averageLowGoalsAuto
   **/
   @ApiModelProperty(required = true, value = "Average points scored in the low goal during auto.")
+
   public Float getAverageLowGoalsAuto() {
     return averageLowGoalsAuto;
   }
+
+
 
   public void setAverageLowGoalsAuto(Float averageLowGoalsAuto) {
     this.averageLowGoalsAuto = averageLowGoalsAuto;
   }
 
+
   public EventInsights2017 averageLowGoalsTeleop(Float averageLowGoalsTeleop) {
+    
     this.averageLowGoalsTeleop = averageLowGoalsTeleop;
     return this;
   }
@@ -332,15 +379,20 @@ public class EventInsights2017 {
    * @return averageLowGoalsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average points scored in the low goal during teleop.")
+
   public Float getAverageLowGoalsTeleop() {
     return averageLowGoalsTeleop;
   }
+
+
 
   public void setAverageLowGoalsTeleop(Float averageLowGoalsTeleop) {
     this.averageLowGoalsTeleop = averageLowGoalsTeleop;
   }
 
+
   public EventInsights2017 averageMobilityPointsAuto(Float averageMobilityPointsAuto) {
+    
     this.averageMobilityPointsAuto = averageMobilityPointsAuto;
     return this;
   }
@@ -350,15 +402,20 @@ public class EventInsights2017 {
    * @return averageMobilityPointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average mobility points scored during auto.")
+
   public Float getAverageMobilityPointsAuto() {
     return averageMobilityPointsAuto;
   }
+
+
 
   public void setAverageMobilityPointsAuto(Float averageMobilityPointsAuto) {
     this.averageMobilityPointsAuto = averageMobilityPointsAuto;
   }
 
+
   public EventInsights2017 averagePointsAuto(Float averagePointsAuto) {
+    
     this.averagePointsAuto = averagePointsAuto;
     return this;
   }
@@ -368,15 +425,20 @@ public class EventInsights2017 {
    * @return averagePointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average points scored during auto.")
+
   public Float getAveragePointsAuto() {
     return averagePointsAuto;
   }
+
+
 
   public void setAveragePointsAuto(Float averagePointsAuto) {
     this.averagePointsAuto = averagePointsAuto;
   }
 
+
   public EventInsights2017 averagePointsTeleop(Float averagePointsTeleop) {
+    
     this.averagePointsTeleop = averagePointsTeleop;
     return this;
   }
@@ -386,15 +448,20 @@ public class EventInsights2017 {
    * @return averagePointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average points scored during teleop.")
+
   public Float getAveragePointsTeleop() {
     return averagePointsTeleop;
   }
+
+
 
   public void setAveragePointsTeleop(Float averagePointsTeleop) {
     this.averagePointsTeleop = averagePointsTeleop;
   }
 
+
   public EventInsights2017 averageRotorPoints(Float averageRotorPoints) {
+    
     this.averageRotorPoints = averageRotorPoints;
     return this;
   }
@@ -404,15 +471,20 @@ public class EventInsights2017 {
    * @return averageRotorPoints
   **/
   @ApiModelProperty(required = true, value = "Average rotor points scored.")
+
   public Float getAverageRotorPoints() {
     return averageRotorPoints;
   }
+
+
 
   public void setAverageRotorPoints(Float averageRotorPoints) {
     this.averageRotorPoints = averageRotorPoints;
   }
 
+
   public EventInsights2017 averageRotorPointsAuto(Float averageRotorPointsAuto) {
+    
     this.averageRotorPointsAuto = averageRotorPointsAuto;
     return this;
   }
@@ -422,15 +494,20 @@ public class EventInsights2017 {
    * @return averageRotorPointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average rotor points scored during auto.")
+
   public Float getAverageRotorPointsAuto() {
     return averageRotorPointsAuto;
   }
+
+
 
   public void setAverageRotorPointsAuto(Float averageRotorPointsAuto) {
     this.averageRotorPointsAuto = averageRotorPointsAuto;
   }
 
+
   public EventInsights2017 averageRotorPointsTeleop(Float averageRotorPointsTeleop) {
+    
     this.averageRotorPointsTeleop = averageRotorPointsTeleop;
     return this;
   }
@@ -440,15 +517,20 @@ public class EventInsights2017 {
    * @return averageRotorPointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average rotor points scored during teleop.")
+
   public Float getAverageRotorPointsTeleop() {
     return averageRotorPointsTeleop;
   }
+
+
 
   public void setAverageRotorPointsTeleop(Float averageRotorPointsTeleop) {
     this.averageRotorPointsTeleop = averageRotorPointsTeleop;
   }
 
+
   public EventInsights2017 averageScore(Float averageScore) {
+    
     this.averageScore = averageScore;
     return this;
   }
@@ -458,15 +540,20 @@ public class EventInsights2017 {
    * @return averageScore
   **/
   @ApiModelProperty(required = true, value = "Average score.")
+
   public Float getAverageScore() {
     return averageScore;
   }
+
+
 
   public void setAverageScore(Float averageScore) {
     this.averageScore = averageScore;
   }
 
+
   public EventInsights2017 averageTakeoffPointsTeleop(Float averageTakeoffPointsTeleop) {
+    
     this.averageTakeoffPointsTeleop = averageTakeoffPointsTeleop;
     return this;
   }
@@ -476,15 +563,20 @@ public class EventInsights2017 {
    * @return averageTakeoffPointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average takeoff points scored during teleop.")
+
   public Float getAverageTakeoffPointsTeleop() {
     return averageTakeoffPointsTeleop;
   }
+
+
 
   public void setAverageTakeoffPointsTeleop(Float averageTakeoffPointsTeleop) {
     this.averageTakeoffPointsTeleop = averageTakeoffPointsTeleop;
   }
 
+
   public EventInsights2017 averageWinMargin(Float averageWinMargin) {
+    
     this.averageWinMargin = averageWinMargin;
     return this;
   }
@@ -494,15 +586,20 @@ public class EventInsights2017 {
    * @return averageWinMargin
   **/
   @ApiModelProperty(required = true, value = "Average margin of victory.")
+
   public Float getAverageWinMargin() {
     return averageWinMargin;
   }
+
+
 
   public void setAverageWinMargin(Float averageWinMargin) {
     this.averageWinMargin = averageWinMargin;
   }
 
+
   public EventInsights2017 averageWinScore(Float averageWinScore) {
+    
     this.averageWinScore = averageWinScore;
     return this;
   }
@@ -512,15 +609,20 @@ public class EventInsights2017 {
    * @return averageWinScore
   **/
   @ApiModelProperty(required = true, value = "Average winning score.")
+
   public Float getAverageWinScore() {
     return averageWinScore;
   }
+
+
 
   public void setAverageWinScore(Float averageWinScore) {
     this.averageWinScore = averageWinScore;
   }
 
+
   public EventInsights2017 highKpa(List<String> highKpa) {
+    
     this.highKpa = highKpa;
     return this;
   }
@@ -535,15 +637,20 @@ public class EventInsights2017 {
    * @return highKpa
   **/
   @ApiModelProperty(required = true, value = "An array with three values, kPa scored, match key from the match with the high kPa, and the name of the match")
+
   public List<String> getHighKpa() {
     return highKpa;
   }
+
+
 
   public void setHighKpa(List<String> highKpa) {
     this.highKpa = highKpa;
   }
 
+
   public EventInsights2017 highScore(List<String> highScore) {
+    
     this.highScore = highScore;
     return this;
   }
@@ -558,15 +665,20 @@ public class EventInsights2017 {
    * @return highScore
   **/
   @ApiModelProperty(required = true, value = "An array with three values, high score, match key from the match with the high score, and the name of the match")
+
   public List<String> getHighScore() {
     return highScore;
   }
+
+
 
   public void setHighScore(List<String> highScore) {
     this.highScore = highScore;
   }
 
+
   public EventInsights2017 kpaAchieved(List<Float> kpaAchieved) {
+    
     this.kpaAchieved = kpaAchieved;
     return this;
   }
@@ -581,15 +693,20 @@ public class EventInsights2017 {
    * @return kpaAchieved
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times kPa bonus achieved, number of opportunities to bonus, and percentage.")
+
   public List<Float> getKpaAchieved() {
     return kpaAchieved;
   }
+
+
 
   public void setKpaAchieved(List<Float> kpaAchieved) {
     this.kpaAchieved = kpaAchieved;
   }
 
+
   public EventInsights2017 mobilityCounts(List<Float> mobilityCounts) {
+    
     this.mobilityCounts = mobilityCounts;
     return this;
   }
@@ -604,15 +721,20 @@ public class EventInsights2017 {
    * @return mobilityCounts
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times mobility bonus achieved, number of opportunities to bonus, and percentage.")
+
   public List<Float> getMobilityCounts() {
     return mobilityCounts;
   }
+
+
 
   public void setMobilityCounts(List<Float> mobilityCounts) {
     this.mobilityCounts = mobilityCounts;
   }
 
+
   public EventInsights2017 rotor1Engaged(List<Float> rotor1Engaged) {
+    
     this.rotor1Engaged = rotor1Engaged;
     return this;
   }
@@ -627,15 +749,20 @@ public class EventInsights2017 {
    * @return rotor1Engaged
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times rotor 1 engaged, number of opportunities to engage, and percentage.")
+
   public List<Float> getRotor1Engaged() {
     return rotor1Engaged;
   }
+
+
 
   public void setRotor1Engaged(List<Float> rotor1Engaged) {
     this.rotor1Engaged = rotor1Engaged;
   }
 
+
   public EventInsights2017 rotor1EngagedAuto(List<Float> rotor1EngagedAuto) {
+    
     this.rotor1EngagedAuto = rotor1EngagedAuto;
     return this;
   }
@@ -650,15 +777,20 @@ public class EventInsights2017 {
    * @return rotor1EngagedAuto
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times rotor 1 engaged in auto, number of opportunities to engage in auto, and percentage.")
+
   public List<Float> getRotor1EngagedAuto() {
     return rotor1EngagedAuto;
   }
+
+
 
   public void setRotor1EngagedAuto(List<Float> rotor1EngagedAuto) {
     this.rotor1EngagedAuto = rotor1EngagedAuto;
   }
 
+
   public EventInsights2017 rotor2Engaged(List<Float> rotor2Engaged) {
+    
     this.rotor2Engaged = rotor2Engaged;
     return this;
   }
@@ -673,15 +805,20 @@ public class EventInsights2017 {
    * @return rotor2Engaged
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times rotor 2 engaged, number of opportunities to engage, and percentage.")
+
   public List<Float> getRotor2Engaged() {
     return rotor2Engaged;
   }
+
+
 
   public void setRotor2Engaged(List<Float> rotor2Engaged) {
     this.rotor2Engaged = rotor2Engaged;
   }
 
+
   public EventInsights2017 rotor2EngagedAuto(List<Float> rotor2EngagedAuto) {
+    
     this.rotor2EngagedAuto = rotor2EngagedAuto;
     return this;
   }
@@ -696,15 +833,20 @@ public class EventInsights2017 {
    * @return rotor2EngagedAuto
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times rotor 2 engaged in auto, number of opportunities to engage in auto, and percentage.")
+
   public List<Float> getRotor2EngagedAuto() {
     return rotor2EngagedAuto;
   }
+
+
 
   public void setRotor2EngagedAuto(List<Float> rotor2EngagedAuto) {
     this.rotor2EngagedAuto = rotor2EngagedAuto;
   }
 
+
   public EventInsights2017 rotor3Engaged(List<Float> rotor3Engaged) {
+    
     this.rotor3Engaged = rotor3Engaged;
     return this;
   }
@@ -719,15 +861,20 @@ public class EventInsights2017 {
    * @return rotor3Engaged
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times rotor 3 engaged, number of opportunities to engage, and percentage.")
+
   public List<Float> getRotor3Engaged() {
     return rotor3Engaged;
   }
+
+
 
   public void setRotor3Engaged(List<Float> rotor3Engaged) {
     this.rotor3Engaged = rotor3Engaged;
   }
 
+
   public EventInsights2017 rotor4Engaged(List<Float> rotor4Engaged) {
+    
     this.rotor4Engaged = rotor4Engaged;
     return this;
   }
@@ -742,15 +889,20 @@ public class EventInsights2017 {
    * @return rotor4Engaged
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times rotor 4 engaged, number of opportunities to engage, and percentage.")
+
   public List<Float> getRotor4Engaged() {
     return rotor4Engaged;
   }
+
+
 
   public void setRotor4Engaged(List<Float> rotor4Engaged) {
     this.rotor4Engaged = rotor4Engaged;
   }
 
+
   public EventInsights2017 takeoffCounts(List<Float> takeoffCounts) {
+    
     this.takeoffCounts = takeoffCounts;
     return this;
   }
@@ -765,15 +917,20 @@ public class EventInsights2017 {
    * @return takeoffCounts
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times takeoff was counted, number of opportunities to takeoff, and percentage.")
+
   public List<Float> getTakeoffCounts() {
     return takeoffCounts;
   }
+
+
 
   public void setTakeoffCounts(List<Float> takeoffCounts) {
     this.takeoffCounts = takeoffCounts;
   }
 
+
   public EventInsights2017 unicornMatches(List<Float> unicornMatches) {
+    
     this.unicornMatches = unicornMatches;
     return this;
   }
@@ -788,9 +945,12 @@ public class EventInsights2017 {
    * @return unicornMatches
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage.")
+
   public List<Float> getUnicornMatches() {
     return unicornMatches;
   }
+
+
 
   public void setUnicornMatches(List<Float> unicornMatches) {
     this.unicornMatches = unicornMatches;

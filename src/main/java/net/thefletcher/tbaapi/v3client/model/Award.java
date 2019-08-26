@@ -52,7 +52,9 @@ public class Award {
   @SerializedName(SERIALIZED_NAME_YEAR)
   private Integer year;
 
+
   public Award name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -62,15 +64,20 @@ public class Award {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "The name of the award as provided by FIRST. May vary for the same award type.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public Award awardType(Integer awardType) {
+    
     this.awardType = awardType;
     return this;
   }
@@ -80,15 +87,20 @@ public class Award {
    * @return awardType
   **/
   @ApiModelProperty(required = true, value = "Type of award given. See https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/award_type.py#L6")
+
   public Integer getAwardType() {
     return awardType;
   }
+
+
 
   public void setAwardType(Integer awardType) {
     this.awardType = awardType;
   }
 
+
   public Award eventKey(String eventKey) {
+    
     this.eventKey = eventKey;
     return this;
   }
@@ -98,15 +110,20 @@ public class Award {
    * @return eventKey
   **/
   @ApiModelProperty(required = true, value = "The event_key of the event the award was won at.")
+
   public String getEventKey() {
     return eventKey;
   }
+
+
 
   public void setEventKey(String eventKey) {
     this.eventKey = eventKey;
   }
 
+
   public Award recipientList(List<AwardRecipient> recipientList) {
+    
     this.recipientList = recipientList;
     return this;
   }
@@ -121,15 +138,20 @@ public class Award {
    * @return recipientList
   **/
   @ApiModelProperty(required = true, value = "A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event).")
+
   public List<AwardRecipient> getRecipientList() {
     return recipientList;
   }
+
+
 
   public void setRecipientList(List<AwardRecipient> recipientList) {
     this.recipientList = recipientList;
   }
 
+
   public Award year(Integer year) {
+    
     this.year = year;
     return this;
   }
@@ -139,9 +161,12 @@ public class Award {
    * @return year
   **/
   @ApiModelProperty(required = true, value = "The year this award was won.")
+
   public Integer getYear() {
     return year;
   }
+
+
 
   public void setYear(Integer year) {
     this.year = year;

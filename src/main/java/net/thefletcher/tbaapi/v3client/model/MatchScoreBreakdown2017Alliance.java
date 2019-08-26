@@ -308,7 +308,9 @@ public class MatchScoreBreakdown2017Alliance {
   @SerializedName(SERIALIZED_NAME_TOUCHPAD_FAR)
   private String touchpadFar;
 
+
   public MatchScoreBreakdown2017Alliance autoPoints(Integer autoPoints) {
+    
     this.autoPoints = autoPoints;
     return this;
   }
@@ -319,15 +321,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoPoints() {
     return autoPoints;
   }
+
+
 
   public void setAutoPoints(Integer autoPoints) {
     this.autoPoints = autoPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance teleopPoints(Integer teleopPoints) {
+    
     this.teleopPoints = teleopPoints;
     return this;
   }
@@ -338,15 +345,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopPoints() {
     return teleopPoints;
   }
+
+
 
   public void setTeleopPoints(Integer teleopPoints) {
     this.teleopPoints = teleopPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance foulPoints(Integer foulPoints) {
+    
     this.foulPoints = foulPoints;
     return this;
   }
@@ -357,15 +369,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getFoulPoints() {
     return foulPoints;
   }
+
+
 
   public void setFoulPoints(Integer foulPoints) {
     this.foulPoints = foulPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance adjustPoints(Integer adjustPoints) {
+    
     this.adjustPoints = adjustPoints;
     return this;
   }
@@ -376,15 +393,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAdjustPoints() {
     return adjustPoints;
   }
+
+
 
   public void setAdjustPoints(Integer adjustPoints) {
     this.adjustPoints = adjustPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance totalPoints(Integer totalPoints) {
+    
     this.totalPoints = totalPoints;
     return this;
   }
@@ -395,15 +417,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTotalPoints() {
     return totalPoints;
   }
+
+
 
   public void setTotalPoints(Integer totalPoints) {
     this.totalPoints = totalPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance robot1Auto(Robot1AutoEnum robot1Auto) {
+    
     this.robot1Auto = robot1Auto;
     return this;
   }
@@ -414,15 +441,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Robot1AutoEnum getRobot1Auto() {
     return robot1Auto;
   }
+
+
 
   public void setRobot1Auto(Robot1AutoEnum robot1Auto) {
     this.robot1Auto = robot1Auto;
   }
 
+
   public MatchScoreBreakdown2017Alliance robot2Auto(Robot2AutoEnum robot2Auto) {
+    
     this.robot2Auto = robot2Auto;
     return this;
   }
@@ -433,15 +465,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Robot2AutoEnum getRobot2Auto() {
     return robot2Auto;
   }
+
+
 
   public void setRobot2Auto(Robot2AutoEnum robot2Auto) {
     this.robot2Auto = robot2Auto;
   }
 
+
   public MatchScoreBreakdown2017Alliance robot3Auto(Robot3AutoEnum robot3Auto) {
+    
     this.robot3Auto = robot3Auto;
     return this;
   }
@@ -452,15 +489,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Robot3AutoEnum getRobot3Auto() {
     return robot3Auto;
   }
+
+
 
   public void setRobot3Auto(Robot3AutoEnum robot3Auto) {
     this.robot3Auto = robot3Auto;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotor1Auto(Boolean rotor1Auto) {
+    
     this.rotor1Auto = rotor1Auto;
     return this;
   }
@@ -471,15 +513,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotor1Auto() {
     return rotor1Auto;
   }
+
+
 
   public void setRotor1Auto(Boolean rotor1Auto) {
     this.rotor1Auto = rotor1Auto;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotor2Auto(Boolean rotor2Auto) {
+    
     this.rotor2Auto = rotor2Auto;
     return this;
   }
@@ -490,15 +537,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotor2Auto() {
     return rotor2Auto;
   }
+
+
 
   public void setRotor2Auto(Boolean rotor2Auto) {
     this.rotor2Auto = rotor2Auto;
   }
 
+
   public MatchScoreBreakdown2017Alliance autoFuelLow(Integer autoFuelLow) {
+    
     this.autoFuelLow = autoFuelLow;
     return this;
   }
@@ -509,15 +561,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoFuelLow() {
     return autoFuelLow;
   }
+
+
 
   public void setAutoFuelLow(Integer autoFuelLow) {
     this.autoFuelLow = autoFuelLow;
   }
 
+
   public MatchScoreBreakdown2017Alliance autoFuelHigh(Integer autoFuelHigh) {
+    
     this.autoFuelHigh = autoFuelHigh;
     return this;
   }
@@ -528,15 +585,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoFuelHigh() {
     return autoFuelHigh;
   }
+
+
 
   public void setAutoFuelHigh(Integer autoFuelHigh) {
     this.autoFuelHigh = autoFuelHigh;
   }
 
+
   public MatchScoreBreakdown2017Alliance autoMobilityPoints(Integer autoMobilityPoints) {
+    
     this.autoMobilityPoints = autoMobilityPoints;
     return this;
   }
@@ -547,15 +609,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoMobilityPoints() {
     return autoMobilityPoints;
   }
+
+
 
   public void setAutoMobilityPoints(Integer autoMobilityPoints) {
     this.autoMobilityPoints = autoMobilityPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance autoRotorPoints(Integer autoRotorPoints) {
+    
     this.autoRotorPoints = autoRotorPoints;
     return this;
   }
@@ -566,15 +633,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoRotorPoints() {
     return autoRotorPoints;
   }
+
+
 
   public void setAutoRotorPoints(Integer autoRotorPoints) {
     this.autoRotorPoints = autoRotorPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance autoFuelPoints(Integer autoFuelPoints) {
+    
     this.autoFuelPoints = autoFuelPoints;
     return this;
   }
@@ -585,15 +657,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoFuelPoints() {
     return autoFuelPoints;
   }
+
+
 
   public void setAutoFuelPoints(Integer autoFuelPoints) {
     this.autoFuelPoints = autoFuelPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance teleopFuelPoints(Integer teleopFuelPoints) {
+    
     this.teleopFuelPoints = teleopFuelPoints;
     return this;
   }
@@ -604,15 +681,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopFuelPoints() {
     return teleopFuelPoints;
   }
+
+
 
   public void setTeleopFuelPoints(Integer teleopFuelPoints) {
     this.teleopFuelPoints = teleopFuelPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance teleopFuelLow(Integer teleopFuelLow) {
+    
     this.teleopFuelLow = teleopFuelLow;
     return this;
   }
@@ -623,15 +705,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopFuelLow() {
     return teleopFuelLow;
   }
+
+
 
   public void setTeleopFuelLow(Integer teleopFuelLow) {
     this.teleopFuelLow = teleopFuelLow;
   }
 
+
   public MatchScoreBreakdown2017Alliance teleopFuelHigh(Integer teleopFuelHigh) {
+    
     this.teleopFuelHigh = teleopFuelHigh;
     return this;
   }
@@ -642,15 +729,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopFuelHigh() {
     return teleopFuelHigh;
   }
+
+
 
   public void setTeleopFuelHigh(Integer teleopFuelHigh) {
     this.teleopFuelHigh = teleopFuelHigh;
   }
 
+
   public MatchScoreBreakdown2017Alliance teleopRotorPoints(Integer teleopRotorPoints) {
+    
     this.teleopRotorPoints = teleopRotorPoints;
     return this;
   }
@@ -661,15 +753,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopRotorPoints() {
     return teleopRotorPoints;
   }
+
+
 
   public void setTeleopRotorPoints(Integer teleopRotorPoints) {
     this.teleopRotorPoints = teleopRotorPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance kPaRankingPointAchieved(Boolean kPaRankingPointAchieved) {
+    
     this.kPaRankingPointAchieved = kPaRankingPointAchieved;
     return this;
   }
@@ -680,15 +777,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getkPaRankingPointAchieved() {
     return kPaRankingPointAchieved;
   }
+
+
 
   public void setkPaRankingPointAchieved(Boolean kPaRankingPointAchieved) {
     this.kPaRankingPointAchieved = kPaRankingPointAchieved;
   }
 
+
   public MatchScoreBreakdown2017Alliance teleopTakeoffPoints(Integer teleopTakeoffPoints) {
+    
     this.teleopTakeoffPoints = teleopTakeoffPoints;
     return this;
   }
@@ -699,15 +801,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopTakeoffPoints() {
     return teleopTakeoffPoints;
   }
+
+
 
   public void setTeleopTakeoffPoints(Integer teleopTakeoffPoints) {
     this.teleopTakeoffPoints = teleopTakeoffPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance kPaBonusPoints(Integer kPaBonusPoints) {
+    
     this.kPaBonusPoints = kPaBonusPoints;
     return this;
   }
@@ -718,15 +825,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getkPaBonusPoints() {
     return kPaBonusPoints;
   }
+
+
 
   public void setkPaBonusPoints(Integer kPaBonusPoints) {
     this.kPaBonusPoints = kPaBonusPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotorBonusPoints(Integer rotorBonusPoints) {
+    
     this.rotorBonusPoints = rotorBonusPoints;
     return this;
   }
@@ -737,15 +849,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getRotorBonusPoints() {
     return rotorBonusPoints;
   }
+
+
 
   public void setRotorBonusPoints(Integer rotorBonusPoints) {
     this.rotorBonusPoints = rotorBonusPoints;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotor1Engaged(Boolean rotor1Engaged) {
+    
     this.rotor1Engaged = rotor1Engaged;
     return this;
   }
@@ -756,15 +873,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotor1Engaged() {
     return rotor1Engaged;
   }
+
+
 
   public void setRotor1Engaged(Boolean rotor1Engaged) {
     this.rotor1Engaged = rotor1Engaged;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotor2Engaged(Boolean rotor2Engaged) {
+    
     this.rotor2Engaged = rotor2Engaged;
     return this;
   }
@@ -775,15 +897,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotor2Engaged() {
     return rotor2Engaged;
   }
+
+
 
   public void setRotor2Engaged(Boolean rotor2Engaged) {
     this.rotor2Engaged = rotor2Engaged;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotor3Engaged(Boolean rotor3Engaged) {
+    
     this.rotor3Engaged = rotor3Engaged;
     return this;
   }
@@ -794,15 +921,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotor3Engaged() {
     return rotor3Engaged;
   }
+
+
 
   public void setRotor3Engaged(Boolean rotor3Engaged) {
     this.rotor3Engaged = rotor3Engaged;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotor4Engaged(Boolean rotor4Engaged) {
+    
     this.rotor4Engaged = rotor4Engaged;
     return this;
   }
@@ -813,15 +945,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotor4Engaged() {
     return rotor4Engaged;
   }
+
+
 
   public void setRotor4Engaged(Boolean rotor4Engaged) {
     this.rotor4Engaged = rotor4Engaged;
   }
 
+
   public MatchScoreBreakdown2017Alliance rotorRankingPointAchieved(Boolean rotorRankingPointAchieved) {
+    
     this.rotorRankingPointAchieved = rotorRankingPointAchieved;
     return this;
   }
@@ -832,15 +969,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRotorRankingPointAchieved() {
     return rotorRankingPointAchieved;
   }
+
+
 
   public void setRotorRankingPointAchieved(Boolean rotorRankingPointAchieved) {
     this.rotorRankingPointAchieved = rotorRankingPointAchieved;
   }
 
+
   public MatchScoreBreakdown2017Alliance techFoulCount(Integer techFoulCount) {
+    
     this.techFoulCount = techFoulCount;
     return this;
   }
@@ -851,15 +993,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTechFoulCount() {
     return techFoulCount;
   }
+
+
 
   public void setTechFoulCount(Integer techFoulCount) {
     this.techFoulCount = techFoulCount;
   }
 
+
   public MatchScoreBreakdown2017Alliance foulCount(Integer foulCount) {
+    
     this.foulCount = foulCount;
     return this;
   }
@@ -870,15 +1017,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getFoulCount() {
     return foulCount;
   }
+
+
 
   public void setFoulCount(Integer foulCount) {
     this.foulCount = foulCount;
   }
 
+
   public MatchScoreBreakdown2017Alliance touchpadNear(String touchpadNear) {
+    
     this.touchpadNear = touchpadNear;
     return this;
   }
@@ -889,15 +1041,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getTouchpadNear() {
     return touchpadNear;
   }
+
+
 
   public void setTouchpadNear(String touchpadNear) {
     this.touchpadNear = touchpadNear;
   }
 
+
   public MatchScoreBreakdown2017Alliance touchpadMiddle(String touchpadMiddle) {
+    
     this.touchpadMiddle = touchpadMiddle;
     return this;
   }
@@ -908,15 +1065,20 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getTouchpadMiddle() {
     return touchpadMiddle;
   }
+
+
 
   public void setTouchpadMiddle(String touchpadMiddle) {
     this.touchpadMiddle = touchpadMiddle;
   }
 
+
   public MatchScoreBreakdown2017Alliance touchpadFar(String touchpadFar) {
+    
     this.touchpadFar = touchpadFar;
     return this;
   }
@@ -927,9 +1089,12 @@ public class MatchScoreBreakdown2017Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getTouchpadFar() {
     return touchpadFar;
   }
+
+
 
   public void setTouchpadFar(String touchpadFar) {
     this.touchpadFar = touchpadFar;

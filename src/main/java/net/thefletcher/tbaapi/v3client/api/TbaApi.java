@@ -69,7 +69,7 @@ public class TbaApi {
      </table>
      */
     public okhttp3.Call getStatusCall(String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/status";

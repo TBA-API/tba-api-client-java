@@ -34,15 +34,15 @@ import net.thefletcher.tbaapi.v3client.model.TeamEventStatusRank;
 public class TeamEventStatus {
   public static final String SERIALIZED_NAME_QUAL = "qual";
   @SerializedName(SERIALIZED_NAME_QUAL)
-  private TeamEventStatusRank qual = null;
+  private TeamEventStatusRank qual;
 
   public static final String SERIALIZED_NAME_ALLIANCE = "alliance";
   @SerializedName(SERIALIZED_NAME_ALLIANCE)
-  private TeamEventStatusAlliance alliance = null;
+  private TeamEventStatusAlliance alliance;
 
   public static final String SERIALIZED_NAME_PLAYOFF = "playoff";
   @SerializedName(SERIALIZED_NAME_PLAYOFF)
-  private TeamEventStatusPlayoff playoff = null;
+  private TeamEventStatusPlayoff playoff;
 
   public static final String SERIALIZED_NAME_ALLIANCE_STATUS_STR = "alliance_status_str";
   @SerializedName(SERIALIZED_NAME_ALLIANCE_STATUS_STR)
@@ -64,7 +64,9 @@ public class TeamEventStatus {
   @SerializedName(SERIALIZED_NAME_LAST_MATCH_KEY)
   private String lastMatchKey;
 
+
   public TeamEventStatus qual(TeamEventStatusRank qual) {
+    
     this.qual = qual;
     return this;
   }
@@ -75,15 +77,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public TeamEventStatusRank getQual() {
     return qual;
   }
+
+
 
   public void setQual(TeamEventStatusRank qual) {
     this.qual = qual;
   }
 
+
   public TeamEventStatus alliance(TeamEventStatusAlliance alliance) {
+    
     this.alliance = alliance;
     return this;
   }
@@ -94,15 +101,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public TeamEventStatusAlliance getAlliance() {
     return alliance;
   }
+
+
 
   public void setAlliance(TeamEventStatusAlliance alliance) {
     this.alliance = alliance;
   }
 
+
   public TeamEventStatus playoff(TeamEventStatusPlayoff playoff) {
+    
     this.playoff = playoff;
     return this;
   }
@@ -113,15 +125,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public TeamEventStatusPlayoff getPlayoff() {
     return playoff;
   }
+
+
 
   public void setPlayoff(TeamEventStatusPlayoff playoff) {
     this.playoff = playoff;
   }
 
+
   public TeamEventStatus allianceStatusStr(String allianceStatusStr) {
+    
     this.allianceStatusStr = allianceStatusStr;
     return this;
   }
@@ -132,15 +149,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "An HTML formatted string suitable for display to the user containing the team's alliance pick status.")
+
   public String getAllianceStatusStr() {
     return allianceStatusStr;
   }
+
+
 
   public void setAllianceStatusStr(String allianceStatusStr) {
     this.allianceStatusStr = allianceStatusStr;
   }
 
+
   public TeamEventStatus playoffStatusStr(String playoffStatusStr) {
+    
     this.playoffStatusStr = playoffStatusStr;
     return this;
   }
@@ -151,15 +173,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "An HTML formatter string suitable for display to the user containing the team's playoff status.")
+
   public String getPlayoffStatusStr() {
     return playoffStatusStr;
   }
+
+
 
   public void setPlayoffStatusStr(String playoffStatusStr) {
     this.playoffStatusStr = playoffStatusStr;
   }
 
+
   public TeamEventStatus overallStatusStr(String overallStatusStr) {
+    
     this.overallStatusStr = overallStatusStr;
     return this;
   }
@@ -170,15 +197,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "An HTML formatted string suitable for display to the user containing the team's overall status summary of the event.")
+
   public String getOverallStatusStr() {
     return overallStatusStr;
   }
+
+
 
   public void setOverallStatusStr(String overallStatusStr) {
     this.overallStatusStr = overallStatusStr;
   }
 
+
   public TeamEventStatus nextMatchKey(String nextMatchKey) {
+    
     this.nextMatchKey = nextMatchKey;
     return this;
   }
@@ -189,15 +221,20 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA match key for the next match the team is scheduled to play in at this event, or null.")
+
   public String getNextMatchKey() {
     return nextMatchKey;
   }
+
+
 
   public void setNextMatchKey(String nextMatchKey) {
     this.nextMatchKey = nextMatchKey;
   }
 
+
   public TeamEventStatus lastMatchKey(String lastMatchKey) {
+    
     this.lastMatchKey = lastMatchKey;
     return this;
   }
@@ -208,9 +245,12 @@ public class TeamEventStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA match key for the last match the team played in at this event, or null.")
+
   public String getLastMatchKey() {
     return lastMatchKey;
   }
+
+
 
   public void setLastMatchKey(String lastMatchKey) {
     this.lastMatchKey = lastMatchKey;

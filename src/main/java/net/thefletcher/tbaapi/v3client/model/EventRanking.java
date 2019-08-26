@@ -40,13 +40,15 @@ public class EventRanking {
 
   public static final String SERIALIZED_NAME_EXTRA_STATS_INFO = "extra_stats_info";
   @SerializedName(SERIALIZED_NAME_EXTRA_STATS_INFO)
-  private List<EventRankingExtraStatsInfo> extraStatsInfo = new ArrayList<EventRankingExtraStatsInfo>();
+  private List<EventRankingExtraStatsInfo> extraStatsInfo = null;
 
   public static final String SERIALIZED_NAME_SORT_ORDER_INFO = "sort_order_info";
   @SerializedName(SERIALIZED_NAME_SORT_ORDER_INFO)
   private List<EventRankingSortOrderInfo> sortOrderInfo = new ArrayList<EventRankingSortOrderInfo>();
 
+
   public EventRanking rankings(List<EventRankingRankings> rankings) {
+    
     this.rankings = rankings;
     return this;
   }
@@ -61,15 +63,20 @@ public class EventRanking {
    * @return rankings
   **/
   @ApiModelProperty(required = true, value = "List of rankings at the event.")
+
   public List<EventRankingRankings> getRankings() {
     return rankings;
   }
+
+
 
   public void setRankings(List<EventRankingRankings> rankings) {
     this.rankings = rankings;
   }
 
+
   public EventRanking extraStatsInfo(List<EventRankingExtraStatsInfo> extraStatsInfo) {
+    
     this.extraStatsInfo = extraStatsInfo;
     return this;
   }
@@ -88,15 +95,20 @@ public class EventRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "List of special TBA-generated values provided in the `extra_stats` array for each item.")
+
   public List<EventRankingExtraStatsInfo> getExtraStatsInfo() {
     return extraStatsInfo;
   }
+
+
 
   public void setExtraStatsInfo(List<EventRankingExtraStatsInfo> extraStatsInfo) {
     this.extraStatsInfo = extraStatsInfo;
   }
 
+
   public EventRanking sortOrderInfo(List<EventRankingSortOrderInfo> sortOrderInfo) {
+    
     this.sortOrderInfo = sortOrderInfo;
     return this;
   }
@@ -111,9 +123,12 @@ public class EventRanking {
    * @return sortOrderInfo
   **/
   @ApiModelProperty(required = true, value = "List of year-specific values provided in the `sort_orders` array for each team.")
+
   public List<EventRankingSortOrderInfo> getSortOrderInfo() {
     return sortOrderInfo;
   }
+
+
 
   public void setSortOrderInfo(List<EventRankingSortOrderInfo> sortOrderInfo) {
     this.sortOrderInfo = sortOrderInfo;

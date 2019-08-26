@@ -99,9 +99,11 @@ public class Team {
 
   public static final String SERIALIZED_NAME_HOME_CHAMPIONSHIP = "home_championship";
   @SerializedName(SERIALIZED_NAME_HOME_CHAMPIONSHIP)
-  private Object homeChampionship = null;
+  private Object homeChampionship;
+
 
   public Team key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -111,15 +113,20 @@ public class Team {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA team key with the format `frcXXXX` with `XXXX` representing the team number.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public Team teamNumber(Integer teamNumber) {
+    
     this.teamNumber = teamNumber;
     return this;
   }
@@ -129,15 +136,20 @@ public class Team {
    * @return teamNumber
   **/
   @ApiModelProperty(required = true, value = "Official team number issued by FIRST.")
+
   public Integer getTeamNumber() {
     return teamNumber;
   }
+
+
 
   public void setTeamNumber(Integer teamNumber) {
     this.teamNumber = teamNumber;
   }
 
+
   public Team nickname(String nickname) {
+    
     this.nickname = nickname;
     return this;
   }
@@ -148,15 +160,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Team nickname provided by FIRST.")
+
   public String getNickname() {
     return nickname;
   }
+
+
 
   public void setNickname(String nickname) {
     this.nickname = nickname;
   }
 
+
   public Team name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -166,15 +183,20 @@ public class Team {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "Official long name registered with FIRST.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public Team city(String city) {
+    
     this.city = city;
     return this;
   }
@@ -185,15 +207,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "City of team derived from parsing the address registered with FIRST.")
+
   public String getCity() {
     return city;
   }
+
+
 
   public void setCity(String city) {
     this.city = city;
   }
 
+
   public Team stateProv(String stateProv) {
+    
     this.stateProv = stateProv;
     return this;
   }
@@ -204,15 +231,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "State of team derived from parsing the address registered with FIRST.")
+
   public String getStateProv() {
     return stateProv;
   }
+
+
 
   public void setStateProv(String stateProv) {
     this.stateProv = stateProv;
   }
 
+
   public Team country(String country) {
+    
     this.country = country;
     return this;
   }
@@ -223,15 +255,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Country of team derived from parsing the address registered with FIRST.")
+
   public String getCountry() {
     return country;
   }
+
+
 
   public void setCountry(String country) {
     this.country = country;
   }
 
+
   public Team address(String address) {
+    
     this.address = address;
     return this;
   }
@@ -242,15 +279,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
+
   public String getAddress() {
     return address;
   }
+
+
 
   public void setAddress(String address) {
     this.address = address;
   }
 
+
   public Team postalCode(String postalCode) {
+    
     this.postalCode = postalCode;
     return this;
   }
@@ -261,15 +303,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Postal code from the team address.")
+
   public String getPostalCode() {
     return postalCode;
   }
+
+
 
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+
   public Team gmapsPlaceId(String gmapsPlaceId) {
+    
     this.gmapsPlaceId = gmapsPlaceId;
     return this;
   }
@@ -280,15 +327,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
+
   public String getGmapsPlaceId() {
     return gmapsPlaceId;
   }
+
+
 
   public void setGmapsPlaceId(String gmapsPlaceId) {
     this.gmapsPlaceId = gmapsPlaceId;
   }
 
+
   public Team gmapsUrl(String gmapsUrl) {
+    
     this.gmapsUrl = gmapsUrl;
     return this;
   }
@@ -299,15 +351,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
+
   public String getGmapsUrl() {
     return gmapsUrl;
   }
+
+
 
   public void setGmapsUrl(String gmapsUrl) {
     this.gmapsUrl = gmapsUrl;
   }
 
+
   public Team lat(Double lat) {
+    
     this.lat = lat;
     return this;
   }
@@ -318,15 +375,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
+
   public Double getLat() {
     return lat;
   }
+
+
 
   public void setLat(Double lat) {
     this.lat = lat;
   }
 
+
   public Team lng(Double lng) {
+    
     this.lng = lng;
     return this;
   }
@@ -337,15 +399,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
+
   public Double getLng() {
     return lng;
   }
+
+
 
   public void setLng(Double lng) {
     this.lng = lng;
   }
 
+
   public Team locationName(String locationName) {
+    
     this.locationName = locationName;
     return this;
   }
@@ -356,15 +423,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Will be NULL, for future development.")
+
   public String getLocationName() {
     return locationName;
   }
+
+
 
   public void setLocationName(String locationName) {
     this.locationName = locationName;
   }
 
+
   public Team website(String website) {
+    
     this.website = website;
     return this;
   }
@@ -375,15 +447,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Official website associated with the team.")
+
   public String getWebsite() {
     return website;
   }
+
+
 
   public void setWebsite(String website) {
     this.website = website;
   }
 
+
   public Team rookieYear(Integer rookieYear) {
+    
     this.rookieYear = rookieYear;
     return this;
   }
@@ -394,15 +471,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "First year the team officially competed.")
+
   public Integer getRookieYear() {
     return rookieYear;
   }
+
+
 
   public void setRookieYear(Integer rookieYear) {
     this.rookieYear = rookieYear;
   }
 
+
   public Team motto(String motto) {
+    
     this.motto = motto;
     return this;
   }
@@ -413,15 +495,20 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Team's motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019.")
+
   public String getMotto() {
     return motto;
   }
+
+
 
   public void setMotto(String motto) {
     this.motto = motto;
   }
 
+
   public Team homeChampionship(Object homeChampionship) {
+    
     this.homeChampionship = homeChampionship;
     return this;
   }
@@ -432,9 +519,12 @@ public class Team {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Location of the team's home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value.")
+
   public Object getHomeChampionship() {
     return homeChampionship;
   }
+
+
 
   public void setHomeChampionship(Object homeChampionship) {
     this.homeChampionship = homeChampionship;

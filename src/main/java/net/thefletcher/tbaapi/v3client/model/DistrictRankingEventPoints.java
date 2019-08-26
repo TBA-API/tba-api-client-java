@@ -57,7 +57,9 @@ public class DistrictRankingEventPoints {
   @SerializedName(SERIALIZED_NAME_QUAL_POINTS)
   private Integer qualPoints;
 
+
   public DistrictRankingEventPoints districtCmp(Boolean districtCmp) {
+    
     this.districtCmp = districtCmp;
     return this;
   }
@@ -67,15 +69,20 @@ public class DistrictRankingEventPoints {
    * @return districtCmp
   **/
   @ApiModelProperty(required = true, value = "`true` if this event is a District Championship event.")
+
   public Boolean getDistrictCmp() {
     return districtCmp;
   }
+
+
 
   public void setDistrictCmp(Boolean districtCmp) {
     this.districtCmp = districtCmp;
   }
 
+
   public DistrictRankingEventPoints total(Integer total) {
+    
     this.total = total;
     return this;
   }
@@ -85,15 +92,20 @@ public class DistrictRankingEventPoints {
    * @return total
   **/
   @ApiModelProperty(required = true, value = "Total points awarded at this event.")
+
   public Integer getTotal() {
     return total;
   }
+
+
 
   public void setTotal(Integer total) {
     this.total = total;
   }
 
+
   public DistrictRankingEventPoints alliancePoints(Integer alliancePoints) {
+    
     this.alliancePoints = alliancePoints;
     return this;
   }
@@ -103,15 +115,20 @@ public class DistrictRankingEventPoints {
    * @return alliancePoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for alliance selection.")
+
   public Integer getAlliancePoints() {
     return alliancePoints;
   }
+
+
 
   public void setAlliancePoints(Integer alliancePoints) {
     this.alliancePoints = alliancePoints;
   }
 
+
   public DistrictRankingEventPoints elimPoints(Integer elimPoints) {
+    
     this.elimPoints = elimPoints;
     return this;
   }
@@ -121,15 +138,20 @@ public class DistrictRankingEventPoints {
    * @return elimPoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for elimination match performance.")
+
   public Integer getElimPoints() {
     return elimPoints;
   }
+
+
 
   public void setElimPoints(Integer elimPoints) {
     this.elimPoints = elimPoints;
   }
 
+
   public DistrictRankingEventPoints awardPoints(Integer awardPoints) {
+    
     this.awardPoints = awardPoints;
     return this;
   }
@@ -139,15 +161,20 @@ public class DistrictRankingEventPoints {
    * @return awardPoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for event awards.")
+
   public Integer getAwardPoints() {
     return awardPoints;
   }
+
+
 
   public void setAwardPoints(Integer awardPoints) {
     this.awardPoints = awardPoints;
   }
 
+
   public DistrictRankingEventPoints eventKey(String eventKey) {
+    
     this.eventKey = eventKey;
     return this;
   }
@@ -157,15 +184,20 @@ public class DistrictRankingEventPoints {
    * @return eventKey
   **/
   @ApiModelProperty(required = true, value = "TBA Event key for this event.")
+
   public String getEventKey() {
     return eventKey;
   }
+
+
 
   public void setEventKey(String eventKey) {
     this.eventKey = eventKey;
   }
 
+
   public DistrictRankingEventPoints qualPoints(Integer qualPoints) {
+    
     this.qualPoints = qualPoints;
     return this;
   }
@@ -175,9 +207,12 @@ public class DistrictRankingEventPoints {
    * @return qualPoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for qualification match performance.")
+
   public Integer getQualPoints() {
     return qualPoints;
   }
+
+
 
   public void setQualPoints(Integer qualPoints) {
     this.qualPoints = qualPoints;

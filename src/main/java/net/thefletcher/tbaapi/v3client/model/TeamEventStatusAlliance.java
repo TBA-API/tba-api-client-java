@@ -40,13 +40,15 @@ public class TeamEventStatusAlliance {
 
   public static final String SERIALIZED_NAME_BACKUP = "backup";
   @SerializedName(SERIALIZED_NAME_BACKUP)
-  private TeamEventStatusAllianceBackup backup = null;
+  private TeamEventStatusAllianceBackup backup;
 
   public static final String SERIALIZED_NAME_PICK = "pick";
   @SerializedName(SERIALIZED_NAME_PICK)
   private Integer pick;
 
+
   public TeamEventStatusAlliance name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -57,15 +59,20 @@ public class TeamEventStatusAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Alliance name, may be null.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public TeamEventStatusAlliance number(Integer number) {
+    
     this.number = number;
     return this;
   }
@@ -75,15 +82,20 @@ public class TeamEventStatusAlliance {
    * @return number
   **/
   @ApiModelProperty(required = true, value = "Alliance number.")
+
   public Integer getNumber() {
     return number;
   }
+
+
 
   public void setNumber(Integer number) {
     this.number = number;
   }
 
+
   public TeamEventStatusAlliance backup(TeamEventStatusAllianceBackup backup) {
+    
     this.backup = backup;
     return this;
   }
@@ -94,15 +106,20 @@ public class TeamEventStatusAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public TeamEventStatusAllianceBackup getBackup() {
     return backup;
   }
+
+
 
   public void setBackup(TeamEventStatusAllianceBackup backup) {
     this.backup = backup;
   }
 
+
   public TeamEventStatusAlliance pick(Integer pick) {
+    
     this.pick = pick;
     return this;
   }
@@ -112,9 +129,12 @@ public class TeamEventStatusAlliance {
    * @return pick
   **/
   @ApiModelProperty(required = true, value = "Order the team was picked in the alliance from 0-2, with 0 being alliance captain.")
+
   public Integer getPick() {
     return pick;
   }
+
+
 
   public void setPick(Integer pick) {
     this.pick = pick;

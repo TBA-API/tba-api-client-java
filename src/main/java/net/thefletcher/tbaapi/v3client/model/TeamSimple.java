@@ -57,7 +57,9 @@ public class TeamSimple {
   @SerializedName(SERIALIZED_NAME_COUNTRY)
   private String country;
 
+
   public TeamSimple key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -67,15 +69,20 @@ public class TeamSimple {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA team key with the format `frcXXXX` with `XXXX` representing the team number.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public TeamSimple teamNumber(Integer teamNumber) {
+    
     this.teamNumber = teamNumber;
     return this;
   }
@@ -85,15 +92,20 @@ public class TeamSimple {
    * @return teamNumber
   **/
   @ApiModelProperty(required = true, value = "Official team number issued by FIRST.")
+
   public Integer getTeamNumber() {
     return teamNumber;
   }
+
+
 
   public void setTeamNumber(Integer teamNumber) {
     this.teamNumber = teamNumber;
   }
 
+
   public TeamSimple nickname(String nickname) {
+    
     this.nickname = nickname;
     return this;
   }
@@ -104,15 +116,20 @@ public class TeamSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Team nickname provided by FIRST.")
+
   public String getNickname() {
     return nickname;
   }
+
+
 
   public void setNickname(String nickname) {
     this.nickname = nickname;
   }
 
+
   public TeamSimple name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -122,15 +139,20 @@ public class TeamSimple {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "Official long name registered with FIRST.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public TeamSimple city(String city) {
+    
     this.city = city;
     return this;
   }
@@ -141,15 +163,20 @@ public class TeamSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "City of team derived from parsing the address registered with FIRST.")
+
   public String getCity() {
     return city;
   }
+
+
 
   public void setCity(String city) {
     this.city = city;
   }
 
+
   public TeamSimple stateProv(String stateProv) {
+    
     this.stateProv = stateProv;
     return this;
   }
@@ -160,15 +187,20 @@ public class TeamSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "State of team derived from parsing the address registered with FIRST.")
+
   public String getStateProv() {
     return stateProv;
   }
+
+
 
   public void setStateProv(String stateProv) {
     this.stateProv = stateProv;
   }
 
+
   public TeamSimple country(String country) {
+    
     this.country = country;
     return this;
   }
@@ -179,9 +211,12 @@ public class TeamSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Country of team derived from parsing the address registered with FIRST.")
+
   public String getCountry() {
     return country;
   }
+
+
 
   public void setCountry(String country) {
     this.country = country;

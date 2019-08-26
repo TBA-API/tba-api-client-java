@@ -33,13 +33,15 @@ import java.util.List;
 public class EventDistrictPointsTiebreakers {
   public static final String SERIALIZED_NAME_HIGHEST_QUAL_SCORES = "highest_qual_scores";
   @SerializedName(SERIALIZED_NAME_HIGHEST_QUAL_SCORES)
-  private List<Integer> highestQualScores = new ArrayList<Integer>();
+  private List<Integer> highestQualScores = null;
 
   public static final String SERIALIZED_NAME_QUAL_WINS = "qual_wins";
   @SerializedName(SERIALIZED_NAME_QUAL_WINS)
   private Integer qualWins;
 
+
   public EventDistrictPointsTiebreakers highestQualScores(List<Integer> highestQualScores) {
+    
     this.highestQualScores = highestQualScores;
     return this;
   }
@@ -58,15 +60,20 @@ public class EventDistrictPointsTiebreakers {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public List<Integer> getHighestQualScores() {
     return highestQualScores;
   }
+
+
 
   public void setHighestQualScores(List<Integer> highestQualScores) {
     this.highestQualScores = highestQualScores;
   }
 
+
   public EventDistrictPointsTiebreakers qualWins(Integer qualWins) {
+    
     this.qualWins = qualWins;
     return this;
   }
@@ -77,9 +84,12 @@ public class EventDistrictPointsTiebreakers {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getQualWins() {
     return qualWins;
   }
+
+
 
   public void setQualWins(Integer qualWins) {
     this.qualWins = qualWins;

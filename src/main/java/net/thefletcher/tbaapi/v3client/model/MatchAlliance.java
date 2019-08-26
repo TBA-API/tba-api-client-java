@@ -41,13 +41,15 @@ public class MatchAlliance {
 
   public static final String SERIALIZED_NAME_SURROGATE_TEAM_KEYS = "surrogate_team_keys";
   @SerializedName(SERIALIZED_NAME_SURROGATE_TEAM_KEYS)
-  private List<String> surrogateTeamKeys = new ArrayList<String>();
+  private List<String> surrogateTeamKeys = null;
 
   public static final String SERIALIZED_NAME_DQ_TEAM_KEYS = "dq_team_keys";
   @SerializedName(SERIALIZED_NAME_DQ_TEAM_KEYS)
-  private List<String> dqTeamKeys = new ArrayList<String>();
+  private List<String> dqTeamKeys = null;
+
 
   public MatchAlliance score(Integer score) {
+    
     this.score = score;
     return this;
   }
@@ -57,15 +59,20 @@ public class MatchAlliance {
    * @return score
   **/
   @ApiModelProperty(required = true, value = "Score for this alliance. Will be null or -1 for an unplayed match.")
+
   public Integer getScore() {
     return score;
   }
+
+
 
   public void setScore(Integer score) {
     this.score = score;
   }
 
+
   public MatchAlliance teamKeys(List<String> teamKeys) {
+    
     this.teamKeys = teamKeys;
     return this;
   }
@@ -80,15 +87,20 @@ public class MatchAlliance {
    * @return teamKeys
   **/
   @ApiModelProperty(required = true, value = "")
+
   public List<String> getTeamKeys() {
     return teamKeys;
   }
+
+
 
   public void setTeamKeys(List<String> teamKeys) {
     this.teamKeys = teamKeys;
   }
 
+
   public MatchAlliance surrogateTeamKeys(List<String> surrogateTeamKeys) {
+    
     this.surrogateTeamKeys = surrogateTeamKeys;
     return this;
   }
@@ -107,15 +119,20 @@ public class MatchAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA team keys (eg `frc254`) of any teams playing as a surrogate.")
+
   public List<String> getSurrogateTeamKeys() {
     return surrogateTeamKeys;
   }
+
+
 
   public void setSurrogateTeamKeys(List<String> surrogateTeamKeys) {
     this.surrogateTeamKeys = surrogateTeamKeys;
   }
 
+
   public MatchAlliance dqTeamKeys(List<String> dqTeamKeys) {
+    
     this.dqTeamKeys = dqTeamKeys;
     return this;
   }
@@ -134,9 +151,12 @@ public class MatchAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA team keys (eg `frc254`) of any disqualified teams.")
+
   public List<String> getDqTeamKeys() {
     return dqTeamKeys;
   }
+
+
 
   public void setDqTeamKeys(List<String> dqTeamKeys) {
     this.dqTeamKeys = dqTeamKeys;

@@ -40,17 +40,19 @@ public class EliminationAllianceStatus {
 
   public static final String SERIALIZED_NAME_RECORD = "record";
   @SerializedName(SERIALIZED_NAME_RECORD)
-  private WLTRecord record = null;
+  private WLTRecord record;
 
   public static final String SERIALIZED_NAME_CURRENT_LEVEL_RECORD = "current_level_record";
   @SerializedName(SERIALIZED_NAME_CURRENT_LEVEL_RECORD)
-  private WLTRecord currentLevelRecord = null;
+  private WLTRecord currentLevelRecord;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   private String status;
 
+
   public EliminationAllianceStatus playoffAverage(Double playoffAverage) {
+    
     this.playoffAverage = playoffAverage;
     return this;
   }
@@ -61,15 +63,20 @@ public class EliminationAllianceStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Double getPlayoffAverage() {
     return playoffAverage;
   }
+
+
 
   public void setPlayoffAverage(Double playoffAverage) {
     this.playoffAverage = playoffAverage;
   }
 
+
   public EliminationAllianceStatus level(String level) {
+    
     this.level = level;
     return this;
   }
@@ -80,15 +87,20 @@ public class EliminationAllianceStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getLevel() {
     return level;
   }
+
+
 
   public void setLevel(String level) {
     this.level = level;
   }
 
+
   public EliminationAllianceStatus record(WLTRecord record) {
+    
     this.record = record;
     return this;
   }
@@ -99,15 +111,20 @@ public class EliminationAllianceStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public WLTRecord getRecord() {
     return record;
   }
+
+
 
   public void setRecord(WLTRecord record) {
     this.record = record;
   }
 
+
   public EliminationAllianceStatus currentLevelRecord(WLTRecord currentLevelRecord) {
+    
     this.currentLevelRecord = currentLevelRecord;
     return this;
   }
@@ -118,15 +135,20 @@ public class EliminationAllianceStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public WLTRecord getCurrentLevelRecord() {
     return currentLevelRecord;
   }
+
+
 
   public void setCurrentLevelRecord(WLTRecord currentLevelRecord) {
     this.currentLevelRecord = currentLevelRecord;
   }
 
+
   public EliminationAllianceStatus status(String status) {
+    
     this.status = status;
     return this;
   }
@@ -137,9 +159,12 @@ public class EliminationAllianceStatus {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getStatus() {
     return status;
   }
+
+
 
   public void setStatus(String status) {
     this.status = status;

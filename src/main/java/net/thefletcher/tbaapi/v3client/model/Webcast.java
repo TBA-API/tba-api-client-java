@@ -108,7 +108,9 @@ public class Webcast {
   @SerializedName(SERIALIZED_NAME_FILE)
   private String file;
 
+
   public Webcast type(TypeEnum type) {
+    
     this.type = type;
     return this;
   }
@@ -118,15 +120,20 @@ public class Webcast {
    * @return type
   **/
   @ApiModelProperty(required = true, value = "Type of webcast, typically descriptive of the streaming provider.")
+
   public TypeEnum getType() {
     return type;
   }
+
+
 
   public void setType(TypeEnum type) {
     this.type = type;
   }
 
+
   public Webcast channel(String channel) {
+    
     this.channel = channel;
     return this;
   }
@@ -136,15 +143,20 @@ public class Webcast {
    * @return channel
   **/
   @ApiModelProperty(required = true, value = "Type specific channel information. May be the YouTube stream, or Twitch channel name. In the case of iframe types, contains HTML to embed the stream in an HTML iframe.")
+
   public String getChannel() {
     return channel;
   }
+
+
 
   public void setChannel(String channel) {
     this.channel = channel;
   }
 
+
   public Webcast file(String file) {
+    
     this.file = file;
     return this;
   }
@@ -155,9 +167,12 @@ public class Webcast {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "File identification as may be required for some types. May be null.")
+
   public String getFile() {
     return file;
   }
+
+
 
   public void setFile(String file) {
     this.file = file;

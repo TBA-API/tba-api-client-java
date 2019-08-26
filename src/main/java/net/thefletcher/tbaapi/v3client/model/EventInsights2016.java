@@ -128,7 +128,9 @@ public class EventInsights2016 {
   @SerializedName(SERIALIZED_NAME_HIGH_SCORE)
   private List<String> highScore = new ArrayList<String>();
 
+
   public EventInsights2016 lowBar(List<Float> lowBar) {
+    
     this.lowBar = lowBar;
     return this;
   }
@@ -143,15 +145,20 @@ public class EventInsights2016 {
    * @return lowBar
   **/
   @ApiModelProperty(required = true, value = "For the Low Bar - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getLowBar() {
     return lowBar;
   }
+
+
 
   public void setLowBar(List<Float> lowBar) {
     this.lowBar = lowBar;
   }
 
+
   public EventInsights2016 aChevalDeFrise(List<Float> aChevalDeFrise) {
+    
     this.aChevalDeFrise = aChevalDeFrise;
     return this;
   }
@@ -166,15 +173,20 @@ public class EventInsights2016 {
    * @return aChevalDeFrise
   **/
   @ApiModelProperty(required = true, value = "For the Cheval De Frise - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getaChevalDeFrise() {
     return aChevalDeFrise;
   }
+
+
 
   public void setaChevalDeFrise(List<Float> aChevalDeFrise) {
     this.aChevalDeFrise = aChevalDeFrise;
   }
 
+
   public EventInsights2016 aPortcullis(List<Float> aPortcullis) {
+    
     this.aPortcullis = aPortcullis;
     return this;
   }
@@ -189,15 +201,20 @@ public class EventInsights2016 {
    * @return aPortcullis
   **/
   @ApiModelProperty(required = true, value = "For the Portcullis - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getaPortcullis() {
     return aPortcullis;
   }
+
+
 
   public void setaPortcullis(List<Float> aPortcullis) {
     this.aPortcullis = aPortcullis;
   }
 
+
   public EventInsights2016 bRamparts(List<Float> bRamparts) {
+    
     this.bRamparts = bRamparts;
     return this;
   }
@@ -212,15 +229,20 @@ public class EventInsights2016 {
    * @return bRamparts
   **/
   @ApiModelProperty(required = true, value = "For the Ramparts - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getbRamparts() {
     return bRamparts;
   }
+
+
 
   public void setbRamparts(List<Float> bRamparts) {
     this.bRamparts = bRamparts;
   }
 
+
   public EventInsights2016 bMoat(List<Float> bMoat) {
+    
     this.bMoat = bMoat;
     return this;
   }
@@ -235,15 +257,20 @@ public class EventInsights2016 {
    * @return bMoat
   **/
   @ApiModelProperty(required = true, value = "For the Moat - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getbMoat() {
     return bMoat;
   }
+
+
 
   public void setbMoat(List<Float> bMoat) {
     this.bMoat = bMoat;
   }
 
+
   public EventInsights2016 cSallyPort(List<Float> cSallyPort) {
+    
     this.cSallyPort = cSallyPort;
     return this;
   }
@@ -258,15 +285,20 @@ public class EventInsights2016 {
    * @return cSallyPort
   **/
   @ApiModelProperty(required = true, value = "For the Sally Port - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getcSallyPort() {
     return cSallyPort;
   }
+
+
 
   public void setcSallyPort(List<Float> cSallyPort) {
     this.cSallyPort = cSallyPort;
   }
 
+
   public EventInsights2016 cDrawbridge(List<Float> cDrawbridge) {
+    
     this.cDrawbridge = cDrawbridge;
     return this;
   }
@@ -281,15 +313,20 @@ public class EventInsights2016 {
    * @return cDrawbridge
   **/
   @ApiModelProperty(required = true, value = "For the Drawbridge - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getcDrawbridge() {
     return cDrawbridge;
   }
+
+
 
   public void setcDrawbridge(List<Float> cDrawbridge) {
     this.cDrawbridge = cDrawbridge;
   }
 
+
   public EventInsights2016 dRoughTerrain(List<Float> dRoughTerrain) {
+    
     this.dRoughTerrain = dRoughTerrain;
     return this;
   }
@@ -304,15 +341,20 @@ public class EventInsights2016 {
    * @return dRoughTerrain
   **/
   @ApiModelProperty(required = true, value = "For the Rough Terrain - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getdRoughTerrain() {
     return dRoughTerrain;
   }
+
+
 
   public void setdRoughTerrain(List<Float> dRoughTerrain) {
     this.dRoughTerrain = dRoughTerrain;
   }
 
+
   public EventInsights2016 dRockWall(List<Float> dRockWall) {
+    
     this.dRockWall = dRockWall;
     return this;
   }
@@ -327,15 +369,20 @@ public class EventInsights2016 {
    * @return dRockWall
   **/
   @ApiModelProperty(required = true, value = "For the Rock Wall - An array with three values, number of times damaged, number of opportunities to damage, and percentage.")
+
   public List<Float> getdRockWall() {
     return dRockWall;
   }
+
+
 
   public void setdRockWall(List<Float> dRockWall) {
     this.dRockWall = dRockWall;
   }
 
+
   public EventInsights2016 averageHighGoals(Float averageHighGoals) {
+    
     this.averageHighGoals = averageHighGoals;
     return this;
   }
@@ -345,15 +392,20 @@ public class EventInsights2016 {
    * @return averageHighGoals
   **/
   @ApiModelProperty(required = true, value = "Average number of high goals scored.")
+
   public Float getAverageHighGoals() {
     return averageHighGoals;
   }
+
+
 
   public void setAverageHighGoals(Float averageHighGoals) {
     this.averageHighGoals = averageHighGoals;
   }
 
+
   public EventInsights2016 averageLowGoals(Float averageLowGoals) {
+    
     this.averageLowGoals = averageLowGoals;
     return this;
   }
@@ -363,15 +415,20 @@ public class EventInsights2016 {
    * @return averageLowGoals
   **/
   @ApiModelProperty(required = true, value = "Average number of low goals scored.")
+
   public Float getAverageLowGoals() {
     return averageLowGoals;
   }
+
+
 
   public void setAverageLowGoals(Float averageLowGoals) {
     this.averageLowGoals = averageLowGoals;
   }
 
+
   public EventInsights2016 breaches(List<Float> breaches) {
+    
     this.breaches = breaches;
     return this;
   }
@@ -386,15 +443,20 @@ public class EventInsights2016 {
    * @return breaches
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times breached, number of opportunities to breach, and percentage.")
+
   public List<Float> getBreaches() {
     return breaches;
   }
+
+
 
   public void setBreaches(List<Float> breaches) {
     this.breaches = breaches;
   }
 
+
   public EventInsights2016 scales(List<Float> scales) {
+    
     this.scales = scales;
     return this;
   }
@@ -409,15 +471,20 @@ public class EventInsights2016 {
    * @return scales
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times scaled, number of opportunities to scale, and percentage.")
+
   public List<Float> getScales() {
     return scales;
   }
+
+
 
   public void setScales(List<Float> scales) {
     this.scales = scales;
   }
 
+
   public EventInsights2016 challenges(List<Float> challenges) {
+    
     this.challenges = challenges;
     return this;
   }
@@ -432,15 +499,20 @@ public class EventInsights2016 {
    * @return challenges
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times challenged, number of opportunities to challenge, and percentage.")
+
   public List<Float> getChallenges() {
     return challenges;
   }
+
+
 
   public void setChallenges(List<Float> challenges) {
     this.challenges = challenges;
   }
 
+
   public EventInsights2016 captures(List<Float> captures) {
+    
     this.captures = captures;
     return this;
   }
@@ -455,15 +527,20 @@ public class EventInsights2016 {
    * @return captures
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times captured, number of opportunities to capture, and percentage.")
+
   public List<Float> getCaptures() {
     return captures;
   }
+
+
 
   public void setCaptures(List<Float> captures) {
     this.captures = captures;
   }
 
+
   public EventInsights2016 averageWinScore(Float averageWinScore) {
+    
     this.averageWinScore = averageWinScore;
     return this;
   }
@@ -473,15 +550,20 @@ public class EventInsights2016 {
    * @return averageWinScore
   **/
   @ApiModelProperty(required = true, value = "Average winning score.")
+
   public Float getAverageWinScore() {
     return averageWinScore;
   }
+
+
 
   public void setAverageWinScore(Float averageWinScore) {
     this.averageWinScore = averageWinScore;
   }
 
+
   public EventInsights2016 averageWinMargin(Float averageWinMargin) {
+    
     this.averageWinMargin = averageWinMargin;
     return this;
   }
@@ -491,15 +573,20 @@ public class EventInsights2016 {
    * @return averageWinMargin
   **/
   @ApiModelProperty(required = true, value = "Average margin of victory.")
+
   public Float getAverageWinMargin() {
     return averageWinMargin;
   }
+
+
 
   public void setAverageWinMargin(Float averageWinMargin) {
     this.averageWinMargin = averageWinMargin;
   }
 
+
   public EventInsights2016 averageScore(Float averageScore) {
+    
     this.averageScore = averageScore;
     return this;
   }
@@ -509,15 +596,20 @@ public class EventInsights2016 {
    * @return averageScore
   **/
   @ApiModelProperty(required = true, value = "Average total score.")
+
   public Float getAverageScore() {
     return averageScore;
   }
+
+
 
   public void setAverageScore(Float averageScore) {
     this.averageScore = averageScore;
   }
 
+
   public EventInsights2016 averageAutoScore(Float averageAutoScore) {
+    
     this.averageAutoScore = averageAutoScore;
     return this;
   }
@@ -527,15 +619,20 @@ public class EventInsights2016 {
    * @return averageAutoScore
   **/
   @ApiModelProperty(required = true, value = "Average autonomous score.")
+
   public Float getAverageAutoScore() {
     return averageAutoScore;
   }
+
+
 
   public void setAverageAutoScore(Float averageAutoScore) {
     this.averageAutoScore = averageAutoScore;
   }
 
+
   public EventInsights2016 averageCrossingScore(Float averageCrossingScore) {
+    
     this.averageCrossingScore = averageCrossingScore;
     return this;
   }
@@ -545,15 +642,20 @@ public class EventInsights2016 {
    * @return averageCrossingScore
   **/
   @ApiModelProperty(required = true, value = "Average crossing score.")
+
   public Float getAverageCrossingScore() {
     return averageCrossingScore;
   }
+
+
 
   public void setAverageCrossingScore(Float averageCrossingScore) {
     this.averageCrossingScore = averageCrossingScore;
   }
 
+
   public EventInsights2016 averageBoulderScore(Float averageBoulderScore) {
+    
     this.averageBoulderScore = averageBoulderScore;
     return this;
   }
@@ -563,15 +665,20 @@ public class EventInsights2016 {
    * @return averageBoulderScore
   **/
   @ApiModelProperty(required = true, value = "Average boulder score.")
+
   public Float getAverageBoulderScore() {
     return averageBoulderScore;
   }
+
+
 
   public void setAverageBoulderScore(Float averageBoulderScore) {
     this.averageBoulderScore = averageBoulderScore;
   }
 
+
   public EventInsights2016 averageTowerScore(Float averageTowerScore) {
+    
     this.averageTowerScore = averageTowerScore;
     return this;
   }
@@ -581,15 +688,20 @@ public class EventInsights2016 {
    * @return averageTowerScore
   **/
   @ApiModelProperty(required = true, value = "Average tower score.")
+
   public Float getAverageTowerScore() {
     return averageTowerScore;
   }
+
+
 
   public void setAverageTowerScore(Float averageTowerScore) {
     this.averageTowerScore = averageTowerScore;
   }
 
+
   public EventInsights2016 averageFoulScore(Float averageFoulScore) {
+    
     this.averageFoulScore = averageFoulScore;
     return this;
   }
@@ -599,15 +711,20 @@ public class EventInsights2016 {
    * @return averageFoulScore
   **/
   @ApiModelProperty(required = true, value = "Average foul score.")
+
   public Float getAverageFoulScore() {
     return averageFoulScore;
   }
+
+
 
   public void setAverageFoulScore(Float averageFoulScore) {
     this.averageFoulScore = averageFoulScore;
   }
 
+
   public EventInsights2016 highScore(List<String> highScore) {
+    
     this.highScore = highScore;
     return this;
   }
@@ -622,9 +739,12 @@ public class EventInsights2016 {
    * @return highScore
   **/
   @ApiModelProperty(required = true, value = "An array with three values, high score, match key from the match with the high score, and the name of the match.")
+
   public List<String> getHighScore() {
     return highScore;
   }
+
+
 
   public void setHighScore(List<String> highScore) {
     this.highScore = highScore;

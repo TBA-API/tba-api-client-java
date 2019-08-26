@@ -101,7 +101,7 @@ public class MatchSimple {
 
   public static final String SERIALIZED_NAME_ALLIANCES = "alliances";
   @SerializedName(SERIALIZED_NAME_ALLIANCES)
-  private MatchSimpleAlliances alliances = null;
+  private MatchSimpleAlliances alliances;
 
   /**
    * The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
@@ -170,7 +170,9 @@ public class MatchSimple {
   @SerializedName(SERIALIZED_NAME_ACTUAL_TIME)
   private Long actualTime;
 
+
   public MatchSimple key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -180,15 +182,20 @@ public class MatchSimple {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may append the competition level if more than one match in required per set.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public MatchSimple compLevel(CompLevelEnum compLevel) {
+    
     this.compLevel = compLevel;
     return this;
   }
@@ -198,15 +205,20 @@ public class MatchSimple {
    * @return compLevel
   **/
   @ApiModelProperty(required = true, value = "The competition level the match was played at.")
+
   public CompLevelEnum getCompLevel() {
     return compLevel;
   }
+
+
 
   public void setCompLevel(CompLevelEnum compLevel) {
     this.compLevel = compLevel;
   }
 
+
   public MatchSimple setNumber(Integer setNumber) {
+    
     this.setNumber = setNumber;
     return this;
   }
@@ -216,15 +228,20 @@ public class MatchSimple {
    * @return setNumber
   **/
   @ApiModelProperty(required = true, value = "The set number in a series of matches where more than one match is required in the match series.")
+
   public Integer getSetNumber() {
     return setNumber;
   }
+
+
 
   public void setSetNumber(Integer setNumber) {
     this.setNumber = setNumber;
   }
 
+
   public MatchSimple matchNumber(Integer matchNumber) {
+    
     this.matchNumber = matchNumber;
     return this;
   }
@@ -234,15 +251,20 @@ public class MatchSimple {
    * @return matchNumber
   **/
   @ApiModelProperty(required = true, value = "The match number of the match in the competition level.")
+
   public Integer getMatchNumber() {
     return matchNumber;
   }
+
+
 
   public void setMatchNumber(Integer matchNumber) {
     this.matchNumber = matchNumber;
   }
 
+
   public MatchSimple alliances(MatchSimpleAlliances alliances) {
+    
     this.alliances = alliances;
     return this;
   }
@@ -253,15 +275,20 @@ public class MatchSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchSimpleAlliances getAlliances() {
     return alliances;
   }
+
+
 
   public void setAlliances(MatchSimpleAlliances alliances) {
     this.alliances = alliances;
   }
 
+
   public MatchSimple winningAlliance(WinningAllianceEnum winningAlliance) {
+    
     this.winningAlliance = winningAlliance;
     return this;
   }
@@ -272,15 +299,20 @@ public class MatchSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.")
+
   public WinningAllianceEnum getWinningAlliance() {
     return winningAlliance;
   }
+
+
 
   public void setWinningAlliance(WinningAllianceEnum winningAlliance) {
     this.winningAlliance = winningAlliance;
   }
 
+
   public MatchSimple eventKey(String eventKey) {
+    
     this.eventKey = eventKey;
     return this;
   }
@@ -290,15 +322,20 @@ public class MatchSimple {
    * @return eventKey
   **/
   @ApiModelProperty(required = true, value = "Event key of the event the match was played at.")
+
   public String getEventKey() {
     return eventKey;
   }
+
+
 
   public void setEventKey(String eventKey) {
     this.eventKey = eventKey;
   }
 
+
   public MatchSimple time(Long time) {
+    
     this.time = time;
     return this;
   }
@@ -309,15 +346,20 @@ public class MatchSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule.")
+
   public Long getTime() {
     return time;
   }
+
+
 
   public void setTime(Long time) {
     this.time = time;
   }
 
+
   public MatchSimple predictedTime(Long predictedTime) {
+    
     this.predictedTime = predictedTime;
     return this;
   }
@@ -328,15 +370,20 @@ public class MatchSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time.")
+
   public Long getPredictedTime() {
     return predictedTime;
   }
+
+
 
   public void setPredictedTime(Long predictedTime) {
     this.predictedTime = predictedTime;
   }
 
+
   public MatchSimple actualTime(Long actualTime) {
+    
     this.actualTime = actualTime;
     return this;
   }
@@ -347,9 +394,12 @@ public class MatchSimple {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.")
+
   public Long getActualTime() {
     return actualTime;
   }
+
+
 
   public void setActualTime(Long actualTime) {
     this.actualTime = actualTime;

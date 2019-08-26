@@ -42,7 +42,9 @@ public class WLTRecord {
   @SerializedName(SERIALIZED_NAME_TIES)
   private Integer ties;
 
+
   public WLTRecord losses(Integer losses) {
+    
     this.losses = losses;
     return this;
   }
@@ -52,15 +54,20 @@ public class WLTRecord {
    * @return losses
   **/
   @ApiModelProperty(required = true, value = "Number of losses.")
+
   public Integer getLosses() {
     return losses;
   }
+
+
 
   public void setLosses(Integer losses) {
     this.losses = losses;
   }
 
+
   public WLTRecord wins(Integer wins) {
+    
     this.wins = wins;
     return this;
   }
@@ -70,15 +77,20 @@ public class WLTRecord {
    * @return wins
   **/
   @ApiModelProperty(required = true, value = "Number of wins.")
+
   public Integer getWins() {
     return wins;
   }
+
+
 
   public void setWins(Integer wins) {
     this.wins = wins;
   }
 
+
   public WLTRecord ties(Integer ties) {
+    
     this.ties = ties;
     return this;
   }
@@ -88,9 +100,12 @@ public class WLTRecord {
    * @return ties
   **/
   @ApiModelProperty(required = true, value = "Number of ties.")
+
   public Integer getTies() {
     return ties;
   }
+
+
 
   public void setTies(Integer ties) {
     this.ties = ties;

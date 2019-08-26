@@ -52,7 +52,7 @@ public class Event {
 
   public static final String SERIALIZED_NAME_DISTRICT = "district";
   @SerializedName(SERIALIZED_NAME_DISTRICT)
-  private DistrictList district = null;
+  private DistrictList district;
 
   public static final String SERIALIZED_NAME_CITY = "city";
   @SerializedName(SERIALIZED_NAME_CITY)
@@ -136,11 +136,11 @@ public class Event {
 
   public static final String SERIALIZED_NAME_WEBCASTS = "webcasts";
   @SerializedName(SERIALIZED_NAME_WEBCASTS)
-  private List<Webcast> webcasts = new ArrayList<Webcast>();
+  private List<Webcast> webcasts = null;
 
   public static final String SERIALIZED_NAME_DIVISION_KEYS = "division_keys";
   @SerializedName(SERIALIZED_NAME_DIVISION_KEYS)
-  private List<String> divisionKeys = new ArrayList<String>();
+  private List<String> divisionKeys = null;
 
   public static final String SERIALIZED_NAME_PARENT_EVENT_KEY = "parent_event_key";
   @SerializedName(SERIALIZED_NAME_PARENT_EVENT_KEY)
@@ -154,7 +154,9 @@ public class Event {
   @SerializedName(SERIALIZED_NAME_PLAYOFF_TYPE_STRING)
   private String playoffTypeString;
 
+
   public Event key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -164,15 +166,20 @@ public class Event {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public Event name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -182,15 +189,20 @@ public class Event {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "Official name of event on record either provided by FIRST or organizers of offseason event.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public Event eventCode(String eventCode) {
+    
     this.eventCode = eventCode;
     return this;
   }
@@ -200,15 +212,20 @@ public class Event {
    * @return eventCode
   **/
   @ApiModelProperty(required = true, value = "Event short code, as provided by FIRST.")
+
   public String getEventCode() {
     return eventCode;
   }
+
+
 
   public void setEventCode(String eventCode) {
     this.eventCode = eventCode;
   }
 
+
   public Event eventType(Integer eventType) {
+    
     this.eventType = eventType;
     return this;
   }
@@ -218,15 +235,20 @@ public class Event {
    * @return eventType
   **/
   @ApiModelProperty(required = true, value = "Event Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2")
+
   public Integer getEventType() {
     return eventType;
   }
+
+
 
   public void setEventType(Integer eventType) {
     this.eventType = eventType;
   }
 
+
   public Event district(DistrictList district) {
+    
     this.district = district;
     return this;
   }
@@ -237,15 +259,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public DistrictList getDistrict() {
     return district;
   }
+
+
 
   public void setDistrict(DistrictList district) {
     this.district = district;
   }
 
+
   public Event city(String city) {
+    
     this.city = city;
     return this;
   }
@@ -256,15 +283,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "City, town, village, etc. the event is located in.")
+
   public String getCity() {
     return city;
   }
+
+
 
   public void setCity(String city) {
     this.city = city;
   }
 
+
   public Event stateProv(String stateProv) {
+    
     this.stateProv = stateProv;
     return this;
   }
@@ -275,15 +307,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "State or Province the event is located in.")
+
   public String getStateProv() {
     return stateProv;
   }
+
+
 
   public void setStateProv(String stateProv) {
     this.stateProv = stateProv;
   }
 
+
   public Event country(String country) {
+    
     this.country = country;
     return this;
   }
@@ -294,15 +331,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Country the event is located in.")
+
   public String getCountry() {
     return country;
   }
+
+
 
   public void setCountry(String country) {
     this.country = country;
   }
 
+
   public Event startDate(LocalDate startDate) {
+    
     this.startDate = startDate;
     return this;
   }
@@ -312,15 +354,20 @@ public class Event {
    * @return startDate
   **/
   @ApiModelProperty(required = true, value = "Event start date in `yyyy-mm-dd` format.")
+
   public LocalDate getStartDate() {
     return startDate;
   }
+
+
 
   public void setStartDate(LocalDate startDate) {
     this.startDate = startDate;
   }
 
+
   public Event endDate(LocalDate endDate) {
+    
     this.endDate = endDate;
     return this;
   }
@@ -330,15 +377,20 @@ public class Event {
    * @return endDate
   **/
   @ApiModelProperty(required = true, value = "Event end date in `yyyy-mm-dd` format.")
+
   public LocalDate getEndDate() {
     return endDate;
   }
+
+
 
   public void setEndDate(LocalDate endDate) {
     this.endDate = endDate;
   }
 
+
   public Event year(Integer year) {
+    
     this.year = year;
     return this;
   }
@@ -348,15 +400,20 @@ public class Event {
    * @return year
   **/
   @ApiModelProperty(required = true, value = "Year the event data is for.")
+
   public Integer getYear() {
     return year;
   }
+
+
 
   public void setYear(Integer year) {
     this.year = year;
   }
 
+
   public Event shortName(String shortName) {
+    
     this.shortName = shortName;
     return this;
   }
@@ -367,15 +424,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Same as `name` but doesn't include event specifiers, such as 'Regional' or 'District'. May be null.")
+
   public String getShortName() {
     return shortName;
   }
+
+
 
   public void setShortName(String shortName) {
     this.shortName = shortName;
   }
 
+
   public Event eventTypeString(String eventTypeString) {
+    
     this.eventTypeString = eventTypeString;
     return this;
   }
@@ -385,15 +447,20 @@ public class Event {
    * @return eventTypeString
   **/
   @ApiModelProperty(required = true, value = "Event Type, eg Regional, District, or Offseason.")
+
   public String getEventTypeString() {
     return eventTypeString;
   }
+
+
 
   public void setEventTypeString(String eventTypeString) {
     this.eventTypeString = eventTypeString;
   }
 
+
   public Event week(Integer week) {
+    
     this.week = week;
     return this;
   }
@@ -404,15 +471,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Week of the event relative to the first official season event, zero-indexed. Only valid for Regionals, Districts, and District Championships. Null otherwise. (Eg. A season with a week 0 'preseason' event does not count, and week 1 events will show 0 here. Seasons with a week 0.5 regional event will show week 0 for those event(s) and week 1 for week 1 events and so on.)")
+
   public Integer getWeek() {
     return week;
   }
+
+
 
   public void setWeek(Integer week) {
     this.week = week;
   }
 
+
   public Event address(String address) {
+    
     this.address = address;
     return this;
   }
@@ -423,15 +495,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Address of the event's venue, if available.")
+
   public String getAddress() {
     return address;
   }
+
+
 
   public void setAddress(String address) {
     this.address = address;
   }
 
+
   public Event postalCode(String postalCode) {
+    
     this.postalCode = postalCode;
     return this;
   }
@@ -442,15 +519,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Postal code from the event address.")
+
   public String getPostalCode() {
     return postalCode;
   }
+
+
 
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+
   public Event gmapsPlaceId(String gmapsPlaceId) {
+    
     this.gmapsPlaceId = gmapsPlaceId;
     return this;
   }
@@ -461,15 +543,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Google Maps Place ID for the event address.")
+
   public String getGmapsPlaceId() {
     return gmapsPlaceId;
   }
+
+
 
   public void setGmapsPlaceId(String gmapsPlaceId) {
     this.gmapsPlaceId = gmapsPlaceId;
   }
 
+
   public Event gmapsUrl(String gmapsUrl) {
+    
     this.gmapsUrl = gmapsUrl;
     return this;
   }
@@ -480,15 +567,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Link to address location on Google Maps.")
+
   public String getGmapsUrl() {
     return gmapsUrl;
   }
+
+
 
   public void setGmapsUrl(String gmapsUrl) {
     this.gmapsUrl = gmapsUrl;
   }
 
+
   public Event lat(Double lat) {
+    
     this.lat = lat;
     return this;
   }
@@ -499,15 +591,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Latitude for the event address.")
+
   public Double getLat() {
     return lat;
   }
+
+
 
   public void setLat(Double lat) {
     this.lat = lat;
   }
 
+
   public Event lng(Double lng) {
+    
     this.lng = lng;
     return this;
   }
@@ -518,15 +615,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Longitude for the event address.")
+
   public Double getLng() {
     return lng;
   }
+
+
 
   public void setLng(Double lng) {
     this.lng = lng;
   }
 
+
   public Event locationName(String locationName) {
+    
     this.locationName = locationName;
     return this;
   }
@@ -537,15 +639,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Name of the location at the address for the event, eg. Blue Alliance High School.")
+
   public String getLocationName() {
     return locationName;
   }
+
+
 
   public void setLocationName(String locationName) {
     this.locationName = locationName;
   }
 
+
   public Event timezone(String timezone) {
+    
     this.timezone = timezone;
     return this;
   }
@@ -556,15 +663,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Timezone name.")
+
   public String getTimezone() {
     return timezone;
   }
+
+
 
   public void setTimezone(String timezone) {
     this.timezone = timezone;
   }
 
+
   public Event website(String website) {
+    
     this.website = website;
     return this;
   }
@@ -575,15 +687,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The event's website, if any.")
+
   public String getWebsite() {
     return website;
   }
+
+
 
   public void setWebsite(String website) {
     this.website = website;
   }
 
+
   public Event firstEventId(String firstEventId) {
+    
     this.firstEventId = firstEventId;
     return this;
   }
@@ -594,15 +711,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The FIRST internal Event ID, used to link to the event on the FRC webpage.")
+
   public String getFirstEventId() {
     return firstEventId;
   }
+
+
 
   public void setFirstEventId(String firstEventId) {
     this.firstEventId = firstEventId;
   }
 
+
   public Event firstEventCode(String firstEventCode) {
+    
     this.firstEventCode = firstEventCode;
     return this;
   }
@@ -613,15 +735,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Public facing event code used by FIRST (on frc-events.firstinspires.org, for example)")
+
   public String getFirstEventCode() {
     return firstEventCode;
   }
+
+
 
   public void setFirstEventCode(String firstEventCode) {
     this.firstEventCode = firstEventCode;
   }
 
+
   public Event webcasts(List<Webcast> webcasts) {
+    
     this.webcasts = webcasts;
     return this;
   }
@@ -640,15 +767,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public List<Webcast> getWebcasts() {
     return webcasts;
   }
+
+
 
   public void setWebcasts(List<Webcast> webcasts) {
     this.webcasts = webcasts;
   }
 
+
   public Event divisionKeys(List<String> divisionKeys) {
+    
     this.divisionKeys = divisionKeys;
     return this;
   }
@@ -667,15 +799,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "An array of event keys for the divisions at this event.")
+
   public List<String> getDivisionKeys() {
     return divisionKeys;
   }
+
+
 
   public void setDivisionKeys(List<String> divisionKeys) {
     this.divisionKeys = divisionKeys;
   }
 
+
   public Event parentEventKey(String parentEventKey) {
+    
     this.parentEventKey = parentEventKey;
     return this;
   }
@@ -686,15 +823,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The TBA Event key that represents the event's parent. Used to link back to the event from a division event. It is also the inverse relation of `divison_keys`.")
+
   public String getParentEventKey() {
     return parentEventKey;
   }
+
+
 
   public void setParentEventKey(String parentEventKey) {
     this.parentEventKey = parentEventKey;
   }
 
+
   public Event playoffType(Integer playoffType) {
+    
     this.playoffType = playoffType;
     return this;
   }
@@ -705,15 +847,20 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Playoff Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/playoff_type.py#L4, or null.")
+
   public Integer getPlayoffType() {
     return playoffType;
   }
+
+
 
   public void setPlayoffType(Integer playoffType) {
     this.playoffType = playoffType;
   }
 
+
   public Event playoffTypeString(String playoffTypeString) {
+    
     this.playoffTypeString = playoffTypeString;
     return this;
   }
@@ -724,9 +871,12 @@ public class Event {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "String representation of the `playoff_type`, or null.")
+
   public String getPlayoffTypeString() {
     return playoffTypeString;
   }
+
+
 
   public void setPlayoffTypeString(String playoffTypeString) {
     this.playoffTypeString = playoffTypeString;

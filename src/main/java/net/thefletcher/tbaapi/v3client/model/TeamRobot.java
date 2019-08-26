@@ -45,7 +45,9 @@ public class TeamRobot {
   @SerializedName(SERIALIZED_NAME_TEAM_KEY)
   private String teamKey;
 
+
   public TeamRobot year(Integer year) {
+    
     this.year = year;
     return this;
   }
@@ -55,15 +57,20 @@ public class TeamRobot {
    * @return year
   **/
   @ApiModelProperty(required = true, value = "Year this robot competed in.")
+
   public Integer getYear() {
     return year;
   }
+
+
 
   public void setYear(Integer year) {
     this.year = year;
   }
 
+
   public TeamRobot robotName(String robotName) {
+    
     this.robotName = robotName;
     return this;
   }
@@ -73,15 +80,20 @@ public class TeamRobot {
    * @return robotName
   **/
   @ApiModelProperty(required = true, value = "Name of the robot as provided by the team.")
+
   public String getRobotName() {
     return robotName;
   }
+
+
 
   public void setRobotName(String robotName) {
     this.robotName = robotName;
   }
 
+
   public TeamRobot key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -91,15 +103,20 @@ public class TeamRobot {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "Internal TBA identifier for this robot.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public TeamRobot teamKey(String teamKey) {
+    
     this.teamKey = teamKey;
     return this;
   }
@@ -109,9 +126,12 @@ public class TeamRobot {
    * @return teamKey
   **/
   @ApiModelProperty(required = true, value = "TBA team key for this robot.")
+
   public String getTeamKey() {
     return teamKey;
   }
+
+
 
   public void setTeamKey(String teamKey) {
     this.teamKey = teamKey;

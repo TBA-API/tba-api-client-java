@@ -37,7 +37,9 @@ public class MatchVideos {
   @SerializedName(SERIALIZED_NAME_KEY)
   private String key;
 
+
   public MatchVideos type(String type) {
+    
     this.type = type;
     return this;
   }
@@ -48,15 +50,20 @@ public class MatchVideos {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Can be one of 'youtube' or 'tba'")
+
   public String getType() {
     return type;
   }
+
+
 
   public void setType(String type) {
     this.type = type;
   }
 
+
   public MatchVideos key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -67,9 +74,12 @@ public class MatchVideos {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Unique key representing this video")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;

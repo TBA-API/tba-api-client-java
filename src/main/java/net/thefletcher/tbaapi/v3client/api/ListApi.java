@@ -75,7 +75,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictEventsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events"
@@ -201,7 +201,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictEventsKeysCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events/keys"
@@ -327,7 +327,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictEventsSimpleCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events/simple"
@@ -453,7 +453,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictRankingsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/rankings"
@@ -579,7 +579,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictTeamsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams"
@@ -705,7 +705,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictTeamsKeysCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams/keys"
@@ -831,7 +831,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getDistrictTeamsSimpleCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams/simple"
@@ -957,7 +957,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventTeamsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/teams"
@@ -1083,7 +1083,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventTeamsKeysCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/teams/keys"
@@ -1209,7 +1209,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventTeamsSimpleCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/teams/simple"
@@ -1335,7 +1335,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventTeamsStatusesCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/teams/statuses"
@@ -1461,7 +1461,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventsByYearCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/events/{year}"
@@ -1587,7 +1587,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventsByYearKeysCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/events/{year}/keys"
@@ -1713,7 +1713,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getEventsByYearSimpleCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/events/{year}/simple"
@@ -1840,7 +1840,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamEventsStatusesByYearCall(String teamKey, Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/events/{year}/statuses"
@@ -1975,7 +1975,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamsCall(Integer pageNum, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/teams/{page_num}"
@@ -2102,7 +2102,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamsByYearCall(Integer year, Integer pageNum, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/teams/{year}/{page_num}"
@@ -2238,7 +2238,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamsByYearKeysCall(Integer year, Integer pageNum, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/teams/{year}/{page_num}/keys"
@@ -2374,7 +2374,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamsByYearSimpleCall(Integer year, Integer pageNum, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/teams/{year}/{page_num}/simple"
@@ -2509,7 +2509,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamsKeysCall(Integer pageNum, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/teams/{page_num}/keys"
@@ -2635,7 +2635,7 @@ public class ListApi {
      </table>
      */
     public okhttp3.Call getTeamsSimpleCall(Integer pageNum, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/teams/{page_num}/simple"

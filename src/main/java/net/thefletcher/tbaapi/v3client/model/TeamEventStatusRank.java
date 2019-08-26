@@ -39,17 +39,19 @@ public class TeamEventStatusRank {
 
   public static final String SERIALIZED_NAME_RANKING = "ranking";
   @SerializedName(SERIALIZED_NAME_RANKING)
-  private TeamEventStatusRankRanking ranking = null;
+  private TeamEventStatusRankRanking ranking;
 
   public static final String SERIALIZED_NAME_SORT_ORDER_INFO = "sort_order_info";
   @SerializedName(SERIALIZED_NAME_SORT_ORDER_INFO)
-  private List<TeamEventStatusRankSortOrderInfo> sortOrderInfo = new ArrayList<TeamEventStatusRankSortOrderInfo>();
+  private List<TeamEventStatusRankSortOrderInfo> sortOrderInfo = null;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   private String status;
 
+
   public TeamEventStatusRank numTeams(Integer numTeams) {
+    
     this.numTeams = numTeams;
     return this;
   }
@@ -60,15 +62,20 @@ public class TeamEventStatusRank {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of teams ranked.")
+
   public Integer getNumTeams() {
     return numTeams;
   }
+
+
 
   public void setNumTeams(Integer numTeams) {
     this.numTeams = numTeams;
   }
 
+
   public TeamEventStatusRank ranking(TeamEventStatusRankRanking ranking) {
+    
     this.ranking = ranking;
     return this;
   }
@@ -79,15 +86,20 @@ public class TeamEventStatusRank {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public TeamEventStatusRankRanking getRanking() {
     return ranking;
   }
+
+
 
   public void setRanking(TeamEventStatusRankRanking ranking) {
     this.ranking = ranking;
   }
 
+
   public TeamEventStatusRank sortOrderInfo(List<TeamEventStatusRankSortOrderInfo> sortOrderInfo) {
+    
     this.sortOrderInfo = sortOrderInfo;
     return this;
   }
@@ -106,15 +118,20 @@ public class TeamEventStatusRank {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Ordered list of names corresponding to the elements of the `sort_orders` array.")
+
   public List<TeamEventStatusRankSortOrderInfo> getSortOrderInfo() {
     return sortOrderInfo;
   }
+
+
 
   public void setSortOrderInfo(List<TeamEventStatusRankSortOrderInfo> sortOrderInfo) {
     this.sortOrderInfo = sortOrderInfo;
   }
 
+
   public TeamEventStatusRank status(String status) {
+    
     this.status = status;
     return this;
   }
@@ -125,9 +142,12 @@ public class TeamEventStatusRank {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public String getStatus() {
     return status;
   }
+
+
 
   public void setStatus(String status) {
     this.status = status;

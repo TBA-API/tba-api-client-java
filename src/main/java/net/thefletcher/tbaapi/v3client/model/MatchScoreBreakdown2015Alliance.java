@@ -125,7 +125,9 @@ public class MatchScoreBreakdown2015Alliance {
   @SerializedName(SERIALIZED_NAME_ROBOT_SET)
   private Boolean robotSet;
 
+
   public MatchScoreBreakdown2015Alliance autoPoints(Integer autoPoints) {
+    
     this.autoPoints = autoPoints;
     return this;
   }
@@ -136,15 +138,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAutoPoints() {
     return autoPoints;
   }
+
+
 
   public void setAutoPoints(Integer autoPoints) {
     this.autoPoints = autoPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance teleopPoints(Integer teleopPoints) {
+    
     this.teleopPoints = teleopPoints;
     return this;
   }
@@ -155,15 +162,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTeleopPoints() {
     return teleopPoints;
   }
+
+
 
   public void setTeleopPoints(Integer teleopPoints) {
     this.teleopPoints = teleopPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerPoints(Integer containerPoints) {
+    
     this.containerPoints = containerPoints;
     return this;
   }
@@ -174,15 +186,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerPoints() {
     return containerPoints;
   }
+
+
 
   public void setContainerPoints(Integer containerPoints) {
     this.containerPoints = containerPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance totePoints(Integer totePoints) {
+    
     this.totePoints = totePoints;
     return this;
   }
@@ -193,15 +210,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTotePoints() {
     return totePoints;
   }
+
+
 
   public void setTotePoints(Integer totePoints) {
     this.totePoints = totePoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance litterPoints(Integer litterPoints) {
+    
     this.litterPoints = litterPoints;
     return this;
   }
@@ -212,15 +234,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getLitterPoints() {
     return litterPoints;
   }
+
+
 
   public void setLitterPoints(Integer litterPoints) {
     this.litterPoints = litterPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance foulPoints(Integer foulPoints) {
+    
     this.foulPoints = foulPoints;
     return this;
   }
@@ -231,15 +258,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getFoulPoints() {
     return foulPoints;
   }
+
+
 
   public void setFoulPoints(Integer foulPoints) {
     this.foulPoints = foulPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance adjustPoints(Integer adjustPoints) {
+    
     this.adjustPoints = adjustPoints;
     return this;
   }
@@ -250,15 +282,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getAdjustPoints() {
     return adjustPoints;
   }
+
+
 
   public void setAdjustPoints(Integer adjustPoints) {
     this.adjustPoints = adjustPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance totalPoints(Integer totalPoints) {
+    
     this.totalPoints = totalPoints;
     return this;
   }
@@ -269,15 +306,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getTotalPoints() {
     return totalPoints;
   }
+
+
 
   public void setTotalPoints(Integer totalPoints) {
     this.totalPoints = totalPoints;
   }
 
+
   public MatchScoreBreakdown2015Alliance foulCount(Integer foulCount) {
+    
     this.foulCount = foulCount;
     return this;
   }
@@ -288,15 +330,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getFoulCount() {
     return foulCount;
   }
+
+
 
   public void setFoulCount(Integer foulCount) {
     this.foulCount = foulCount;
   }
 
+
   public MatchScoreBreakdown2015Alliance toteCountFar(Integer toteCountFar) {
+    
     this.toteCountFar = toteCountFar;
     return this;
   }
@@ -307,15 +354,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getToteCountFar() {
     return toteCountFar;
   }
+
+
 
   public void setToteCountFar(Integer toteCountFar) {
     this.toteCountFar = toteCountFar;
   }
 
+
   public MatchScoreBreakdown2015Alliance toteCountNear(Integer toteCountNear) {
+    
     this.toteCountNear = toteCountNear;
     return this;
   }
@@ -326,15 +378,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getToteCountNear() {
     return toteCountNear;
   }
+
+
 
   public void setToteCountNear(Integer toteCountNear) {
     this.toteCountNear = toteCountNear;
   }
 
+
   public MatchScoreBreakdown2015Alliance toteSet(Boolean toteSet) {
+    
     this.toteSet = toteSet;
     return this;
   }
@@ -345,15 +402,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getToteSet() {
     return toteSet;
   }
+
+
 
   public void setToteSet(Boolean toteSet) {
     this.toteSet = toteSet;
   }
 
+
   public MatchScoreBreakdown2015Alliance toteStack(Boolean toteStack) {
+    
     this.toteStack = toteStack;
     return this;
   }
@@ -364,15 +426,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getToteStack() {
     return toteStack;
   }
+
+
 
   public void setToteStack(Boolean toteStack) {
     this.toteStack = toteStack;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerCountLevel1(Integer containerCountLevel1) {
+    
     this.containerCountLevel1 = containerCountLevel1;
     return this;
   }
@@ -383,15 +450,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerCountLevel1() {
     return containerCountLevel1;
   }
+
+
 
   public void setContainerCountLevel1(Integer containerCountLevel1) {
     this.containerCountLevel1 = containerCountLevel1;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerCountLevel2(Integer containerCountLevel2) {
+    
     this.containerCountLevel2 = containerCountLevel2;
     return this;
   }
@@ -402,15 +474,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerCountLevel2() {
     return containerCountLevel2;
   }
+
+
 
   public void setContainerCountLevel2(Integer containerCountLevel2) {
     this.containerCountLevel2 = containerCountLevel2;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerCountLevel3(Integer containerCountLevel3) {
+    
     this.containerCountLevel3 = containerCountLevel3;
     return this;
   }
@@ -421,15 +498,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerCountLevel3() {
     return containerCountLevel3;
   }
+
+
 
   public void setContainerCountLevel3(Integer containerCountLevel3) {
     this.containerCountLevel3 = containerCountLevel3;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerCountLevel4(Integer containerCountLevel4) {
+    
     this.containerCountLevel4 = containerCountLevel4;
     return this;
   }
@@ -440,15 +522,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerCountLevel4() {
     return containerCountLevel4;
   }
+
+
 
   public void setContainerCountLevel4(Integer containerCountLevel4) {
     this.containerCountLevel4 = containerCountLevel4;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerCountLevel5(Integer containerCountLevel5) {
+    
     this.containerCountLevel5 = containerCountLevel5;
     return this;
   }
@@ -459,15 +546,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerCountLevel5() {
     return containerCountLevel5;
   }
+
+
 
   public void setContainerCountLevel5(Integer containerCountLevel5) {
     this.containerCountLevel5 = containerCountLevel5;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerCountLevel6(Integer containerCountLevel6) {
+    
     this.containerCountLevel6 = containerCountLevel6;
     return this;
   }
@@ -478,15 +570,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getContainerCountLevel6() {
     return containerCountLevel6;
   }
+
+
 
   public void setContainerCountLevel6(Integer containerCountLevel6) {
     this.containerCountLevel6 = containerCountLevel6;
   }
 
+
   public MatchScoreBreakdown2015Alliance containerSet(Boolean containerSet) {
+    
     this.containerSet = containerSet;
     return this;
   }
@@ -497,15 +594,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getContainerSet() {
     return containerSet;
   }
+
+
 
   public void setContainerSet(Boolean containerSet) {
     this.containerSet = containerSet;
   }
 
+
   public MatchScoreBreakdown2015Alliance litterCountContainer(Integer litterCountContainer) {
+    
     this.litterCountContainer = litterCountContainer;
     return this;
   }
@@ -516,15 +618,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getLitterCountContainer() {
     return litterCountContainer;
   }
+
+
 
   public void setLitterCountContainer(Integer litterCountContainer) {
     this.litterCountContainer = litterCountContainer;
   }
 
+
   public MatchScoreBreakdown2015Alliance litterCountLandfill(Integer litterCountLandfill) {
+    
     this.litterCountLandfill = litterCountLandfill;
     return this;
   }
@@ -535,15 +642,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getLitterCountLandfill() {
     return litterCountLandfill;
   }
+
+
 
   public void setLitterCountLandfill(Integer litterCountLandfill) {
     this.litterCountLandfill = litterCountLandfill;
   }
 
+
   public MatchScoreBreakdown2015Alliance litterCountUnprocessed(Integer litterCountUnprocessed) {
+    
     this.litterCountUnprocessed = litterCountUnprocessed;
     return this;
   }
@@ -554,15 +666,20 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Integer getLitterCountUnprocessed() {
     return litterCountUnprocessed;
   }
+
+
 
   public void setLitterCountUnprocessed(Integer litterCountUnprocessed) {
     this.litterCountUnprocessed = litterCountUnprocessed;
   }
 
+
   public MatchScoreBreakdown2015Alliance robotSet(Boolean robotSet) {
+    
     this.robotSet = robotSet;
     return this;
   }
@@ -573,9 +690,12 @@ public class MatchScoreBreakdown2015Alliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public Boolean getRobotSet() {
     return robotSet;
   }
+
+
 
   public void setRobotSet(Boolean robotSet) {
     this.robotSet = robotSet;

@@ -38,7 +38,9 @@ public class TeamEventStatusAllianceBackup {
   @SerializedName(SERIALIZED_NAME_IN)
   private String in;
 
+
   public TeamEventStatusAllianceBackup out(String out) {
+    
     this.out = out;
     return this;
   }
@@ -49,15 +51,20 @@ public class TeamEventStatusAllianceBackup {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA key for the team replaced by the backup.")
+
   public String getOut() {
     return out;
   }
+
+
 
   public void setOut(String out) {
     this.out = out;
   }
 
+
   public TeamEventStatusAllianceBackup in(String in) {
+    
     this.in = in;
     return this;
   }
@@ -68,9 +75,12 @@ public class TeamEventStatusAllianceBackup {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA key for the backup team called in.")
+
   public String getIn() {
     return in;
   }
+
+
 
   public void setIn(String in) {
     this.in = in;

@@ -50,13 +50,15 @@ public class APIStatus {
 
   public static final String SERIALIZED_NAME_IOS = "ios";
   @SerializedName(SERIALIZED_NAME_IOS)
-  private APIStatusAppVersion ios = null;
+  private APIStatusAppVersion ios;
 
   public static final String SERIALIZED_NAME_ANDROID = "android";
   @SerializedName(SERIALIZED_NAME_ANDROID)
-  private APIStatusAppVersion android = null;
+  private APIStatusAppVersion android;
+
 
   public APIStatus currentSeason(Integer currentSeason) {
+    
     this.currentSeason = currentSeason;
     return this;
   }
@@ -66,15 +68,20 @@ public class APIStatus {
    * @return currentSeason
   **/
   @ApiModelProperty(required = true, value = "Year of the current FRC season.")
+
   public Integer getCurrentSeason() {
     return currentSeason;
   }
+
+
 
   public void setCurrentSeason(Integer currentSeason) {
     this.currentSeason = currentSeason;
   }
 
+
   public APIStatus maxSeason(Integer maxSeason) {
+    
     this.maxSeason = maxSeason;
     return this;
   }
@@ -84,15 +91,20 @@ public class APIStatus {
    * @return maxSeason
   **/
   @ApiModelProperty(required = true, value = "Maximum FRC season year for valid queries.")
+
   public Integer getMaxSeason() {
     return maxSeason;
   }
+
+
 
   public void setMaxSeason(Integer maxSeason) {
     this.maxSeason = maxSeason;
   }
 
+
   public APIStatus isDatafeedDown(Boolean isDatafeedDown) {
+    
     this.isDatafeedDown = isDatafeedDown;
     return this;
   }
@@ -102,15 +114,20 @@ public class APIStatus {
    * @return isDatafeedDown
   **/
   @ApiModelProperty(required = true, value = "True if the entire FMS API provided by FIRST is down.")
+
   public Boolean getIsDatafeedDown() {
     return isDatafeedDown;
   }
+
+
 
   public void setIsDatafeedDown(Boolean isDatafeedDown) {
     this.isDatafeedDown = isDatafeedDown;
   }
 
+
   public APIStatus downEvents(List<String> downEvents) {
+    
     this.downEvents = downEvents;
     return this;
   }
@@ -125,15 +142,20 @@ public class APIStatus {
    * @return downEvents
   **/
   @ApiModelProperty(required = true, value = "An array of strings containing event keys of any active events that are no longer updating.")
+
   public List<String> getDownEvents() {
     return downEvents;
   }
+
+
 
   public void setDownEvents(List<String> downEvents) {
     this.downEvents = downEvents;
   }
 
+
   public APIStatus ios(APIStatusAppVersion ios) {
+    
     this.ios = ios;
     return this;
   }
@@ -143,15 +165,20 @@ public class APIStatus {
    * @return ios
   **/
   @ApiModelProperty(required = true, value = "")
+
   public APIStatusAppVersion getIos() {
     return ios;
   }
+
+
 
   public void setIos(APIStatusAppVersion ios) {
     this.ios = ios;
   }
 
+
   public APIStatus android(APIStatusAppVersion android) {
+    
     this.android = android;
     return this;
   }
@@ -161,9 +188,12 @@ public class APIStatus {
    * @return android
   **/
   @ApiModelProperty(required = true, value = "")
+
   public APIStatusAppVersion getAndroid() {
     return android;
   }
+
+
 
   public void setAndroid(APIStatusAppVersion android) {
     this.android = android;

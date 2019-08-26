@@ -113,7 +113,7 @@ public class Media {
 
   public static final String SERIALIZED_NAME_DETAILS = "details";
   @SerializedName(SERIALIZED_NAME_DETAILS)
-  private Object details = null;
+  private Object details;
 
   public static final String SERIALIZED_NAME_PREFERRED = "preferred";
   @SerializedName(SERIALIZED_NAME_PREFERRED)
@@ -127,7 +127,9 @@ public class Media {
   @SerializedName(SERIALIZED_NAME_VIEW_URL)
   private String viewUrl;
 
+
   public Media key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -137,15 +139,20 @@ public class Media {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA identifier for this media.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public Media type(TypeEnum type) {
+    
     this.type = type;
     return this;
   }
@@ -155,15 +162,20 @@ public class Media {
    * @return type
   **/
   @ApiModelProperty(required = true, value = "String type of the media element.")
+
   public TypeEnum getType() {
     return type;
   }
+
+
 
   public void setType(TypeEnum type) {
     this.type = type;
   }
 
+
   public Media foreignKey(String foreignKey) {
+    
     this.foreignKey = foreignKey;
     return this;
   }
@@ -174,15 +186,20 @@ public class Media {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The key used to identify this media on the media site.")
+
   public String getForeignKey() {
     return foreignKey;
   }
+
+
 
   public void setForeignKey(String foreignKey) {
     this.foreignKey = foreignKey;
   }
 
+
   public Media details(Object details) {
+    
     this.details = details;
     return this;
   }
@@ -193,15 +210,20 @@ public class Media {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "If required, a JSON dict of additional media information.")
+
   public Object getDetails() {
     return details;
   }
+
+
 
   public void setDetails(Object details) {
     this.details = details;
   }
 
+
   public Media preferred(Boolean preferred) {
+    
     this.preferred = preferred;
     return this;
   }
@@ -212,15 +234,20 @@ public class Media {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "True if the media is of high quality.")
+
   public Boolean getPreferred() {
     return preferred;
   }
+
+
 
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }
 
+
   public Media directUrl(String directUrl) {
+    
     this.directUrl = directUrl;
     return this;
   }
@@ -231,15 +258,20 @@ public class Media {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Direct URL to the media.")
+
   public String getDirectUrl() {
     return directUrl;
   }
+
+
 
   public void setDirectUrl(String directUrl) {
     this.directUrl = directUrl;
   }
 
+
   public Media viewUrl(String viewUrl) {
+    
     this.viewUrl = viewUrl;
     return this;
   }
@@ -250,9 +282,12 @@ public class Media {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL that leads to the full web page for the media, if one exists.")
+
   public String getViewUrl() {
     return viewUrl;
   }
+
+
 
   public void setViewUrl(String viewUrl) {
     this.viewUrl = viewUrl;

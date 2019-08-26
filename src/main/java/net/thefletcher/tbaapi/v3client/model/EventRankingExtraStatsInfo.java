@@ -38,7 +38,9 @@ public class EventRankingExtraStatsInfo {
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public EventRankingExtraStatsInfo precision(BigDecimal precision) {
+    
     this.precision = precision;
     return this;
   }
@@ -48,15 +50,20 @@ public class EventRankingExtraStatsInfo {
    * @return precision
   **/
   @ApiModelProperty(required = true, value = "Integer expressing the number of digits of precision in the number provided in `sort_orders`.")
+
   public BigDecimal getPrecision() {
     return precision;
   }
+
+
 
   public void setPrecision(BigDecimal precision) {
     this.precision = precision;
   }
 
+
   public EventRankingExtraStatsInfo name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -66,9 +73,12 @@ public class EventRankingExtraStatsInfo {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "Name of the field used in the `extra_stats` array.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;

@@ -180,7 +180,9 @@ public class EventInsights2018 {
   @SerializedName(SERIALIZED_NAME_WINNING_SCALE_OWNERSHIP_PERCENTAGE_TELEOP)
   private Float winningScaleOwnershipPercentageTeleop;
 
+
   public EventInsights2018 autoQuestAchieved(List<Float> autoQuestAchieved) {
+    
     this.autoQuestAchieved = autoQuestAchieved;
     return this;
   }
@@ -195,15 +197,20 @@ public class EventInsights2018 {
    * @return autoQuestAchieved
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times auto quest was completed, number of opportunities to complete the auto quest, and percentage.")
+
   public List<Float> getAutoQuestAchieved() {
     return autoQuestAchieved;
   }
+
+
 
   public void setAutoQuestAchieved(List<Float> autoQuestAchieved) {
     this.autoQuestAchieved = autoQuestAchieved;
   }
 
+
   public EventInsights2018 averageBoostPlayed(Float averageBoostPlayed) {
+    
     this.averageBoostPlayed = averageBoostPlayed;
     return this;
   }
@@ -213,15 +220,20 @@ public class EventInsights2018 {
    * @return averageBoostPlayed
   **/
   @ApiModelProperty(required = true, value = "Average number of boost power up scored (out of 3).")
+
   public Float getAverageBoostPlayed() {
     return averageBoostPlayed;
   }
+
+
 
   public void setAverageBoostPlayed(Float averageBoostPlayed) {
     this.averageBoostPlayed = averageBoostPlayed;
   }
 
+
   public EventInsights2018 averageEndgamePoints(Float averageEndgamePoints) {
+    
     this.averageEndgamePoints = averageEndgamePoints;
     return this;
   }
@@ -231,15 +243,20 @@ public class EventInsights2018 {
    * @return averageEndgamePoints
   **/
   @ApiModelProperty(required = true, value = "Average endgame points.")
+
   public Float getAverageEndgamePoints() {
     return averageEndgamePoints;
   }
+
+
 
   public void setAverageEndgamePoints(Float averageEndgamePoints) {
     this.averageEndgamePoints = averageEndgamePoints;
   }
 
+
   public EventInsights2018 averageForcePlayed(Float averageForcePlayed) {
+    
     this.averageForcePlayed = averageForcePlayed;
     return this;
   }
@@ -249,15 +266,20 @@ public class EventInsights2018 {
    * @return averageForcePlayed
   **/
   @ApiModelProperty(required = true, value = "Average number of force power up scored (out of 3).")
+
   public Float getAverageForcePlayed() {
     return averageForcePlayed;
   }
+
+
 
   public void setAverageForcePlayed(Float averageForcePlayed) {
     this.averageForcePlayed = averageForcePlayed;
   }
 
+
   public EventInsights2018 averageFoulScore(Float averageFoulScore) {
+    
     this.averageFoulScore = averageFoulScore;
     return this;
   }
@@ -267,15 +289,20 @@ public class EventInsights2018 {
    * @return averageFoulScore
   **/
   @ApiModelProperty(required = true, value = "Average foul score.")
+
   public Float getAverageFoulScore() {
     return averageFoulScore;
   }
+
+
 
   public void setAverageFoulScore(Float averageFoulScore) {
     this.averageFoulScore = averageFoulScore;
   }
 
+
   public EventInsights2018 averagePointsAuto(Float averagePointsAuto) {
+    
     this.averagePointsAuto = averagePointsAuto;
     return this;
   }
@@ -285,15 +312,20 @@ public class EventInsights2018 {
    * @return averagePointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average points scored during auto.")
+
   public Float getAveragePointsAuto() {
     return averagePointsAuto;
   }
+
+
 
   public void setAveragePointsAuto(Float averagePointsAuto) {
     this.averagePointsAuto = averagePointsAuto;
   }
 
+
   public EventInsights2018 averagePointsTeleop(Float averagePointsTeleop) {
+    
     this.averagePointsTeleop = averagePointsTeleop;
     return this;
   }
@@ -303,15 +335,20 @@ public class EventInsights2018 {
    * @return averagePointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average points scored during teleop.")
+
   public Float getAveragePointsTeleop() {
     return averagePointsTeleop;
   }
+
+
 
   public void setAveragePointsTeleop(Float averagePointsTeleop) {
     this.averagePointsTeleop = averagePointsTeleop;
   }
 
+
   public EventInsights2018 averageRunPointsAuto(Float averageRunPointsAuto) {
+    
     this.averageRunPointsAuto = averageRunPointsAuto;
     return this;
   }
@@ -321,15 +358,20 @@ public class EventInsights2018 {
    * @return averageRunPointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average mobility points scored during auto.")
+
   public Float getAverageRunPointsAuto() {
     return averageRunPointsAuto;
   }
+
+
 
   public void setAverageRunPointsAuto(Float averageRunPointsAuto) {
     this.averageRunPointsAuto = averageRunPointsAuto;
   }
 
+
   public EventInsights2018 averageScaleOwnershipPoints(Float averageScaleOwnershipPoints) {
+    
     this.averageScaleOwnershipPoints = averageScaleOwnershipPoints;
     return this;
   }
@@ -339,15 +381,20 @@ public class EventInsights2018 {
    * @return averageScaleOwnershipPoints
   **/
   @ApiModelProperty(required = true, value = "Average scale ownership points scored.")
+
   public Float getAverageScaleOwnershipPoints() {
     return averageScaleOwnershipPoints;
   }
+
+
 
   public void setAverageScaleOwnershipPoints(Float averageScaleOwnershipPoints) {
     this.averageScaleOwnershipPoints = averageScaleOwnershipPoints;
   }
 
+
   public EventInsights2018 averageScaleOwnershipPointsAuto(Float averageScaleOwnershipPointsAuto) {
+    
     this.averageScaleOwnershipPointsAuto = averageScaleOwnershipPointsAuto;
     return this;
   }
@@ -357,15 +404,20 @@ public class EventInsights2018 {
    * @return averageScaleOwnershipPointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average scale ownership points scored during auto.")
+
   public Float getAverageScaleOwnershipPointsAuto() {
     return averageScaleOwnershipPointsAuto;
   }
+
+
 
   public void setAverageScaleOwnershipPointsAuto(Float averageScaleOwnershipPointsAuto) {
     this.averageScaleOwnershipPointsAuto = averageScaleOwnershipPointsAuto;
   }
 
+
   public EventInsights2018 averageScaleOwnershipPointsTeleop(Float averageScaleOwnershipPointsTeleop) {
+    
     this.averageScaleOwnershipPointsTeleop = averageScaleOwnershipPointsTeleop;
     return this;
   }
@@ -375,15 +427,20 @@ public class EventInsights2018 {
    * @return averageScaleOwnershipPointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average scale ownership points scored during teleop.")
+
   public Float getAverageScaleOwnershipPointsTeleop() {
     return averageScaleOwnershipPointsTeleop;
   }
+
+
 
   public void setAverageScaleOwnershipPointsTeleop(Float averageScaleOwnershipPointsTeleop) {
     this.averageScaleOwnershipPointsTeleop = averageScaleOwnershipPointsTeleop;
   }
 
+
   public EventInsights2018 averageScore(Float averageScore) {
+    
     this.averageScore = averageScore;
     return this;
   }
@@ -393,15 +450,20 @@ public class EventInsights2018 {
    * @return averageScore
   **/
   @ApiModelProperty(required = true, value = "Average score.")
+
   public Float getAverageScore() {
     return averageScore;
   }
+
+
 
   public void setAverageScore(Float averageScore) {
     this.averageScore = averageScore;
   }
 
+
   public EventInsights2018 averageSwitchOwnershipPoints(Float averageSwitchOwnershipPoints) {
+    
     this.averageSwitchOwnershipPoints = averageSwitchOwnershipPoints;
     return this;
   }
@@ -411,15 +473,20 @@ public class EventInsights2018 {
    * @return averageSwitchOwnershipPoints
   **/
   @ApiModelProperty(required = true, value = "Average switch ownership points scored.")
+
   public Float getAverageSwitchOwnershipPoints() {
     return averageSwitchOwnershipPoints;
   }
+
+
 
   public void setAverageSwitchOwnershipPoints(Float averageSwitchOwnershipPoints) {
     this.averageSwitchOwnershipPoints = averageSwitchOwnershipPoints;
   }
 
+
   public EventInsights2018 averageSwitchOwnershipPointsAuto(Float averageSwitchOwnershipPointsAuto) {
+    
     this.averageSwitchOwnershipPointsAuto = averageSwitchOwnershipPointsAuto;
     return this;
   }
@@ -429,15 +496,20 @@ public class EventInsights2018 {
    * @return averageSwitchOwnershipPointsAuto
   **/
   @ApiModelProperty(required = true, value = "Average switch ownership points scored during auto.")
+
   public Float getAverageSwitchOwnershipPointsAuto() {
     return averageSwitchOwnershipPointsAuto;
   }
+
+
 
   public void setAverageSwitchOwnershipPointsAuto(Float averageSwitchOwnershipPointsAuto) {
     this.averageSwitchOwnershipPointsAuto = averageSwitchOwnershipPointsAuto;
   }
 
+
   public EventInsights2018 averageSwitchOwnershipPointsTeleop(Float averageSwitchOwnershipPointsTeleop) {
+    
     this.averageSwitchOwnershipPointsTeleop = averageSwitchOwnershipPointsTeleop;
     return this;
   }
@@ -447,15 +519,20 @@ public class EventInsights2018 {
    * @return averageSwitchOwnershipPointsTeleop
   **/
   @ApiModelProperty(required = true, value = "Average switch ownership points scored during teleop.")
+
   public Float getAverageSwitchOwnershipPointsTeleop() {
     return averageSwitchOwnershipPointsTeleop;
   }
+
+
 
   public void setAverageSwitchOwnershipPointsTeleop(Float averageSwitchOwnershipPointsTeleop) {
     this.averageSwitchOwnershipPointsTeleop = averageSwitchOwnershipPointsTeleop;
   }
 
+
   public EventInsights2018 averageVaultPoints(Float averageVaultPoints) {
+    
     this.averageVaultPoints = averageVaultPoints;
     return this;
   }
@@ -465,15 +542,20 @@ public class EventInsights2018 {
    * @return averageVaultPoints
   **/
   @ApiModelProperty(required = true, value = "Average value points scored.")
+
   public Float getAverageVaultPoints() {
     return averageVaultPoints;
   }
+
+
 
   public void setAverageVaultPoints(Float averageVaultPoints) {
     this.averageVaultPoints = averageVaultPoints;
   }
 
+
   public EventInsights2018 averageWinMargin(Float averageWinMargin) {
+    
     this.averageWinMargin = averageWinMargin;
     return this;
   }
@@ -483,15 +565,20 @@ public class EventInsights2018 {
    * @return averageWinMargin
   **/
   @ApiModelProperty(required = true, value = "Average margin of victory.")
+
   public Float getAverageWinMargin() {
     return averageWinMargin;
   }
+
+
 
   public void setAverageWinMargin(Float averageWinMargin) {
     this.averageWinMargin = averageWinMargin;
   }
 
+
   public EventInsights2018 averageWinScore(Float averageWinScore) {
+    
     this.averageWinScore = averageWinScore;
     return this;
   }
@@ -501,15 +588,20 @@ public class EventInsights2018 {
    * @return averageWinScore
   **/
   @ApiModelProperty(required = true, value = "Average winning score.")
+
   public Float getAverageWinScore() {
     return averageWinScore;
   }
+
+
 
   public void setAverageWinScore(Float averageWinScore) {
     this.averageWinScore = averageWinScore;
   }
 
+
   public EventInsights2018 boostPlayedCounts(List<Float> boostPlayedCounts) {
+    
     this.boostPlayedCounts = boostPlayedCounts;
     return this;
   }
@@ -524,15 +616,20 @@ public class EventInsights2018 {
    * @return boostPlayedCounts
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a boost power up was played, number of opportunities to play a boost power up, and percentage.")
+
   public List<Float> getBoostPlayedCounts() {
     return boostPlayedCounts;
   }
+
+
 
   public void setBoostPlayedCounts(List<Float> boostPlayedCounts) {
     this.boostPlayedCounts = boostPlayedCounts;
   }
 
+
   public EventInsights2018 climbCounts(List<Float> climbCounts) {
+    
     this.climbCounts = climbCounts;
     return this;
   }
@@ -547,15 +644,20 @@ public class EventInsights2018 {
    * @return climbCounts
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a climb occurred, number of opportunities to climb, and percentage.")
+
   public List<Float> getClimbCounts() {
     return climbCounts;
   }
+
+
 
   public void setClimbCounts(List<Float> climbCounts) {
     this.climbCounts = climbCounts;
   }
 
+
   public EventInsights2018 faceTheBossAchieved(List<Float> faceTheBossAchieved) {
+    
     this.faceTheBossAchieved = faceTheBossAchieved;
     return this;
   }
@@ -570,15 +672,20 @@ public class EventInsights2018 {
    * @return faceTheBossAchieved
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times an alliance faced the boss, number of opportunities to face the boss, and percentage.")
+
   public List<Float> getFaceTheBossAchieved() {
     return faceTheBossAchieved;
   }
+
+
 
   public void setFaceTheBossAchieved(List<Float> faceTheBossAchieved) {
     this.faceTheBossAchieved = faceTheBossAchieved;
   }
 
+
   public EventInsights2018 forcePlayedCounts(List<Float> forcePlayedCounts) {
+    
     this.forcePlayedCounts = forcePlayedCounts;
     return this;
   }
@@ -593,15 +700,20 @@ public class EventInsights2018 {
    * @return forcePlayedCounts
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a force power up was played, number of opportunities to play a force power up, and percentage.")
+
   public List<Float> getForcePlayedCounts() {
     return forcePlayedCounts;
   }
+
+
 
   public void setForcePlayedCounts(List<Float> forcePlayedCounts) {
     this.forcePlayedCounts = forcePlayedCounts;
   }
 
+
   public EventInsights2018 highScore(List<String> highScore) {
+    
     this.highScore = highScore;
     return this;
   }
@@ -616,15 +728,20 @@ public class EventInsights2018 {
    * @return highScore
   **/
   @ApiModelProperty(required = true, value = "An array with three values, high score, match key from the match with the high score, and the name of the match")
+
   public List<String> getHighScore() {
     return highScore;
   }
+
+
 
   public void setHighScore(List<String> highScore) {
     this.highScore = highScore;
   }
 
+
   public EventInsights2018 levitatePlayedCounts(List<Float> levitatePlayedCounts) {
+    
     this.levitatePlayedCounts = levitatePlayedCounts;
     return this;
   }
@@ -639,15 +756,20 @@ public class EventInsights2018 {
    * @return levitatePlayedCounts
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a levitate power up was played, number of opportunities to play a levitate power up, and percentage.")
+
   public List<Float> getLevitatePlayedCounts() {
     return levitatePlayedCounts;
   }
+
+
 
   public void setLevitatePlayedCounts(List<Float> levitatePlayedCounts) {
     this.levitatePlayedCounts = levitatePlayedCounts;
   }
 
+
   public EventInsights2018 runCountsAuto(List<Float> runCountsAuto) {
+    
     this.runCountsAuto = runCountsAuto;
     return this;
   }
@@ -662,15 +784,20 @@ public class EventInsights2018 {
    * @return runCountsAuto
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a team scored mobility points in auto, number of opportunities to score mobility points in auto, and percentage.")
+
   public List<Float> getRunCountsAuto() {
     return runCountsAuto;
   }
+
+
 
   public void setRunCountsAuto(List<Float> runCountsAuto) {
     this.runCountsAuto = runCountsAuto;
   }
 
+
   public EventInsights2018 scaleNeutralPercentage(Float scaleNeutralPercentage) {
+    
     this.scaleNeutralPercentage = scaleNeutralPercentage;
     return this;
   }
@@ -680,15 +807,20 @@ public class EventInsights2018 {
    * @return scaleNeutralPercentage
   **/
   @ApiModelProperty(required = true, value = "Average scale neutral percentage.")
+
   public Float getScaleNeutralPercentage() {
     return scaleNeutralPercentage;
   }
+
+
 
   public void setScaleNeutralPercentage(Float scaleNeutralPercentage) {
     this.scaleNeutralPercentage = scaleNeutralPercentage;
   }
 
+
   public EventInsights2018 scaleNeutralPercentageAuto(Float scaleNeutralPercentageAuto) {
+    
     this.scaleNeutralPercentageAuto = scaleNeutralPercentageAuto;
     return this;
   }
@@ -698,15 +830,20 @@ public class EventInsights2018 {
    * @return scaleNeutralPercentageAuto
   **/
   @ApiModelProperty(required = true, value = "Average scale neutral percentage during auto.")
+
   public Float getScaleNeutralPercentageAuto() {
     return scaleNeutralPercentageAuto;
   }
+
+
 
   public void setScaleNeutralPercentageAuto(Float scaleNeutralPercentageAuto) {
     this.scaleNeutralPercentageAuto = scaleNeutralPercentageAuto;
   }
 
+
   public EventInsights2018 scaleNeutralPercentageTeleop(Float scaleNeutralPercentageTeleop) {
+    
     this.scaleNeutralPercentageTeleop = scaleNeutralPercentageTeleop;
     return this;
   }
@@ -716,15 +853,20 @@ public class EventInsights2018 {
    * @return scaleNeutralPercentageTeleop
   **/
   @ApiModelProperty(required = true, value = "Average scale neutral percentage during teleop.")
+
   public Float getScaleNeutralPercentageTeleop() {
     return scaleNeutralPercentageTeleop;
   }
+
+
 
   public void setScaleNeutralPercentageTeleop(Float scaleNeutralPercentageTeleop) {
     this.scaleNeutralPercentageTeleop = scaleNeutralPercentageTeleop;
   }
 
+
   public EventInsights2018 switchOwnedCountsAuto(List<Float> switchOwnedCountsAuto) {
+    
     this.switchOwnedCountsAuto = switchOwnedCountsAuto;
     return this;
   }
@@ -739,15 +881,20 @@ public class EventInsights2018 {
    * @return switchOwnedCountsAuto
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a switch was owned during auto, number of opportunities to own a switch during auto, and percentage.")
+
   public List<Float> getSwitchOwnedCountsAuto() {
     return switchOwnedCountsAuto;
   }
+
+
 
   public void setSwitchOwnedCountsAuto(List<Float> switchOwnedCountsAuto) {
     this.switchOwnedCountsAuto = switchOwnedCountsAuto;
   }
 
+
   public EventInsights2018 unicornMatches(List<Float> unicornMatches) {
+    
     this.unicornMatches = unicornMatches;
     return this;
   }
@@ -762,15 +909,20 @@ public class EventInsights2018 {
    * @return unicornMatches
   **/
   @ApiModelProperty(required = true, value = "An array with three values, number of times a unicorn match (Win + Auto Quest + Face the Boss) occurred, number of opportunities to have a unicorn match, and percentage.")
+
   public List<Float> getUnicornMatches() {
     return unicornMatches;
   }
+
+
 
   public void setUnicornMatches(List<Float> unicornMatches) {
     this.unicornMatches = unicornMatches;
   }
 
+
   public EventInsights2018 winningOppSwitchDenialPercentageTeleop(Float winningOppSwitchDenialPercentageTeleop) {
+    
     this.winningOppSwitchDenialPercentageTeleop = winningOppSwitchDenialPercentageTeleop;
     return this;
   }
@@ -780,15 +932,20 @@ public class EventInsights2018 {
    * @return winningOppSwitchDenialPercentageTeleop
   **/
   @ApiModelProperty(required = true, value = "Average opposing switch denail percentage for the winning alliance during teleop.")
+
   public Float getWinningOppSwitchDenialPercentageTeleop() {
     return winningOppSwitchDenialPercentageTeleop;
   }
+
+
 
   public void setWinningOppSwitchDenialPercentageTeleop(Float winningOppSwitchDenialPercentageTeleop) {
     this.winningOppSwitchDenialPercentageTeleop = winningOppSwitchDenialPercentageTeleop;
   }
 
+
   public EventInsights2018 winningOwnSwitchOwnershipPercentage(Float winningOwnSwitchOwnershipPercentage) {
+    
     this.winningOwnSwitchOwnershipPercentage = winningOwnSwitchOwnershipPercentage;
     return this;
   }
@@ -798,15 +955,20 @@ public class EventInsights2018 {
    * @return winningOwnSwitchOwnershipPercentage
   **/
   @ApiModelProperty(required = true, value = "Average own switch ownership percentage for the winning alliance.")
+
   public Float getWinningOwnSwitchOwnershipPercentage() {
     return winningOwnSwitchOwnershipPercentage;
   }
+
+
 
   public void setWinningOwnSwitchOwnershipPercentage(Float winningOwnSwitchOwnershipPercentage) {
     this.winningOwnSwitchOwnershipPercentage = winningOwnSwitchOwnershipPercentage;
   }
 
+
   public EventInsights2018 winningOwnSwitchOwnershipPercentageAuto(Float winningOwnSwitchOwnershipPercentageAuto) {
+    
     this.winningOwnSwitchOwnershipPercentageAuto = winningOwnSwitchOwnershipPercentageAuto;
     return this;
   }
@@ -816,15 +978,20 @@ public class EventInsights2018 {
    * @return winningOwnSwitchOwnershipPercentageAuto
   **/
   @ApiModelProperty(required = true, value = "Average own switch ownership percentage for the winning alliance during auto.")
+
   public Float getWinningOwnSwitchOwnershipPercentageAuto() {
     return winningOwnSwitchOwnershipPercentageAuto;
   }
+
+
 
   public void setWinningOwnSwitchOwnershipPercentageAuto(Float winningOwnSwitchOwnershipPercentageAuto) {
     this.winningOwnSwitchOwnershipPercentageAuto = winningOwnSwitchOwnershipPercentageAuto;
   }
 
+
   public EventInsights2018 winningOwnSwitchOwnershipPercentageTeleop(Float winningOwnSwitchOwnershipPercentageTeleop) {
+    
     this.winningOwnSwitchOwnershipPercentageTeleop = winningOwnSwitchOwnershipPercentageTeleop;
     return this;
   }
@@ -834,15 +1001,20 @@ public class EventInsights2018 {
    * @return winningOwnSwitchOwnershipPercentageTeleop
   **/
   @ApiModelProperty(required = true, value = "Average own switch ownership percentage for the winning alliance during teleop.")
+
   public Float getWinningOwnSwitchOwnershipPercentageTeleop() {
     return winningOwnSwitchOwnershipPercentageTeleop;
   }
+
+
 
   public void setWinningOwnSwitchOwnershipPercentageTeleop(Float winningOwnSwitchOwnershipPercentageTeleop) {
     this.winningOwnSwitchOwnershipPercentageTeleop = winningOwnSwitchOwnershipPercentageTeleop;
   }
 
+
   public EventInsights2018 winningScaleOwnershipPercentage(Float winningScaleOwnershipPercentage) {
+    
     this.winningScaleOwnershipPercentage = winningScaleOwnershipPercentage;
     return this;
   }
@@ -852,15 +1024,20 @@ public class EventInsights2018 {
    * @return winningScaleOwnershipPercentage
   **/
   @ApiModelProperty(required = true, value = "Average scale ownership percentage for the winning alliance.")
+
   public Float getWinningScaleOwnershipPercentage() {
     return winningScaleOwnershipPercentage;
   }
+
+
 
   public void setWinningScaleOwnershipPercentage(Float winningScaleOwnershipPercentage) {
     this.winningScaleOwnershipPercentage = winningScaleOwnershipPercentage;
   }
 
+
   public EventInsights2018 winningScaleOwnershipPercentageAuto(Float winningScaleOwnershipPercentageAuto) {
+    
     this.winningScaleOwnershipPercentageAuto = winningScaleOwnershipPercentageAuto;
     return this;
   }
@@ -870,15 +1047,20 @@ public class EventInsights2018 {
    * @return winningScaleOwnershipPercentageAuto
   **/
   @ApiModelProperty(required = true, value = "Average scale ownership percentage for the winning alliance during auto.")
+
   public Float getWinningScaleOwnershipPercentageAuto() {
     return winningScaleOwnershipPercentageAuto;
   }
+
+
 
   public void setWinningScaleOwnershipPercentageAuto(Float winningScaleOwnershipPercentageAuto) {
     this.winningScaleOwnershipPercentageAuto = winningScaleOwnershipPercentageAuto;
   }
 
+
   public EventInsights2018 winningScaleOwnershipPercentageTeleop(Float winningScaleOwnershipPercentageTeleop) {
+    
     this.winningScaleOwnershipPercentageTeleop = winningScaleOwnershipPercentageTeleop;
     return this;
   }
@@ -888,9 +1070,12 @@ public class EventInsights2018 {
    * @return winningScaleOwnershipPercentageTeleop
   **/
   @ApiModelProperty(required = true, value = "Average scale ownership percentage for the winning alliance during teleop.")
+
   public Float getWinningScaleOwnershipPercentageTeleop() {
     return winningScaleOwnershipPercentageTeleop;
   }
+
+
 
   public void setWinningScaleOwnershipPercentageTeleop(Float winningScaleOwnershipPercentageTeleop) {
     this.winningScaleOwnershipPercentageTeleop = winningScaleOwnershipPercentageTeleop;

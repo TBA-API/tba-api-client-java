@@ -37,7 +37,9 @@ public class TeamEventStatusRankSortOrderInfo {
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public TeamEventStatusRankSortOrderInfo precision(Integer precision) {
+    
     this.precision = precision;
     return this;
   }
@@ -48,15 +50,20 @@ public class TeamEventStatusRankSortOrderInfo {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The number of digits of precision used for this value, eg `2` would correspond to a value of `101.11` while `0` would correspond to `101`.")
+
   public Integer getPrecision() {
     return precision;
   }
+
+
 
   public void setPrecision(Integer precision) {
     this.precision = precision;
   }
 
+
   public TeamEventStatusRankSortOrderInfo name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -67,9 +74,12 @@ public class TeamEventStatusRankSortOrderInfo {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The descriptive name of the value used to sort the ranking.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;

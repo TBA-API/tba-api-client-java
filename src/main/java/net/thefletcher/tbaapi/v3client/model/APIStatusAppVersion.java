@@ -37,7 +37,9 @@ public class APIStatusAppVersion {
   @SerializedName(SERIALIZED_NAME_LATEST_APP_VERSION)
   private Integer latestAppVersion;
 
+
   public APIStatusAppVersion minAppVersion(Integer minAppVersion) {
+    
     this.minAppVersion = minAppVersion;
     return this;
   }
@@ -47,15 +49,20 @@ public class APIStatusAppVersion {
    * @return minAppVersion
   **/
   @ApiModelProperty(required = true, value = "Internal use - Minimum application version required to correctly connect and process data.")
+
   public Integer getMinAppVersion() {
     return minAppVersion;
   }
+
+
 
   public void setMinAppVersion(Integer minAppVersion) {
     this.minAppVersion = minAppVersion;
   }
 
+
   public APIStatusAppVersion latestAppVersion(Integer latestAppVersion) {
+    
     this.latestAppVersion = latestAppVersion;
     return this;
   }
@@ -65,9 +72,12 @@ public class APIStatusAppVersion {
    * @return latestAppVersion
   **/
   @ApiModelProperty(required = true, value = "Internal use - Latest application version available.")
+
   public Integer getLatestAppVersion() {
     return latestAppVersion;
   }
+
+
 
   public void setLatestAppVersion(Integer latestAppVersion) {
     this.latestAppVersion = latestAppVersion;

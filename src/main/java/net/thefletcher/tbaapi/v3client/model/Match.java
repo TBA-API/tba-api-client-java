@@ -104,7 +104,7 @@ public class Match {
 
   public static final String SERIALIZED_NAME_ALLIANCES = "alliances";
   @SerializedName(SERIALIZED_NAME_ALLIANCES)
-  private MatchSimpleAlliances alliances = null;
+  private MatchSimpleAlliances alliances;
 
   public static final String SERIALIZED_NAME_WINNING_ALLIANCE = "winning_alliance";
   @SerializedName(SERIALIZED_NAME_WINNING_ALLIANCE)
@@ -132,13 +132,15 @@ public class Match {
 
   public static final String SERIALIZED_NAME_SCORE_BREAKDOWN = "score_breakdown";
   @SerializedName(SERIALIZED_NAME_SCORE_BREAKDOWN)
-  private Object scoreBreakdown = null;
+  private Object scoreBreakdown;
 
   public static final String SERIALIZED_NAME_VIDEOS = "videos";
   @SerializedName(SERIALIZED_NAME_VIDEOS)
-  private List<MatchVideos> videos = new ArrayList<MatchVideos>();
+  private List<MatchVideos> videos = null;
+
 
   public Match key(String key) {
+    
     this.key = key;
     return this;
   }
@@ -148,15 +150,20 @@ public class Match {
    * @return key
   **/
   @ApiModelProperty(required = true, value = "TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may be appended to the competition level if more than one match in required per set.")
+
   public String getKey() {
     return key;
   }
+
+
 
   public void setKey(String key) {
     this.key = key;
   }
 
+
   public Match compLevel(CompLevelEnum compLevel) {
+    
     this.compLevel = compLevel;
     return this;
   }
@@ -166,15 +173,20 @@ public class Match {
    * @return compLevel
   **/
   @ApiModelProperty(required = true, value = "The competition level the match was played at.")
+
   public CompLevelEnum getCompLevel() {
     return compLevel;
   }
+
+
 
   public void setCompLevel(CompLevelEnum compLevel) {
     this.compLevel = compLevel;
   }
 
+
   public Match setNumber(Integer setNumber) {
+    
     this.setNumber = setNumber;
     return this;
   }
@@ -184,15 +196,20 @@ public class Match {
    * @return setNumber
   **/
   @ApiModelProperty(required = true, value = "The set number in a series of matches where more than one match is required in the match series.")
+
   public Integer getSetNumber() {
     return setNumber;
   }
+
+
 
   public void setSetNumber(Integer setNumber) {
     this.setNumber = setNumber;
   }
 
+
   public Match matchNumber(Integer matchNumber) {
+    
     this.matchNumber = matchNumber;
     return this;
   }
@@ -202,15 +219,20 @@ public class Match {
    * @return matchNumber
   **/
   @ApiModelProperty(required = true, value = "The match number of the match in the competition level.")
+
   public Integer getMatchNumber() {
     return matchNumber;
   }
+
+
 
   public void setMatchNumber(Integer matchNumber) {
     this.matchNumber = matchNumber;
   }
 
+
   public Match alliances(MatchSimpleAlliances alliances) {
+    
     this.alliances = alliances;
     return this;
   }
@@ -221,15 +243,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchSimpleAlliances getAlliances() {
     return alliances;
   }
+
+
 
   public void setAlliances(MatchSimpleAlliances alliances) {
     this.alliances = alliances;
   }
 
+
   public Match winningAlliance(String winningAlliance) {
+    
     this.winningAlliance = winningAlliance;
     return this;
   }
@@ -240,15 +267,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.")
+
   public String getWinningAlliance() {
     return winningAlliance;
   }
+
+
 
   public void setWinningAlliance(String winningAlliance) {
     this.winningAlliance = winningAlliance;
   }
 
+
   public Match eventKey(String eventKey) {
+    
     this.eventKey = eventKey;
     return this;
   }
@@ -258,15 +290,20 @@ public class Match {
    * @return eventKey
   **/
   @ApiModelProperty(required = true, value = "Event key of the event the match was played at.")
+
   public String getEventKey() {
     return eventKey;
   }
+
+
 
   public void setEventKey(String eventKey) {
     this.eventKey = eventKey;
   }
 
+
   public Match time(Long time) {
+    
     this.time = time;
     return this;
   }
@@ -277,15 +314,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule.")
+
   public Long getTime() {
     return time;
   }
+
+
 
   public void setTime(Long time) {
     this.time = time;
   }
 
+
   public Match actualTime(Long actualTime) {
+    
     this.actualTime = actualTime;
     return this;
   }
@@ -296,15 +338,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.")
+
   public Long getActualTime() {
     return actualTime;
   }
+
+
 
   public void setActualTime(Long actualTime) {
     this.actualTime = actualTime;
   }
 
+
   public Match predictedTime(Long predictedTime) {
+    
     this.predictedTime = predictedTime;
     return this;
   }
@@ -315,15 +362,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time.")
+
   public Long getPredictedTime() {
     return predictedTime;
   }
+
+
 
   public void setPredictedTime(Long predictedTime) {
     this.predictedTime = predictedTime;
   }
 
+
   public Match postResultTime(Long postResultTime) {
+    
     this.postResultTime = postResultTime;
     return this;
   }
@@ -334,15 +386,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) when the match result was posted.")
+
   public Long getPostResultTime() {
     return postResultTime;
   }
+
+
 
   public void setPostResultTime(Long postResultTime) {
     this.postResultTime = postResultTime;
   }
 
+
   public Match scoreBreakdown(Object scoreBreakdown) {
+    
     this.scoreBreakdown = scoreBreakdown;
     return this;
   }
@@ -353,15 +410,20 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null.")
+
   public Object getScoreBreakdown() {
     return scoreBreakdown;
   }
+
+
 
   public void setScoreBreakdown(Object scoreBreakdown) {
     this.scoreBreakdown = scoreBreakdown;
   }
 
+
   public Match videos(List<MatchVideos> videos) {
+    
     this.videos = videos;
     return this;
   }
@@ -380,9 +442,12 @@ public class Match {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Array of video objects associated with this match.")
+
   public List<MatchVideos> getVideos() {
     return videos;
   }
+
+
 
   public void setVideos(List<MatchVideos> videos) {
     this.videos = videos;

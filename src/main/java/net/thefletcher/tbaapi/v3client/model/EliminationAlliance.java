@@ -39,11 +39,11 @@ public class EliminationAlliance {
 
   public static final String SERIALIZED_NAME_BACKUP = "backup";
   @SerializedName(SERIALIZED_NAME_BACKUP)
-  private EliminationAllianceBackup backup = null;
+  private EliminationAllianceBackup backup;
 
   public static final String SERIALIZED_NAME_DECLINES = "declines";
   @SerializedName(SERIALIZED_NAME_DECLINES)
-  private List<String> declines = new ArrayList<String>();
+  private List<String> declines = null;
 
   public static final String SERIALIZED_NAME_PICKS = "picks";
   @SerializedName(SERIALIZED_NAME_PICKS)
@@ -51,9 +51,11 @@ public class EliminationAlliance {
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private EliminationAllianceStatus status = null;
+  private EliminationAllianceStatus status;
+
 
   public EliminationAlliance name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -64,15 +66,20 @@ public class EliminationAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Alliance name, may be null.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;
   }
 
+
   public EliminationAlliance backup(EliminationAllianceBackup backup) {
+    
     this.backup = backup;
     return this;
   }
@@ -83,15 +90,20 @@ public class EliminationAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public EliminationAllianceBackup getBackup() {
     return backup;
   }
+
+
 
   public void setBackup(EliminationAllianceBackup backup) {
     this.backup = backup;
   }
 
+
   public EliminationAlliance declines(List<String> declines) {
+    
     this.declines = declines;
     return this;
   }
@@ -110,15 +122,20 @@ public class EliminationAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "List of teams that declined the alliance.")
+
   public List<String> getDeclines() {
     return declines;
   }
+
+
 
   public void setDeclines(List<String> declines) {
     this.declines = declines;
   }
 
+
   public EliminationAlliance picks(List<String> picks) {
+    
     this.picks = picks;
     return this;
   }
@@ -133,15 +150,20 @@ public class EliminationAlliance {
    * @return picks
   **/
   @ApiModelProperty(required = true, value = "List of team keys picked for the alliance. First pick is captain.")
+
   public List<String> getPicks() {
     return picks;
   }
+
+
 
   public void setPicks(List<String> picks) {
     this.picks = picks;
   }
 
+
   public EliminationAlliance status(EliminationAllianceStatus status) {
+    
     this.status = status;
     return this;
   }
@@ -152,9 +174,12 @@ public class EliminationAlliance {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public EliminationAllianceStatus getStatus() {
     return status;
   }
+
+
 
   public void setStatus(EliminationAllianceStatus status) {
     this.status = status;

@@ -35,17 +35,19 @@ import java.util.Map;
 public class EventOPRs {
   public static final String SERIALIZED_NAME_OPRS = "oprs";
   @SerializedName(SERIALIZED_NAME_OPRS)
-  private Map<String, Float> oprs = new HashMap<String, Float>();
+  private Map<String, Float> oprs = null;
 
   public static final String SERIALIZED_NAME_DPRS = "dprs";
   @SerializedName(SERIALIZED_NAME_DPRS)
-  private Map<String, Float> dprs = new HashMap<String, Float>();
+  private Map<String, Float> dprs = null;
 
   public static final String SERIALIZED_NAME_CCWMS = "ccwms";
   @SerializedName(SERIALIZED_NAME_CCWMS)
-  private Map<String, Float> ccwms = new HashMap<String, Float>();
+  private Map<String, Float> ccwms = null;
+
 
   public EventOPRs oprs(Map<String, Float> oprs) {
+    
     this.oprs = oprs;
     return this;
   }
@@ -64,15 +66,20 @@ public class EventOPRs {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "A key-value pair with team key (eg `frc254`) as key and OPR as value.")
+
   public Map<String, Float> getOprs() {
     return oprs;
   }
+
+
 
   public void setOprs(Map<String, Float> oprs) {
     this.oprs = oprs;
   }
 
+
   public EventOPRs dprs(Map<String, Float> dprs) {
+    
     this.dprs = dprs;
     return this;
   }
@@ -91,15 +98,20 @@ public class EventOPRs {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "A key-value pair with team key (eg `frc254`) as key and DPR as value.")
+
   public Map<String, Float> getDprs() {
     return dprs;
   }
+
+
 
   public void setDprs(Map<String, Float> dprs) {
     this.dprs = dprs;
   }
 
+
   public EventOPRs ccwms(Map<String, Float> ccwms) {
+    
     this.ccwms = ccwms;
     return this;
   }
@@ -118,9 +130,12 @@ public class EventOPRs {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "A key-value pair with team key (eg `frc254`) as key and CCWM as value.")
+
   public Map<String, Float> getCcwms() {
     return ccwms;
   }
+
+
 
   public void setCcwms(Map<String, Float> ccwms) {
     this.ccwms = ccwms;

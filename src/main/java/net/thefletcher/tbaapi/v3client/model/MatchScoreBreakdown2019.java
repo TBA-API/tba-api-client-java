@@ -33,13 +33,15 @@ import net.thefletcher.tbaapi.v3client.model.MatchScoreBreakdown2019Alliance;
 public class MatchScoreBreakdown2019 {
   public static final String SERIALIZED_NAME_BLUE = "blue";
   @SerializedName(SERIALIZED_NAME_BLUE)
-  private MatchScoreBreakdown2019Alliance blue = null;
+  private MatchScoreBreakdown2019Alliance blue;
 
   public static final String SERIALIZED_NAME_RED = "red";
   @SerializedName(SERIALIZED_NAME_RED)
-  private MatchScoreBreakdown2019Alliance red = null;
+  private MatchScoreBreakdown2019Alliance red;
+
 
   public MatchScoreBreakdown2019 blue(MatchScoreBreakdown2019Alliance blue) {
+    
     this.blue = blue;
     return this;
   }
@@ -50,15 +52,20 @@ public class MatchScoreBreakdown2019 {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchScoreBreakdown2019Alliance getBlue() {
     return blue;
   }
+
+
 
   public void setBlue(MatchScoreBreakdown2019Alliance blue) {
     this.blue = blue;
   }
 
+
   public MatchScoreBreakdown2019 red(MatchScoreBreakdown2019Alliance red) {
+    
     this.red = red;
     return this;
   }
@@ -69,9 +76,12 @@ public class MatchScoreBreakdown2019 {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public MatchScoreBreakdown2019Alliance getRed() {
     return red;
   }
+
+
 
   public void setRed(MatchScoreBreakdown2019Alliance red) {
     this.red = red;

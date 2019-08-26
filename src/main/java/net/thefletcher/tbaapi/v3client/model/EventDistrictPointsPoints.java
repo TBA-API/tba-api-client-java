@@ -49,7 +49,9 @@ public class EventDistrictPointsPoints {
   @SerializedName(SERIALIZED_NAME_QUAL_POINTS)
   private Integer qualPoints;
 
+
   public EventDistrictPointsPoints total(Integer total) {
+    
     this.total = total;
     return this;
   }
@@ -59,15 +61,20 @@ public class EventDistrictPointsPoints {
    * @return total
   **/
   @ApiModelProperty(required = true, value = "Total points awarded at this event.")
+
   public Integer getTotal() {
     return total;
   }
+
+
 
   public void setTotal(Integer total) {
     this.total = total;
   }
 
+
   public EventDistrictPointsPoints alliancePoints(Integer alliancePoints) {
+    
     this.alliancePoints = alliancePoints;
     return this;
   }
@@ -77,15 +84,20 @@ public class EventDistrictPointsPoints {
    * @return alliancePoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for alliance selection")
+
   public Integer getAlliancePoints() {
     return alliancePoints;
   }
+
+
 
   public void setAlliancePoints(Integer alliancePoints) {
     this.alliancePoints = alliancePoints;
   }
 
+
   public EventDistrictPointsPoints elimPoints(Integer elimPoints) {
+    
     this.elimPoints = elimPoints;
     return this;
   }
@@ -95,15 +107,20 @@ public class EventDistrictPointsPoints {
    * @return elimPoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for elimination match performance.")
+
   public Integer getElimPoints() {
     return elimPoints;
   }
+
+
 
   public void setElimPoints(Integer elimPoints) {
     this.elimPoints = elimPoints;
   }
 
+
   public EventDistrictPointsPoints awardPoints(Integer awardPoints) {
+    
     this.awardPoints = awardPoints;
     return this;
   }
@@ -113,15 +130,20 @@ public class EventDistrictPointsPoints {
    * @return awardPoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for event awards.")
+
   public Integer getAwardPoints() {
     return awardPoints;
   }
+
+
 
   public void setAwardPoints(Integer awardPoints) {
     this.awardPoints = awardPoints;
   }
 
+
   public EventDistrictPointsPoints qualPoints(Integer qualPoints) {
+    
     this.qualPoints = qualPoints;
     return this;
   }
@@ -131,9 +153,12 @@ public class EventDistrictPointsPoints {
    * @return qualPoints
   **/
   @ApiModelProperty(required = true, value = "Points awarded for qualification match performance.")
+
   public Integer getQualPoints() {
     return qualPoints;
   }
+
+
 
   public void setQualPoints(Integer qualPoints) {
     this.qualPoints = qualPoints;

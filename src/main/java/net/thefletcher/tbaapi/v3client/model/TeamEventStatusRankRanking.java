@@ -43,11 +43,11 @@ public class TeamEventStatusRankRanking {
 
   public static final String SERIALIZED_NAME_SORT_ORDERS = "sort_orders";
   @SerializedName(SERIALIZED_NAME_SORT_ORDERS)
-  private List<BigDecimal> sortOrders = new ArrayList<BigDecimal>();
+  private List<BigDecimal> sortOrders = null;
 
   public static final String SERIALIZED_NAME_RECORD = "record";
   @SerializedName(SERIALIZED_NAME_RECORD)
-  private WLTRecord record = null;
+  private WLTRecord record;
 
   public static final String SERIALIZED_NAME_RANK = "rank";
   @SerializedName(SERIALIZED_NAME_RANK)
@@ -61,7 +61,9 @@ public class TeamEventStatusRankRanking {
   @SerializedName(SERIALIZED_NAME_TEAM_KEY)
   private String teamKey;
 
+
   public TeamEventStatusRankRanking matchesPlayed(Integer matchesPlayed) {
+    
     this.matchesPlayed = matchesPlayed;
     return this;
   }
@@ -72,15 +74,20 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of matches played.")
+
   public Integer getMatchesPlayed() {
     return matchesPlayed;
   }
+
+
 
   public void setMatchesPlayed(Integer matchesPlayed) {
     this.matchesPlayed = matchesPlayed;
   }
 
+
   public TeamEventStatusRankRanking qualAverage(Double qualAverage) {
+    
     this.qualAverage = qualAverage;
     return this;
   }
@@ -91,15 +98,20 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "For some years, average qualification score. Can be null.")
+
   public Double getQualAverage() {
     return qualAverage;
   }
+
+
 
   public void setQualAverage(Double qualAverage) {
     this.qualAverage = qualAverage;
   }
 
+
   public TeamEventStatusRankRanking sortOrders(List<BigDecimal> sortOrders) {
+    
     this.sortOrders = sortOrders;
     return this;
   }
@@ -118,15 +130,20 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Ordered list of values used to determine the rank. See the `sort_order_info` property for the name of each value.")
+
   public List<BigDecimal> getSortOrders() {
     return sortOrders;
   }
+
+
 
   public void setSortOrders(List<BigDecimal> sortOrders) {
     this.sortOrders = sortOrders;
   }
 
+
   public TeamEventStatusRankRanking record(WLTRecord record) {
+    
     this.record = record;
     return this;
   }
@@ -137,15 +154,20 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public WLTRecord getRecord() {
     return record;
   }
+
+
 
   public void setRecord(WLTRecord record) {
     this.record = record;
   }
 
+
   public TeamEventStatusRankRanking rank(Integer rank) {
+    
     this.rank = rank;
     return this;
   }
@@ -156,15 +178,20 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Relative rank of this team.")
+
   public Integer getRank() {
     return rank;
   }
+
+
 
   public void setRank(Integer rank) {
     this.rank = rank;
   }
 
+
   public TeamEventStatusRankRanking dq(Integer dq) {
+    
     this.dq = dq;
     return this;
   }
@@ -175,15 +202,20 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Number of matches the team was disqualified for.")
+
   public Integer getDq() {
     return dq;
   }
+
+
 
   public void setDq(Integer dq) {
     this.dq = dq;
   }
 
+
   public TeamEventStatusRankRanking teamKey(String teamKey) {
+    
     this.teamKey = teamKey;
     return this;
   }
@@ -194,9 +226,12 @@ public class TeamEventStatusRankRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "TBA team key for this rank.")
+
   public String getTeamKey() {
     return teamKey;
   }
+
+
 
   public void setTeamKey(String teamKey) {
     this.teamKey = teamKey;

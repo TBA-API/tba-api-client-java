@@ -37,7 +37,9 @@ public class EventRankingSortOrderInfo {
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public EventRankingSortOrderInfo precision(Integer precision) {
+    
     this.precision = precision;
     return this;
   }
@@ -47,15 +49,20 @@ public class EventRankingSortOrderInfo {
    * @return precision
   **/
   @ApiModelProperty(required = true, value = "Integer expressing the number of digits of precision in the number provided in `sort_orders`.")
+
   public Integer getPrecision() {
     return precision;
   }
+
+
 
   public void setPrecision(Integer precision) {
     this.precision = precision;
   }
 
+
   public EventRankingSortOrderInfo name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -65,9 +72,12 @@ public class EventRankingSortOrderInfo {
    * @return name
   **/
   @ApiModelProperty(required = true, value = "Name of the field used in the `sort_order` array.")
+
   public String getName() {
     return name;
   }
+
+
 
   public void setName(String name) {
     this.name = name;

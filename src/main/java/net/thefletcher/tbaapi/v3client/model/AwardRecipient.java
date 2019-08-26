@@ -38,7 +38,9 @@ public class AwardRecipient {
   @SerializedName(SERIALIZED_NAME_AWARDEE)
   private String awardee;
 
+
   public AwardRecipient teamKey(String teamKey) {
+    
     this.teamKey = teamKey;
     return this;
   }
@@ -49,15 +51,20 @@ public class AwardRecipient {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The TBA team key for the team that was given the award. May be null.")
+
   public String getTeamKey() {
     return teamKey;
   }
+
+
 
   public void setTeamKey(String teamKey) {
     this.teamKey = teamKey;
   }
 
+
   public AwardRecipient awardee(String awardee) {
+    
     this.awardee = awardee;
     return this;
   }
@@ -68,9 +75,12 @@ public class AwardRecipient {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The name of the individual given the award. May be null.")
+
   public String getAwardee() {
     return awardee;
   }
+
+
 
   public void setAwardee(String awardee) {
     this.awardee = awardee;

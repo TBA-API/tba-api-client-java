@@ -76,7 +76,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictEventsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events"
@@ -202,7 +202,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictEventsKeysCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events/keys"
@@ -328,7 +328,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictEventsSimpleCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events/simple"
@@ -454,7 +454,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictRankingsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/rankings"
@@ -580,7 +580,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictTeamsCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams"
@@ -706,7 +706,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictTeamsKeysCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams/keys"
@@ -832,7 +832,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictTeamsSimpleCall(String districtKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams/simple"
@@ -958,7 +958,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getDistrictsByYearCall(Integer year, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/districts/{year}"
@@ -1084,7 +1084,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getEventDistrictPointsCall(String eventKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/district_points"
@@ -1210,7 +1210,7 @@ public class DistrictApi {
      </table>
      */
     public okhttp3.Call getTeamDistrictsCall(String teamKey, String ifModifiedSince, final ApiCallback _callback) throws ApiException {
-        Object localVarPostBody = new Object();
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/districts"

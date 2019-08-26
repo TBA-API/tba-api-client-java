@@ -51,9 +51,11 @@ public class DistrictRanking {
 
   public static final String SERIALIZED_NAME_EVENT_POINTS = "event_points";
   @SerializedName(SERIALIZED_NAME_EVENT_POINTS)
-  private List<DistrictRankingEventPoints> eventPoints = new ArrayList<DistrictRankingEventPoints>();
+  private List<DistrictRankingEventPoints> eventPoints = null;
+
 
   public DistrictRanking teamKey(String teamKey) {
+    
     this.teamKey = teamKey;
     return this;
   }
@@ -63,15 +65,20 @@ public class DistrictRanking {
    * @return teamKey
   **/
   @ApiModelProperty(required = true, value = "TBA team key for the team.")
+
   public String getTeamKey() {
     return teamKey;
   }
+
+
 
   public void setTeamKey(String teamKey) {
     this.teamKey = teamKey;
   }
 
+
   public DistrictRanking rank(Integer rank) {
+    
     this.rank = rank;
     return this;
   }
@@ -81,15 +88,20 @@ public class DistrictRanking {
    * @return rank
   **/
   @ApiModelProperty(required = true, value = "Numerical rank of the team, 1 being top rank.")
+
   public Integer getRank() {
     return rank;
   }
+
+
 
   public void setRank(Integer rank) {
     this.rank = rank;
   }
 
+
   public DistrictRanking rookieBonus(Integer rookieBonus) {
+    
     this.rookieBonus = rookieBonus;
     return this;
   }
@@ -100,15 +112,20 @@ public class DistrictRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Any points added to a team as a result of the rookie bonus.")
+
   public Integer getRookieBonus() {
     return rookieBonus;
   }
+
+
 
   public void setRookieBonus(Integer rookieBonus) {
     this.rookieBonus = rookieBonus;
   }
 
+
   public DistrictRanking pointTotal(Integer pointTotal) {
+    
     this.pointTotal = pointTotal;
     return this;
   }
@@ -118,15 +135,20 @@ public class DistrictRanking {
    * @return pointTotal
   **/
   @ApiModelProperty(required = true, value = "Total district points for the team.")
+
   public Integer getPointTotal() {
     return pointTotal;
   }
+
+
 
   public void setPointTotal(Integer pointTotal) {
     this.pointTotal = pointTotal;
   }
 
+
   public DistrictRanking eventPoints(List<DistrictRankingEventPoints> eventPoints) {
+    
     this.eventPoints = eventPoints;
     return this;
   }
@@ -145,9 +167,12 @@ public class DistrictRanking {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "List of events that contributed to the point total for the team.")
+
   public List<DistrictRankingEventPoints> getEventPoints() {
     return eventPoints;
   }
+
+
 
   public void setEventPoints(List<DistrictRankingEventPoints> eventPoints) {
     this.eventPoints = eventPoints;

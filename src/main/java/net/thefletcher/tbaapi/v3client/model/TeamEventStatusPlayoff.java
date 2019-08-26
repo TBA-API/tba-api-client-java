@@ -90,11 +90,11 @@ public class TeamEventStatusPlayoff {
 
   public static final String SERIALIZED_NAME_CURRENT_LEVEL_RECORD = "current_level_record";
   @SerializedName(SERIALIZED_NAME_CURRENT_LEVEL_RECORD)
-  private WLTRecord currentLevelRecord = null;
+  private WLTRecord currentLevelRecord;
 
   public static final String SERIALIZED_NAME_RECORD = "record";
   @SerializedName(SERIALIZED_NAME_RECORD)
-  private WLTRecord record = null;
+  private WLTRecord record;
 
   /**
    * Current competition status for the playoffs.
@@ -153,7 +153,9 @@ public class TeamEventStatusPlayoff {
   @SerializedName(SERIALIZED_NAME_PLAYOFF_AVERAGE)
   private Integer playoffAverage;
 
+
   public TeamEventStatusPlayoff level(LevelEnum level) {
+    
     this.level = level;
     return this;
   }
@@ -164,15 +166,20 @@ public class TeamEventStatusPlayoff {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The highest playoff level the team reached.")
+
   public LevelEnum getLevel() {
     return level;
   }
+
+
 
   public void setLevel(LevelEnum level) {
     this.level = level;
   }
 
+
   public TeamEventStatusPlayoff currentLevelRecord(WLTRecord currentLevelRecord) {
+    
     this.currentLevelRecord = currentLevelRecord;
     return this;
   }
@@ -183,15 +190,20 @@ public class TeamEventStatusPlayoff {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public WLTRecord getCurrentLevelRecord() {
     return currentLevelRecord;
   }
+
+
 
   public void setCurrentLevelRecord(WLTRecord currentLevelRecord) {
     this.currentLevelRecord = currentLevelRecord;
   }
 
+
   public TeamEventStatusPlayoff record(WLTRecord record) {
+    
     this.record = record;
     return this;
   }
@@ -202,15 +214,20 @@ public class TeamEventStatusPlayoff {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
+
   public WLTRecord getRecord() {
     return record;
   }
+
+
 
   public void setRecord(WLTRecord record) {
     this.record = record;
   }
 
+
   public TeamEventStatusPlayoff status(StatusEnum status) {
+    
     this.status = status;
     return this;
   }
@@ -221,15 +238,20 @@ public class TeamEventStatusPlayoff {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Current competition status for the playoffs.")
+
   public StatusEnum getStatus() {
     return status;
   }
+
+
 
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
 
+
   public TeamEventStatusPlayoff playoffAverage(Integer playoffAverage) {
+    
     this.playoffAverage = playoffAverage;
     return this;
   }
@@ -240,9 +262,12 @@ public class TeamEventStatusPlayoff {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The average match score during playoffs. Year specific. May be null if not relevant for a given year.")
+
   public Integer getPlayoffAverage() {
     return playoffAverage;
   }
+
+
 
   public void setPlayoffAverage(Integer playoffAverage) {
     this.playoffAverage = playoffAverage;

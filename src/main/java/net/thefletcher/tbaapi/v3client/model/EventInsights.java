@@ -32,13 +32,15 @@ import java.io.IOException;
 public class EventInsights {
   public static final String SERIALIZED_NAME_QUAL = "qual";
   @SerializedName(SERIALIZED_NAME_QUAL)
-  private Object qual = null;
+  private Object qual;
 
   public static final String SERIALIZED_NAME_PLAYOFF = "playoff";
   @SerializedName(SERIALIZED_NAME_PLAYOFF)
-  private Object playoff = null;
+  private Object playoff;
+
 
   public EventInsights qual(Object qual) {
+    
     this.qual = qual;
     return this;
   }
@@ -49,15 +51,20 @@ public class EventInsights {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Inights for the qualification round of an event")
+
   public Object getQual() {
     return qual;
   }
+
+
 
   public void setQual(Object qual) {
     this.qual = qual;
   }
 
+
   public EventInsights playoff(Object playoff) {
+    
     this.playoff = playoff;
     return this;
   }
@@ -68,9 +75,12 @@ public class EventInsights {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Insights for the playoff round of an event")
+
   public Object getPlayoff() {
     return playoff;
   }
+
+
 
   public void setPlayoff(Object playoff) {
     this.playoff = playoff;
