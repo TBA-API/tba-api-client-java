@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2017Alliance {
 
       @Override
       public Robot1AutoEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return Robot1AutoEnum.fromValue(value);
       }
     }
@@ -145,7 +145,7 @@ public class MatchScoreBreakdown2017Alliance {
 
       @Override
       public Robot2AutoEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return Robot2AutoEnum.fromValue(value);
       }
     }
@@ -198,7 +198,7 @@ public class MatchScoreBreakdown2017Alliance {
 
       @Override
       public Robot3AutoEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return Robot3AutoEnum.fromValue(value);
       }
     }

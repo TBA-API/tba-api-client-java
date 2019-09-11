@@ -78,7 +78,7 @@ public class TeamEventStatusPlayoff {
 
       @Override
       public LevelEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return LevelEnum.fromValue(value);
       }
     }
@@ -139,7 +139,7 @@ public class TeamEventStatusPlayoff {
 
       @Override
       public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return StatusEnum.fromValue(value);
       }
     }

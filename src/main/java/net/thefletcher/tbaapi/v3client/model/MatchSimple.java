@@ -81,7 +81,7 @@ public class MatchSimple {
 
       @Override
       public CompLevelEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return CompLevelEnum.fromValue(value);
       }
     }
@@ -144,7 +144,7 @@ public class MatchSimple {
 
       @Override
       public WinningAllianceEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return WinningAllianceEnum.fromValue(value);
       }
     }

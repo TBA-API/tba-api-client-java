@@ -84,7 +84,7 @@ public class Match {
 
       @Override
       public CompLevelEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return CompLevelEnum.fromValue(value);
       }
     }

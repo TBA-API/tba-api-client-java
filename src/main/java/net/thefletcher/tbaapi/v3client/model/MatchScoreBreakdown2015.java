@@ -82,7 +82,7 @@ public class MatchScoreBreakdown2015 {
 
       @Override
       public CoopertitionEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return CoopertitionEnum.fromValue(value);
       }
     }
