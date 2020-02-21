@@ -2,6 +2,7 @@
 
 # MatchScoreBreakdown2016
 
+See the 2016 FMS API documentation for a description of each value.
 ## Properties
 
 Name | Type | Description | Notes

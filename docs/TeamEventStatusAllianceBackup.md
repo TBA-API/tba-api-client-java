@@ -2,6 +2,7 @@
 
 # TeamEventStatusAllianceBackup
 
+Backup status, may be null.
 ## Properties
 
 Name | Type | Description | Notes

@@ -2,6 +2,7 @@
 
 # EventInsights2017
 
+Insights for FIRST STEAMWORKS qualification and elimination matches.
 ## Properties
 
 Name | Type | Description | Notes

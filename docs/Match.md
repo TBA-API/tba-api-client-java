@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **setNumber** | **Integer** | The set number in a series of matches where more than one match is required in the match series. | 
 **matchNumber** | **Integer** | The match number of the match in the competition level. | 
 **alliances** | [**MatchSimpleAlliances**](MatchSimpleAlliances.md) |  |  [optional]
-**winningAlliance** | **String** | The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie. |  [optional]
+**winningAlliance** | [**WinningAllianceEnum**](#WinningAllianceEnum) | The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie. |  [optional]
 **eventKey** | **String** | Event key of the event the match was played at. | 
 **time** | **Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule. |  [optional]
 **actualTime** | **Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. |  [optional]
@@ -31,6 +31,16 @@ EF | &quot;ef&quot;
 QF | &quot;qf&quot;
 SF | &quot;sf&quot;
 F | &quot;f&quot;
+
+
+
+## Enum: WinningAllianceEnum
+
+Name | Value
+---- | -----
+RED | &quot;red&quot;
+BLUE | &quot;blue&quot;
+EMPTY | &quot;&quot;
 
 
 

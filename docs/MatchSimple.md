@@ -37,6 +37,7 @@ Name | Value
 ---- | -----
 RED | &quot;red&quot;
 BLUE | &quot;blue&quot;
+EMPTY | &quot;&quot;
 
 
 

@@ -2,6 +2,7 @@
 
 # AwardRecipient
 
+An `Award_Recipient` object represents the team and/or person who received an award at an event.
 ## Properties
 
 Name | Type | Description | Notes

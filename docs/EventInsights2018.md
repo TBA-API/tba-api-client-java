@@ -2,6 +2,7 @@
 
 # EventInsights2018
 
+Insights for FIRST Power Up qualification and elimination matches.
 ## Properties
 
 Name | Type | Description | Notes
