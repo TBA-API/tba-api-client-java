@@ -104,6 +104,10 @@ public class Webcast {
   @SerializedName(SERIALIZED_NAME_CHANNEL)
   private String channel;
 
+  public static final String SERIALIZED_NAME_DATE = "date";
+  @SerializedName(SERIALIZED_NAME_DATE)
+  private String date;
+
   public static final String SERIALIZED_NAME_FILE = "file";
   @SerializedName(SERIALIZED_NAME_FILE)
   private String file;
@@ -153,6 +157,29 @@ public class Webcast {
   }
 
 
+  public Webcast date(String date) {
+    
+    this.date = date;
+    return this;
+  }
+
+   /**
+   * The date for the webcast in &#x60;yyyy-mm-dd&#x60; format. May be null.
+   * @return date
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The date for the webcast in `yyyy-mm-dd` format. May be null.")
+
+  public String getDate() {
+    return date;
+  }
+
+
+  public void setDate(String date) {
+    this.date = date;
+  }
+
+
   public Webcast file(String file) {
     
     this.file = file;
@@ -187,12 +214,13 @@ public class Webcast {
     Webcast webcast = (Webcast) o;
     return Objects.equals(this.type, webcast.type) &&
         Objects.equals(this.channel, webcast.channel) &&
+        Objects.equals(this.date, webcast.date) &&
         Objects.equals(this.file, webcast.file);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, channel, file);
+    return Objects.hash(type, channel, date, file);
   }
 
 
@@ -202,6 +230,7 @@ public class Webcast {
     sb.append("class Webcast {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
+    sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    file: ").append(toIndentedString(file)).append("\n");
     sb.append("}");
     return sb.toString();
