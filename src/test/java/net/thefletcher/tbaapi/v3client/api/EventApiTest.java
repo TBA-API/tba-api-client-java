@@ -278,7 +278,7 @@ public class EventApiTest {
     public void getEventPredictionsTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
-        EventPredictions response = api.getEventPredictions(eventKey, ifModifiedSince);
+        EventPredictions response = (EventPredictions) api.getEventPredictions(eventKey, ifModifiedSince);
 
         // TODO: test validations
     }
