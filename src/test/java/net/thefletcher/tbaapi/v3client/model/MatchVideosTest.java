@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchVideos
  */
-public class MatchVideosTest {
+class MatchVideosTest {
     private final MatchVideos model = new MatchVideos();
 
     /**
      * Model tests for MatchVideos
      */
     @Test
-    public void testMatchVideos() {
+    void testMatchVideos() {
         // TODO: test MatchVideos
     }
 
@@ -44,7 +44,7 @@ public class MatchVideosTest {
      * Test the property 'type'
      */
     @Test
-    public void typeTest() {
+    void typeTest() {
         // TODO: test type
     }
 
@@ -52,7 +52,7 @@ public class MatchVideosTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 

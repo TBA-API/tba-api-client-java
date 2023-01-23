@@ -16,8 +16,9 @@ package net.thefletcher.tbaapi.v3client.api;
 import net.thefletcher.tbaapi.v3client.ApiException;
 import net.thefletcher.tbaapi.v3client.model.Match;
 import net.thefletcher.tbaapi.v3client.model.MatchSimple;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,8 +28,8 @@ import java.util.Map;
 /**
  * API tests for MatchApi
  */
-@Ignore
-public class MatchApiTest {
+@Disabled
+class MatchApiTest {
 
     private final MatchApi api = new MatchApi();
 
@@ -42,7 +43,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchTimeseriesTest() throws ApiException {
+    void getEventMatchTimeseriesTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventMatchTimeseries(eventKey, ifModifiedSince);
@@ -59,7 +60,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchesTest() throws ApiException {
+    void getEventMatchesTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<Match> response = api.getEventMatches(eventKey, ifModifiedSince);
@@ -76,7 +77,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchesKeysTest() throws ApiException {
+    void getEventMatchesKeysTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventMatchesKeys(eventKey, ifModifiedSince);
@@ -93,7 +94,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchesSimpleTest() throws ApiException {
+    void getEventMatchesSimpleTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<MatchSimple> response = api.getEventMatchesSimple(eventKey, ifModifiedSince);
@@ -110,7 +111,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getMatchTest() throws ApiException {
+    void getMatchTest() throws ApiException {
         String matchKey = null;
         String ifModifiedSince = null;
         Match response = api.getMatch(matchKey, ifModifiedSince);
@@ -127,7 +128,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getMatchSimpleTest() throws ApiException {
+    void getMatchSimpleTest() throws ApiException {
         String matchKey = null;
         String ifModifiedSince = null;
         MatchSimple response = api.getMatchSimple(matchKey, ifModifiedSince);
@@ -144,7 +145,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getMatchTimeseriesTest() throws ApiException {
+    void getMatchTimeseriesTest() throws ApiException {
         String matchKey = null;
         String ifModifiedSince = null;
         List<Object> response = api.getMatchTimeseries(matchKey, ifModifiedSince);
@@ -161,7 +162,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesTest() throws ApiException {
+    void getTeamEventMatchesTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -179,7 +180,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesKeysTest() throws ApiException {
+    void getTeamEventMatchesKeysTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -197,7 +198,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesSimpleTest() throws ApiException {
+    void getTeamEventMatchesSimpleTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -215,7 +216,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearTest() throws ApiException {
+    void getTeamMatchesByYearTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -233,7 +234,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearKeysTest() throws ApiException {
+    void getTeamMatchesByYearKeysTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -251,7 +252,7 @@ public class MatchApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearSimpleTest() throws ApiException {
+    void getTeamMatchesByYearSimpleTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;

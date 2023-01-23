@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for DistrictRankingEventPoints
  */
-public class DistrictRankingEventPointsTest {
+class DistrictRankingEventPointsTest {
     private final DistrictRankingEventPoints model = new DistrictRankingEventPoints();
 
     /**
      * Model tests for DistrictRankingEventPoints
      */
     @Test
-    public void testDistrictRankingEventPoints() {
+    void testDistrictRankingEventPoints() {
         // TODO: test DistrictRankingEventPoints
     }
 
@@ -44,7 +44,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'districtCmp'
      */
     @Test
-    public void districtCmpTest() {
+    void districtCmpTest() {
         // TODO: test districtCmp
     }
 
@@ -52,7 +52,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'total'
      */
     @Test
-    public void totalTest() {
+    void totalTest() {
         // TODO: test total
     }
 
@@ -60,7 +60,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'alliancePoints'
      */
     @Test
-    public void alliancePointsTest() {
+    void alliancePointsTest() {
         // TODO: test alliancePoints
     }
 
@@ -68,7 +68,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'elimPoints'
      */
     @Test
-    public void elimPointsTest() {
+    void elimPointsTest() {
         // TODO: test elimPoints
     }
 
@@ -76,7 +76,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'awardPoints'
      */
     @Test
-    public void awardPointsTest() {
+    void awardPointsTest() {
         // TODO: test awardPoints
     }
 
@@ -84,7 +84,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'eventKey'
      */
     @Test
-    public void eventKeyTest() {
+    void eventKeyTest() {
         // TODO: test eventKey
     }
 
@@ -92,7 +92,7 @@ public class DistrictRankingEventPointsTest {
      * Test the property 'qualPoints'
      */
     @Test
-    public void qualPointsTest() {
+    void qualPointsTest() {
         // TODO: test qualPoints
     }
 

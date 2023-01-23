@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Webcast
  */
-public class WebcastTest {
+class WebcastTest {
     private final Webcast model = new Webcast();
 
     /**
      * Model tests for Webcast
      */
     @Test
-    public void testWebcast() {
+    void testWebcast() {
         // TODO: test Webcast
     }
 
@@ -44,7 +44,7 @@ public class WebcastTest {
      * Test the property 'type'
      */
     @Test
-    public void typeTest() {
+    void typeTest() {
         // TODO: test type
     }
 
@@ -52,7 +52,7 @@ public class WebcastTest {
      * Test the property 'channel'
      */
     @Test
-    public void channelTest() {
+    void channelTest() {
         // TODO: test channel
     }
 
@@ -60,7 +60,7 @@ public class WebcastTest {
      * Test the property 'file'
      */
     @Test
-    public void fileTest() {
+    void fileTest() {
         // TODO: test file
     }
 

@@ -25,22 +25,22 @@ import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.MatchSimpleAlliances;
 import net.thefletcher.tbaapi.v3client.model.MatchVideos;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Match
  */
-public class MatchTest {
+class MatchTest {
     private final Match model = new Match();
 
     /**
      * Model tests for Match
      */
     @Test
-    public void testMatch() {
+    void testMatch() {
         // TODO: test Match
     }
 
@@ -48,7 +48,7 @@ public class MatchTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -56,7 +56,7 @@ public class MatchTest {
      * Test the property 'compLevel'
      */
     @Test
-    public void compLevelTest() {
+    void compLevelTest() {
         // TODO: test compLevel
     }
 
@@ -64,7 +64,7 @@ public class MatchTest {
      * Test the property 'setNumber'
      */
     @Test
-    public void setNumberTest() {
+    void setNumberTest() {
         // TODO: test setNumber
     }
 
@@ -72,7 +72,7 @@ public class MatchTest {
      * Test the property 'matchNumber'
      */
     @Test
-    public void matchNumberTest() {
+    void matchNumberTest() {
         // TODO: test matchNumber
     }
 
@@ -80,7 +80,7 @@ public class MatchTest {
      * Test the property 'alliances'
      */
     @Test
-    public void alliancesTest() {
+    void alliancesTest() {
         // TODO: test alliances
     }
 
@@ -88,7 +88,7 @@ public class MatchTest {
      * Test the property 'winningAlliance'
      */
     @Test
-    public void winningAllianceTest() {
+    void winningAllianceTest() {
         // TODO: test winningAlliance
     }
 
@@ -96,7 +96,7 @@ public class MatchTest {
      * Test the property 'eventKey'
      */
     @Test
-    public void eventKeyTest() {
+    void eventKeyTest() {
         // TODO: test eventKey
     }
 
@@ -104,7 +104,7 @@ public class MatchTest {
      * Test the property 'time'
      */
     @Test
-    public void timeTest() {
+    void timeTest() {
         // TODO: test time
     }
 
@@ -112,7 +112,7 @@ public class MatchTest {
      * Test the property 'actualTime'
      */
     @Test
-    public void actualTimeTest() {
+    void actualTimeTest() {
         // TODO: test actualTime
     }
 
@@ -120,7 +120,7 @@ public class MatchTest {
      * Test the property 'predictedTime'
      */
     @Test
-    public void predictedTimeTest() {
+    void predictedTimeTest() {
         // TODO: test predictedTime
     }
 
@@ -128,7 +128,7 @@ public class MatchTest {
      * Test the property 'postResultTime'
      */
     @Test
-    public void postResultTimeTest() {
+    void postResultTimeTest() {
         // TODO: test postResultTime
     }
 
@@ -136,7 +136,7 @@ public class MatchTest {
      * Test the property 'scoreBreakdown'
      */
     @Test
-    public void scoreBreakdownTest() {
+    void scoreBreakdownTest() {
         // TODO: test scoreBreakdown
     }
 
@@ -144,7 +144,7 @@ public class MatchTest {
      * Test the property 'videos'
      */
     @Test
-    public void videosTest() {
+    void videosTest() {
         // TODO: test videos
     }
 

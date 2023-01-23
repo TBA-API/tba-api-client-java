@@ -15,8 +15,9 @@ package net.thefletcher.tbaapi.v3client.api;
 
 import net.thefletcher.tbaapi.v3client.ApiException;
 import net.thefletcher.tbaapi.v3client.model.APIStatus;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,8 +27,8 @@ import java.util.Map;
 /**
  * API tests for TbaApi
  */
-@Ignore
-public class TbaApiTest {
+@Disabled
+class TbaApiTest {
 
     private final TbaApi api = new TbaApi();
 
@@ -41,7 +42,7 @@ public class TbaApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getStatusTest() throws ApiException {
+    void getStatusTest() throws ApiException {
         String ifModifiedSince = null;
         APIStatus response = api.getStatus(ifModifiedSince);
 

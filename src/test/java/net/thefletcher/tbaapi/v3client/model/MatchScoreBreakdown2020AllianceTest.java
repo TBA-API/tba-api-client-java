@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2020Alliance
  */
-public class MatchScoreBreakdown2020AllianceTest {
+class MatchScoreBreakdown2020AllianceTest {
     private final MatchScoreBreakdown2020Alliance model = new MatchScoreBreakdown2020Alliance();
 
     /**
      * Model tests for MatchScoreBreakdown2020Alliance
      */
     @Test
-    public void testMatchScoreBreakdown2020Alliance() {
+    void testMatchScoreBreakdown2020Alliance() {
         // TODO: test MatchScoreBreakdown2020Alliance
     }
 
@@ -44,7 +44,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'initLineRobot1'
      */
     @Test
-    public void initLineRobot1Test() {
+    void initLineRobot1Test() {
         // TODO: test initLineRobot1
     }
 
@@ -52,7 +52,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'endgameRobot1'
      */
     @Test
-    public void endgameRobot1Test() {
+    void endgameRobot1Test() {
         // TODO: test endgameRobot1
     }
 
@@ -60,7 +60,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'initLineRobot2'
      */
     @Test
-    public void initLineRobot2Test() {
+    void initLineRobot2Test() {
         // TODO: test initLineRobot2
     }
 
@@ -68,7 +68,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'endgameRobot2'
      */
     @Test
-    public void endgameRobot2Test() {
+    void endgameRobot2Test() {
         // TODO: test endgameRobot2
     }
 
@@ -76,7 +76,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'initLineRobot3'
      */
     @Test
-    public void initLineRobot3Test() {
+    void initLineRobot3Test() {
         // TODO: test initLineRobot3
     }
 
@@ -84,7 +84,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'endgameRobot3'
      */
     @Test
-    public void endgameRobot3Test() {
+    void endgameRobot3Test() {
         // TODO: test endgameRobot3
     }
 
@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'autoCellsBottom'
      */
     @Test
-    public void autoCellsBottomTest() {
+    void autoCellsBottomTest() {
         // TODO: test autoCellsBottom
     }
 
@@ -100,7 +100,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'autoCellsOuter'
      */
     @Test
-    public void autoCellsOuterTest() {
+    void autoCellsOuterTest() {
         // TODO: test autoCellsOuter
     }
 
@@ -108,7 +108,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'autoCellsInner'
      */
     @Test
-    public void autoCellsInnerTest() {
+    void autoCellsInnerTest() {
         // TODO: test autoCellsInner
     }
 
@@ -116,7 +116,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'teleopCellsBottom'
      */
     @Test
-    public void teleopCellsBottomTest() {
+    void teleopCellsBottomTest() {
         // TODO: test teleopCellsBottom
     }
 
@@ -124,7 +124,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'teleopCellsOuter'
      */
     @Test
-    public void teleopCellsOuterTest() {
+    void teleopCellsOuterTest() {
         // TODO: test teleopCellsOuter
     }
 
@@ -132,7 +132,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'teleopCellsInner'
      */
     @Test
-    public void teleopCellsInnerTest() {
+    void teleopCellsInnerTest() {
         // TODO: test teleopCellsInner
     }
 
@@ -140,7 +140,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'stage1Activated'
      */
     @Test
-    public void stage1ActivatedTest() {
+    void stage1ActivatedTest() {
         // TODO: test stage1Activated
     }
 
@@ -148,7 +148,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'stage2Activated'
      */
     @Test
-    public void stage2ActivatedTest() {
+    void stage2ActivatedTest() {
         // TODO: test stage2Activated
     }
 
@@ -156,7 +156,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'stage3Activated'
      */
     @Test
-    public void stage3ActivatedTest() {
+    void stage3ActivatedTest() {
         // TODO: test stage3Activated
     }
 
@@ -164,7 +164,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'stage3TargetColor'
      */
     @Test
-    public void stage3TargetColorTest() {
+    void stage3TargetColorTest() {
         // TODO: test stage3TargetColor
     }
 
@@ -172,7 +172,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'endgameRungIsLevel'
      */
     @Test
-    public void endgameRungIsLevelTest() {
+    void endgameRungIsLevelTest() {
         // TODO: test endgameRungIsLevel
     }
 
@@ -180,7 +180,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'autoInitLinePoints'
      */
     @Test
-    public void autoInitLinePointsTest() {
+    void autoInitLinePointsTest() {
         // TODO: test autoInitLinePoints
     }
 
@@ -188,7 +188,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'autoCellPoints'
      */
     @Test
-    public void autoCellPointsTest() {
+    void autoCellPointsTest() {
         // TODO: test autoCellPoints
     }
 
@@ -196,7 +196,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'autoPoints'
      */
     @Test
-    public void autoPointsTest() {
+    void autoPointsTest() {
         // TODO: test autoPoints
     }
 
@@ -204,7 +204,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'teleopCellPoints'
      */
     @Test
-    public void teleopCellPointsTest() {
+    void teleopCellPointsTest() {
         // TODO: test teleopCellPoints
     }
 
@@ -212,7 +212,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'controlPanelPoints'
      */
     @Test
-    public void controlPanelPointsTest() {
+    void controlPanelPointsTest() {
         // TODO: test controlPanelPoints
     }
 
@@ -220,7 +220,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'endgamePoints'
      */
     @Test
-    public void endgamePointsTest() {
+    void endgamePointsTest() {
         // TODO: test endgamePoints
     }
 
@@ -228,7 +228,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'teleopPoints'
      */
     @Test
-    public void teleopPointsTest() {
+    void teleopPointsTest() {
         // TODO: test teleopPoints
     }
 
@@ -236,7 +236,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'shieldOperationalRankingPoint'
      */
     @Test
-    public void shieldOperationalRankingPointTest() {
+    void shieldOperationalRankingPointTest() {
         // TODO: test shieldOperationalRankingPoint
     }
 
@@ -244,7 +244,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'shieldEnergizedRankingPoint'
      */
     @Test
-    public void shieldEnergizedRankingPointTest() {
+    void shieldEnergizedRankingPointTest() {
         // TODO: test shieldEnergizedRankingPoint
     }
 
@@ -252,7 +252,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'tbaShieldEnergizedRankingPointFromFoul'
      */
     @Test
-    public void tbaShieldEnergizedRankingPointFromFoulTest() {
+    void tbaShieldEnergizedRankingPointFromFoulTest() {
         // TODO: test tbaShieldEnergizedRankingPointFromFoul
     }
 
@@ -260,7 +260,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'tbaNumRobotsHanging'
      */
     @Test
-    public void tbaNumRobotsHangingTest() {
+    void tbaNumRobotsHangingTest() {
         // TODO: test tbaNumRobotsHanging
     }
 
@@ -268,7 +268,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'foulCount'
      */
     @Test
-    public void foulCountTest() {
+    void foulCountTest() {
         // TODO: test foulCount
     }
 
@@ -276,7 +276,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'techFoulCount'
      */
     @Test
-    public void techFoulCountTest() {
+    void techFoulCountTest() {
         // TODO: test techFoulCount
     }
 
@@ -284,7 +284,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'adjustPoints'
      */
     @Test
-    public void adjustPointsTest() {
+    void adjustPointsTest() {
         // TODO: test adjustPoints
     }
 
@@ -292,7 +292,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'foulPoints'
      */
     @Test
-    public void foulPointsTest() {
+    void foulPointsTest() {
         // TODO: test foulPoints
     }
 
@@ -300,7 +300,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'rp'
      */
     @Test
-    public void rpTest() {
+    void rpTest() {
         // TODO: test rp
     }
 
@@ -308,7 +308,7 @@ public class MatchScoreBreakdown2020AllianceTest {
      * Test the property 'totalPoints'
      */
     @Test
-    public void totalPointsTest() {
+    void totalPointsTest() {
         // TODO: test totalPoints
     }
 

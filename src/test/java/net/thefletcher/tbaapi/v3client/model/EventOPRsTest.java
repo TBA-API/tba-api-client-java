@@ -24,22 +24,22 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventOPRs
  */
-public class EventOPRsTest {
+class EventOPRsTest {
     private final EventOPRs model = new EventOPRs();
 
     /**
      * Model tests for EventOPRs
      */
     @Test
-    public void testEventOPRs() {
+    void testEventOPRs() {
         // TODO: test EventOPRs
     }
 
@@ -47,7 +47,7 @@ public class EventOPRsTest {
      * Test the property 'oprs'
      */
     @Test
-    public void oprsTest() {
+    void oprsTest() {
         // TODO: test oprs
     }
 
@@ -55,7 +55,7 @@ public class EventOPRsTest {
      * Test the property 'dprs'
      */
     @Test
-    public void dprsTest() {
+    void dprsTest() {
         // TODO: test dprs
     }
 
@@ -63,7 +63,7 @@ public class EventOPRsTest {
      * Test the property 'ccwms'
      */
     @Test
-    public void ccwmsTest() {
+    void ccwmsTest() {
         // TODO: test ccwms
     }
 

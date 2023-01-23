@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventInsights2017
  */
-public class EventInsights2017Test {
+class EventInsights2017Test {
     private final EventInsights2017 model = new EventInsights2017();
 
     /**
      * Model tests for EventInsights2017
      */
     @Test
-    public void testEventInsights2017() {
+    void testEventInsights2017() {
         // TODO: test EventInsights2017
     }
 
@@ -46,7 +46,7 @@ public class EventInsights2017Test {
      * Test the property 'averageFoulScore'
      */
     @Test
-    public void averageFoulScoreTest() {
+    void averageFoulScoreTest() {
         // TODO: test averageFoulScore
     }
 
@@ -54,7 +54,7 @@ public class EventInsights2017Test {
      * Test the property 'averageFuelPoints'
      */
     @Test
-    public void averageFuelPointsTest() {
+    void averageFuelPointsTest() {
         // TODO: test averageFuelPoints
     }
 
@@ -62,7 +62,7 @@ public class EventInsights2017Test {
      * Test the property 'averageFuelPointsAuto'
      */
     @Test
-    public void averageFuelPointsAutoTest() {
+    void averageFuelPointsAutoTest() {
         // TODO: test averageFuelPointsAuto
     }
 
@@ -70,7 +70,7 @@ public class EventInsights2017Test {
      * Test the property 'averageFuelPointsTeleop'
      */
     @Test
-    public void averageFuelPointsTeleopTest() {
+    void averageFuelPointsTeleopTest() {
         // TODO: test averageFuelPointsTeleop
     }
 
@@ -78,7 +78,7 @@ public class EventInsights2017Test {
      * Test the property 'averageHighGoals'
      */
     @Test
-    public void averageHighGoalsTest() {
+    void averageHighGoalsTest() {
         // TODO: test averageHighGoals
     }
 
@@ -86,7 +86,7 @@ public class EventInsights2017Test {
      * Test the property 'averageHighGoalsAuto'
      */
     @Test
-    public void averageHighGoalsAutoTest() {
+    void averageHighGoalsAutoTest() {
         // TODO: test averageHighGoalsAuto
     }
 
@@ -94,7 +94,7 @@ public class EventInsights2017Test {
      * Test the property 'averageHighGoalsTeleop'
      */
     @Test
-    public void averageHighGoalsTeleopTest() {
+    void averageHighGoalsTeleopTest() {
         // TODO: test averageHighGoalsTeleop
     }
 
@@ -102,7 +102,7 @@ public class EventInsights2017Test {
      * Test the property 'averageLowGoals'
      */
     @Test
-    public void averageLowGoalsTest() {
+    void averageLowGoalsTest() {
         // TODO: test averageLowGoals
     }
 
@@ -110,7 +110,7 @@ public class EventInsights2017Test {
      * Test the property 'averageLowGoalsAuto'
      */
     @Test
-    public void averageLowGoalsAutoTest() {
+    void averageLowGoalsAutoTest() {
         // TODO: test averageLowGoalsAuto
     }
 
@@ -118,7 +118,7 @@ public class EventInsights2017Test {
      * Test the property 'averageLowGoalsTeleop'
      */
     @Test
-    public void averageLowGoalsTeleopTest() {
+    void averageLowGoalsTeleopTest() {
         // TODO: test averageLowGoalsTeleop
     }
 
@@ -126,7 +126,7 @@ public class EventInsights2017Test {
      * Test the property 'averageMobilityPointsAuto'
      */
     @Test
-    public void averageMobilityPointsAutoTest() {
+    void averageMobilityPointsAutoTest() {
         // TODO: test averageMobilityPointsAuto
     }
 
@@ -134,7 +134,7 @@ public class EventInsights2017Test {
      * Test the property 'averagePointsAuto'
      */
     @Test
-    public void averagePointsAutoTest() {
+    void averagePointsAutoTest() {
         // TODO: test averagePointsAuto
     }
 
@@ -142,7 +142,7 @@ public class EventInsights2017Test {
      * Test the property 'averagePointsTeleop'
      */
     @Test
-    public void averagePointsTeleopTest() {
+    void averagePointsTeleopTest() {
         // TODO: test averagePointsTeleop
     }
 
@@ -150,7 +150,7 @@ public class EventInsights2017Test {
      * Test the property 'averageRotorPoints'
      */
     @Test
-    public void averageRotorPointsTest() {
+    void averageRotorPointsTest() {
         // TODO: test averageRotorPoints
     }
 
@@ -158,7 +158,7 @@ public class EventInsights2017Test {
      * Test the property 'averageRotorPointsAuto'
      */
     @Test
-    public void averageRotorPointsAutoTest() {
+    void averageRotorPointsAutoTest() {
         // TODO: test averageRotorPointsAuto
     }
 
@@ -166,7 +166,7 @@ public class EventInsights2017Test {
      * Test the property 'averageRotorPointsTeleop'
      */
     @Test
-    public void averageRotorPointsTeleopTest() {
+    void averageRotorPointsTeleopTest() {
         // TODO: test averageRotorPointsTeleop
     }
 
@@ -174,7 +174,7 @@ public class EventInsights2017Test {
      * Test the property 'averageScore'
      */
     @Test
-    public void averageScoreTest() {
+    void averageScoreTest() {
         // TODO: test averageScore
     }
 
@@ -182,7 +182,7 @@ public class EventInsights2017Test {
      * Test the property 'averageTakeoffPointsTeleop'
      */
     @Test
-    public void averageTakeoffPointsTeleopTest() {
+    void averageTakeoffPointsTeleopTest() {
         // TODO: test averageTakeoffPointsTeleop
     }
 
@@ -190,7 +190,7 @@ public class EventInsights2017Test {
      * Test the property 'averageWinMargin'
      */
     @Test
-    public void averageWinMarginTest() {
+    void averageWinMarginTest() {
         // TODO: test averageWinMargin
     }
 
@@ -198,7 +198,7 @@ public class EventInsights2017Test {
      * Test the property 'averageWinScore'
      */
     @Test
-    public void averageWinScoreTest() {
+    void averageWinScoreTest() {
         // TODO: test averageWinScore
     }
 
@@ -206,7 +206,7 @@ public class EventInsights2017Test {
      * Test the property 'highKpa'
      */
     @Test
-    public void highKpaTest() {
+    void highKpaTest() {
         // TODO: test highKpa
     }
 
@@ -214,7 +214,7 @@ public class EventInsights2017Test {
      * Test the property 'highScore'
      */
     @Test
-    public void highScoreTest() {
+    void highScoreTest() {
         // TODO: test highScore
     }
 
@@ -222,7 +222,7 @@ public class EventInsights2017Test {
      * Test the property 'kpaAchieved'
      */
     @Test
-    public void kpaAchievedTest() {
+    void kpaAchievedTest() {
         // TODO: test kpaAchieved
     }
 
@@ -230,7 +230,7 @@ public class EventInsights2017Test {
      * Test the property 'mobilityCounts'
      */
     @Test
-    public void mobilityCountsTest() {
+    void mobilityCountsTest() {
         // TODO: test mobilityCounts
     }
 
@@ -238,7 +238,7 @@ public class EventInsights2017Test {
      * Test the property 'rotor1Engaged'
      */
     @Test
-    public void rotor1EngagedTest() {
+    void rotor1EngagedTest() {
         // TODO: test rotor1Engaged
     }
 
@@ -246,7 +246,7 @@ public class EventInsights2017Test {
      * Test the property 'rotor1EngagedAuto'
      */
     @Test
-    public void rotor1EngagedAutoTest() {
+    void rotor1EngagedAutoTest() {
         // TODO: test rotor1EngagedAuto
     }
 
@@ -254,7 +254,7 @@ public class EventInsights2017Test {
      * Test the property 'rotor2Engaged'
      */
     @Test
-    public void rotor2EngagedTest() {
+    void rotor2EngagedTest() {
         // TODO: test rotor2Engaged
     }
 
@@ -262,7 +262,7 @@ public class EventInsights2017Test {
      * Test the property 'rotor2EngagedAuto'
      */
     @Test
-    public void rotor2EngagedAutoTest() {
+    void rotor2EngagedAutoTest() {
         // TODO: test rotor2EngagedAuto
     }
 
@@ -270,7 +270,7 @@ public class EventInsights2017Test {
      * Test the property 'rotor3Engaged'
      */
     @Test
-    public void rotor3EngagedTest() {
+    void rotor3EngagedTest() {
         // TODO: test rotor3Engaged
     }
 
@@ -278,7 +278,7 @@ public class EventInsights2017Test {
      * Test the property 'rotor4Engaged'
      */
     @Test
-    public void rotor4EngagedTest() {
+    void rotor4EngagedTest() {
         // TODO: test rotor4Engaged
     }
 
@@ -286,7 +286,7 @@ public class EventInsights2017Test {
      * Test the property 'takeoffCounts'
      */
     @Test
-    public void takeoffCountsTest() {
+    void takeoffCountsTest() {
         // TODO: test takeoffCounts
     }
 
@@ -294,7 +294,7 @@ public class EventInsights2017Test {
      * Test the property 'unicornMatches'
      */
     @Test
-    public void unicornMatchesTest() {
+    void unicornMatchesTest() {
         // TODO: test unicornMatches
     }
 

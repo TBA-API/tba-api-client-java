@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamEventStatusRankSortOrderInfo
  */
-public class TeamEventStatusRankSortOrderInfoTest {
+class TeamEventStatusRankSortOrderInfoTest {
     private final TeamEventStatusRankSortOrderInfo model = new TeamEventStatusRankSortOrderInfo();
 
     /**
      * Model tests for TeamEventStatusRankSortOrderInfo
      */
     @Test
-    public void testTeamEventStatusRankSortOrderInfo() {
+    void testTeamEventStatusRankSortOrderInfo() {
         // TODO: test TeamEventStatusRankSortOrderInfo
     }
 
@@ -44,7 +44,7 @@ public class TeamEventStatusRankSortOrderInfoTest {
      * Test the property 'precision'
      */
     @Test
-    public void precisionTest() {
+    void precisionTest() {
         // TODO: test precision
     }
 
@@ -52,7 +52,7 @@ public class TeamEventStatusRankSortOrderInfoTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 

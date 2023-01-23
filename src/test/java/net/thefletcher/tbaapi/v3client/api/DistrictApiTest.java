@@ -21,8 +21,9 @@ import net.thefletcher.tbaapi.v3client.model.EventDistrictPoints;
 import net.thefletcher.tbaapi.v3client.model.EventSimple;
 import net.thefletcher.tbaapi.v3client.model.Team;
 import net.thefletcher.tbaapi.v3client.model.TeamSimple;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,8 +33,8 @@ import java.util.Map;
 /**
  * API tests for DistrictApi
  */
-@Ignore
-public class DistrictApiTest {
+@Disabled
+class DistrictApiTest {
 
     private final DistrictApi api = new DistrictApi();
 
@@ -47,7 +48,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsTest() throws ApiException {
+    void getDistrictEventsTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Event> response = api.getDistrictEvents(districtKey, ifModifiedSince);
@@ -64,7 +65,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsKeysTest() throws ApiException {
+    void getDistrictEventsKeysTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictEventsKeys(districtKey, ifModifiedSince);
@@ -81,7 +82,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsSimpleTest() throws ApiException {
+    void getDistrictEventsSimpleTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<EventSimple> response = api.getDistrictEventsSimple(districtKey, ifModifiedSince);
@@ -98,7 +99,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictRankingsTest() throws ApiException {
+    void getDistrictRankingsTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<DistrictRanking> response = api.getDistrictRankings(districtKey, ifModifiedSince);
@@ -115,7 +116,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsTest() throws ApiException {
+    void getDistrictTeamsTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Team> response = api.getDistrictTeams(districtKey, ifModifiedSince);
@@ -132,7 +133,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsKeysTest() throws ApiException {
+    void getDistrictTeamsKeysTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictTeamsKeys(districtKey, ifModifiedSince);
@@ -149,7 +150,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsSimpleTest() throws ApiException {
+    void getDistrictTeamsSimpleTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getDistrictTeamsSimple(districtKey, ifModifiedSince);
@@ -166,7 +167,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictsByYearTest() throws ApiException {
+    void getDistrictsByYearTest() throws ApiException {
         Integer year = null;
         String ifModifiedSince = null;
         List<DistrictList> response = api.getDistrictsByYear(year, ifModifiedSince);
@@ -183,7 +184,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventDistrictPointsTest() throws ApiException {
+    void getEventDistrictPointsTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         EventDistrictPoints response = api.getEventDistrictPoints(eventKey, ifModifiedSince);
@@ -200,7 +201,7 @@ public class DistrictApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamDistrictsTest() throws ApiException {
+    void getTeamDistrictsTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<DistrictList> response = api.getTeamDistricts(teamKey, ifModifiedSince);

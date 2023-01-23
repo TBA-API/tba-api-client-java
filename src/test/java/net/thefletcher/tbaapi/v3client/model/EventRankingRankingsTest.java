@@ -25,22 +25,22 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.WLTRecord;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventRankingRankings
  */
-public class EventRankingRankingsTest {
+class EventRankingRankingsTest {
     private final EventRankingRankings model = new EventRankingRankings();
 
     /**
      * Model tests for EventRankingRankings
      */
     @Test
-    public void testEventRankingRankings() {
+    void testEventRankingRankings() {
         // TODO: test EventRankingRankings
     }
 
@@ -48,7 +48,7 @@ public class EventRankingRankingsTest {
      * Test the property 'matchesPlayed'
      */
     @Test
-    public void matchesPlayedTest() {
+    void matchesPlayedTest() {
         // TODO: test matchesPlayed
     }
 
@@ -56,7 +56,7 @@ public class EventRankingRankingsTest {
      * Test the property 'qualAverage'
      */
     @Test
-    public void qualAverageTest() {
+    void qualAverageTest() {
         // TODO: test qualAverage
     }
 
@@ -64,7 +64,7 @@ public class EventRankingRankingsTest {
      * Test the property 'extraStats'
      */
     @Test
-    public void extraStatsTest() {
+    void extraStatsTest() {
         // TODO: test extraStats
     }
 
@@ -72,7 +72,7 @@ public class EventRankingRankingsTest {
      * Test the property 'sortOrders'
      */
     @Test
-    public void sortOrdersTest() {
+    void sortOrdersTest() {
         // TODO: test sortOrders
     }
 
@@ -80,7 +80,7 @@ public class EventRankingRankingsTest {
      * Test the property 'record'
      */
     @Test
-    public void recordTest() {
+    void recordTest() {
         // TODO: test record
     }
 
@@ -88,7 +88,7 @@ public class EventRankingRankingsTest {
      * Test the property 'rank'
      */
     @Test
-    public void rankTest() {
+    void rankTest() {
         // TODO: test rank
     }
 
@@ -96,7 +96,7 @@ public class EventRankingRankingsTest {
      * Test the property 'dq'
      */
     @Test
-    public void dqTest() {
+    void dqTest() {
         // TODO: test dq
     }
 
@@ -104,7 +104,7 @@ public class EventRankingRankingsTest {
      * Test the property 'teamKey'
      */
     @Test
-    public void teamKeyTest() {
+    void teamKeyTest() {
         // TODO: test teamKey
     }
 

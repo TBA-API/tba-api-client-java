@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for WLTRecord
  */
-public class WLTRecordTest {
+class WLTRecordTest {
     private final WLTRecord model = new WLTRecord();
 
     /**
      * Model tests for WLTRecord
      */
     @Test
-    public void testWLTRecord() {
+    void testWLTRecord() {
         // TODO: test WLTRecord
     }
 
@@ -44,7 +44,7 @@ public class WLTRecordTest {
      * Test the property 'losses'
      */
     @Test
-    public void lossesTest() {
+    void lossesTest() {
         // TODO: test losses
     }
 
@@ -52,7 +52,7 @@ public class WLTRecordTest {
      * Test the property 'wins'
      */
     @Test
-    public void winsTest() {
+    void winsTest() {
         // TODO: test wins
     }
 
@@ -60,7 +60,7 @@ public class WLTRecordTest {
      * Test the property 'ties'
      */
     @Test
-    public void tiesTest() {
+    void tiesTest() {
         // TODO: test ties
     }
 

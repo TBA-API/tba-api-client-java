@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Media
  */
-public class MediaTest {
+class MediaTest {
     private final Media model = new Media();
 
     /**
      * Model tests for Media
      */
     @Test
-    public void testMedia() {
+    void testMedia() {
         // TODO: test Media
     }
 
@@ -44,7 +44,7 @@ public class MediaTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -52,7 +52,7 @@ public class MediaTest {
      * Test the property 'type'
      */
     @Test
-    public void typeTest() {
+    void typeTest() {
         // TODO: test type
     }
 
@@ -60,7 +60,7 @@ public class MediaTest {
      * Test the property 'foreignKey'
      */
     @Test
-    public void foreignKeyTest() {
+    void foreignKeyTest() {
         // TODO: test foreignKey
     }
 
@@ -68,7 +68,7 @@ public class MediaTest {
      * Test the property 'details'
      */
     @Test
-    public void detailsTest() {
+    void detailsTest() {
         // TODO: test details
     }
 
@@ -76,7 +76,7 @@ public class MediaTest {
      * Test the property 'preferred'
      */
     @Test
-    public void preferredTest() {
+    void preferredTest() {
         // TODO: test preferred
     }
 
@@ -84,7 +84,7 @@ public class MediaTest {
      * Test the property 'directUrl'
      */
     @Test
-    public void directUrlTest() {
+    void directUrlTest() {
         // TODO: test directUrl
     }
 
@@ -92,7 +92,7 @@ public class MediaTest {
      * Test the property 'viewUrl'
      */
     @Test
-    public void viewUrlTest() {
+    void viewUrlTest() {
         // TODO: test viewUrl
     }
 

@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchTimeseries2018
  */
-public class MatchTimeseries2018Test {
+class MatchTimeseries2018Test {
     private final MatchTimeseries2018 model = new MatchTimeseries2018();
 
     /**
      * Model tests for MatchTimeseries2018
      */
     @Test
-    public void testMatchTimeseries2018() {
+    void testMatchTimeseries2018() {
         // TODO: test MatchTimeseries2018
     }
 
@@ -44,7 +44,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'eventKey'
      */
     @Test
-    public void eventKeyTest() {
+    void eventKeyTest() {
         // TODO: test eventKey
     }
 
@@ -52,7 +52,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'matchId'
      */
     @Test
-    public void matchIdTest() {
+    void matchIdTest() {
         // TODO: test matchId
     }
 
@@ -60,7 +60,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'mode'
      */
     @Test
-    public void modeTest() {
+    void modeTest() {
         // TODO: test mode
     }
 
@@ -68,7 +68,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'play'
      */
     @Test
-    public void playTest() {
+    void playTest() {
         // TODO: test play
     }
 
@@ -76,7 +76,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'timeRemaining'
      */
     @Test
-    public void timeRemainingTest() {
+    void timeRemainingTest() {
         // TODO: test timeRemaining
     }
 
@@ -84,7 +84,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueAutoQuest'
      */
     @Test
-    public void blueAutoQuestTest() {
+    void blueAutoQuestTest() {
         // TODO: test blueAutoQuest
     }
 
@@ -92,7 +92,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueBoostCount'
      */
     @Test
-    public void blueBoostCountTest() {
+    void blueBoostCountTest() {
         // TODO: test blueBoostCount
     }
 
@@ -100,7 +100,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueBoostPlayed'
      */
     @Test
-    public void blueBoostPlayedTest() {
+    void blueBoostPlayedTest() {
         // TODO: test blueBoostPlayed
     }
 
@@ -108,7 +108,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueCurrentPowerup'
      */
     @Test
-    public void blueCurrentPowerupTest() {
+    void blueCurrentPowerupTest() {
         // TODO: test blueCurrentPowerup
     }
 
@@ -116,7 +116,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueFaceTheBoss'
      */
     @Test
-    public void blueFaceTheBossTest() {
+    void blueFaceTheBossTest() {
         // TODO: test blueFaceTheBoss
     }
 
@@ -124,7 +124,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueForceCount'
      */
     @Test
-    public void blueForceCountTest() {
+    void blueForceCountTest() {
         // TODO: test blueForceCount
     }
 
@@ -132,7 +132,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueForcePlayed'
      */
     @Test
-    public void blueForcePlayedTest() {
+    void blueForcePlayedTest() {
         // TODO: test blueForcePlayed
     }
 
@@ -140,7 +140,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueLevitateCount'
      */
     @Test
-    public void blueLevitateCountTest() {
+    void blueLevitateCountTest() {
         // TODO: test blueLevitateCount
     }
 
@@ -148,7 +148,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueLevitatePlayed'
      */
     @Test
-    public void blueLevitatePlayedTest() {
+    void blueLevitatePlayedTest() {
         // TODO: test blueLevitatePlayed
     }
 
@@ -156,7 +156,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'bluePowerupTimeRemaining'
      */
     @Test
-    public void bluePowerupTimeRemainingTest() {
+    void bluePowerupTimeRemainingTest() {
         // TODO: test bluePowerupTimeRemaining
     }
 
@@ -164,7 +164,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueScaleOwned'
      */
     @Test
-    public void blueScaleOwnedTest() {
+    void blueScaleOwnedTest() {
         // TODO: test blueScaleOwned
     }
 
@@ -172,7 +172,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueScore'
      */
     @Test
-    public void blueScoreTest() {
+    void blueScoreTest() {
         // TODO: test blueScore
     }
 
@@ -180,7 +180,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'blueSwitchOwned'
      */
     @Test
-    public void blueSwitchOwnedTest() {
+    void blueSwitchOwnedTest() {
         // TODO: test blueSwitchOwned
     }
 
@@ -188,7 +188,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redAutoQuest'
      */
     @Test
-    public void redAutoQuestTest() {
+    void redAutoQuestTest() {
         // TODO: test redAutoQuest
     }
 
@@ -196,7 +196,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redBoostCount'
      */
     @Test
-    public void redBoostCountTest() {
+    void redBoostCountTest() {
         // TODO: test redBoostCount
     }
 
@@ -204,7 +204,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redBoostPlayed'
      */
     @Test
-    public void redBoostPlayedTest() {
+    void redBoostPlayedTest() {
         // TODO: test redBoostPlayed
     }
 
@@ -212,7 +212,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redCurrentPowerup'
      */
     @Test
-    public void redCurrentPowerupTest() {
+    void redCurrentPowerupTest() {
         // TODO: test redCurrentPowerup
     }
 
@@ -220,7 +220,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redFaceTheBoss'
      */
     @Test
-    public void redFaceTheBossTest() {
+    void redFaceTheBossTest() {
         // TODO: test redFaceTheBoss
     }
 
@@ -228,7 +228,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redForceCount'
      */
     @Test
-    public void redForceCountTest() {
+    void redForceCountTest() {
         // TODO: test redForceCount
     }
 
@@ -236,7 +236,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redForcePlayed'
      */
     @Test
-    public void redForcePlayedTest() {
+    void redForcePlayedTest() {
         // TODO: test redForcePlayed
     }
 
@@ -244,7 +244,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redLevitateCount'
      */
     @Test
-    public void redLevitateCountTest() {
+    void redLevitateCountTest() {
         // TODO: test redLevitateCount
     }
 
@@ -252,7 +252,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redLevitatePlayed'
      */
     @Test
-    public void redLevitatePlayedTest() {
+    void redLevitatePlayedTest() {
         // TODO: test redLevitatePlayed
     }
 
@@ -260,7 +260,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redPowerupTimeRemaining'
      */
     @Test
-    public void redPowerupTimeRemainingTest() {
+    void redPowerupTimeRemainingTest() {
         // TODO: test redPowerupTimeRemaining
     }
 
@@ -268,7 +268,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redScaleOwned'
      */
     @Test
-    public void redScaleOwnedTest() {
+    void redScaleOwnedTest() {
         // TODO: test redScaleOwned
     }
 
@@ -276,7 +276,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redScore'
      */
     @Test
-    public void redScoreTest() {
+    void redScoreTest() {
         // TODO: test redScore
     }
 
@@ -284,7 +284,7 @@ public class MatchTimeseries2018Test {
      * Test the property 'redSwitchOwned'
      */
     @Test
-    public void redSwitchOwnedTest() {
+    void redSwitchOwnedTest() {
         // TODO: test redSwitchOwned
     }
 

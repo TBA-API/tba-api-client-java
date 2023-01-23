@@ -24,22 +24,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.AwardRecipient;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Award
  */
-public class AwardTest {
+class AwardTest {
     private final Award model = new Award();
 
     /**
      * Model tests for Award
      */
     @Test
-    public void testAward() {
+    void testAward() {
         // TODO: test Award
     }
 
@@ -47,7 +47,7 @@ public class AwardTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -55,7 +55,7 @@ public class AwardTest {
      * Test the property 'awardType'
      */
     @Test
-    public void awardTypeTest() {
+    void awardTypeTest() {
         // TODO: test awardType
     }
 
@@ -63,7 +63,7 @@ public class AwardTest {
      * Test the property 'eventKey'
      */
     @Test
-    public void eventKeyTest() {
+    void eventKeyTest() {
         // TODO: test eventKey
     }
 
@@ -71,7 +71,7 @@ public class AwardTest {
      * Test the property 'recipientList'
      */
     @Test
-    public void recipientListTest() {
+    void recipientListTest() {
         // TODO: test recipientList
     }
 
@@ -79,7 +79,7 @@ public class AwardTest {
      * Test the property 'year'
      */
     @Test
-    public void yearTest() {
+    void yearTest() {
         // TODO: test year
     }
 

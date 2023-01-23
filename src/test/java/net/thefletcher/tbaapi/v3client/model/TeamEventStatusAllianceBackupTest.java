@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamEventStatusAllianceBackup
  */
-public class TeamEventStatusAllianceBackupTest {
+class TeamEventStatusAllianceBackupTest {
     private final TeamEventStatusAllianceBackup model = new TeamEventStatusAllianceBackup();
 
     /**
      * Model tests for TeamEventStatusAllianceBackup
      */
     @Test
-    public void testTeamEventStatusAllianceBackup() {
+    void testTeamEventStatusAllianceBackup() {
         // TODO: test TeamEventStatusAllianceBackup
     }
 
@@ -44,7 +44,7 @@ public class TeamEventStatusAllianceBackupTest {
      * Test the property 'out'
      */
     @Test
-    public void outTest() {
+    void outTest() {
         // TODO: test out
     }
 
@@ -52,7 +52,7 @@ public class TeamEventStatusAllianceBackupTest {
      * Test the property 'in'
      */
     @Test
-    public void inTest() {
+    void inTest() {
         // TODO: test in
     }
 

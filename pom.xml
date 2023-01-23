@@ -66,7 +66,6 @@
                     </systemProperties>
                     <argLine>-Xms512m -Xmx1500m</argLine>
                     <parallel>methods</parallel>
-                    <forkMode>pertest</forkMode>
                     <threadCount>8</threadCount>
                 </configuration>
             </plugin>
@@ -115,7 +114,8 @@
                         <configuration>
                             <sources>
                                 <source>
-                                src/main/java</source>
+                                    src/main/java
+                                </source>
                             </sources>
                         </configuration>
                     </execution>
@@ -128,7 +128,8 @@
                         <configuration>
                             <sources>
                                 <source>
-                                src/test/java</source>
+                                    src/test/java
+                                </source>
                             </sources>
                         </configuration>
                     </execution>
@@ -213,11 +214,11 @@
             <artifactId>gson-fire</artifactId>
             <version>${gson-fire-version}</version>
         </dependency>
-            <dependency>
-                <groupId>org.threeten</groupId>
-                <artifactId>threetenbp</artifactId>
-                <version>${threetenbp-version}</version>
-            </dependency>
+        <dependency>
+            <groupId>org.threeten</groupId>
+            <artifactId>threetenbp</artifactId>
+            <version>${threetenbp-version}</version>
+        </dependency>
 
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
@@ -227,8 +228,8 @@
 
         <!-- test dependencies -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
             <version>${junit-version}</version>
             <scope>test</scope>
         </dependency>
@@ -259,6 +260,6 @@
         <findbugs-version>3.0.2</findbugs-version>
 
         <!-- test dependency versions -->
-        <junit-version>4.12</junit-version>
+        <junit-version>5.9.2</junit-version>
     </properties>
 </project>

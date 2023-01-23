@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2015Alliance
  */
-public class MatchScoreBreakdown2015AllianceTest {
+class MatchScoreBreakdown2015AllianceTest {
     private final MatchScoreBreakdown2015Alliance model = new MatchScoreBreakdown2015Alliance();
 
     /**
      * Model tests for MatchScoreBreakdown2015Alliance
      */
     @Test
-    public void testMatchScoreBreakdown2015Alliance() {
+    void testMatchScoreBreakdown2015Alliance() {
         // TODO: test MatchScoreBreakdown2015Alliance
     }
 
@@ -44,7 +44,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'autoPoints'
      */
     @Test
-    public void autoPointsTest() {
+    void autoPointsTest() {
         // TODO: test autoPoints
     }
 
@@ -52,7 +52,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'teleopPoints'
      */
     @Test
-    public void teleopPointsTest() {
+    void teleopPointsTest() {
         // TODO: test teleopPoints
     }
 
@@ -60,7 +60,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerPoints'
      */
     @Test
-    public void containerPointsTest() {
+    void containerPointsTest() {
         // TODO: test containerPoints
     }
 
@@ -68,7 +68,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'totePoints'
      */
     @Test
-    public void totePointsTest() {
+    void totePointsTest() {
         // TODO: test totePoints
     }
 
@@ -76,7 +76,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'litterPoints'
      */
     @Test
-    public void litterPointsTest() {
+    void litterPointsTest() {
         // TODO: test litterPoints
     }
 
@@ -84,7 +84,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'foulPoints'
      */
     @Test
-    public void foulPointsTest() {
+    void foulPointsTest() {
         // TODO: test foulPoints
     }
 
@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'adjustPoints'
      */
     @Test
-    public void adjustPointsTest() {
+    void adjustPointsTest() {
         // TODO: test adjustPoints
     }
 
@@ -100,7 +100,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'totalPoints'
      */
     @Test
-    public void totalPointsTest() {
+    void totalPointsTest() {
         // TODO: test totalPoints
     }
 
@@ -108,7 +108,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'foulCount'
      */
     @Test
-    public void foulCountTest() {
+    void foulCountTest() {
         // TODO: test foulCount
     }
 
@@ -116,7 +116,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'toteCountFar'
      */
     @Test
-    public void toteCountFarTest() {
+    void toteCountFarTest() {
         // TODO: test toteCountFar
     }
 
@@ -124,7 +124,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'toteCountNear'
      */
     @Test
-    public void toteCountNearTest() {
+    void toteCountNearTest() {
         // TODO: test toteCountNear
     }
 
@@ -132,7 +132,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'toteSet'
      */
     @Test
-    public void toteSetTest() {
+    void toteSetTest() {
         // TODO: test toteSet
     }
 
@@ -140,7 +140,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'toteStack'
      */
     @Test
-    public void toteStackTest() {
+    void toteStackTest() {
         // TODO: test toteStack
     }
 
@@ -148,7 +148,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerCountLevel1'
      */
     @Test
-    public void containerCountLevel1Test() {
+    void containerCountLevel1Test() {
         // TODO: test containerCountLevel1
     }
 
@@ -156,7 +156,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerCountLevel2'
      */
     @Test
-    public void containerCountLevel2Test() {
+    void containerCountLevel2Test() {
         // TODO: test containerCountLevel2
     }
 
@@ -164,7 +164,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerCountLevel3'
      */
     @Test
-    public void containerCountLevel3Test() {
+    void containerCountLevel3Test() {
         // TODO: test containerCountLevel3
     }
 
@@ -172,7 +172,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerCountLevel4'
      */
     @Test
-    public void containerCountLevel4Test() {
+    void containerCountLevel4Test() {
         // TODO: test containerCountLevel4
     }
 
@@ -180,7 +180,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerCountLevel5'
      */
     @Test
-    public void containerCountLevel5Test() {
+    void containerCountLevel5Test() {
         // TODO: test containerCountLevel5
     }
 
@@ -188,7 +188,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerCountLevel6'
      */
     @Test
-    public void containerCountLevel6Test() {
+    void containerCountLevel6Test() {
         // TODO: test containerCountLevel6
     }
 
@@ -196,7 +196,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'containerSet'
      */
     @Test
-    public void containerSetTest() {
+    void containerSetTest() {
         // TODO: test containerSet
     }
 
@@ -204,7 +204,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'litterCountContainer'
      */
     @Test
-    public void litterCountContainerTest() {
+    void litterCountContainerTest() {
         // TODO: test litterCountContainer
     }
 
@@ -212,7 +212,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'litterCountLandfill'
      */
     @Test
-    public void litterCountLandfillTest() {
+    void litterCountLandfillTest() {
         // TODO: test litterCountLandfill
     }
 
@@ -220,7 +220,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'litterCountUnprocessed'
      */
     @Test
-    public void litterCountUnprocessedTest() {
+    void litterCountUnprocessedTest() {
         // TODO: test litterCountUnprocessed
     }
 
@@ -228,7 +228,7 @@ public class MatchScoreBreakdown2015AllianceTest {
      * Test the property 'robotSet'
      */
     @Test
-    public void robotSetTest() {
+    void robotSetTest() {
         // TODO: test robotSet
     }
 
