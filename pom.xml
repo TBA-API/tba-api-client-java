@@ -5,7 +5,7 @@
     <artifactId>tba-api-v3client</artifactId>
     <packaging>jar</packaging>
     <name>tba-api-v3client</name>
-    <version>3.03.1</version>
+    <version>3.04.1</version>
     <url>https://github.com/swagger-api/swagger-codegen</url>
     <description>Swagger Java</description>
     <scm>
