@@ -25,22 +25,22 @@ import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatusRankRanking;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatusRankSortOrderInfo;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamEventStatusRank
  */
-public class TeamEventStatusRankTest {
+class TeamEventStatusRankTest {
     private final TeamEventStatusRank model = new TeamEventStatusRank();
 
     /**
      * Model tests for TeamEventStatusRank
      */
     @Test
-    public void testTeamEventStatusRank() {
+    void testTeamEventStatusRank() {
         // TODO: test TeamEventStatusRank
     }
 
@@ -48,7 +48,7 @@ public class TeamEventStatusRankTest {
      * Test the property 'numTeams'
      */
     @Test
-    public void numTeamsTest() {
+    void numTeamsTest() {
         // TODO: test numTeams
     }
 
@@ -56,7 +56,7 @@ public class TeamEventStatusRankTest {
      * Test the property 'ranking'
      */
     @Test
-    public void rankingTest() {
+    void rankingTest() {
         // TODO: test ranking
     }
 
@@ -64,7 +64,7 @@ public class TeamEventStatusRankTest {
      * Test the property 'sortOrderInfo'
      */
     @Test
-    public void sortOrderInfoTest() {
+    void sortOrderInfoTest() {
         // TODO: test sortOrderInfo
     }
 
@@ -72,7 +72,7 @@ public class TeamEventStatusRankTest {
      * Test the property 'status'
      */
     @Test
-    public void statusTest() {
+    void statusTest() {
         // TODO: test status
     }
 

@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EliminationAllianceBackup
  */
-public class EliminationAllianceBackupTest {
+class EliminationAllianceBackupTest {
     private final EliminationAllianceBackup model = new EliminationAllianceBackup();
 
     /**
      * Model tests for EliminationAllianceBackup
      */
     @Test
-    public void testEliminationAllianceBackup() {
+    void testEliminationAllianceBackup() {
         // TODO: test EliminationAllianceBackup
     }
 
@@ -44,7 +44,7 @@ public class EliminationAllianceBackupTest {
      * Test the property 'in'
      */
     @Test
-    public void inTest() {
+    void inTest() {
         // TODO: test in
     }
 
@@ -52,7 +52,7 @@ public class EliminationAllianceBackupTest {
      * Test the property 'out'
      */
     @Test
-    public void outTest() {
+    void outTest() {
         // TODO: test out
     }
 

@@ -24,22 +24,22 @@ import java.io.IOException;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatusAlliance;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatusPlayoff;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatusRank;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamEventStatus
  */
-public class TeamEventStatusTest {
+class TeamEventStatusTest {
     private final TeamEventStatus model = new TeamEventStatus();
 
     /**
      * Model tests for TeamEventStatus
      */
     @Test
-    public void testTeamEventStatus() {
+    void testTeamEventStatus() {
         // TODO: test TeamEventStatus
     }
 
@@ -47,7 +47,7 @@ public class TeamEventStatusTest {
      * Test the property 'qual'
      */
     @Test
-    public void qualTest() {
+    void qualTest() {
         // TODO: test qual
     }
 
@@ -55,7 +55,7 @@ public class TeamEventStatusTest {
      * Test the property 'alliance'
      */
     @Test
-    public void allianceTest() {
+    void allianceTest() {
         // TODO: test alliance
     }
 
@@ -63,7 +63,7 @@ public class TeamEventStatusTest {
      * Test the property 'playoff'
      */
     @Test
-    public void playoffTest() {
+    void playoffTest() {
         // TODO: test playoff
     }
 
@@ -71,7 +71,7 @@ public class TeamEventStatusTest {
      * Test the property 'allianceStatusStr'
      */
     @Test
-    public void allianceStatusStrTest() {
+    void allianceStatusStrTest() {
         // TODO: test allianceStatusStr
     }
 
@@ -79,7 +79,7 @@ public class TeamEventStatusTest {
      * Test the property 'playoffStatusStr'
      */
     @Test
-    public void playoffStatusStrTest() {
+    void playoffStatusStrTest() {
         // TODO: test playoffStatusStr
     }
 
@@ -87,7 +87,7 @@ public class TeamEventStatusTest {
      * Test the property 'overallStatusStr'
      */
     @Test
-    public void overallStatusStrTest() {
+    void overallStatusStrTest() {
         // TODO: test overallStatusStr
     }
 
@@ -95,7 +95,7 @@ public class TeamEventStatusTest {
      * Test the property 'nextMatchKey'
      */
     @Test
-    public void nextMatchKeyTest() {
+    void nextMatchKeyTest() {
         // TODO: test nextMatchKey
     }
 
@@ -103,7 +103,7 @@ public class TeamEventStatusTest {
      * Test the property 'lastMatchKey'
      */
     @Test
-    public void lastMatchKeyTest() {
+    void lastMatchKeyTest() {
         // TODO: test lastMatchKey
     }
 

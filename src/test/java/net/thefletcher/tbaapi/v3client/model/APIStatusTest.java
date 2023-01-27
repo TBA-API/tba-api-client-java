@@ -24,22 +24,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.APIStatusAppVersion;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for APIStatus
  */
-public class APIStatusTest {
+class APIStatusTest {
     private final APIStatus model = new APIStatus();
 
     /**
      * Model tests for APIStatus
      */
     @Test
-    public void testAPIStatus() {
+    void testAPIStatus() {
         // TODO: test APIStatus
     }
 
@@ -47,7 +47,7 @@ public class APIStatusTest {
      * Test the property 'currentSeason'
      */
     @Test
-    public void currentSeasonTest() {
+    void currentSeasonTest() {
         // TODO: test currentSeason
     }
 
@@ -55,7 +55,7 @@ public class APIStatusTest {
      * Test the property 'maxSeason'
      */
     @Test
-    public void maxSeasonTest() {
+    void maxSeasonTest() {
         // TODO: test maxSeason
     }
 
@@ -63,7 +63,7 @@ public class APIStatusTest {
      * Test the property 'isDatafeedDown'
      */
     @Test
-    public void isDatafeedDownTest() {
+    void isDatafeedDownTest() {
         // TODO: test isDatafeedDown
     }
 
@@ -71,7 +71,7 @@ public class APIStatusTest {
      * Test the property 'downEvents'
      */
     @Test
-    public void downEventsTest() {
+    void downEventsTest() {
         // TODO: test downEvents
     }
 
@@ -79,7 +79,7 @@ public class APIStatusTest {
      * Test the property 'ios'
      */
     @Test
-    public void iosTest() {
+    void iosTest() {
         // TODO: test ios
     }
 
@@ -87,7 +87,7 @@ public class APIStatusTest {
      * Test the property 'android'
      */
     @Test
-    public void androidTest() {
+    void androidTest() {
         // TODO: test android
     }
 

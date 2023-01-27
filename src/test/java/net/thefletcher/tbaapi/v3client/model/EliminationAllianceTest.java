@@ -25,22 +25,22 @@ import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.EliminationAllianceBackup;
 import net.thefletcher.tbaapi.v3client.model.EliminationAllianceStatus;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EliminationAlliance
  */
-public class EliminationAllianceTest {
+class EliminationAllianceTest {
     private final EliminationAlliance model = new EliminationAlliance();
 
     /**
      * Model tests for EliminationAlliance
      */
     @Test
-    public void testEliminationAlliance() {
+    void testEliminationAlliance() {
         // TODO: test EliminationAlliance
     }
 
@@ -48,7 +48,7 @@ public class EliminationAllianceTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -56,7 +56,7 @@ public class EliminationAllianceTest {
      * Test the property 'backup'
      */
     @Test
-    public void backupTest() {
+    void backupTest() {
         // TODO: test backup
     }
 
@@ -64,7 +64,7 @@ public class EliminationAllianceTest {
      * Test the property 'declines'
      */
     @Test
-    public void declinesTest() {
+    void declinesTest() {
         // TODO: test declines
     }
 
@@ -72,7 +72,7 @@ public class EliminationAllianceTest {
      * Test the property 'picks'
      */
     @Test
-    public void picksTest() {
+    void picksTest() {
         // TODO: test picks
     }
 
@@ -80,7 +80,7 @@ public class EliminationAllianceTest {
      * Test the property 'status'
      */
     @Test
-    public void statusTest() {
+    void statusTest() {
         // TODO: test status
     }
 

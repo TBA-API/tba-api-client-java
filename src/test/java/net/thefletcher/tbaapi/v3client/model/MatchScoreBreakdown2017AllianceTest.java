@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2017Alliance
  */
-public class MatchScoreBreakdown2017AllianceTest {
+class MatchScoreBreakdown2017AllianceTest {
     private final MatchScoreBreakdown2017Alliance model = new MatchScoreBreakdown2017Alliance();
 
     /**
      * Model tests for MatchScoreBreakdown2017Alliance
      */
     @Test
-    public void testMatchScoreBreakdown2017Alliance() {
+    void testMatchScoreBreakdown2017Alliance() {
         // TODO: test MatchScoreBreakdown2017Alliance
     }
 
@@ -44,7 +44,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'autoPoints'
      */
     @Test
-    public void autoPointsTest() {
+    void autoPointsTest() {
         // TODO: test autoPoints
     }
 
@@ -52,7 +52,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'teleopPoints'
      */
     @Test
-    public void teleopPointsTest() {
+    void teleopPointsTest() {
         // TODO: test teleopPoints
     }
 
@@ -60,7 +60,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'foulPoints'
      */
     @Test
-    public void foulPointsTest() {
+    void foulPointsTest() {
         // TODO: test foulPoints
     }
 
@@ -68,7 +68,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'adjustPoints'
      */
     @Test
-    public void adjustPointsTest() {
+    void adjustPointsTest() {
         // TODO: test adjustPoints
     }
 
@@ -76,7 +76,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'totalPoints'
      */
     @Test
-    public void totalPointsTest() {
+    void totalPointsTest() {
         // TODO: test totalPoints
     }
 
@@ -84,7 +84,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'robot1Auto'
      */
     @Test
-    public void robot1AutoTest() {
+    void robot1AutoTest() {
         // TODO: test robot1Auto
     }
 
@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'robot2Auto'
      */
     @Test
-    public void robot2AutoTest() {
+    void robot2AutoTest() {
         // TODO: test robot2Auto
     }
 
@@ -100,7 +100,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'robot3Auto'
      */
     @Test
-    public void robot3AutoTest() {
+    void robot3AutoTest() {
         // TODO: test robot3Auto
     }
 
@@ -108,7 +108,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotor1Auto'
      */
     @Test
-    public void rotor1AutoTest() {
+    void rotor1AutoTest() {
         // TODO: test rotor1Auto
     }
 
@@ -116,7 +116,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotor2Auto'
      */
     @Test
-    public void rotor2AutoTest() {
+    void rotor2AutoTest() {
         // TODO: test rotor2Auto
     }
 
@@ -124,7 +124,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'autoFuelLow'
      */
     @Test
-    public void autoFuelLowTest() {
+    void autoFuelLowTest() {
         // TODO: test autoFuelLow
     }
 
@@ -132,7 +132,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'autoFuelHigh'
      */
     @Test
-    public void autoFuelHighTest() {
+    void autoFuelHighTest() {
         // TODO: test autoFuelHigh
     }
 
@@ -140,7 +140,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'autoMobilityPoints'
      */
     @Test
-    public void autoMobilityPointsTest() {
+    void autoMobilityPointsTest() {
         // TODO: test autoMobilityPoints
     }
 
@@ -148,7 +148,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'autoRotorPoints'
      */
     @Test
-    public void autoRotorPointsTest() {
+    void autoRotorPointsTest() {
         // TODO: test autoRotorPoints
     }
 
@@ -156,7 +156,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'autoFuelPoints'
      */
     @Test
-    public void autoFuelPointsTest() {
+    void autoFuelPointsTest() {
         // TODO: test autoFuelPoints
     }
 
@@ -164,7 +164,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'teleopFuelPoints'
      */
     @Test
-    public void teleopFuelPointsTest() {
+    void teleopFuelPointsTest() {
         // TODO: test teleopFuelPoints
     }
 
@@ -172,7 +172,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'teleopFuelLow'
      */
     @Test
-    public void teleopFuelLowTest() {
+    void teleopFuelLowTest() {
         // TODO: test teleopFuelLow
     }
 
@@ -180,7 +180,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'teleopFuelHigh'
      */
     @Test
-    public void teleopFuelHighTest() {
+    void teleopFuelHighTest() {
         // TODO: test teleopFuelHigh
     }
 
@@ -188,7 +188,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'teleopRotorPoints'
      */
     @Test
-    public void teleopRotorPointsTest() {
+    void teleopRotorPointsTest() {
         // TODO: test teleopRotorPoints
     }
 
@@ -196,7 +196,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'kPaRankingPointAchieved'
      */
     @Test
-    public void kPaRankingPointAchievedTest() {
+    void kPaRankingPointAchievedTest() {
         // TODO: test kPaRankingPointAchieved
     }
 
@@ -204,7 +204,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'teleopTakeoffPoints'
      */
     @Test
-    public void teleopTakeoffPointsTest() {
+    void teleopTakeoffPointsTest() {
         // TODO: test teleopTakeoffPoints
     }
 
@@ -212,7 +212,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'kPaBonusPoints'
      */
     @Test
-    public void kPaBonusPointsTest() {
+    void kPaBonusPointsTest() {
         // TODO: test kPaBonusPoints
     }
 
@@ -220,7 +220,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotorBonusPoints'
      */
     @Test
-    public void rotorBonusPointsTest() {
+    void rotorBonusPointsTest() {
         // TODO: test rotorBonusPoints
     }
 
@@ -228,7 +228,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotor1Engaged'
      */
     @Test
-    public void rotor1EngagedTest() {
+    void rotor1EngagedTest() {
         // TODO: test rotor1Engaged
     }
 
@@ -236,7 +236,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotor2Engaged'
      */
     @Test
-    public void rotor2EngagedTest() {
+    void rotor2EngagedTest() {
         // TODO: test rotor2Engaged
     }
 
@@ -244,7 +244,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotor3Engaged'
      */
     @Test
-    public void rotor3EngagedTest() {
+    void rotor3EngagedTest() {
         // TODO: test rotor3Engaged
     }
 
@@ -252,7 +252,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotor4Engaged'
      */
     @Test
-    public void rotor4EngagedTest() {
+    void rotor4EngagedTest() {
         // TODO: test rotor4Engaged
     }
 
@@ -260,7 +260,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'rotorRankingPointAchieved'
      */
     @Test
-    public void rotorRankingPointAchievedTest() {
+    void rotorRankingPointAchievedTest() {
         // TODO: test rotorRankingPointAchieved
     }
 
@@ -268,7 +268,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'techFoulCount'
      */
     @Test
-    public void techFoulCountTest() {
+    void techFoulCountTest() {
         // TODO: test techFoulCount
     }
 
@@ -276,7 +276,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'foulCount'
      */
     @Test
-    public void foulCountTest() {
+    void foulCountTest() {
         // TODO: test foulCount
     }
 
@@ -284,7 +284,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'touchpadNear'
      */
     @Test
-    public void touchpadNearTest() {
+    void touchpadNearTest() {
         // TODO: test touchpadNear
     }
 
@@ -292,7 +292,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'touchpadMiddle'
      */
     @Test
-    public void touchpadMiddleTest() {
+    void touchpadMiddleTest() {
         // TODO: test touchpadMiddle
     }
 
@@ -300,7 +300,7 @@ public class MatchScoreBreakdown2017AllianceTest {
      * Test the property 'touchpadFar'
      */
     @Test
-    public void touchpadFarTest() {
+    void touchpadFarTest() {
         // TODO: test touchpadFar
     }
 

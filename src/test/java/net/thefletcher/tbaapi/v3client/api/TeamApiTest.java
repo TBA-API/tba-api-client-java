@@ -26,8 +26,8 @@ import net.thefletcher.tbaapi.v3client.model.Team;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatus;
 import net.thefletcher.tbaapi.v3client.model.TeamRobot;
 import net.thefletcher.tbaapi.v3client.model.TeamSimple;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,8 +37,8 @@ import java.util.Map;
 /**
  * API tests for TeamApi
  */
-@Ignore
-public class TeamApiTest {
+@Disabled
+class TeamApiTest {
 
     private final TeamApi api = new TeamApi();
 
@@ -52,7 +52,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictRankingsTest() throws ApiException {
+    void getDistrictRankingsTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<DistrictRanking> response = api.getDistrictRankings(districtKey, ifModifiedSince);
@@ -69,7 +69,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsTest() throws ApiException {
+    void getDistrictTeamsTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Team> response = api.getDistrictTeams(districtKey, ifModifiedSince);
@@ -86,7 +86,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsKeysTest() throws ApiException {
+    void getDistrictTeamsKeysTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictTeamsKeys(districtKey, ifModifiedSince);
@@ -103,7 +103,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsSimpleTest() throws ApiException {
+    void getDistrictTeamsSimpleTest() throws ApiException {
         String districtKey = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getDistrictTeamsSimple(districtKey, ifModifiedSince);
@@ -120,7 +120,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsTest() throws ApiException {
+    void getEventTeamsTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<Team> response = api.getEventTeams(eventKey, ifModifiedSince);
@@ -137,7 +137,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsKeysTest() throws ApiException {
+    void getEventTeamsKeysTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventTeamsKeys(eventKey, ifModifiedSince);
@@ -154,7 +154,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsSimpleTest() throws ApiException {
+    void getEventTeamsSimpleTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getEventTeamsSimple(eventKey, ifModifiedSince);
@@ -171,7 +171,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsStatusesTest() throws ApiException {
+    void getEventTeamsStatusesTest() throws ApiException {
         String eventKey = null;
         String ifModifiedSince = null;
         Map<String, TeamEventStatus> response = api.getEventTeamsStatuses(eventKey, ifModifiedSince);
@@ -188,7 +188,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamTest() throws ApiException {
+    void getTeamTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         Team response = api.getTeam(teamKey, ifModifiedSince);
@@ -205,7 +205,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamAwardsTest() throws ApiException {
+    void getTeamAwardsTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<Award> response = api.getTeamAwards(teamKey, ifModifiedSince);
@@ -222,7 +222,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamAwardsByYearTest() throws ApiException {
+    void getTeamAwardsByYearTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -240,7 +240,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamDistrictsTest() throws ApiException {
+    void getTeamDistrictsTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<DistrictList> response = api.getTeamDistricts(teamKey, ifModifiedSince);
@@ -257,7 +257,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventAwardsTest() throws ApiException {
+    void getTeamEventAwardsTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -275,7 +275,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesTest() throws ApiException {
+    void getTeamEventMatchesTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -293,7 +293,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesKeysTest() throws ApiException {
+    void getTeamEventMatchesKeysTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -311,7 +311,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesSimpleTest() throws ApiException {
+    void getTeamEventMatchesSimpleTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -329,7 +329,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventStatusTest() throws ApiException {
+    void getTeamEventStatusTest() throws ApiException {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -347,7 +347,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsTest() throws ApiException {
+    void getTeamEventsTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<Event> response = api.getTeamEvents(teamKey, ifModifiedSince);
@@ -364,7 +364,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsByYearTest() throws ApiException {
+    void getTeamEventsByYearTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -382,7 +382,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsByYearKeysTest() throws ApiException {
+    void getTeamEventsByYearKeysTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -400,7 +400,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsByYearSimpleTest() throws ApiException {
+    void getTeamEventsByYearSimpleTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -418,7 +418,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsKeysTest() throws ApiException {
+    void getTeamEventsKeysTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getTeamEventsKeys(teamKey, ifModifiedSince);
@@ -435,7 +435,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsSimpleTest() throws ApiException {
+    void getTeamEventsSimpleTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<EventSimple> response = api.getTeamEventsSimple(teamKey, ifModifiedSince);
@@ -452,7 +452,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsStatusesByYearTest() throws ApiException {
+    void getTeamEventsStatusesByYearTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -470,7 +470,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearTest() throws ApiException {
+    void getTeamMatchesByYearTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -488,7 +488,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearKeysTest() throws ApiException {
+    void getTeamMatchesByYearKeysTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -506,7 +506,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearSimpleTest() throws ApiException {
+    void getTeamMatchesByYearSimpleTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -524,7 +524,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMediaByTagTest() throws ApiException {
+    void getTeamMediaByTagTest() throws ApiException {
         String teamKey = null;
         String mediaTag = null;
         String ifModifiedSince = null;
@@ -542,7 +542,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMediaByTagYearTest() throws ApiException {
+    void getTeamMediaByTagYearTest() throws ApiException {
         String teamKey = null;
         String mediaTag = null;
         Integer year = null;
@@ -561,7 +561,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamMediaByYearTest() throws ApiException {
+    void getTeamMediaByYearTest() throws ApiException {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -579,7 +579,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamRobotsTest() throws ApiException {
+    void getTeamRobotsTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<TeamRobot> response = api.getTeamRobots(teamKey, ifModifiedSince);
@@ -596,7 +596,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamSimpleTest() throws ApiException {
+    void getTeamSimpleTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         TeamSimple response = api.getTeamSimple(teamKey, ifModifiedSince);
@@ -613,7 +613,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamSocialMediaTest() throws ApiException {
+    void getTeamSocialMediaTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<Media> response = api.getTeamSocialMedia(teamKey, ifModifiedSince);
@@ -630,7 +630,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamYearsParticipatedTest() throws ApiException {
+    void getTeamYearsParticipatedTest() throws ApiException {
         String teamKey = null;
         String ifModifiedSince = null;
         List<Integer> response = api.getTeamYearsParticipated(teamKey, ifModifiedSince);
@@ -647,7 +647,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamsTest() throws ApiException {
+    void getTeamsTest() throws ApiException {
         Integer pageNum = null;
         String ifModifiedSince = null;
         List<Team> response = api.getTeams(pageNum, ifModifiedSince);
@@ -664,7 +664,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamsByYearTest() throws ApiException {
+    void getTeamsByYearTest() throws ApiException {
         Integer year = null;
         Integer pageNum = null;
         String ifModifiedSince = null;
@@ -682,7 +682,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamsByYearKeysTest() throws ApiException {
+    void getTeamsByYearKeysTest() throws ApiException {
         Integer year = null;
         Integer pageNum = null;
         String ifModifiedSince = null;
@@ -700,7 +700,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamsByYearSimpleTest() throws ApiException {
+    void getTeamsByYearSimpleTest() throws ApiException {
         Integer year = null;
         Integer pageNum = null;
         String ifModifiedSince = null;
@@ -718,7 +718,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamsKeysTest() throws ApiException {
+    void getTeamsKeysTest() throws ApiException {
         Integer pageNum = null;
         String ifModifiedSince = null;
         List<String> response = api.getTeamsKeys(pageNum, ifModifiedSince);
@@ -735,7 +735,7 @@ public class TeamApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getTeamsSimpleTest() throws ApiException {
+    void getTeamsSimpleTest() throws ApiException {
         Integer pageNum = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getTeamsSimple(pageNum, ifModifiedSince);

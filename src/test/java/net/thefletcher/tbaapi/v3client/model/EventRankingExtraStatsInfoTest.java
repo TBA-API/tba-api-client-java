@@ -22,22 +22,22 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventRankingExtraStatsInfo
  */
-public class EventRankingExtraStatsInfoTest {
+class EventRankingExtraStatsInfoTest {
     private final EventRankingExtraStatsInfo model = new EventRankingExtraStatsInfo();
 
     /**
      * Model tests for EventRankingExtraStatsInfo
      */
     @Test
-    public void testEventRankingExtraStatsInfo() {
+    void testEventRankingExtraStatsInfo() {
         // TODO: test EventRankingExtraStatsInfo
     }
 
@@ -45,7 +45,7 @@ public class EventRankingExtraStatsInfoTest {
      * Test the property 'precision'
      */
     @Test
-    public void precisionTest() {
+    void precisionTest() {
         // TODO: test precision
     }
 
@@ -53,7 +53,7 @@ public class EventRankingExtraStatsInfoTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 

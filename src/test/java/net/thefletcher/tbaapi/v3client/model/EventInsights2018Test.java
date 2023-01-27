@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventInsights2018
  */
-public class EventInsights2018Test {
+class EventInsights2018Test {
     private final EventInsights2018 model = new EventInsights2018();
 
     /**
      * Model tests for EventInsights2018
      */
     @Test
-    public void testEventInsights2018() {
+    void testEventInsights2018() {
         // TODO: test EventInsights2018
     }
 
@@ -46,7 +46,7 @@ public class EventInsights2018Test {
      * Test the property 'autoQuestAchieved'
      */
     @Test
-    public void autoQuestAchievedTest() {
+    void autoQuestAchievedTest() {
         // TODO: test autoQuestAchieved
     }
 
@@ -54,7 +54,7 @@ public class EventInsights2018Test {
      * Test the property 'averageBoostPlayed'
      */
     @Test
-    public void averageBoostPlayedTest() {
+    void averageBoostPlayedTest() {
         // TODO: test averageBoostPlayed
     }
 
@@ -62,7 +62,7 @@ public class EventInsights2018Test {
      * Test the property 'averageEndgamePoints'
      */
     @Test
-    public void averageEndgamePointsTest() {
+    void averageEndgamePointsTest() {
         // TODO: test averageEndgamePoints
     }
 
@@ -70,7 +70,7 @@ public class EventInsights2018Test {
      * Test the property 'averageForcePlayed'
      */
     @Test
-    public void averageForcePlayedTest() {
+    void averageForcePlayedTest() {
         // TODO: test averageForcePlayed
     }
 
@@ -78,7 +78,7 @@ public class EventInsights2018Test {
      * Test the property 'averageFoulScore'
      */
     @Test
-    public void averageFoulScoreTest() {
+    void averageFoulScoreTest() {
         // TODO: test averageFoulScore
     }
 
@@ -86,7 +86,7 @@ public class EventInsights2018Test {
      * Test the property 'averagePointsAuto'
      */
     @Test
-    public void averagePointsAutoTest() {
+    void averagePointsAutoTest() {
         // TODO: test averagePointsAuto
     }
 
@@ -94,7 +94,7 @@ public class EventInsights2018Test {
      * Test the property 'averagePointsTeleop'
      */
     @Test
-    public void averagePointsTeleopTest() {
+    void averagePointsTeleopTest() {
         // TODO: test averagePointsTeleop
     }
 
@@ -102,7 +102,7 @@ public class EventInsights2018Test {
      * Test the property 'averageRunPointsAuto'
      */
     @Test
-    public void averageRunPointsAutoTest() {
+    void averageRunPointsAutoTest() {
         // TODO: test averageRunPointsAuto
     }
 
@@ -110,7 +110,7 @@ public class EventInsights2018Test {
      * Test the property 'averageScaleOwnershipPoints'
      */
     @Test
-    public void averageScaleOwnershipPointsTest() {
+    void averageScaleOwnershipPointsTest() {
         // TODO: test averageScaleOwnershipPoints
     }
 
@@ -118,7 +118,7 @@ public class EventInsights2018Test {
      * Test the property 'averageScaleOwnershipPointsAuto'
      */
     @Test
-    public void averageScaleOwnershipPointsAutoTest() {
+    void averageScaleOwnershipPointsAutoTest() {
         // TODO: test averageScaleOwnershipPointsAuto
     }
 
@@ -126,7 +126,7 @@ public class EventInsights2018Test {
      * Test the property 'averageScaleOwnershipPointsTeleop'
      */
     @Test
-    public void averageScaleOwnershipPointsTeleopTest() {
+    void averageScaleOwnershipPointsTeleopTest() {
         // TODO: test averageScaleOwnershipPointsTeleop
     }
 
@@ -134,7 +134,7 @@ public class EventInsights2018Test {
      * Test the property 'averageScore'
      */
     @Test
-    public void averageScoreTest() {
+    void averageScoreTest() {
         // TODO: test averageScore
     }
 
@@ -142,7 +142,7 @@ public class EventInsights2018Test {
      * Test the property 'averageSwitchOwnershipPoints'
      */
     @Test
-    public void averageSwitchOwnershipPointsTest() {
+    void averageSwitchOwnershipPointsTest() {
         // TODO: test averageSwitchOwnershipPoints
     }
 
@@ -150,7 +150,7 @@ public class EventInsights2018Test {
      * Test the property 'averageSwitchOwnershipPointsAuto'
      */
     @Test
-    public void averageSwitchOwnershipPointsAutoTest() {
+    void averageSwitchOwnershipPointsAutoTest() {
         // TODO: test averageSwitchOwnershipPointsAuto
     }
 
@@ -158,7 +158,7 @@ public class EventInsights2018Test {
      * Test the property 'averageSwitchOwnershipPointsTeleop'
      */
     @Test
-    public void averageSwitchOwnershipPointsTeleopTest() {
+    void averageSwitchOwnershipPointsTeleopTest() {
         // TODO: test averageSwitchOwnershipPointsTeleop
     }
 
@@ -166,7 +166,7 @@ public class EventInsights2018Test {
      * Test the property 'averageVaultPoints'
      */
     @Test
-    public void averageVaultPointsTest() {
+    void averageVaultPointsTest() {
         // TODO: test averageVaultPoints
     }
 
@@ -174,7 +174,7 @@ public class EventInsights2018Test {
      * Test the property 'averageWinMargin'
      */
     @Test
-    public void averageWinMarginTest() {
+    void averageWinMarginTest() {
         // TODO: test averageWinMargin
     }
 
@@ -182,7 +182,7 @@ public class EventInsights2018Test {
      * Test the property 'averageWinScore'
      */
     @Test
-    public void averageWinScoreTest() {
+    void averageWinScoreTest() {
         // TODO: test averageWinScore
     }
 
@@ -190,7 +190,7 @@ public class EventInsights2018Test {
      * Test the property 'boostPlayedCounts'
      */
     @Test
-    public void boostPlayedCountsTest() {
+    void boostPlayedCountsTest() {
         // TODO: test boostPlayedCounts
     }
 
@@ -198,7 +198,7 @@ public class EventInsights2018Test {
      * Test the property 'climbCounts'
      */
     @Test
-    public void climbCountsTest() {
+    void climbCountsTest() {
         // TODO: test climbCounts
     }
 
@@ -206,7 +206,7 @@ public class EventInsights2018Test {
      * Test the property 'faceTheBossAchieved'
      */
     @Test
-    public void faceTheBossAchievedTest() {
+    void faceTheBossAchievedTest() {
         // TODO: test faceTheBossAchieved
     }
 
@@ -214,7 +214,7 @@ public class EventInsights2018Test {
      * Test the property 'forcePlayedCounts'
      */
     @Test
-    public void forcePlayedCountsTest() {
+    void forcePlayedCountsTest() {
         // TODO: test forcePlayedCounts
     }
 
@@ -222,7 +222,7 @@ public class EventInsights2018Test {
      * Test the property 'highScore'
      */
     @Test
-    public void highScoreTest() {
+    void highScoreTest() {
         // TODO: test highScore
     }
 
@@ -230,7 +230,7 @@ public class EventInsights2018Test {
      * Test the property 'levitatePlayedCounts'
      */
     @Test
-    public void levitatePlayedCountsTest() {
+    void levitatePlayedCountsTest() {
         // TODO: test levitatePlayedCounts
     }
 
@@ -238,7 +238,7 @@ public class EventInsights2018Test {
      * Test the property 'runCountsAuto'
      */
     @Test
-    public void runCountsAutoTest() {
+    void runCountsAutoTest() {
         // TODO: test runCountsAuto
     }
 
@@ -246,7 +246,7 @@ public class EventInsights2018Test {
      * Test the property 'scaleNeutralPercentage'
      */
     @Test
-    public void scaleNeutralPercentageTest() {
+    void scaleNeutralPercentageTest() {
         // TODO: test scaleNeutralPercentage
     }
 
@@ -254,7 +254,7 @@ public class EventInsights2018Test {
      * Test the property 'scaleNeutralPercentageAuto'
      */
     @Test
-    public void scaleNeutralPercentageAutoTest() {
+    void scaleNeutralPercentageAutoTest() {
         // TODO: test scaleNeutralPercentageAuto
     }
 
@@ -262,7 +262,7 @@ public class EventInsights2018Test {
      * Test the property 'scaleNeutralPercentageTeleop'
      */
     @Test
-    public void scaleNeutralPercentageTeleopTest() {
+    void scaleNeutralPercentageTeleopTest() {
         // TODO: test scaleNeutralPercentageTeleop
     }
 
@@ -270,7 +270,7 @@ public class EventInsights2018Test {
      * Test the property 'switchOwnedCountsAuto'
      */
     @Test
-    public void switchOwnedCountsAutoTest() {
+    void switchOwnedCountsAutoTest() {
         // TODO: test switchOwnedCountsAuto
     }
 
@@ -278,7 +278,7 @@ public class EventInsights2018Test {
      * Test the property 'unicornMatches'
      */
     @Test
-    public void unicornMatchesTest() {
+    void unicornMatchesTest() {
         // TODO: test unicornMatches
     }
 
@@ -286,7 +286,7 @@ public class EventInsights2018Test {
      * Test the property 'winningOppSwitchDenialPercentageTeleop'
      */
     @Test
-    public void winningOppSwitchDenialPercentageTeleopTest() {
+    void winningOppSwitchDenialPercentageTeleopTest() {
         // TODO: test winningOppSwitchDenialPercentageTeleop
     }
 
@@ -294,7 +294,7 @@ public class EventInsights2018Test {
      * Test the property 'winningOwnSwitchOwnershipPercentage'
      */
     @Test
-    public void winningOwnSwitchOwnershipPercentageTest() {
+    void winningOwnSwitchOwnershipPercentageTest() {
         // TODO: test winningOwnSwitchOwnershipPercentage
     }
 
@@ -302,7 +302,7 @@ public class EventInsights2018Test {
      * Test the property 'winningOwnSwitchOwnershipPercentageAuto'
      */
     @Test
-    public void winningOwnSwitchOwnershipPercentageAutoTest() {
+    void winningOwnSwitchOwnershipPercentageAutoTest() {
         // TODO: test winningOwnSwitchOwnershipPercentageAuto
     }
 
@@ -310,7 +310,7 @@ public class EventInsights2018Test {
      * Test the property 'winningOwnSwitchOwnershipPercentageTeleop'
      */
     @Test
-    public void winningOwnSwitchOwnershipPercentageTeleopTest() {
+    void winningOwnSwitchOwnershipPercentageTeleopTest() {
         // TODO: test winningOwnSwitchOwnershipPercentageTeleop
     }
 
@@ -318,7 +318,7 @@ public class EventInsights2018Test {
      * Test the property 'winningScaleOwnershipPercentage'
      */
     @Test
-    public void winningScaleOwnershipPercentageTest() {
+    void winningScaleOwnershipPercentageTest() {
         // TODO: test winningScaleOwnershipPercentage
     }
 
@@ -326,7 +326,7 @@ public class EventInsights2018Test {
      * Test the property 'winningScaleOwnershipPercentageAuto'
      */
     @Test
-    public void winningScaleOwnershipPercentageAutoTest() {
+    void winningScaleOwnershipPercentageAutoTest() {
         // TODO: test winningScaleOwnershipPercentageAuto
     }
 
@@ -334,7 +334,7 @@ public class EventInsights2018Test {
      * Test the property 'winningScaleOwnershipPercentageTeleop'
      */
     @Test
-    public void winningScaleOwnershipPercentageTeleopTest() {
+    void winningScaleOwnershipPercentageTeleopTest() {
         // TODO: test winningScaleOwnershipPercentageTeleop
     }
 

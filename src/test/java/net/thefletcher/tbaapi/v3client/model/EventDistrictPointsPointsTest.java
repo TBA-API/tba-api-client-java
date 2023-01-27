@@ -21,22 +21,20 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventDistrictPointsPoints
  */
-public class EventDistrictPointsPointsTest {
+class EventDistrictPointsPointsTest {
     private final EventDistrictPointsPoints model = new EventDistrictPointsPoints();
 
     /**
      * Model tests for EventDistrictPointsPoints
      */
     @Test
-    public void testEventDistrictPointsPoints() {
+    void testEventDistrictPointsPoints() {
         // TODO: test EventDistrictPointsPoints
     }
 
@@ -44,7 +42,7 @@ public class EventDistrictPointsPointsTest {
      * Test the property 'total'
      */
     @Test
-    public void totalTest() {
+    void totalTest() {
         // TODO: test total
     }
 
@@ -52,7 +50,7 @@ public class EventDistrictPointsPointsTest {
      * Test the property 'alliancePoints'
      */
     @Test
-    public void alliancePointsTest() {
+    void alliancePointsTest() {
         // TODO: test alliancePoints
     }
 
@@ -60,7 +58,7 @@ public class EventDistrictPointsPointsTest {
      * Test the property 'elimPoints'
      */
     @Test
-    public void elimPointsTest() {
+    void elimPointsTest() {
         // TODO: test elimPoints
     }
 
@@ -68,7 +66,7 @@ public class EventDistrictPointsPointsTest {
      * Test the property 'awardPoints'
      */
     @Test
-    public void awardPointsTest() {
+    void awardPointsTest() {
         // TODO: test awardPoints
     }
 
@@ -76,7 +74,7 @@ public class EventDistrictPointsPointsTest {
      * Test the property 'qualPoints'
      */
     @Test
-    public void qualPointsTest() {
+    void qualPointsTest() {
         // TODO: test qualPoints
     }
 

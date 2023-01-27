@@ -26,22 +26,22 @@ import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.DistrictList;
 import net.thefletcher.tbaapi.v3client.model.Webcast;
 import org.threeten.bp.LocalDate;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Event
  */
-public class EventTest {
+class EventTest {
     private final Event model = new Event();
 
     /**
      * Model tests for Event
      */
     @Test
-    public void testEvent() {
+    void testEvent() {
         // TODO: test Event
     }
 
@@ -49,7 +49,7 @@ public class EventTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -57,7 +57,7 @@ public class EventTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -65,7 +65,7 @@ public class EventTest {
      * Test the property 'eventCode'
      */
     @Test
-    public void eventCodeTest() {
+    void eventCodeTest() {
         // TODO: test eventCode
     }
 
@@ -73,7 +73,7 @@ public class EventTest {
      * Test the property 'eventType'
      */
     @Test
-    public void eventTypeTest() {
+    void eventTypeTest() {
         // TODO: test eventType
     }
 
@@ -81,7 +81,7 @@ public class EventTest {
      * Test the property 'district'
      */
     @Test
-    public void districtTest() {
+    void districtTest() {
         // TODO: test district
     }
 
@@ -89,7 +89,7 @@ public class EventTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -97,7 +97,7 @@ public class EventTest {
      * Test the property 'stateProv'
      */
     @Test
-    public void stateProvTest() {
+    void stateProvTest() {
         // TODO: test stateProv
     }
 
@@ -105,7 +105,7 @@ public class EventTest {
      * Test the property 'country'
      */
     @Test
-    public void countryTest() {
+    void countryTest() {
         // TODO: test country
     }
 
@@ -113,7 +113,7 @@ public class EventTest {
      * Test the property 'startDate'
      */
     @Test
-    public void startDateTest() {
+    void startDateTest() {
         // TODO: test startDate
     }
 
@@ -121,7 +121,7 @@ public class EventTest {
      * Test the property 'endDate'
      */
     @Test
-    public void endDateTest() {
+    void endDateTest() {
         // TODO: test endDate
     }
 
@@ -129,7 +129,7 @@ public class EventTest {
      * Test the property 'year'
      */
     @Test
-    public void yearTest() {
+    void yearTest() {
         // TODO: test year
     }
 
@@ -137,7 +137,7 @@ public class EventTest {
      * Test the property 'shortName'
      */
     @Test
-    public void shortNameTest() {
+    void shortNameTest() {
         // TODO: test shortName
     }
 
@@ -145,7 +145,7 @@ public class EventTest {
      * Test the property 'eventTypeString'
      */
     @Test
-    public void eventTypeStringTest() {
+    void eventTypeStringTest() {
         // TODO: test eventTypeString
     }
 
@@ -153,7 +153,7 @@ public class EventTest {
      * Test the property 'week'
      */
     @Test
-    public void weekTest() {
+    void weekTest() {
         // TODO: test week
     }
 
@@ -161,7 +161,7 @@ public class EventTest {
      * Test the property 'address'
      */
     @Test
-    public void addressTest() {
+    void addressTest() {
         // TODO: test address
     }
 
@@ -169,7 +169,7 @@ public class EventTest {
      * Test the property 'postalCode'
      */
     @Test
-    public void postalCodeTest() {
+    void postalCodeTest() {
         // TODO: test postalCode
     }
 
@@ -177,7 +177,7 @@ public class EventTest {
      * Test the property 'gmapsPlaceId'
      */
     @Test
-    public void gmapsPlaceIdTest() {
+    void gmapsPlaceIdTest() {
         // TODO: test gmapsPlaceId
     }
 
@@ -185,7 +185,7 @@ public class EventTest {
      * Test the property 'gmapsUrl'
      */
     @Test
-    public void gmapsUrlTest() {
+    void gmapsUrlTest() {
         // TODO: test gmapsUrl
     }
 
@@ -193,7 +193,7 @@ public class EventTest {
      * Test the property 'lat'
      */
     @Test
-    public void latTest() {
+    void latTest() {
         // TODO: test lat
     }
 
@@ -201,7 +201,7 @@ public class EventTest {
      * Test the property 'lng'
      */
     @Test
-    public void lngTest() {
+    void lngTest() {
         // TODO: test lng
     }
 
@@ -209,7 +209,7 @@ public class EventTest {
      * Test the property 'locationName'
      */
     @Test
-    public void locationNameTest() {
+    void locationNameTest() {
         // TODO: test locationName
     }
 
@@ -217,7 +217,7 @@ public class EventTest {
      * Test the property 'timezone'
      */
     @Test
-    public void timezoneTest() {
+    void timezoneTest() {
         // TODO: test timezone
     }
 
@@ -225,7 +225,7 @@ public class EventTest {
      * Test the property 'website'
      */
     @Test
-    public void websiteTest() {
+    void websiteTest() {
         // TODO: test website
     }
 
@@ -233,7 +233,7 @@ public class EventTest {
      * Test the property 'firstEventId'
      */
     @Test
-    public void firstEventIdTest() {
+    void firstEventIdTest() {
         // TODO: test firstEventId
     }
 
@@ -241,7 +241,7 @@ public class EventTest {
      * Test the property 'firstEventCode'
      */
     @Test
-    public void firstEventCodeTest() {
+    void firstEventCodeTest() {
         // TODO: test firstEventCode
     }
 
@@ -249,7 +249,7 @@ public class EventTest {
      * Test the property 'webcasts'
      */
     @Test
-    public void webcastsTest() {
+    void webcastsTest() {
         // TODO: test webcasts
     }
 
@@ -257,7 +257,7 @@ public class EventTest {
      * Test the property 'divisionKeys'
      */
     @Test
-    public void divisionKeysTest() {
+    void divisionKeysTest() {
         // TODO: test divisionKeys
     }
 
@@ -265,7 +265,7 @@ public class EventTest {
      * Test the property 'parentEventKey'
      */
     @Test
-    public void parentEventKeyTest() {
+    void parentEventKeyTest() {
         // TODO: test parentEventKey
     }
 
@@ -273,7 +273,7 @@ public class EventTest {
      * Test the property 'playoffType'
      */
     @Test
-    public void playoffTypeTest() {
+    void playoffTypeTest() {
         // TODO: test playoffType
     }
 
@@ -281,7 +281,7 @@ public class EventTest {
      * Test the property 'playoffTypeString'
      */
     @Test
-    public void playoffTypeStringTest() {
+    void playoffTypeStringTest() {
         // TODO: test playoffTypeString
     }
 

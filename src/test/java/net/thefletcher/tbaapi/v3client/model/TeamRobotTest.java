@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamRobot
  */
-public class TeamRobotTest {
+class TeamRobotTest {
     private final TeamRobot model = new TeamRobot();
 
     /**
      * Model tests for TeamRobot
      */
     @Test
-    public void testTeamRobot() {
+    void testTeamRobot() {
         // TODO: test TeamRobot
     }
 
@@ -44,7 +44,7 @@ public class TeamRobotTest {
      * Test the property 'year'
      */
     @Test
-    public void yearTest() {
+    void yearTest() {
         // TODO: test year
     }
 
@@ -52,7 +52,7 @@ public class TeamRobotTest {
      * Test the property 'robotName'
      */
     @Test
-    public void robotNameTest() {
+    void robotNameTest() {
         // TODO: test robotName
     }
 
@@ -60,7 +60,7 @@ public class TeamRobotTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -68,7 +68,7 @@ public class TeamRobotTest {
      * Test the property 'teamKey'
      */
     @Test
-    public void teamKeyTest() {
+    void teamKeyTest() {
         // TODO: test teamKey
     }
 

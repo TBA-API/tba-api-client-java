@@ -26,22 +26,22 @@ import java.util.List;
 import java.util.Map;
 import net.thefletcher.tbaapi.v3client.model.EventDistrictPointsPoints;
 import net.thefletcher.tbaapi.v3client.model.EventDistrictPointsTiebreakers;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventDistrictPoints
  */
-public class EventDistrictPointsTest {
+class EventDistrictPointsTest {
     private final EventDistrictPoints model = new EventDistrictPoints();
 
     /**
      * Model tests for EventDistrictPoints
      */
     @Test
-    public void testEventDistrictPoints() {
+    void testEventDistrictPoints() {
         // TODO: test EventDistrictPoints
     }
 
@@ -49,7 +49,7 @@ public class EventDistrictPointsTest {
      * Test the property 'points'
      */
     @Test
-    public void pointsTest() {
+    void pointsTest() {
         // TODO: test points
     }
 
@@ -57,7 +57,7 @@ public class EventDistrictPointsTest {
      * Test the property 'tiebreakers'
      */
     @Test
-    public void tiebreakersTest() {
+    void tiebreakersTest() {
         // TODO: test tiebreakers
     }
 

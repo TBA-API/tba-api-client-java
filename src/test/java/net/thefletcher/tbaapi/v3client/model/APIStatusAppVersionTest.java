@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for APIStatusAppVersion
  */
-public class APIStatusAppVersionTest {
+class APIStatusAppVersionTest {
     private final APIStatusAppVersion model = new APIStatusAppVersion();
 
     /**
      * Model tests for APIStatusAppVersion
      */
     @Test
-    public void testAPIStatusAppVersion() {
+    void testAPIStatusAppVersion() {
         // TODO: test APIStatusAppVersion
     }
 
@@ -44,7 +44,7 @@ public class APIStatusAppVersionTest {
      * Test the property 'minAppVersion'
      */
     @Test
-    public void minAppVersionTest() {
+    void minAppVersionTest() {
         // TODO: test minAppVersion
     }
 
@@ -52,7 +52,7 @@ public class APIStatusAppVersionTest {
      * Test the property 'latestAppVersion'
      */
     @Test
-    public void latestAppVersionTest() {
+    void latestAppVersionTest() {
         // TODO: test latestAppVersion
     }
 

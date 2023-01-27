@@ -24,22 +24,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.DistrictRankingEventPoints;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for DistrictRanking
  */
-public class DistrictRankingTest {
+class DistrictRankingTest {
     private final DistrictRanking model = new DistrictRanking();
 
     /**
      * Model tests for DistrictRanking
      */
     @Test
-    public void testDistrictRanking() {
+    void testDistrictRanking() {
         // TODO: test DistrictRanking
     }
 
@@ -47,7 +47,7 @@ public class DistrictRankingTest {
      * Test the property 'teamKey'
      */
     @Test
-    public void teamKeyTest() {
+    void teamKeyTest() {
         // TODO: test teamKey
     }
 
@@ -55,7 +55,7 @@ public class DistrictRankingTest {
      * Test the property 'rank'
      */
     @Test
-    public void rankTest() {
+    void rankTest() {
         // TODO: test rank
     }
 
@@ -63,7 +63,7 @@ public class DistrictRankingTest {
      * Test the property 'rookieBonus'
      */
     @Test
-    public void rookieBonusTest() {
+    void rookieBonusTest() {
         // TODO: test rookieBonus
     }
 
@@ -71,7 +71,7 @@ public class DistrictRankingTest {
      * Test the property 'pointTotal'
      */
     @Test
-    public void pointTotalTest() {
+    void pointTotalTest() {
         // TODO: test pointTotal
     }
 
@@ -79,7 +79,7 @@ public class DistrictRankingTest {
      * Test the property 'eventPoints'
      */
     @Test
-    public void eventPointsTest() {
+    void eventPointsTest() {
         // TODO: test eventPoints
     }
 

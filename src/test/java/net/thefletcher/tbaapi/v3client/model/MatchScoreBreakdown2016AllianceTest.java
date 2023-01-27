@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2016Alliance
  */
-public class MatchScoreBreakdown2016AllianceTest {
+class MatchScoreBreakdown2016AllianceTest {
     private final MatchScoreBreakdown2016Alliance model = new MatchScoreBreakdown2016Alliance();
 
     /**
      * Model tests for MatchScoreBreakdown2016Alliance
      */
     @Test
-    public void testMatchScoreBreakdown2016Alliance() {
+    void testMatchScoreBreakdown2016Alliance() {
         // TODO: test MatchScoreBreakdown2016Alliance
     }
 
@@ -44,7 +44,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'autoPoints'
      */
     @Test
-    public void autoPointsTest() {
+    void autoPointsTest() {
         // TODO: test autoPoints
     }
 
@@ -52,7 +52,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopPoints'
      */
     @Test
-    public void teleopPointsTest() {
+    void teleopPointsTest() {
         // TODO: test teleopPoints
     }
 
@@ -60,7 +60,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'breachPoints'
      */
     @Test
-    public void breachPointsTest() {
+    void breachPointsTest() {
         // TODO: test breachPoints
     }
 
@@ -68,7 +68,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'foulPoints'
      */
     @Test
-    public void foulPointsTest() {
+    void foulPointsTest() {
         // TODO: test foulPoints
     }
 
@@ -76,7 +76,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'capturePoints'
      */
     @Test
-    public void capturePointsTest() {
+    void capturePointsTest() {
         // TODO: test capturePoints
     }
 
@@ -84,7 +84,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'adjustPoints'
      */
     @Test
-    public void adjustPointsTest() {
+    void adjustPointsTest() {
         // TODO: test adjustPoints
     }
 
@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'totalPoints'
      */
     @Test
-    public void totalPointsTest() {
+    void totalPointsTest() {
         // TODO: test totalPoints
     }
 
@@ -100,7 +100,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'robot1Auto'
      */
     @Test
-    public void robot1AutoTest() {
+    void robot1AutoTest() {
         // TODO: test robot1Auto
     }
 
@@ -108,7 +108,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'robot2Auto'
      */
     @Test
-    public void robot2AutoTest() {
+    void robot2AutoTest() {
         // TODO: test robot2Auto
     }
 
@@ -116,7 +116,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'robot3Auto'
      */
     @Test
-    public void robot3AutoTest() {
+    void robot3AutoTest() {
         // TODO: test robot3Auto
     }
 
@@ -124,7 +124,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'autoReachPoints'
      */
     @Test
-    public void autoReachPointsTest() {
+    void autoReachPointsTest() {
         // TODO: test autoReachPoints
     }
 
@@ -132,7 +132,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'autoCrossingPoints'
      */
     @Test
-    public void autoCrossingPointsTest() {
+    void autoCrossingPointsTest() {
         // TODO: test autoCrossingPoints
     }
 
@@ -140,7 +140,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'autoBouldersLow'
      */
     @Test
-    public void autoBouldersLowTest() {
+    void autoBouldersLowTest() {
         // TODO: test autoBouldersLow
     }
 
@@ -148,7 +148,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'autoBouldersHigh'
      */
     @Test
-    public void autoBouldersHighTest() {
+    void autoBouldersHighTest() {
         // TODO: test autoBouldersHigh
     }
 
@@ -156,7 +156,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'autoBoulderPoints'
      */
     @Test
-    public void autoBoulderPointsTest() {
+    void autoBoulderPointsTest() {
         // TODO: test autoBoulderPoints
     }
 
@@ -164,7 +164,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopCrossingPoints'
      */
     @Test
-    public void teleopCrossingPointsTest() {
+    void teleopCrossingPointsTest() {
         // TODO: test teleopCrossingPoints
     }
 
@@ -172,7 +172,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopBouldersLow'
      */
     @Test
-    public void teleopBouldersLowTest() {
+    void teleopBouldersLowTest() {
         // TODO: test teleopBouldersLow
     }
 
@@ -180,7 +180,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopBouldersHigh'
      */
     @Test
-    public void teleopBouldersHighTest() {
+    void teleopBouldersHighTest() {
         // TODO: test teleopBouldersHigh
     }
 
@@ -188,7 +188,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopBoulderPoints'
      */
     @Test
-    public void teleopBoulderPointsTest() {
+    void teleopBoulderPointsTest() {
         // TODO: test teleopBoulderPoints
     }
 
@@ -196,7 +196,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopDefensesBreached'
      */
     @Test
-    public void teleopDefensesBreachedTest() {
+    void teleopDefensesBreachedTest() {
         // TODO: test teleopDefensesBreached
     }
 
@@ -204,7 +204,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopChallengePoints'
      */
     @Test
-    public void teleopChallengePointsTest() {
+    void teleopChallengePointsTest() {
         // TODO: test teleopChallengePoints
     }
 
@@ -212,7 +212,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopScalePoints'
      */
     @Test
-    public void teleopScalePointsTest() {
+    void teleopScalePointsTest() {
         // TODO: test teleopScalePoints
     }
 
@@ -220,7 +220,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'teleopTowerCaptured'
      */
     @Test
-    public void teleopTowerCapturedTest() {
+    void teleopTowerCapturedTest() {
         // TODO: test teleopTowerCaptured
     }
 
@@ -228,7 +228,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'towerFaceA'
      */
     @Test
-    public void towerFaceATest() {
+    void towerFaceATest() {
         // TODO: test towerFaceA
     }
 
@@ -236,7 +236,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'towerFaceB'
      */
     @Test
-    public void towerFaceBTest() {
+    void towerFaceBTest() {
         // TODO: test towerFaceB
     }
 
@@ -244,7 +244,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'towerFaceC'
      */
     @Test
-    public void towerFaceCTest() {
+    void towerFaceCTest() {
         // TODO: test towerFaceC
     }
 
@@ -252,7 +252,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'towerEndStrength'
      */
     @Test
-    public void towerEndStrengthTest() {
+    void towerEndStrengthTest() {
         // TODO: test towerEndStrength
     }
 
@@ -260,7 +260,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'techFoulCount'
      */
     @Test
-    public void techFoulCountTest() {
+    void techFoulCountTest() {
         // TODO: test techFoulCount
     }
 
@@ -268,7 +268,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'foulCount'
      */
     @Test
-    public void foulCountTest() {
+    void foulCountTest() {
         // TODO: test foulCount
     }
 
@@ -276,7 +276,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position2'
      */
     @Test
-    public void position2Test() {
+    void position2Test() {
         // TODO: test position2
     }
 
@@ -284,7 +284,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position3'
      */
     @Test
-    public void position3Test() {
+    void position3Test() {
         // TODO: test position3
     }
 
@@ -292,7 +292,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position4'
      */
     @Test
-    public void position4Test() {
+    void position4Test() {
         // TODO: test position4
     }
 
@@ -300,7 +300,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position5'
      */
     @Test
-    public void position5Test() {
+    void position5Test() {
         // TODO: test position5
     }
 
@@ -308,7 +308,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position1crossings'
      */
     @Test
-    public void position1crossingsTest() {
+    void position1crossingsTest() {
         // TODO: test position1crossings
     }
 
@@ -316,7 +316,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position2crossings'
      */
     @Test
-    public void position2crossingsTest() {
+    void position2crossingsTest() {
         // TODO: test position2crossings
     }
 
@@ -324,7 +324,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position3crossings'
      */
     @Test
-    public void position3crossingsTest() {
+    void position3crossingsTest() {
         // TODO: test position3crossings
     }
 
@@ -332,7 +332,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position4crossings'
      */
     @Test
-    public void position4crossingsTest() {
+    void position4crossingsTest() {
         // TODO: test position4crossings
     }
 
@@ -340,7 +340,7 @@ public class MatchScoreBreakdown2016AllianceTest {
      * Test the property 'position5crossings'
      */
     @Test
-    public void position5crossingsTest() {
+    void position5crossingsTest() {
         // TODO: test position5crossings
     }
 

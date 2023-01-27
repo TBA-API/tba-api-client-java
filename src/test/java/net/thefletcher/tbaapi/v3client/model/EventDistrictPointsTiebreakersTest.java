@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventDistrictPointsTiebreakers
  */
-public class EventDistrictPointsTiebreakersTest {
+class EventDistrictPointsTiebreakersTest {
     private final EventDistrictPointsTiebreakers model = new EventDistrictPointsTiebreakers();
 
     /**
      * Model tests for EventDistrictPointsTiebreakers
      */
     @Test
-    public void testEventDistrictPointsTiebreakers() {
+    void testEventDistrictPointsTiebreakers() {
         // TODO: test EventDistrictPointsTiebreakers
     }
 
@@ -46,7 +46,7 @@ public class EventDistrictPointsTiebreakersTest {
      * Test the property 'highestQualScores'
      */
     @Test
-    public void highestQualScoresTest() {
+    void highestQualScoresTest() {
         // TODO: test highestQualScores
     }
 
@@ -54,7 +54,7 @@ public class EventDistrictPointsTiebreakersTest {
      * Test the property 'qualWins'
      */
     @Test
-    public void qualWinsTest() {
+    void qualWinsTest() {
         // TODO: test qualWins
     }
 
