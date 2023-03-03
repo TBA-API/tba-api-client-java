@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventInsights2016
  */
-public class EventInsights2016Test {
+class EventInsights2016Test {
     private final EventInsights2016 model = new EventInsights2016();
 
     /**
      * Model tests for EventInsights2016
      */
     @Test
-    public void testEventInsights2016() {
+    void testEventInsights2016() {
         // TODO: test EventInsights2016
     }
 
@@ -46,7 +46,7 @@ public class EventInsights2016Test {
      * Test the property 'lowBar'
      */
     @Test
-    public void lowBarTest() {
+    void lowBarTest() {
         // TODO: test lowBar
     }
 
@@ -54,7 +54,7 @@ public class EventInsights2016Test {
      * Test the property 'aChevalDeFrise'
      */
     @Test
-    public void aChevalDeFriseTest() {
+    void aChevalDeFriseTest() {
         // TODO: test aChevalDeFrise
     }
 
@@ -62,7 +62,7 @@ public class EventInsights2016Test {
      * Test the property 'aPortcullis'
      */
     @Test
-    public void aPortcullisTest() {
+    void aPortcullisTest() {
         // TODO: test aPortcullis
     }
 
@@ -70,7 +70,7 @@ public class EventInsights2016Test {
      * Test the property 'bRamparts'
      */
     @Test
-    public void bRampartsTest() {
+    void bRampartsTest() {
         // TODO: test bRamparts
     }
 
@@ -78,7 +78,7 @@ public class EventInsights2016Test {
      * Test the property 'bMoat'
      */
     @Test
-    public void bMoatTest() {
+    void bMoatTest() {
         // TODO: test bMoat
     }
 
@@ -86,7 +86,7 @@ public class EventInsights2016Test {
      * Test the property 'cSallyPort'
      */
     @Test
-    public void cSallyPortTest() {
+    void cSallyPortTest() {
         // TODO: test cSallyPort
     }
 
@@ -94,7 +94,7 @@ public class EventInsights2016Test {
      * Test the property 'cDrawbridge'
      */
     @Test
-    public void cDrawbridgeTest() {
+    void cDrawbridgeTest() {
         // TODO: test cDrawbridge
     }
 
@@ -102,7 +102,7 @@ public class EventInsights2016Test {
      * Test the property 'dRoughTerrain'
      */
     @Test
-    public void dRoughTerrainTest() {
+    void dRoughTerrainTest() {
         // TODO: test dRoughTerrain
     }
 
@@ -110,7 +110,7 @@ public class EventInsights2016Test {
      * Test the property 'dRockWall'
      */
     @Test
-    public void dRockWallTest() {
+    void dRockWallTest() {
         // TODO: test dRockWall
     }
 
@@ -118,7 +118,7 @@ public class EventInsights2016Test {
      * Test the property 'averageHighGoals'
      */
     @Test
-    public void averageHighGoalsTest() {
+    void averageHighGoalsTest() {
         // TODO: test averageHighGoals
     }
 
@@ -126,7 +126,7 @@ public class EventInsights2016Test {
      * Test the property 'averageLowGoals'
      */
     @Test
-    public void averageLowGoalsTest() {
+    void averageLowGoalsTest() {
         // TODO: test averageLowGoals
     }
 
@@ -134,7 +134,7 @@ public class EventInsights2016Test {
      * Test the property 'breaches'
      */
     @Test
-    public void breachesTest() {
+    void breachesTest() {
         // TODO: test breaches
     }
 
@@ -142,7 +142,7 @@ public class EventInsights2016Test {
      * Test the property 'scales'
      */
     @Test
-    public void scalesTest() {
+    void scalesTest() {
         // TODO: test scales
     }
 
@@ -150,7 +150,7 @@ public class EventInsights2016Test {
      * Test the property 'challenges'
      */
     @Test
-    public void challengesTest() {
+    void challengesTest() {
         // TODO: test challenges
     }
 
@@ -158,7 +158,7 @@ public class EventInsights2016Test {
      * Test the property 'captures'
      */
     @Test
-    public void capturesTest() {
+    void capturesTest() {
         // TODO: test captures
     }
 
@@ -166,7 +166,7 @@ public class EventInsights2016Test {
      * Test the property 'averageWinScore'
      */
     @Test
-    public void averageWinScoreTest() {
+    void averageWinScoreTest() {
         // TODO: test averageWinScore
     }
 
@@ -174,7 +174,7 @@ public class EventInsights2016Test {
      * Test the property 'averageWinMargin'
      */
     @Test
-    public void averageWinMarginTest() {
+    void averageWinMarginTest() {
         // TODO: test averageWinMargin
     }
 
@@ -182,7 +182,7 @@ public class EventInsights2016Test {
      * Test the property 'averageScore'
      */
     @Test
-    public void averageScoreTest() {
+    void averageScoreTest() {
         // TODO: test averageScore
     }
 
@@ -190,7 +190,7 @@ public class EventInsights2016Test {
      * Test the property 'averageAutoScore'
      */
     @Test
-    public void averageAutoScoreTest() {
+    void averageAutoScoreTest() {
         // TODO: test averageAutoScore
     }
 
@@ -198,7 +198,7 @@ public class EventInsights2016Test {
      * Test the property 'averageCrossingScore'
      */
     @Test
-    public void averageCrossingScoreTest() {
+    void averageCrossingScoreTest() {
         // TODO: test averageCrossingScore
     }
 
@@ -206,7 +206,7 @@ public class EventInsights2016Test {
      * Test the property 'averageBoulderScore'
      */
     @Test
-    public void averageBoulderScoreTest() {
+    void averageBoulderScoreTest() {
         // TODO: test averageBoulderScore
     }
 
@@ -214,7 +214,7 @@ public class EventInsights2016Test {
      * Test the property 'averageTowerScore'
      */
     @Test
-    public void averageTowerScoreTest() {
+    void averageTowerScoreTest() {
         // TODO: test averageTowerScore
     }
 
@@ -222,7 +222,7 @@ public class EventInsights2016Test {
      * Test the property 'averageFoulScore'
      */
     @Test
-    public void averageFoulScoreTest() {
+    void averageFoulScoreTest() {
         // TODO: test averageFoulScore
     }
 
@@ -230,7 +230,7 @@ public class EventInsights2016Test {
      * Test the property 'highScore'
      */
     @Test
-    public void highScoreTest() {
+    void highScoreTest() {
         // TODO: test highScore
     }
 

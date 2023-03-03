@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import net.thefletcher.tbaapi.v3client.model.DistrictList;
 import org.threeten.bp.LocalDate;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventSimple
  */
-public class EventSimpleTest {
+class EventSimpleTest {
     private final EventSimple model = new EventSimple();
 
     /**
      * Model tests for EventSimple
      */
     @Test
-    public void testEventSimple() {
+    void testEventSimple() {
         // TODO: test EventSimple
     }
 
@@ -46,7 +46,7 @@ public class EventSimpleTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -54,7 +54,7 @@ public class EventSimpleTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -62,7 +62,7 @@ public class EventSimpleTest {
      * Test the property 'eventCode'
      */
     @Test
-    public void eventCodeTest() {
+    void eventCodeTest() {
         // TODO: test eventCode
     }
 
@@ -70,7 +70,7 @@ public class EventSimpleTest {
      * Test the property 'eventType'
      */
     @Test
-    public void eventTypeTest() {
+    void eventTypeTest() {
         // TODO: test eventType
     }
 
@@ -78,7 +78,7 @@ public class EventSimpleTest {
      * Test the property 'district'
      */
     @Test
-    public void districtTest() {
+    void districtTest() {
         // TODO: test district
     }
 
@@ -86,7 +86,7 @@ public class EventSimpleTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -94,7 +94,7 @@ public class EventSimpleTest {
      * Test the property 'stateProv'
      */
     @Test
-    public void stateProvTest() {
+    void stateProvTest() {
         // TODO: test stateProv
     }
 
@@ -102,7 +102,7 @@ public class EventSimpleTest {
      * Test the property 'country'
      */
     @Test
-    public void countryTest() {
+    void countryTest() {
         // TODO: test country
     }
 
@@ -110,7 +110,7 @@ public class EventSimpleTest {
      * Test the property 'startDate'
      */
     @Test
-    public void startDateTest() {
+    void startDateTest() {
         // TODO: test startDate
     }
 
@@ -118,7 +118,7 @@ public class EventSimpleTest {
      * Test the property 'endDate'
      */
     @Test
-    public void endDateTest() {
+    void endDateTest() {
         // TODO: test endDate
     }
 
@@ -126,7 +126,7 @@ public class EventSimpleTest {
      * Test the property 'year'
      */
     @Test
-    public void yearTest() {
+    void yearTest() {
         // TODO: test year
     }
 

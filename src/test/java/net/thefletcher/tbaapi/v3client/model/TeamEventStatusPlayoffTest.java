@@ -22,22 +22,22 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import net.thefletcher.tbaapi.v3client.model.WLTRecord;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamEventStatusPlayoff
  */
-public class TeamEventStatusPlayoffTest {
+class TeamEventStatusPlayoffTest {
     private final TeamEventStatusPlayoff model = new TeamEventStatusPlayoff();
 
     /**
      * Model tests for TeamEventStatusPlayoff
      */
     @Test
-    public void testTeamEventStatusPlayoff() {
+    void testTeamEventStatusPlayoff() {
         // TODO: test TeamEventStatusPlayoff
     }
 
@@ -45,7 +45,7 @@ public class TeamEventStatusPlayoffTest {
      * Test the property 'level'
      */
     @Test
-    public void levelTest() {
+    void levelTest() {
         // TODO: test level
     }
 
@@ -53,7 +53,7 @@ public class TeamEventStatusPlayoffTest {
      * Test the property 'currentLevelRecord'
      */
     @Test
-    public void currentLevelRecordTest() {
+    void currentLevelRecordTest() {
         // TODO: test currentLevelRecord
     }
 
@@ -61,7 +61,7 @@ public class TeamEventStatusPlayoffTest {
      * Test the property 'record'
      */
     @Test
-    public void recordTest() {
+    void recordTest() {
         // TODO: test record
     }
 
@@ -69,7 +69,7 @@ public class TeamEventStatusPlayoffTest {
      * Test the property 'status'
      */
     @Test
-    public void statusTest() {
+    void statusTest() {
         // TODO: test status
     }
 
@@ -77,7 +77,7 @@ public class TeamEventStatusPlayoffTest {
      * Test the property 'playoffAverage'
      */
     @Test
-    public void playoffAverageTest() {
+    void playoffAverageTest() {
         // TODO: test playoffAverage
     }
 

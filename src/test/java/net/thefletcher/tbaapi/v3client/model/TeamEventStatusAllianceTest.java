@@ -22,22 +22,22 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import net.thefletcher.tbaapi.v3client.model.TeamEventStatusAllianceBackup;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamEventStatusAlliance
  */
-public class TeamEventStatusAllianceTest {
+class TeamEventStatusAllianceTest {
     private final TeamEventStatusAlliance model = new TeamEventStatusAlliance();
 
     /**
      * Model tests for TeamEventStatusAlliance
      */
     @Test
-    public void testTeamEventStatusAlliance() {
+    void testTeamEventStatusAlliance() {
         // TODO: test TeamEventStatusAlliance
     }
 
@@ -45,7 +45,7 @@ public class TeamEventStatusAllianceTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -53,7 +53,7 @@ public class TeamEventStatusAllianceTest {
      * Test the property 'number'
      */
     @Test
-    public void numberTest() {
+    void numberTest() {
         // TODO: test number
     }
 
@@ -61,7 +61,7 @@ public class TeamEventStatusAllianceTest {
      * Test the property 'backup'
      */
     @Test
-    public void backupTest() {
+    void backupTest() {
         // TODO: test backup
     }
 
@@ -69,7 +69,7 @@ public class TeamEventStatusAllianceTest {
      * Test the property 'pick'
      */
     @Test
-    public void pickTest() {
+    void pickTest() {
         // TODO: test pick
     }
 

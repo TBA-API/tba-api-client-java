@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Team
  */
-public class TeamTest {
+class TeamTest {
     private final Team model = new Team();
 
     /**
      * Model tests for Team
      */
     @Test
-    public void testTeam() {
+    void testTeam() {
         // TODO: test Team
     }
 
@@ -44,7 +44,7 @@ public class TeamTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -52,7 +52,7 @@ public class TeamTest {
      * Test the property 'teamNumber'
      */
     @Test
-    public void teamNumberTest() {
+    void teamNumberTest() {
         // TODO: test teamNumber
     }
 
@@ -60,7 +60,7 @@ public class TeamTest {
      * Test the property 'nickname'
      */
     @Test
-    public void nicknameTest() {
+    void nicknameTest() {
         // TODO: test nickname
     }
 
@@ -68,7 +68,7 @@ public class TeamTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -76,7 +76,7 @@ public class TeamTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -84,7 +84,7 @@ public class TeamTest {
      * Test the property 'stateProv'
      */
     @Test
-    public void stateProvTest() {
+    void stateProvTest() {
         // TODO: test stateProv
     }
 
@@ -92,7 +92,7 @@ public class TeamTest {
      * Test the property 'country'
      */
     @Test
-    public void countryTest() {
+    void countryTest() {
         // TODO: test country
     }
 
@@ -100,7 +100,7 @@ public class TeamTest {
      * Test the property 'address'
      */
     @Test
-    public void addressTest() {
+    void addressTest() {
         // TODO: test address
     }
 
@@ -108,7 +108,7 @@ public class TeamTest {
      * Test the property 'postalCode'
      */
     @Test
-    public void postalCodeTest() {
+    void postalCodeTest() {
         // TODO: test postalCode
     }
 
@@ -116,7 +116,7 @@ public class TeamTest {
      * Test the property 'gmapsPlaceId'
      */
     @Test
-    public void gmapsPlaceIdTest() {
+    void gmapsPlaceIdTest() {
         // TODO: test gmapsPlaceId
     }
 
@@ -124,7 +124,7 @@ public class TeamTest {
      * Test the property 'gmapsUrl'
      */
     @Test
-    public void gmapsUrlTest() {
+    void gmapsUrlTest() {
         // TODO: test gmapsUrl
     }
 
@@ -132,7 +132,7 @@ public class TeamTest {
      * Test the property 'lat'
      */
     @Test
-    public void latTest() {
+    void latTest() {
         // TODO: test lat
     }
 
@@ -140,7 +140,7 @@ public class TeamTest {
      * Test the property 'lng'
      */
     @Test
-    public void lngTest() {
+    void lngTest() {
         // TODO: test lng
     }
 
@@ -148,7 +148,7 @@ public class TeamTest {
      * Test the property 'locationName'
      */
     @Test
-    public void locationNameTest() {
+    void locationNameTest() {
         // TODO: test locationName
     }
 
@@ -156,7 +156,7 @@ public class TeamTest {
      * Test the property 'website'
      */
     @Test
-    public void websiteTest() {
+    void websiteTest() {
         // TODO: test website
     }
 
@@ -164,7 +164,7 @@ public class TeamTest {
      * Test the property 'rookieYear'
      */
     @Test
-    public void rookieYearTest() {
+    void rookieYearTest() {
         // TODO: test rookieYear
     }
 
@@ -172,7 +172,7 @@ public class TeamTest {
      * Test the property 'motto'
      */
     @Test
-    public void mottoTest() {
+    void mottoTest() {
         // TODO: test motto
     }
 
@@ -180,7 +180,7 @@ public class TeamTest {
      * Test the property 'homeChampionship'
      */
     @Test
-    public void homeChampionshipTest() {
+    void homeChampionshipTest() {
         // TODO: test homeChampionship
     }
 

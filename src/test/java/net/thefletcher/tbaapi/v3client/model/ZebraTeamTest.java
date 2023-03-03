@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for ZebraTeam
  */
-public class ZebraTeamTest {
+class ZebraTeamTest {
     private final ZebraTeam model = new ZebraTeam();
 
     /**
      * Model tests for ZebraTeam
      */
     @Test
-    public void testZebraTeam() {
+    void testZebraTeam() {
         // TODO: test ZebraTeam
     }
 
@@ -46,7 +46,7 @@ public class ZebraTeamTest {
      * Test the property 'teamKey'
      */
     @Test
-    public void teamKeyTest() {
+    void teamKeyTest() {
         // TODO: test teamKey
     }
 
@@ -54,7 +54,7 @@ public class ZebraTeamTest {
      * Test the property 'xs'
      */
     @Test
-    public void xsTest() {
+    void xsTest() {
         // TODO: test xs
     }
 
@@ -62,7 +62,7 @@ public class ZebraTeamTest {
      * Test the property 'ys'
      */
     @Test
-    public void ysTest() {
+    void ysTest() {
         // TODO: test ys
     }
 

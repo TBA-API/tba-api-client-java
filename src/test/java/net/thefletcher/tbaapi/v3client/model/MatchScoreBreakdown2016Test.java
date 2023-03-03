@@ -22,22 +22,22 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import net.thefletcher.tbaapi.v3client.model.MatchScoreBreakdown2016Alliance;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2016
  */
-public class MatchScoreBreakdown2016Test {
+class MatchScoreBreakdown2016Test {
     private final MatchScoreBreakdown2016 model = new MatchScoreBreakdown2016();
 
     /**
      * Model tests for MatchScoreBreakdown2016
      */
     @Test
-    public void testMatchScoreBreakdown2016() {
+    void testMatchScoreBreakdown2016() {
         // TODO: test MatchScoreBreakdown2016
     }
 
@@ -45,7 +45,7 @@ public class MatchScoreBreakdown2016Test {
      * Test the property 'blue'
      */
     @Test
-    public void blueTest() {
+    void blueTest() {
         // TODO: test blue
     }
 
@@ -53,7 +53,7 @@ public class MatchScoreBreakdown2016Test {
      * Test the property 'red'
      */
     @Test
-    public void redTest() {
+    void redTest() {
         // TODO: test red
     }
 

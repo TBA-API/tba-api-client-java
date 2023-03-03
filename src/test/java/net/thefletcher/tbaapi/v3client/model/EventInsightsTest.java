@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventInsights
  */
-public class EventInsightsTest {
+class EventInsightsTest {
     private final EventInsights model = new EventInsights();
 
     /**
      * Model tests for EventInsights
      */
     @Test
-    public void testEventInsights() {
+    void testEventInsights() {
         // TODO: test EventInsights
     }
 
@@ -44,7 +44,7 @@ public class EventInsightsTest {
      * Test the property 'qual'
      */
     @Test
-    public void qualTest() {
+    void qualTest() {
         // TODO: test qual
     }
 
@@ -52,7 +52,7 @@ public class EventInsightsTest {
      * Test the property 'playoff'
      */
     @Test
-    public void playoffTest() {
+    void playoffTest() {
         // TODO: test playoff
     }
 

@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2018Alliance
  */
-public class MatchScoreBreakdown2018AllianceTest {
+class MatchScoreBreakdown2018AllianceTest {
     private final MatchScoreBreakdown2018Alliance model = new MatchScoreBreakdown2018Alliance();
 
     /**
      * Model tests for MatchScoreBreakdown2018Alliance
      */
     @Test
-    public void testMatchScoreBreakdown2018Alliance() {
+    void testMatchScoreBreakdown2018Alliance() {
         // TODO: test MatchScoreBreakdown2018Alliance
     }
 
@@ -44,7 +44,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'adjustPoints'
      */
     @Test
-    public void adjustPointsTest() {
+    void adjustPointsTest() {
         // TODO: test adjustPoints
     }
 
@@ -52,7 +52,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoOwnershipPoints'
      */
     @Test
-    public void autoOwnershipPointsTest() {
+    void autoOwnershipPointsTest() {
         // TODO: test autoOwnershipPoints
     }
 
@@ -60,7 +60,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoPoints'
      */
     @Test
-    public void autoPointsTest() {
+    void autoPointsTest() {
         // TODO: test autoPoints
     }
 
@@ -68,7 +68,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoQuestRankingPoint'
      */
     @Test
-    public void autoQuestRankingPointTest() {
+    void autoQuestRankingPointTest() {
         // TODO: test autoQuestRankingPoint
     }
 
@@ -76,7 +76,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoRobot1'
      */
     @Test
-    public void autoRobot1Test() {
+    void autoRobot1Test() {
         // TODO: test autoRobot1
     }
 
@@ -84,7 +84,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoRobot2'
      */
     @Test
-    public void autoRobot2Test() {
+    void autoRobot2Test() {
         // TODO: test autoRobot2
     }
 
@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoRobot3'
      */
     @Test
-    public void autoRobot3Test() {
+    void autoRobot3Test() {
         // TODO: test autoRobot3
     }
 
@@ -100,7 +100,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoRunPoints'
      */
     @Test
-    public void autoRunPointsTest() {
+    void autoRunPointsTest() {
         // TODO: test autoRunPoints
     }
 
@@ -108,7 +108,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoScaleOwnershipSec'
      */
     @Test
-    public void autoScaleOwnershipSecTest() {
+    void autoScaleOwnershipSecTest() {
         // TODO: test autoScaleOwnershipSec
     }
 
@@ -116,7 +116,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoSwitchAtZero'
      */
     @Test
-    public void autoSwitchAtZeroTest() {
+    void autoSwitchAtZeroTest() {
         // TODO: test autoSwitchAtZero
     }
 
@@ -124,7 +124,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'autoSwitchOwnershipSec'
      */
     @Test
-    public void autoSwitchOwnershipSecTest() {
+    void autoSwitchOwnershipSecTest() {
         // TODO: test autoSwitchOwnershipSec
     }
 
@@ -132,7 +132,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'endgamePoints'
      */
     @Test
-    public void endgamePointsTest() {
+    void endgamePointsTest() {
         // TODO: test endgamePoints
     }
 
@@ -140,7 +140,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'endgameRobot1'
      */
     @Test
-    public void endgameRobot1Test() {
+    void endgameRobot1Test() {
         // TODO: test endgameRobot1
     }
 
@@ -148,7 +148,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'endgameRobot2'
      */
     @Test
-    public void endgameRobot2Test() {
+    void endgameRobot2Test() {
         // TODO: test endgameRobot2
     }
 
@@ -156,7 +156,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'endgameRobot3'
      */
     @Test
-    public void endgameRobot3Test() {
+    void endgameRobot3Test() {
         // TODO: test endgameRobot3
     }
 
@@ -164,7 +164,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'faceTheBossRankingPoint'
      */
     @Test
-    public void faceTheBossRankingPointTest() {
+    void faceTheBossRankingPointTest() {
         // TODO: test faceTheBossRankingPoint
     }
 
@@ -172,7 +172,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'foulCount'
      */
     @Test
-    public void foulCountTest() {
+    void foulCountTest() {
         // TODO: test foulCount
     }
 
@@ -180,7 +180,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'foulPoints'
      */
     @Test
-    public void foulPointsTest() {
+    void foulPointsTest() {
         // TODO: test foulPoints
     }
 
@@ -188,7 +188,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'rp'
      */
     @Test
-    public void rpTest() {
+    void rpTest() {
         // TODO: test rp
     }
 
@@ -196,7 +196,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'techFoulCount'
      */
     @Test
-    public void techFoulCountTest() {
+    void techFoulCountTest() {
         // TODO: test techFoulCount
     }
 
@@ -204,7 +204,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopOwnershipPoints'
      */
     @Test
-    public void teleopOwnershipPointsTest() {
+    void teleopOwnershipPointsTest() {
         // TODO: test teleopOwnershipPoints
     }
 
@@ -212,7 +212,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopPoints'
      */
     @Test
-    public void teleopPointsTest() {
+    void teleopPointsTest() {
         // TODO: test teleopPoints
     }
 
@@ -220,7 +220,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopScaleBoostSec'
      */
     @Test
-    public void teleopScaleBoostSecTest() {
+    void teleopScaleBoostSecTest() {
         // TODO: test teleopScaleBoostSec
     }
 
@@ -228,7 +228,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopScaleForceSec'
      */
     @Test
-    public void teleopScaleForceSecTest() {
+    void teleopScaleForceSecTest() {
         // TODO: test teleopScaleForceSec
     }
 
@@ -236,7 +236,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopScaleOwnershipSec'
      */
     @Test
-    public void teleopScaleOwnershipSecTest() {
+    void teleopScaleOwnershipSecTest() {
         // TODO: test teleopScaleOwnershipSec
     }
 
@@ -244,7 +244,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopSwitchBoostSec'
      */
     @Test
-    public void teleopSwitchBoostSecTest() {
+    void teleopSwitchBoostSecTest() {
         // TODO: test teleopSwitchBoostSec
     }
 
@@ -252,7 +252,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopSwitchForceSec'
      */
     @Test
-    public void teleopSwitchForceSecTest() {
+    void teleopSwitchForceSecTest() {
         // TODO: test teleopSwitchForceSec
     }
 
@@ -260,7 +260,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'teleopSwitchOwnershipSec'
      */
     @Test
-    public void teleopSwitchOwnershipSecTest() {
+    void teleopSwitchOwnershipSecTest() {
         // TODO: test teleopSwitchOwnershipSec
     }
 
@@ -268,7 +268,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'totalPoints'
      */
     @Test
-    public void totalPointsTest() {
+    void totalPointsTest() {
         // TODO: test totalPoints
     }
 
@@ -276,7 +276,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultBoostPlayed'
      */
     @Test
-    public void vaultBoostPlayedTest() {
+    void vaultBoostPlayedTest() {
         // TODO: test vaultBoostPlayed
     }
 
@@ -284,7 +284,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultBoostTotal'
      */
     @Test
-    public void vaultBoostTotalTest() {
+    void vaultBoostTotalTest() {
         // TODO: test vaultBoostTotal
     }
 
@@ -292,7 +292,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultForcePlayed'
      */
     @Test
-    public void vaultForcePlayedTest() {
+    void vaultForcePlayedTest() {
         // TODO: test vaultForcePlayed
     }
 
@@ -300,7 +300,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultForceTotal'
      */
     @Test
-    public void vaultForceTotalTest() {
+    void vaultForceTotalTest() {
         // TODO: test vaultForceTotal
     }
 
@@ -308,7 +308,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultLevitatePlayed'
      */
     @Test
-    public void vaultLevitatePlayedTest() {
+    void vaultLevitatePlayedTest() {
         // TODO: test vaultLevitatePlayed
     }
 
@@ -316,7 +316,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultLevitateTotal'
      */
     @Test
-    public void vaultLevitateTotalTest() {
+    void vaultLevitateTotalTest() {
         // TODO: test vaultLevitateTotal
     }
 
@@ -324,7 +324,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'vaultPoints'
      */
     @Test
-    public void vaultPointsTest() {
+    void vaultPointsTest() {
         // TODO: test vaultPoints
     }
 
@@ -332,7 +332,7 @@ public class MatchScoreBreakdown2018AllianceTest {
      * Test the property 'tbaGameData'
      */
     @Test
-    public void tbaGameDataTest() {
+    void tbaGameDataTest() {
         // TODO: test tbaGameData
     }
 

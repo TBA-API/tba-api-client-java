@@ -24,22 +24,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.ZebraAlliances;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for Zebra
  */
-public class ZebraTest {
+class ZebraTest {
     private final Zebra model = new Zebra();
 
     /**
      * Model tests for Zebra
      */
     @Test
-    public void testZebra() {
+    void testZebra() {
         // TODO: test Zebra
     }
 
@@ -47,7 +47,7 @@ public class ZebraTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -55,7 +55,7 @@ public class ZebraTest {
      * Test the property 'times'
      */
     @Test
-    public void timesTest() {
+    void timesTest() {
         // TODO: test times
     }
 
@@ -63,7 +63,7 @@ public class ZebraTest {
      * Test the property 'alliances'
      */
     @Test
-    public void alliancesTest() {
+    void alliancesTest() {
         // TODO: test alliances
     }
 

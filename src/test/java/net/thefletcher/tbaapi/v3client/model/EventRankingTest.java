@@ -26,22 +26,22 @@ import java.util.List;
 import net.thefletcher.tbaapi.v3client.model.EventRankingExtraStatsInfo;
 import net.thefletcher.tbaapi.v3client.model.EventRankingRankings;
 import net.thefletcher.tbaapi.v3client.model.EventRankingSortOrderInfo;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for EventRanking
  */
-public class EventRankingTest {
+class EventRankingTest {
     private final EventRanking model = new EventRanking();
 
     /**
      * Model tests for EventRanking
      */
     @Test
-    public void testEventRanking() {
+    void testEventRanking() {
         // TODO: test EventRanking
     }
 
@@ -49,7 +49,7 @@ public class EventRankingTest {
      * Test the property 'rankings'
      */
     @Test
-    public void rankingsTest() {
+    void rankingsTest() {
         // TODO: test rankings
     }
 
@@ -57,7 +57,7 @@ public class EventRankingTest {
      * Test the property 'extraStatsInfo'
      */
     @Test
-    public void extraStatsInfoTest() {
+    void extraStatsInfoTest() {
         // TODO: test extraStatsInfo
     }
 
@@ -65,7 +65,7 @@ public class EventRankingTest {
      * Test the property 'sortOrderInfo'
      */
     @Test
-    public void sortOrderInfoTest() {
+    void sortOrderInfoTest() {
         // TODO: test sortOrderInfo
     }
 

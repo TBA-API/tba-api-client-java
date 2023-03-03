@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchScoreBreakdown2019Alliance
  */
-public class MatchScoreBreakdown2019AllianceTest {
+class MatchScoreBreakdown2019AllianceTest {
     private final MatchScoreBreakdown2019Alliance model = new MatchScoreBreakdown2019Alliance();
 
     /**
      * Model tests for MatchScoreBreakdown2019Alliance
      */
     @Test
-    public void testMatchScoreBreakdown2019Alliance() {
+    void testMatchScoreBreakdown2019Alliance() {
         // TODO: test MatchScoreBreakdown2019Alliance
     }
 
@@ -44,7 +44,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'adjustPoints'
      */
     @Test
-    public void adjustPointsTest() {
+    void adjustPointsTest() {
         // TODO: test adjustPoints
     }
 
@@ -52,7 +52,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'autoPoints'
      */
     @Test
-    public void autoPointsTest() {
+    void autoPointsTest() {
         // TODO: test autoPoints
     }
 
@@ -60,7 +60,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay1'
      */
     @Test
-    public void bay1Test() {
+    void bay1Test() {
         // TODO: test bay1
     }
 
@@ -68,7 +68,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay2'
      */
     @Test
-    public void bay2Test() {
+    void bay2Test() {
         // TODO: test bay2
     }
 
@@ -76,7 +76,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay3'
      */
     @Test
-    public void bay3Test() {
+    void bay3Test() {
         // TODO: test bay3
     }
 
@@ -84,7 +84,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay4'
      */
     @Test
-    public void bay4Test() {
+    void bay4Test() {
         // TODO: test bay4
     }
 
@@ -92,7 +92,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay5'
      */
     @Test
-    public void bay5Test() {
+    void bay5Test() {
         // TODO: test bay5
     }
 
@@ -100,7 +100,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay6'
      */
     @Test
-    public void bay6Test() {
+    void bay6Test() {
         // TODO: test bay6
     }
 
@@ -108,7 +108,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay7'
      */
     @Test
-    public void bay7Test() {
+    void bay7Test() {
         // TODO: test bay7
     }
 
@@ -116,7 +116,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'bay8'
      */
     @Test
-    public void bay8Test() {
+    void bay8Test() {
         // TODO: test bay8
     }
 
@@ -124,7 +124,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'cargoPoints'
      */
     @Test
-    public void cargoPointsTest() {
+    void cargoPointsTest() {
         // TODO: test cargoPoints
     }
 
@@ -132,7 +132,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'completeRocketRankingPoint'
      */
     @Test
-    public void completeRocketRankingPointTest() {
+    void completeRocketRankingPointTest() {
         // TODO: test completeRocketRankingPoint
     }
 
@@ -140,7 +140,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'completedRocketFar'
      */
     @Test
-    public void completedRocketFarTest() {
+    void completedRocketFarTest() {
         // TODO: test completedRocketFar
     }
 
@@ -148,7 +148,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'completedRocketNear'
      */
     @Test
-    public void completedRocketNearTest() {
+    void completedRocketNearTest() {
         // TODO: test completedRocketNear
     }
 
@@ -156,7 +156,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'endgameRobot1'
      */
     @Test
-    public void endgameRobot1Test() {
+    void endgameRobot1Test() {
         // TODO: test endgameRobot1
     }
 
@@ -164,7 +164,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'endgameRobot2'
      */
     @Test
-    public void endgameRobot2Test() {
+    void endgameRobot2Test() {
         // TODO: test endgameRobot2
     }
 
@@ -172,7 +172,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'endgameRobot3'
      */
     @Test
-    public void endgameRobot3Test() {
+    void endgameRobot3Test() {
         // TODO: test endgameRobot3
     }
 
@@ -180,7 +180,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'foulCount'
      */
     @Test
-    public void foulCountTest() {
+    void foulCountTest() {
         // TODO: test foulCount
     }
 
@@ -188,7 +188,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'foulPoints'
      */
     @Test
-    public void foulPointsTest() {
+    void foulPointsTest() {
         // TODO: test foulPoints
     }
 
@@ -196,7 +196,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'habClimbPoints'
      */
     @Test
-    public void habClimbPointsTest() {
+    void habClimbPointsTest() {
         // TODO: test habClimbPoints
     }
 
@@ -204,7 +204,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'habDockingRankingPoint'
      */
     @Test
-    public void habDockingRankingPointTest() {
+    void habDockingRankingPointTest() {
         // TODO: test habDockingRankingPoint
     }
 
@@ -212,7 +212,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'habLineRobot1'
      */
     @Test
-    public void habLineRobot1Test() {
+    void habLineRobot1Test() {
         // TODO: test habLineRobot1
     }
 
@@ -220,7 +220,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'habLineRobot2'
      */
     @Test
-    public void habLineRobot2Test() {
+    void habLineRobot2Test() {
         // TODO: test habLineRobot2
     }
 
@@ -228,7 +228,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'habLineRobot3'
      */
     @Test
-    public void habLineRobot3Test() {
+    void habLineRobot3Test() {
         // TODO: test habLineRobot3
     }
 
@@ -236,7 +236,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'hatchPanelPoints'
      */
     @Test
-    public void hatchPanelPointsTest() {
+    void hatchPanelPointsTest() {
         // TODO: test hatchPanelPoints
     }
 
@@ -244,7 +244,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'lowLeftRocketFar'
      */
     @Test
-    public void lowLeftRocketFarTest() {
+    void lowLeftRocketFarTest() {
         // TODO: test lowLeftRocketFar
     }
 
@@ -252,7 +252,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'lowLeftRocketNear'
      */
     @Test
-    public void lowLeftRocketNearTest() {
+    void lowLeftRocketNearTest() {
         // TODO: test lowLeftRocketNear
     }
 
@@ -260,7 +260,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'lowRightRocketFar'
      */
     @Test
-    public void lowRightRocketFarTest() {
+    void lowRightRocketFarTest() {
         // TODO: test lowRightRocketFar
     }
 
@@ -268,7 +268,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'lowRightRocketNear'
      */
     @Test
-    public void lowRightRocketNearTest() {
+    void lowRightRocketNearTest() {
         // TODO: test lowRightRocketNear
     }
 
@@ -276,7 +276,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'midLeftRocketFar'
      */
     @Test
-    public void midLeftRocketFarTest() {
+    void midLeftRocketFarTest() {
         // TODO: test midLeftRocketFar
     }
 
@@ -284,7 +284,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'midLeftRocketNear'
      */
     @Test
-    public void midLeftRocketNearTest() {
+    void midLeftRocketNearTest() {
         // TODO: test midLeftRocketNear
     }
 
@@ -292,7 +292,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'midRightRocketFar'
      */
     @Test
-    public void midRightRocketFarTest() {
+    void midRightRocketFarTest() {
         // TODO: test midRightRocketFar
     }
 
@@ -300,7 +300,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'midRightRocketNear'
      */
     @Test
-    public void midRightRocketNearTest() {
+    void midRightRocketNearTest() {
         // TODO: test midRightRocketNear
     }
 
@@ -308,7 +308,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchBay1'
      */
     @Test
-    public void preMatchBay1Test() {
+    void preMatchBay1Test() {
         // TODO: test preMatchBay1
     }
 
@@ -316,7 +316,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchBay2'
      */
     @Test
-    public void preMatchBay2Test() {
+    void preMatchBay2Test() {
         // TODO: test preMatchBay2
     }
 
@@ -324,7 +324,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchBay3'
      */
     @Test
-    public void preMatchBay3Test() {
+    void preMatchBay3Test() {
         // TODO: test preMatchBay3
     }
 
@@ -332,7 +332,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchBay6'
      */
     @Test
-    public void preMatchBay6Test() {
+    void preMatchBay6Test() {
         // TODO: test preMatchBay6
     }
 
@@ -340,7 +340,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchBay7'
      */
     @Test
-    public void preMatchBay7Test() {
+    void preMatchBay7Test() {
         // TODO: test preMatchBay7
     }
 
@@ -348,7 +348,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchBay8'
      */
     @Test
-    public void preMatchBay8Test() {
+    void preMatchBay8Test() {
         // TODO: test preMatchBay8
     }
 
@@ -356,7 +356,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchLevelRobot1'
      */
     @Test
-    public void preMatchLevelRobot1Test() {
+    void preMatchLevelRobot1Test() {
         // TODO: test preMatchLevelRobot1
     }
 
@@ -364,7 +364,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchLevelRobot2'
      */
     @Test
-    public void preMatchLevelRobot2Test() {
+    void preMatchLevelRobot2Test() {
         // TODO: test preMatchLevelRobot2
     }
 
@@ -372,7 +372,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'preMatchLevelRobot3'
      */
     @Test
-    public void preMatchLevelRobot3Test() {
+    void preMatchLevelRobot3Test() {
         // TODO: test preMatchLevelRobot3
     }
 
@@ -380,7 +380,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'rp'
      */
     @Test
-    public void rpTest() {
+    void rpTest() {
         // TODO: test rp
     }
 
@@ -388,7 +388,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'sandStormBonusPoints'
      */
     @Test
-    public void sandStormBonusPointsTest() {
+    void sandStormBonusPointsTest() {
         // TODO: test sandStormBonusPoints
     }
 
@@ -396,7 +396,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'techFoulCount'
      */
     @Test
-    public void techFoulCountTest() {
+    void techFoulCountTest() {
         // TODO: test techFoulCount
     }
 
@@ -404,7 +404,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'teleopPoints'
      */
     @Test
-    public void teleopPointsTest() {
+    void teleopPointsTest() {
         // TODO: test teleopPoints
     }
 
@@ -412,7 +412,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'topLeftRocketFar'
      */
     @Test
-    public void topLeftRocketFarTest() {
+    void topLeftRocketFarTest() {
         // TODO: test topLeftRocketFar
     }
 
@@ -420,7 +420,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'topLeftRocketNear'
      */
     @Test
-    public void topLeftRocketNearTest() {
+    void topLeftRocketNearTest() {
         // TODO: test topLeftRocketNear
     }
 
@@ -428,7 +428,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'topRightRocketFar'
      */
     @Test
-    public void topRightRocketFarTest() {
+    void topRightRocketFarTest() {
         // TODO: test topRightRocketFar
     }
 
@@ -436,7 +436,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'topRightRocketNear'
      */
     @Test
-    public void topRightRocketNearTest() {
+    void topRightRocketNearTest() {
         // TODO: test topRightRocketNear
     }
 
@@ -444,7 +444,7 @@ public class MatchScoreBreakdown2019AllianceTest {
      * Test the property 'totalPoints'
      */
     @Test
-    public void totalPointsTest() {
+    void totalPointsTest() {
         // TODO: test totalPoints
     }
 

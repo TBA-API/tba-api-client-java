@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for AwardRecipient
  */
-public class AwardRecipientTest {
+class AwardRecipientTest {
     private final AwardRecipient model = new AwardRecipient();
 
     /**
      * Model tests for AwardRecipient
      */
     @Test
-    public void testAwardRecipient() {
+    void testAwardRecipient() {
         // TODO: test AwardRecipient
     }
 
@@ -44,7 +44,7 @@ public class AwardRecipientTest {
      * Test the property 'teamKey'
      */
     @Test
-    public void teamKeyTest() {
+    void teamKeyTest() {
         // TODO: test teamKey
     }
 
@@ -52,7 +52,7 @@ public class AwardRecipientTest {
      * Test the property 'awardee'
      */
     @Test
-    public void awardeeTest() {
+    void awardeeTest() {
         // TODO: test awardee
     }
 

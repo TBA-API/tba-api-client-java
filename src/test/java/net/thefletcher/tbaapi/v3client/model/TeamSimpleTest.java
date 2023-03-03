@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for TeamSimple
  */
-public class TeamSimpleTest {
+class TeamSimpleTest {
     private final TeamSimple model = new TeamSimple();
 
     /**
      * Model tests for TeamSimple
      */
     @Test
-    public void testTeamSimple() {
+    void testTeamSimple() {
         // TODO: test TeamSimple
     }
 
@@ -44,7 +44,7 @@ public class TeamSimpleTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -52,7 +52,7 @@ public class TeamSimpleTest {
      * Test the property 'teamNumber'
      */
     @Test
-    public void teamNumberTest() {
+    void teamNumberTest() {
         // TODO: test teamNumber
     }
 
@@ -60,7 +60,7 @@ public class TeamSimpleTest {
      * Test the property 'nickname'
      */
     @Test
-    public void nicknameTest() {
+    void nicknameTest() {
         // TODO: test nickname
     }
 
@@ -68,7 +68,7 @@ public class TeamSimpleTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -76,7 +76,7 @@ public class TeamSimpleTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -84,7 +84,7 @@ public class TeamSimpleTest {
      * Test the property 'stateProv'
      */
     @Test
-    public void stateProvTest() {
+    void stateProvTest() {
         // TODO: test stateProv
     }
 
@@ -92,7 +92,7 @@ public class TeamSimpleTest {
      * Test the property 'country'
      */
     @Test
-    public void countryTest() {
+    void countryTest() {
         // TODO: test country
     }
 

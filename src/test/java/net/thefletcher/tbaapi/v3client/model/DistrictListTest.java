@@ -21,22 +21,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for DistrictList
  */
-public class DistrictListTest {
+class DistrictListTest {
     private final DistrictList model = new DistrictList();
 
     /**
      * Model tests for DistrictList
      */
     @Test
-    public void testDistrictList() {
+    void testDistrictList() {
         // TODO: test DistrictList
     }
 
@@ -44,7 +44,7 @@ public class DistrictListTest {
      * Test the property 'abbreviation'
      */
     @Test
-    public void abbreviationTest() {
+    void abbreviationTest() {
         // TODO: test abbreviation
     }
 
@@ -52,7 +52,7 @@ public class DistrictListTest {
      * Test the property 'displayName'
      */
     @Test
-    public void displayNameTest() {
+    void displayNameTest() {
         // TODO: test displayName
     }
 
@@ -60,7 +60,7 @@ public class DistrictListTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -68,7 +68,7 @@ public class DistrictListTest {
      * Test the property 'year'
      */
     @Test
-    public void yearTest() {
+    void yearTest() {
         // TODO: test year
     }
 

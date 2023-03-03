@@ -22,22 +22,22 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import net.thefletcher.tbaapi.v3client.model.MatchSimpleAlliances;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchSimple
  */
-public class MatchSimpleTest {
+class MatchSimpleTest {
     private final MatchSimple model = new MatchSimple();
 
     /**
      * Model tests for MatchSimple
      */
     @Test
-    public void testMatchSimple() {
+    void testMatchSimple() {
         // TODO: test MatchSimple
     }
 
@@ -45,7 +45,7 @@ public class MatchSimpleTest {
      * Test the property 'key'
      */
     @Test
-    public void keyTest() {
+    void keyTest() {
         // TODO: test key
     }
 
@@ -53,7 +53,7 @@ public class MatchSimpleTest {
      * Test the property 'compLevel'
      */
     @Test
-    public void compLevelTest() {
+    void compLevelTest() {
         // TODO: test compLevel
     }
 
@@ -61,7 +61,7 @@ public class MatchSimpleTest {
      * Test the property 'setNumber'
      */
     @Test
-    public void setNumberTest() {
+    void setNumberTest() {
         // TODO: test setNumber
     }
 
@@ -69,7 +69,7 @@ public class MatchSimpleTest {
      * Test the property 'matchNumber'
      */
     @Test
-    public void matchNumberTest() {
+    void matchNumberTest() {
         // TODO: test matchNumber
     }
 
@@ -77,7 +77,7 @@ public class MatchSimpleTest {
      * Test the property 'alliances'
      */
     @Test
-    public void alliancesTest() {
+    void alliancesTest() {
         // TODO: test alliances
     }
 
@@ -85,7 +85,7 @@ public class MatchSimpleTest {
      * Test the property 'winningAlliance'
      */
     @Test
-    public void winningAllianceTest() {
+    void winningAllianceTest() {
         // TODO: test winningAlliance
     }
 
@@ -93,7 +93,7 @@ public class MatchSimpleTest {
      * Test the property 'eventKey'
      */
     @Test
-    public void eventKeyTest() {
+    void eventKeyTest() {
         // TODO: test eventKey
     }
 
@@ -101,7 +101,7 @@ public class MatchSimpleTest {
      * Test the property 'time'
      */
     @Test
-    public void timeTest() {
+    void timeTest() {
         // TODO: test time
     }
 
@@ -109,7 +109,7 @@ public class MatchSimpleTest {
      * Test the property 'predictedTime'
      */
     @Test
-    public void predictedTimeTest() {
+    void predictedTimeTest() {
         // TODO: test predictedTime
     }
 
@@ -117,7 +117,7 @@ public class MatchSimpleTest {
      * Test the property 'actualTime'
      */
     @Test
-    public void actualTimeTest() {
+    void actualTimeTest() {
         // TODO: test actualTime
     }
 

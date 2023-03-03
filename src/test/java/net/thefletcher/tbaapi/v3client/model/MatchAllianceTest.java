@@ -23,22 +23,22 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 
 /**
  * Model tests for MatchAlliance
  */
-public class MatchAllianceTest {
+class MatchAllianceTest {
     private final MatchAlliance model = new MatchAlliance();
 
     /**
      * Model tests for MatchAlliance
      */
     @Test
-    public void testMatchAlliance() {
+    void testMatchAlliance() {
         // TODO: test MatchAlliance
     }
 
@@ -46,7 +46,7 @@ public class MatchAllianceTest {
      * Test the property 'score'
      */
     @Test
-    public void scoreTest() {
+    void scoreTest() {
         // TODO: test score
     }
 
@@ -54,7 +54,7 @@ public class MatchAllianceTest {
      * Test the property 'teamKeys'
      */
     @Test
-    public void teamKeysTest() {
+    void teamKeysTest() {
         // TODO: test teamKeys
     }
 
@@ -62,7 +62,7 @@ public class MatchAllianceTest {
      * Test the property 'surrogateTeamKeys'
      */
     @Test
-    public void surrogateTeamKeysTest() {
+    void surrogateTeamKeysTest() {
         // TODO: test surrogateTeamKeys
     }
 
@@ -70,7 +70,7 @@ public class MatchAllianceTest {
      * Test the property 'dqTeamKeys'
      */
     @Test
-    public void dqTeamKeysTest() {
+    void dqTeamKeysTest() {
         // TODO: test dqTeamKeys
     }
 
